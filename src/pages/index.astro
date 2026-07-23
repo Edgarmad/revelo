@@ -8,13 +8,24 @@ import ContactCallout from '@/components/sections/ContactCallout.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { getFeaturedCategories } from '@/services/categoryService';
 import { getFeaturedProducts } from '@/services/productService';
-import { blogCards, socialGallery, testimonials } from '@/data/siteContent';
+import { blogCards, testimonials } from '@/data/siteContent';
 import { CreditCard, RotateCcw, ShieldCheck, Truck } from 'lucide-astro';
 import bgSrc from '@/styles/images/bg.webp';
 
 const categories = getFeaturedCategories();
 const products = getFeaturedProducts(4);
 const testimonial = testimonials[0];
+const instagramReels = [
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DbE5EoXtMei/', tone: 'from-stone-200 via-stone-100 to-cocoa/50' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/Da6HAhoJtuT/', tone: 'from-sand via-white to-aqua/30' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DaLX89wR8Gn/', tone: 'from-cocoa/30 via-sand to-stone-200' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DTl0X5QD12n/', tone: 'from-zinc-200 via-sand to-cocoa/40' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DUJOXy7kdGP/', tone: 'from-white via-sand to-aqua/40' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DRU30uZgfVq/', tone: 'from-stone-100 via-white to-zinc-300' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DPouY0NklzU/', tone: 'from-cocoa/40 via-sand to-white' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DPUBKIkjWwX/', tone: 'from-aqua/30 via-white to-sand' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DOWnTiViefZ/', tone: 'from-zinc-300 via-stone-100 to-cocoa/30' },
+];
 ---
 
 <MainLayout title="Milapro Home | Catalogo visual de muebles modulares" description="MVP visual de catalogo premium inspirado en Milapro Home, con sofas modulares, reclinables y muebles para sala.">
@@ -67,12 +78,51 @@ const testimonial = testimonials[0];
 
   <Container>
     <section class="rounded-[2.4rem] bg-aqua p-6 md:p-10">
-      <h2 class="font-display text-2xl font-black uppercase md:text-3xl">Share with us #Milapro Home</h2>
-      <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-        {socialGallery.map((image) => <img class="aspect-[3/4] rounded-xl object-cover" src={image} alt="Publicacion social de sala con muebles Milapro Home" loading="lazy" width="500" height="666" />)}
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <h2 class="font-display text-2xl font-black uppercase md:text-3xl">Share with us #Milapro Home</h2>
+        <div class="flex gap-2" aria-label="Controles del carrusel de Instagram">
+          <button class="instagram-carousel-prev rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-ink/80" type="button" aria-label="Video anterior">Prev</button>
+          <button class="instagram-carousel-next rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-ink/80" type="button" aria-label="Video siguiente">Next</button>
+        </div>
+      </div>
+      <div class="instagram-carousel mt-8 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4 scroll-smooth md:justify-center" tabindex="0" aria-label="Videos de Instagram de Milapro Home">
+        {instagramReels.map((reel, index) => (
+          <a
+            class={`group relative aspect-[9/16] w-[44vw] max-w-[170px] shrink-0 snap-start overflow-hidden rounded-xl bg-gradient-to-br ${reel.tone} shadow-sm ring-1 ring-ink/10 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:w-[150px] lg:w-[170px]`}
+            href={reel.url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Ver reel ${index + 1} de Milapro Home en Instagram`}
+          >
+            <span class="absolute left-2 top-2 rounded-full bg-white/75 px-2 py-1 text-[10px] font-bold text-ink shadow-sm backdrop-blur">@milaprohome.mid</span>
+            <span class="absolute right-2 top-2 grid h-6 w-6 place-items-center rounded-full bg-white/70 text-ink shadow-sm backdrop-blur" aria-hidden="true">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+            </span>
+            <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/75 to-transparent p-3 pt-14 text-white">
+              <span class="block text-xs font-semibold uppercase tracking-wide">Instagram Reel</span>
+              <span class="mt-1 block text-lg font-black leading-none">#{String(index + 1).padStart(2, '0')}</span>
+            </span>
+          </a>
+        ))}
       </div>
     </section>
   </Container>
+
+  <script is:inline>
+    const carousel = document.querySelector('.instagram-carousel');
+    const previousButton = document.querySelector('.instagram-carousel-prev');
+    const nextButton = document.querySelector('.instagram-carousel-next');
+
+    const scrollCarousel = (direction) => {
+      if (!carousel) return;
+      const firstCard = carousel.querySelector('a');
+      const distance = firstCard ? firstCard.getBoundingClientRect().width + 12 : 182;
+      carousel.scrollBy({ left: direction * distance, behavior: 'smooth' });
+    };
+
+    previousButton?.addEventListener('click', () => scrollCarousel(-1));
+    nextButton?.addEventListener('click', () => scrollCarousel(1));
+  </script>
 
   <Container>
     <section class="py-16">
