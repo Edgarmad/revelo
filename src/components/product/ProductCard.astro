@@ -1,0 +1,33 @@
+---
+import type { Product } from '@/types/product';
+import Badge from '@/components/common/Badge.astro';
+import ProductColorSelector from './ProductColorSelector.astro';
+import { ShoppingBag } from 'lucide-astro';
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+---
+
+<article class="product-card group rounded-soft bg-sand p-4" data-name={product.name.toLowerCase()} data-category={product.category} data-colors={product.colors.map((color) => color.name.toLowerCase()).join(' ')} data-available={String(product.available)}>
+  <a href={`/products/${product.slug}/`} class="block">
+    <div class="relative overflow-hidden rounded-2xl bg-white">
+      {product.badge && <div class="absolute left-3 top-3 z-10"><Badge tone={product.badge.toLowerCase().includes('save') ? 'red' : 'aqua'}>{product.badge}</Badge></div>}
+      <img class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" src={product.mainImage} alt={product.name} loading="lazy" width="700" height="525" />
+    </div>
+  </a>
+  <div class="mt-4">
+    <h3 class="min-h-10 text-sm font-semibold leading-5 text-ink"><a class="hover:underline" href={`/products/${product.slug}/`}>{product.name}</a></h3>
+    <div class="mt-2 flex items-center gap-2 text-sm">
+      <span class="font-semibold text-ink">{product.price}</span>
+      {product.compareAtPrice && <span class="text-muted line-through">{product.compareAtPrice}</span>}
+    </div>
+    <div class="mt-3"><ProductColorSelector colors={product.colors} /></div>
+    <div class="mt-4 flex items-center gap-2">
+      <a class="flex min-h-11 flex-1 items-center justify-center rounded-pill border border-ink/40 bg-white px-4 text-xs font-extrabold uppercase tracking-wide transition hover:bg-ink hover:text-white" href={`/products/${product.slug}/`}>Ver detalle</a>
+      <a class="grid h-11 w-11 place-items-center rounded-full bg-aqua text-ink transition hover:bg-ink hover:text-white" href="/contact/" aria-label={`Solicitar informacion sobre ${product.name}`}><ShoppingBag size={18} /></a>
+    </div>
+  </div>
+</article>

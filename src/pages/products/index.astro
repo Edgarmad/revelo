@@ -1,0 +1,28 @@
+---
+import Container from '@/components/common/Container.astro';
+import EmptyState from '@/components/common/EmptyState.astro';
+import SectionHeading from '@/components/common/SectionHeading.astro';
+import FilterControls from '@/components/filters/FilterControls.astro';
+import ProductGrid from '@/components/product/ProductGrid.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+import { getAllCategories } from '@/services/categoryService';
+import { getAllProducts } from '@/services/productService';
+
+const products = getAllProducts();
+const categories = getAllCategories();
+---
+
+<MainLayout title="Productos | Linsy Home" description="Explora sofas modulares, reclinables, mesas y soluciones de almacenamiento para sala.">
+  <Container class="py-14">
+    <SectionHeading eyebrow="Catalogo" title="Our Products" description="Filtros visuales con comportamiento local de demostracion. Los datos vienen del servicio mock, listos para reemplazarse por WordPress Headless en otra fase." />
+    <div class="mt-8"><FilterControls categories={categories} /></div>
+    <div class="mt-6 flex items-center justify-between text-sm text-muted">
+      <span data-product-count>{products.length} productos</span>
+      <label class="flex items-center gap-2">Ordenar
+        <select class="rounded-pill border border-ink/15 px-4 py-2"><option>Featured</option><option>Price low to high</option><option>Newest</option></select>
+      </label>
+    </div>
+    <div class="mt-8"><ProductGrid products={products} /></div>
+    <div class="mt-8" data-empty-state hidden><EmptyState title="No encontramos productos" description="Ajusta la busqueda, categoria, color o disponibilidad para ver mas opciones del catalogo." /></div>
+  </Container>
+</MainLayout>

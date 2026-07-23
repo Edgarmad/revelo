@@ -1,0 +1,50 @@
+---
+import { navItems } from '@/data/siteContent';
+import Container from '@/components/common/Container.astro';
+import { Heart, Menu, Search, ShoppingBag, User, X } from 'lucide-astro';
+---
+
+<header class="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur">
+  <div class="bg-ink py-2 text-white">
+    <Container class="flex items-center justify-center gap-3 text-xs font-bold">
+      <span>July Comfort Event - Up To $2000 Off</span>
+      <a class="rounded-pill bg-aqua px-4 py-1 text-ink" href="/products/">Ver ofertas</a>
+    </Container>
+  </div>
+  <Container class="flex min-h-16 items-center justify-between gap-4">
+    <a href="/" class="font-display text-2xl font-black uppercase leading-none tracking-tight text-teal-800">Linsy<br />Home</a>
+    <nav class="hidden items-center gap-7 text-sm font-bold lg:flex" aria-label="Navegacion principal">
+      {navItems.map((item) => <a class="transition hover:text-cocoa" href={item.href}>{item.label}</a>)}
+    </nav>
+    <div class="hidden items-center gap-4 lg:flex" aria-label="Acciones">
+      <a href="/products/" aria-label="Buscar"><Search size={20} /></a>
+      <a href="/products/" aria-label="Favoritos"><Heart size={20} /></a>
+      <a href="/contact/" aria-label="Cuenta demo"><User size={20} /></a>
+      <a href="/contact/" aria-label="Solicitud"><ShoppingBag size={20} /></a>
+    </div>
+    <button class="grid h-11 w-11 place-items-center rounded-full border border-ink/15 lg:hidden" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu"><Menu size={22} /></button>
+  </Container>
+  <div id="mobile-menu" class="hidden border-t border-ink/10 bg-white lg:hidden" data-mobile-menu>
+    <Container class="py-5">
+      <div class="mb-4 flex items-center justify-between">
+        <span class="font-bold">Menu</span>
+        <button class="grid h-10 w-10 place-items-center rounded-full border border-ink/15" type="button" data-menu-close aria-label="Cerrar menu"><X size={20} /></button>
+      </div>
+      <nav class="grid gap-3 text-base font-bold" aria-label="Navegacion movil">
+        {navItems.map((item) => <a class="rounded-xl bg-sand px-4 py-3" href={item.href}>{item.label}</a>)}
+      </nav>
+    </Container>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const close = document.querySelector<HTMLButtonElement>('[data-menu-close]');
+  const menu = document.querySelector<HTMLElement>('[data-mobile-menu]');
+  const setOpen = (open: boolean) => {
+    menu?.classList.toggle('hidden', !open);
+    toggle?.setAttribute('aria-expanded', String(open));
+  };
+  toggle?.addEventListener('click', () => setOpen(menu?.classList.contains('hidden') ?? true));
+  close?.addEventListener('click', () => setOpen(false));
+</script>

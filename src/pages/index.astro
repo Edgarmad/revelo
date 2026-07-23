@@ -1,0 +1,112 @@
+---
+import Container from '@/components/common/Container.astro';
+import Button from '@/components/common/Button.astro';
+import SectionHeading from '@/components/common/SectionHeading.astro';
+import CategoryCard from '@/components/category/CategoryCard.astro';
+import ProductGrid from '@/components/product/ProductGrid.astro';
+import ContactCallout from '@/components/sections/ContactCallout.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+import { getFeaturedCategories } from '@/services/categoryService';
+import { getFeaturedProducts } from '@/services/productService';
+import { blogCards, socialGallery, testimonials } from '@/data/siteContent';
+import { CreditCard, RotateCcw, ShieldCheck, Truck } from 'lucide-astro';
+
+const categories = getFeaturedCategories();
+const products = getFeaturedProducts(4);
+const testimonial = testimonials[0];
+---
+
+<MainLayout title="Linsy Home | Catalogo visual de muebles modulares" description="MVP visual de catalogo premium inspirado en Linsy Home, con sofas modulares, reclinables y muebles para sala.">
+  <section class="relative min-h-[520px] overflow-hidden">
+    <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85" alt="Comedor exterior frente al mar" width="1800" height="1000" />
+    <div class="absolute inset-0 bg-black/45"></div>
+    <Container class="relative grid min-h-[520px] place-items-center py-20 text-center text-white">
+      <div>
+        <h1 class="font-display text-5xl font-black uppercase leading-none tracking-tight sm:text-7xl lg:text-8xl">Summer Sale</h1>
+        <p class="mt-2 text-3xl font-light uppercase sm:text-5xl">Hasta 50% Off</p>
+        <Button href="/products/" class="mt-6">Shop now</Button>
+      </div>
+    </Container>
+  </section>
+
+  <Container>
+    <section class="grid border-b border-ink/10 py-10 sm:grid-cols-2 lg:grid-cols-4">
+      {[
+        { icon: Truck, label: 'Free shipping' },
+        { icon: ShieldCheck, label: 'Three-year warranty' },
+        { icon: CreditCard, label: 'Installment payments' },
+        { icon: RotateCcw, label: '30-day returns' },
+      ].map((benefit) => (
+        <div class="flex flex-col items-center gap-3 border-ink/10 py-6 text-center lg:border-r last:border-r-0">
+          <benefit.icon class="text-aqua" size={30} />
+          <p class="text-sm font-semibold uppercase tracking-wide text-muted">{benefit.label}</p>
+        </div>
+      ))}
+    </section>
+
+    <section class="py-14">
+      <h2 class="font-display text-4xl font-light tracking-tight text-ink sm:text-5xl">LINSY HOME - Make Life Better</h2>
+      <p class="mt-10 text-2xl font-light uppercase tracking-wide text-cocoa">Shop by category</p>
+      <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {categories.map((category) => <CategoryCard category={category} />)}
+      </div>
+    </section>
+
+    <section class="pb-16">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <SectionHeading title="Our Products" description="Colecciones visuales listas para adaptar a catalogo real en fases posteriores." />
+        <Button href="/products/" variant="secondary">View all</Button>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-3">
+        {['Rubik V - Collection', 'Reclining Modular Couch', 'Best Value', 'Rubik III - Collection', 'Cabik I - Collection'].map((item, index) => <span class={`rounded-pill px-4 py-2 text-xs font-semibold ${index === 0 ? 'bg-aqua text-ink' : 'bg-sand text-muted'}`}>{item}</span>)}
+      </div>
+      <div class="mt-8"><ProductGrid products={products} /></div>
+    </section>
+  </Container>
+
+  <Container>
+    <section class="rounded-[2.4rem] bg-aqua p-6 md:p-10">
+      <h2 class="font-display text-2xl font-black uppercase md:text-3xl">Share with us #Linsy Home</h2>
+      <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        {socialGallery.map((image) => <img class="aspect-[3/4] rounded-xl object-cover" src={image} alt="Publicacion social de sala con muebles Linsy Home" loading="lazy" width="500" height="666" />)}
+      </div>
+    </section>
+  </Container>
+
+  <Container>
+    <section class="py-16">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <SectionHeading title="Blogs & Inspirations" description="Discover our freshest event updates to unveil exciting dimensions of play with modular sofas." />
+        <Button href="/about/">View all</Button>
+      </div>
+      <div class="mt-8 grid gap-8 md:grid-cols-3">
+        {blogCards.map((card) => (
+          <article>
+            <img class="aspect-[4/3] rounded-xl object-cover" src={card.image} alt={card.title} loading="lazy" width="800" height="600" />
+            <p class="mt-4 text-xs text-muted">{card.category}</p>
+            <h3 class="mt-2 text-lg font-bold text-ink">{card.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-muted">{card.excerpt}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="reviews" class="py-12">
+      <div class="flex flex-wrap items-center justify-between gap-6 px-2">
+        <h2 class="font-display text-4xl font-light uppercase tracking-tight">Voices of Customer</h2>
+        <Button href="/products/" variant="secondary">View all</Button>
+      </div>
+      <div class="mt-6 grid gap-10 rounded-b-[2rem] bg-sand p-8 md:grid-cols-2 md:p-12">
+        <img class="aspect-[4/3] rounded-xl object-cover" src={testimonial.image} alt={`Sala de ${testimonial.name}`} loading="lazy" width="900" height="675" />
+        <div class="flex flex-col justify-center">
+          <p class="font-semibold text-muted">@ {testimonial.name}</p>
+          <p class="mt-4 text-3xl text-orange-500" aria-label={`${testimonial.rating} estrellas`}>★★★★★</p>
+          <h3 class="mt-3 font-bold uppercase">{testimonial.product}</h3>
+          <p class="mt-5 max-w-xl leading-7 text-muted">{testimonial.quote}</p>
+        </div>
+      </div>
+    </section>
+
+    <ContactCallout />
+  </Container>
+</MainLayout>

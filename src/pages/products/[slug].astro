@@ -1,0 +1,53 @@
+---
+import Breadcrumbs from '@/components/common/Breadcrumbs.astro';
+import Button from '@/components/common/Button.astro';
+import Container from '@/components/common/Container.astro';
+import SectionHeading from '@/components/common/SectionHeading.astro';
+import ProductColorSelector from '@/components/product/ProductColorSelector.astro';
+import ProductGallery from '@/components/product/ProductGallery.astro';
+import ProductGrid from '@/components/product/ProductGrid.astro';
+import ProductSpecifications from '@/components/product/ProductSpecifications.astro';
+import ContactCallout from '@/components/sections/ContactCallout.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+import { getProductBySlug, getProductSlugs, getRelatedProducts } from '@/services/productService';
+
+export function getStaticPaths() {
+  return getProductSlugs().map((slug) => ({ params: { slug } }));
+}
+
+const product = getProductBySlug(Astro.params.slug ?? '');
+if (!product) return Astro.redirect('/404/');
+const related = getRelatedProducts(product);
+---
+
+<MainLayout title={`${product.name} | Linsy Home`} description={product.shortDescription}>
+  <Container class="py-10">
+    <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Products', href: '/products/' }, { label: product.name }]} />
+    <div class="mt-8 grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <ProductGallery images={product.gallery.length ? product.gallery : [product.mainImage]} alt={product.name} />
+      <section>
+        <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-aqua">{product.collection}</p>
+        <h1 class="mt-3 font-display text-4xl font-bold tracking-tight md:text-6xl">{product.name}</h1>
+        <p class="mt-5 text-lg leading-8 text-muted">{product.shortDescription}</p>
+        <div class="mt-6 flex items-center gap-3"><span class="text-2xl font-bold">{product.price}</span>{product.compareAtPrice && <span class="text-muted line-through">{product.compareAtPrice}</span>}</div>
+        <div class="mt-8 rounded-soft bg-sand p-5">
+          <h2 id="colors" class="font-bold">Colores disponibles</h2>
+          <div class="mt-3"><ProductColorSelector colors={product.colors} labelledBy="colors" /></div>
+        </div>
+        <div class="mt-6 grid gap-3 text-sm text-muted sm:grid-cols-2">
+          <p><strong class="text-ink">SKU:</strong> {product.sku}</p>
+          <p><strong class="text-ink">Disponibilidad:</strong> {product.available ? 'Disponible' : 'Proximamente'}</p>
+          <p><strong class="text-ink">Categoria:</strong> {product.category}</p>
+          <p><strong class="text-ink">Dimensiones:</strong> {product.dimensions}</p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3"><Button href="/contact/">Solicitar informacion</Button><Button href="/products/" variant="secondary">Volver al catalogo</Button></div>
+      </section>
+    </div>
+    <section class="mt-14 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+      <div><SectionHeading title="Descripcion" description={product.description} /></div>
+      <ProductSpecifications specifications={product.specifications} />
+    </section>
+    {related.length > 0 && <section class="mt-16"><SectionHeading title="Related products" description="Piezas de la misma familia o categoria." /><div class="mt-8"><ProductGrid products={related} /></div></section>}
+    <div class="mt-16"><ContactCallout /></div>
+  </Container>
+</MainLayout>

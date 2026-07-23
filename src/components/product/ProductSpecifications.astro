@@ -1,0 +1,18 @@
+---
+import type { ProductSpecification } from '@/types/product';
+
+interface Props {
+  specifications: ProductSpecification[];
+}
+
+const { specifications } = Astro.props;
+---
+
+<dl class="grid gap-3 sm:grid-cols-2">
+  {specifications.map((item) => (
+    <div class="rounded-2xl border border-ink/10 bg-white p-4">
+      <dt class="text-xs font-bold uppercase tracking-wide text-muted">{item.label}</dt>
+      <dd class="mt-1 font-semibold text-ink">{item.value}</dd>
+    </div>
+  ))}
+</dl>

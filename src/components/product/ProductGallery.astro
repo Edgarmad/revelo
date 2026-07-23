@@ -1,0 +1,33 @@
+---
+interface Props {
+  images: string[];
+  alt: string;
+}
+
+const { images, alt } = Astro.props;
+const mainImage = images[0];
+---
+
+<div class="grid gap-4" data-gallery>
+  <div class="overflow-hidden rounded-soft bg-sand">
+    <img data-gallery-main class="aspect-[4/3] w-full object-cover" src={mainImage} alt={alt} width="900" height="675" />
+  </div>
+  <div class="grid grid-cols-4 gap-3">
+    {images.map((image, index) => (
+      <button class="overflow-hidden rounded-xl border border-ink/10 bg-sand focus-visible:outline-aqua" type="button" data-gallery-thumb={image} aria-label={`Ver imagen ${index + 1} de ${alt}`}>
+        <img class="aspect-square w-full object-cover" src={image} alt="" loading="lazy" width="180" height="180" />
+      </button>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+    const main = gallery.querySelector<HTMLImageElement>('[data-gallery-main]');
+    gallery.querySelectorAll<HTMLButtonElement>('[data-gallery-thumb]').forEach((button) => {
+      button.addEventListener('click', () => {
+        if (main) main.src = button.dataset.galleryThumb ?? main.src;
+      });
+    });
+  });
+</script>

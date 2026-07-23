@@ -1,0 +1,9 @@
+---
+import { ArrowRight } from 'lucide-astro';
+---
+
+<form class="flex max-w-sm items-center gap-2 rounded-pill bg-white p-2" aria-label="Newsletter visual">
+  <label class="sr-only" for="newsletter-email">E-mail</label>
+  <input id="newsletter-email" class="min-h-10 flex-1 rounded-pill px-4 text-sm" type="email" placeholder="E-mail" />
+  <button class="grid h-10 w-14 place-items-center rounded-pill bg-aqua text-ink" type="button" aria-label="Enviar email"><ArrowRight size={20} /></button>
+</form>

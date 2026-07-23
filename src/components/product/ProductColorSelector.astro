@@ -1,0 +1,16 @@
+---
+import type { ProductColor } from '@/types/product';
+
+interface Props {
+  colors: ProductColor[];
+  labelledBy?: string;
+}
+
+const { colors, labelledBy } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2" aria-labelledby={labelledBy}>
+  {colors.map((color) => (
+    <span class={`h-6 w-6 rounded-full border-2 ${color.available ? 'border-ink/25' : 'border-red-300 opacity-40'} shadow-sm`} title={color.name} style={`background:${color.hex}`} aria-label={`${color.name}${color.available ? '' : ', no disponible'}`}></span>
+  ))}
+</div>

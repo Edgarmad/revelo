@@ -1,0 +1,64 @@
+---
+import type { Category } from '@/types/category';
+
+interface Props {
+  categories: Category[];
+}
+
+const { categories } = Astro.props;
+---
+
+<form id="catalog-filters" class="grid gap-3 rounded-soft border border-ink/10 bg-white p-4 shadow-sm md:grid-cols-4" aria-label="Filtros de productos">
+  <label class="grid gap-2 text-sm font-semibold text-ink">Buscar
+    <input class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" type="search" name="search" placeholder="Sofa, consola..." />
+  </label>
+  <label class="grid gap-2 text-sm font-semibold text-ink">Categoria
+    <select class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" name="category">
+      <option value="all">Todas</option>
+      {categories.map((category) => <option value={category.slug}>{category.name}</option>)}
+    </select>
+  </label>
+  <label class="grid gap-2 text-sm font-semibold text-ink">Color
+    <input class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" type="text" name="color" placeholder="Crema, nogal..." />
+  </label>
+  <label class="grid gap-2 text-sm font-semibold text-ink">Disponibilidad
+    <select class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" name="available">
+      <option value="all">Todo</option>
+      <option value="true">Disponible</option>
+      <option value="false">Proximamente</option>
+    </select>
+  </label>
+</form>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#catalog-filters');
+  const empty = document.querySelector<HTMLElement>('[data-empty-state]');
+  const count = document.querySelector<HTMLElement>('[data-product-count]');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.product-card'));
+
+  function applyFilters() {
+    if (!form) return;
+    const data = new FormData(form);
+    const search = String(data.get('search') ?? '').toLowerCase();
+    const category = String(data.get('category') ?? 'all');
+    const color = String(data.get('color') ?? '').toLowerCase();
+    const available = String(data.get('available') ?? 'all');
+    let visible = 0;
+
+    cards.forEach((card) => {
+      const matchesSearch = !search || (card.dataset.name ?? '').includes(search);
+      const matchesCategory = category === 'all' || card.dataset.category === category;
+      const matchesColor = !color || (card.dataset.colors ?? '').includes(color);
+      const matchesAvailable = available === 'all' || card.dataset.available === available;
+      const show = matchesSearch && matchesCategory && matchesColor && matchesAvailable;
+      card.style.display = show ? '' : 'none';
+      if (show) visible += 1;
+    });
+
+    if (empty) empty.hidden = visible !== 0;
+    if (count) count.textContent = `${visible} productos`;
+  }
+
+  form?.addEventListener('input', applyFilters);
+  form?.addEventListener('change', applyFilters);
+</script>

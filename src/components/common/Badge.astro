@@ -1,0 +1,13 @@
+---
+interface Props {
+  tone?: 'aqua' | 'red' | 'neutral';
+}
+const { tone = 'neutral' } = Astro.props;
+const tones = {
+  aqua: 'bg-aqua text-ink',
+  red: 'bg-red-500 text-white',
+  neutral: 'bg-sand text-ink',
+};
+---
+
+<span class={`inline-flex rounded px-2 py-1 text-xs font-extrabold ${tones[tone]}`}><slot /></span>
