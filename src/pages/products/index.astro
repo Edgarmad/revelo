@@ -12,14 +12,14 @@ const products = getAllProducts();
 const categories = getAllCategories();
 ---
 
-<MainLayout title="Productos | Milapro Home" description="Explora sofas modulares, reclinables, mesas y soluciones de almacenamiento para sala.">
+<MainLayout title="Productos | Milapro Home" description="Explora muebles de exterior en rattan sintetico, plastico, aluminio, sombrillas, pergolas y plantas.">
   <Container class="py-14">
-    <SectionHeading eyebrow="Catalogo" title="Our Products" description="Filtros visuales con comportamiento local de demostracion. Los datos vienen del servicio mock, listos para reemplazarse por WordPress Headless en otra fase." />
+    <SectionHeading eyebrow="Catalogo" title="Nuestros productos" description="Filtra muebles y complementos para terrazas, jardines y proyectos comerciales." />
     <div class="mt-8"><FilterControls categories={categories} /></div>
     <div class="mt-6 flex items-center justify-between text-sm text-muted">
       <span data-product-count>{products.length} productos</span>
       <label class="flex items-center gap-2">Ordenar
-        <select class="rounded-pill border border-ink/15 px-4 py-2"><option>Featured</option><option>Price low to high</option><option>Newest</option></select>
+        <select class="rounded-pill border border-ink/15 px-4 py-2"><option>Destacados</option><option>Precio de menor a mayor</option><option>Mas recientes</option></select>
       </label>
     </div>
     <div class="mt-8"><ProductGrid products={products} /></div>

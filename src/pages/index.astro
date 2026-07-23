@@ -8,13 +8,13 @@ import ContactCallout from '@/components/sections/ContactCallout.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { getFeaturedCategories } from '@/services/categoryService';
 import { getFeaturedProducts } from '@/services/productService';
-import { blogCards, testimonials } from '@/data/siteContent';
+import { blogCards, customerReviews } from '@/data/siteContent';
 import { CreditCard, RotateCcw, ShieldCheck, Truck } from 'lucide-astro';
 import bgSrc from '@/styles/images/bg.webp';
 
 const categories = getFeaturedCategories();
 const products = getFeaturedProducts(4);
-const testimonial = testimonials[0];
+const featuredReviews = customerReviews.filter((review) => review.rating === 5);
 const instagramReels = [
   { url: 'https://www.instagram.com/milaprohome.mid/reel/DbE5EoXtMei/', tone: 'from-stone-200 via-stone-100 to-cocoa/50' },
   { url: 'https://www.instagram.com/milaprohome.mid/reel/Da6HAhoJtuT/', tone: 'from-sand via-white to-aqua/30' },
@@ -28,15 +28,15 @@ const instagramReels = [
 ];
 ---
 
-<MainLayout title="Milapro Home | Catalogo visual de muebles modulares" description="MVP visual de catalogo premium inspirado en Milapro Home, con sofas modulares, reclinables y muebles para sala.">
+<MainLayout title="Milapro Home | Muebles para exterior" description="Catalogo visual de muebles para exterior, rattan sintetico, aluminio, plastico, sombrillas, pergolas y plantas.">
   <section class="relative min-h-[520px] overflow-hidden">
     <img class="absolute inset-0 h-full w-full object-none" src={bgSrc} alt="Comedor exterior frente al mar" width="1800" height="1000" />
     <div class="absolute inset-0"></div>
     <Container class="relative grid min-h-[520px] place-items-center py-20 text-center text-white">
       <div>
-        <h1 class="font-display text-5xl font-black uppercase leading-none tracking-tight sm:text-7xl lg:text-8xl">Summer Sale</h1>
-        <p class="mt-2 text-3xl font-light uppercase sm:text-5xl">Hasta 50% Off</p>
-        <Button href="/products/" class="mt-6">Shop now</Button>
+        <h1 class="font-display text-5xl font-black uppercase leading-none tracking-tight sm:text-7xl lg:text-8xl">Oferta de verano</h1>
+        <p class="mt-2 text-3xl font-light uppercase sm:text-5xl">Hasta 50% de descuento</p>
+        <Button href="/products/" class="mt-6">Comprar ahora</Button>
       </div>
     </Container>
   </section>
@@ -44,10 +44,10 @@ const instagramReels = [
   <Container>
     <section class="grid border-b border-ink/10 py-10 sm:grid-cols-2 lg:grid-cols-4">
       {[
-        { icon: Truck, label: 'Free shipping' },
-        { icon: ShieldCheck, label: 'Three-year warranty' },
-        { icon: CreditCard, label: 'Installment payments' },
-        { icon: RotateCcw, label: '30-day returns' },
+        { icon: Truck, label: 'Envio disponible' },
+        { icon: ShieldCheck, label: 'Garantia de tres anos' },
+        { icon: CreditCard, label: 'Pagos en cuotas' },
+        { icon: RotateCcw, label: 'Asesoria postventa' },
       ].map((benefit) => (
         <div class="flex flex-col items-center gap-3 border-ink/10 py-6 text-center lg:border-r last:border-r-0">
           <benefit.icon class="text-aqua" size={30} />
@@ -57,8 +57,8 @@ const instagramReels = [
     </section>
 
     <section class="py-14">
-      <h2 class="font-display text-4xl font-light tracking-tight text-ink sm:text-5xl">Milapro Home - Make Life Better</h2>
-      <p class="mt-10 text-2xl font-light uppercase tracking-wide text-cocoa">Shop by category</p>
+      <h2 class="font-display text-4xl font-light tracking-tight text-ink sm:text-5xl">Milapro Home - Transforma tu exterior</h2>
+      <p class="mt-10 text-2xl font-light uppercase tracking-wide text-cocoa">Compra por categoria</p>
       <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {categories.map((category) => <CategoryCard category={category} />)}
       </div>
@@ -66,11 +66,11 @@ const instagramReels = [
 
     <section class="pb-16">
       <div class="flex flex-wrap items-end justify-between gap-6">
-        <SectionHeading title="Our Products" description="Colecciones visuales listas para adaptar a catalogo real en fases posteriores." />
-        <Button href="/products/" variant="secondary">View all</Button>
+        <SectionHeading title="Nuestros productos" description="Colecciones para terrazas, jardines y proyectos comerciales con materiales resistentes al exterior." />
+        <Button href="/products/" variant="secondary">Ver todo</Button>
       </div>
       <div class="mt-8 flex flex-wrap gap-3">
-        {['Rubik V - Collection', 'Reclining Modular Couch', 'Best Value', 'Rubik III - Collection', 'Cabik I - Collection'].map((item, index) => <span class={`rounded-pill px-4 py-2 text-xs font-semibold ${index === 0 ? 'bg-aqua text-ink' : 'bg-sand text-muted'}`}>{item}</span>)}
+        {['Rattan sintetico', 'Plastico', 'Aluminio', 'Sombrillas', 'Pergolas'].map((item, index) => <span class={`rounded-pill px-4 py-2 text-xs font-semibold ${index === 0 ? 'bg-aqua text-ink' : 'bg-sand text-muted'}`}>{item}</span>)}
       </div>
       <div class="mt-8"><ProductGrid products={products} /></div>
     </section>
@@ -79,7 +79,7 @@ const instagramReels = [
   <Container>
     <section class="rounded-[2.4rem] bg-aqua p-6 md:p-10">
       <div class="flex flex-wrap items-end justify-between gap-4">
-        <h2 class="font-display text-2xl font-black uppercase md:text-3xl">Share with us #Milapro Home</h2>
+        <h2 class="font-display text-2xl font-black uppercase md:text-3xl">Comparte con nosotros #MilaproHome</h2>
       </div>
       <div class="relative mt-8">
         <button class="instagram-carousel-prev absolute left-2 top-1/2 z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink shadow-lg ring-1 ring-ink/10 transition hover:scale-105 hover:bg-white" type="button" aria-label="Video anterior">
@@ -99,7 +99,7 @@ const instagramReels = [
                 <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
               </span>
               <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/75 to-transparent p-3 pt-14 text-white">
-                <span class="block text-xs font-semibold uppercase tracking-wide">Instagram Reel</span>
+                <span class="block text-xs font-semibold uppercase tracking-wide">Video de Instagram</span>
                 <span class="mt-1 block text-lg font-black leading-none">#{String(index + 1).padStart(2, '0')}</span>
               </span>
             </a>
@@ -131,15 +131,15 @@ const instagramReels = [
   <Container>
     <section class="py-16">
       <div class="flex flex-wrap items-end justify-between gap-6">
-        <SectionHeading title="Blogs & Inspirations" description="Discover our freshest event updates to unveil exciting dimensions of play with modular sofas." />
-        <Button href="/about/">View all</Button>
+        <SectionHeading title="Blogs & Inspirations" description="Consejos para elegir materiales, crear sombra y transformar espacios exteriores con soluciones funcionales." />
+        <Button href="/blogs/">Ver todo</Button>
       </div>
       <div class="mt-8 grid gap-8 md:grid-cols-3">
         {blogCards.map((card) => (
           <article>
             <img class="aspect-[4/3] rounded-xl object-cover" src={card.image} alt={card.title} loading="lazy" width="800" height="600" />
             <p class="mt-4 text-xs text-muted">{card.category}</p>
-            <h3 class="mt-2 text-lg font-bold text-ink">{card.title}</h3>
+            <h3 class="mt-2 text-lg font-bold text-ink"><a class="transition hover:text-cocoa" href={`/blogs/${card.slug}/`}>{card.title}</a></h3>
             <p class="mt-2 text-sm leading-6 text-muted">{card.excerpt}</p>
           </article>
         ))}
@@ -148,16 +148,20 @@ const instagramReels = [
 
     <section id="reviews" class="py-12">
       <div class="flex flex-wrap items-center justify-between gap-6 px-2">
-        <h2 class="font-display text-4xl font-light uppercase tracking-tight">Voices of Customer</h2>
-        <Button href="/products/" variant="secondary">View all</Button>
+        <h2 class="font-display text-4xl font-light uppercase tracking-tight">Opiniones de clientes</h2>
+        <Button href="/reviews/" variant="secondary">Ver todo</Button>
       </div>
-      <div class="mt-6 grid gap-10 rounded-b-[2rem] bg-sand p-8 md:grid-cols-2 md:p-12">
-        <img class="aspect-[4/3] rounded-xl object-cover" src={testimonial.image} alt={`Sala de ${testimonial.name}`} loading="lazy" width="900" height="675" />
+      <div class="mt-6 grid gap-10 rounded-b-[2rem] bg-sand p-8 md:grid-cols-2 md:p-12" data-review-carousel>
+        <img class="review-image aspect-[4/3] rounded-xl object-cover" src={featuredReviews[0].image} alt={`Ambiente exterior de ${featuredReviews[0].name}`} loading="lazy" width="900" height="675" />
         <div class="flex flex-col justify-center">
-          <p class="font-semibold text-muted">@ {testimonial.name}</p>
-          <p class="mt-4 text-3xl text-orange-500" aria-label={`${testimonial.rating} estrellas`}>★★★★★</p>
-          <h3 class="mt-3 font-bold uppercase">{testimonial.product}</h3>
-          <p class="mt-5 max-w-xl leading-7 text-muted">{testimonial.quote}</p>
+          <p class="review-name font-semibold text-muted">@ {featuredReviews[0].name}</p>
+          <p class="review-rating mt-4 text-3xl text-orange-500" aria-label={`${featuredReviews[0].rating} estrellas`}>{'★'.repeat(featuredReviews[0].rating)}</p>
+          <h3 class="review-product mt-3 font-bold uppercase">{featuredReviews[0].product}</h3>
+          <p class="review-quote mt-5 max-w-xl leading-7 text-muted">{featuredReviews[0].quote}</p>
+          <div class="mt-6 flex gap-4">
+            <button class="review-prev inline-flex h-8 min-w-16 items-center justify-center rounded-pill border border-ink/15 bg-white text-2xl leading-none transition hover:border-ink hover:bg-sand" type="button" aria-label="Opinion anterior">←</button>
+            <button class="review-next inline-flex h-8 min-w-16 items-center justify-center rounded-pill border border-ink/15 bg-white text-2xl leading-none transition hover:border-ink hover:bg-sand" type="button" aria-label="Opinion siguiente">→</button>
+          </div>
         </div>
       </div>
     </section>
@@ -165,3 +169,39 @@ const instagramReels = [
     <ContactCallout />
   </Container>
 </MainLayout>
+
+<script define:vars={{ featuredReviews }}>
+  const reviewCarousel = document.querySelector('[data-review-carousel]');
+
+  if (reviewCarousel && featuredReviews.length > 0) {
+    const image = reviewCarousel.querySelector('.review-image');
+    const name = reviewCarousel.querySelector('.review-name');
+    const rating = reviewCarousel.querySelector('.review-rating');
+    const product = reviewCarousel.querySelector('.review-product');
+    const quote = reviewCarousel.querySelector('.review-quote');
+    const previousButton = reviewCarousel.querySelector('.review-prev');
+    const nextButton = reviewCarousel.querySelector('.review-next');
+    let activeIndex = 0;
+
+    const renderReview = () => {
+      const review = featuredReviews[activeIndex];
+      image.src = review.image;
+      image.alt = `Ambiente exterior de ${review.name}`;
+      name.textContent = `@ ${review.name}`;
+      rating.textContent = '★'.repeat(review.rating);
+      rating.setAttribute('aria-label', `${review.rating} estrellas`);
+      product.textContent = review.product;
+      quote.textContent = review.quote;
+    };
+
+    previousButton?.addEventListener('click', () => {
+      activeIndex = (activeIndex - 1 + featuredReviews.length) % featuredReviews.length;
+      renderReview();
+    });
+
+    nextButton?.addEventListener('click', () => {
+      activeIndex = (activeIndex + 1) % featuredReviews.length;
+      renderReview();
+    });
+  }
+</script>

@@ -1,0 +1,40 @@
+---
+import Button from '@/components/common/Button.astro';
+import Container from '@/components/common/Container.astro';
+import Breadcrumbs from '@/components/common/Breadcrumbs.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+import { blogCards } from '@/data/siteContent';
+
+export function getStaticPaths() {
+  return blogCards.map((blog) => ({
+    params: { slug: blog.slug },
+    props: { blog },
+  }));
+}
+
+const { blog } = Astro.props;
+---
+
+<MainLayout title={`${blog.title} | Milapro Home`} description={blog.excerpt}>
+  <Container class="py-14">
+    <Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: 'Blogs & Inspirations', href: '/blogs/' }, { label: blog.title }]} />
+
+    <article class="mt-8 overflow-hidden rounded-[2.4rem] bg-sand">
+      <img class="aspect-[16/9] w-full object-cover" src={blog.image} alt={blog.title} width="1200" height="675" />
+      <div class="mx-auto max-w-3xl px-6 py-10 md:px-10 md:py-14">
+        <p class="text-xs font-semibold uppercase tracking-wide text-cocoa">{blog.category}</p>
+        <h1 class="mt-4 font-display text-4xl font-light tracking-tight text-ink sm:text-5xl">{blog.title}</h1>
+        <p class="mt-5 text-lg leading-8 text-muted">{blog.excerpt}</p>
+
+        <div class="mt-10 space-y-6 text-base leading-8 text-muted">
+          {blog.content.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <Button href="/blogs/" variant="secondary">Volver a blogs</Button>
+          <Button href="/contact/">Solicitar asesoria</Button>
+        </div>
+      </div>
+    </article>
+  </Container>
+</MainLayout>

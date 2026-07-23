@@ -1,39 +1,30 @@
 ---
 import { navItems } from '@/data/siteContent';
 import Container from '@/components/common/Container.astro';
-import { Heart, Menu, Search, ShoppingBag, User, X } from 'lucide-astro';
+import { Menu, X } from 'lucide-astro';
 import logoSrc from '@/styles/images/Logo Mila.svg';
 ---
 
 <header class="sticky top-0 z-50 bg-white shadow-sm">
   <div class="bg-ink py-2 text-white">
     <Container class="flex items-center justify-center gap-3 text-xs font-bold">
-      <span>July Comfort Event - Up To $2000 Off</span>
+      <span>Oferta de verano - Hasta 50% de descuento</span>
       <a class="rounded-pill bg-aqua px-4 py-1 text-ink" href="/products/">Ver ofertas</a>
     </Container>
   </div>
-  <Container class="flex min-h-[82px] items-center justify-between gap-4">
+  <Container class="flex min-h-[82px] items-center justify-between gap-4 lg:grid lg:grid-cols-[188px_minmax(0,1fr)_128px]">
     <a href="/" class="inline-flex items-center" aria-label="Milapro Home">
       <img class="h-auto w-[188px] max-w-[42vw]" src={logoSrc} alt="Milapro Home" width="188" height="25" />
     </a>
-    <nav class="hidden items-center gap-[34px] text-sm font-bold text-[#332b1e] lg:flex" aria-label="Navegacion principal">
+    <nav class="hidden items-center gap-[34px] text-sm font-bold text-[#332b1e] lg:flex lg:justify-self-center" aria-label="Navegacion principal">
       {
         navItems.map((item) => (
           <a class="transition hover:text-cocoa" href={item.href}>
-            {item.label === 'July Comfort Event' && <span aria-hidden="true">&#128293; </span>}
             {item.label}
-            {item.label === 'Reclining Couch' && <span class="ml-1.5 inline-flex rounded-full bg-[#ef4d5b] px-2 py-0.5 align-middle text-[11px] font-black leading-none text-white">NEW</span>}
-            {['Modular Products', 'Reclining Couch', 'July Comfort Event', 'About Us'].includes(item.label) && <span class="ml-1.5 text-[15px]" aria-hidden="true">&#8964;</span>}
           </a>
         ))
       }
     </nav>
-    <div class="hidden items-center gap-4 lg:flex" aria-label="Acciones">
-      <a href="/products/" aria-label="Buscar"><Search size={20} /></a>
-      <a href="/products/" aria-label="Favoritos"><Heart size={20} /></a>
-      <a href="/contact/" aria-label="Cuenta demo"><User size={20} /></a>
-      <a href="/contact/" aria-label="Solicitud"><ShoppingBag size={20} /></a>
-    </div>
     <button class="grid h-11 w-11 place-items-center rounded-full border border-ink/15 lg:hidden" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu"><Menu size={22} /></button>
   </Container>
   <div id="mobile-menu" class="hidden border-t border-ink/10 bg-white lg:hidden" data-mobile-menu>
