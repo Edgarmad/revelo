@@ -2,19 +2,31 @@
 import { navItems } from '@/data/siteContent';
 import Container from '@/components/common/Container.astro';
 import { Heart, Menu, Search, ShoppingBag, User, X } from 'lucide-astro';
+import logoSrc from '@/styles/images/Logo Mila.svg';
 ---
 
-<header class="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur">
+<header class="sticky top-0 z-50 bg-white shadow-sm">
   <div class="bg-ink py-2 text-white">
     <Container class="flex items-center justify-center gap-3 text-xs font-bold">
       <span>July Comfort Event - Up To $2000 Off</span>
       <a class="rounded-pill bg-aqua px-4 py-1 text-ink" href="/products/">Ver ofertas</a>
     </Container>
   </div>
-  <Container class="flex min-h-16 items-center justify-between gap-4">
-    <a href="/" class="font-display text-2xl font-black uppercase leading-none tracking-tight text-teal-800">Linsy<br />Home</a>
-    <nav class="hidden items-center gap-7 text-sm font-bold lg:flex" aria-label="Navegacion principal">
-      {navItems.map((item) => <a class="transition hover:text-cocoa" href={item.href}>{item.label}</a>)}
+  <Container class="flex min-h-[82px] items-center justify-between gap-4">
+    <a href="/" class="inline-flex items-center" aria-label="Milapro Home">
+      <img class="h-auto w-[188px] max-w-[42vw]" src={logoSrc} alt="Milapro Home" width="188" height="25" />
+    </a>
+    <nav class="hidden items-center gap-[34px] text-sm font-bold text-[#332b1e] lg:flex" aria-label="Navegacion principal">
+      {
+        navItems.map((item) => (
+          <a class="transition hover:text-cocoa" href={item.href}>
+            {item.label === 'July Comfort Event' && <span aria-hidden="true">&#128293; </span>}
+            {item.label}
+            {item.label === 'Reclining Couch' && <span class="ml-1.5 inline-flex rounded-full bg-[#ef4d5b] px-2 py-0.5 align-middle text-[11px] font-black leading-none text-white">NEW</span>}
+            {['Modular Products', 'Reclining Couch', 'July Comfort Event', 'About Us'].includes(item.label) && <span class="ml-1.5 text-[15px]" aria-hidden="true">&#8964;</span>}
+          </a>
+        ))
+      }
     </nav>
     <div class="hidden items-center gap-4 lg:flex" aria-label="Acciones">
       <a href="/products/" aria-label="Buscar"><Search size={20} /></a>

@@ -1,12 +1,12 @@
 import type { BlogCard, NavItem, Testimonial } from '@/types/site';
 
 export const navItems: NavItem[] = [
-  { label: 'Productos modulares', href: '/products/' },
-  { label: 'Reclinables', href: '/categories/reclinables/' },
-  { label: 'Summer sale', href: '/categories/exterior/' },
+  { label: 'Modular Products', href: '/products/' },
+  { label: 'Reclining Couch', href: '/categories/reclinables/' },
+  { label: 'July Comfort Event', href: '/categories/exterior/' },
   { label: 'Reviews', href: '/#reviews' },
-  { label: 'About us', href: '/about/' },
-  { label: 'Free swatches', href: '/contact/' },
+  { label: 'About Us', href: '/about/' },
+  { label: 'Free Swatches', href: '/contact/' },
 ];
 
 export const testimonials: Testimonial[] = [

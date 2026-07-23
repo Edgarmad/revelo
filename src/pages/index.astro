@@ -10,6 +10,7 @@ import { getFeaturedCategories } from '@/services/categoryService';
 import { getFeaturedProducts } from '@/services/productService';
 import { blogCards, socialGallery, testimonials } from '@/data/siteContent';
 import { CreditCard, RotateCcw, ShieldCheck, Truck } from 'lucide-astro';
+import bgSrc from '@/styles/images/bg.webp';
 
 const categories = getFeaturedCategories();
 const products = getFeaturedProducts(4);
@@ -18,8 +19,8 @@ const testimonial = testimonials[0];
 
 <MainLayout title="Linsy Home | Catalogo visual de muebles modulares" description="MVP visual de catalogo premium inspirado en Linsy Home, con sofas modulares, reclinables y muebles para sala.">
   <section class="relative min-h-[520px] overflow-hidden">
-    <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85" alt="Comedor exterior frente al mar" width="1800" height="1000" />
-    <div class="absolute inset-0 bg-black/45"></div>
+    <img class="absolute inset-0 h-full w-full object-none" src={bgSrc} alt="Comedor exterior frente al mar" width="1800" height="1000" />
+    <div class="absolute inset-0"></div>
     <Container class="relative grid min-h-[520px] place-items-center py-20 text-center text-white">
       <div>
         <h1 class="font-display text-5xl font-black uppercase leading-none tracking-tight sm:text-7xl lg:text-8xl">Summer Sale</h1>
