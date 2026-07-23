@@ -4,19 +4,17 @@ import Newsletter from '@/components/sections/Newsletter.astro';
 import { Facebook, Instagram, Youtube } from 'lucide-astro';
 ---
 
-<footer class="mt-20">
-  <Container>
-    <div class="relative rounded-t-[2rem] bg-ink px-8 pb-12 pt-20 text-white md:px-14">
-      <div class="absolute -top-10 left-8 rounded-[1.5rem] bg-aqua px-12 py-5 font-display text-3xl font-black uppercase leading-none text-teal-900 md:left-36">Milapro<br />Home</div>
-      <div class="grid gap-10 md:grid-cols-4">
-        <div><h3 class="font-bold uppercase tracking-wide">Catalogo</h3><ul class="mt-6 grid gap-3 text-sm text-white/75"><li>Rattan sintetico</li><li>Plastico</li><li>Aluminio</li><li>Sombrillas</li></ul></div>
-        <div><h3 class="font-bold uppercase tracking-wide">Explora</h3><ul class="mt-6 grid gap-3 text-sm text-white/75"><li><a href="/about/">Acerca de</a></li><li>Proyectos a la medida</li><li>Pergolas</li><li>Plantas</li></ul></div>
-        <div><h3 class="font-bold uppercase tracking-wide">Atencion</h3><ul class="mt-6 grid gap-3 text-sm text-white/75"><li><a href="/#reviews">Opiniones</a></li><li>Asesoria personalizada</li><li>Alianzas comerciales</li><li>Soporte al cliente</li></ul></div>
-        <div><h3 class="font-bold uppercase tracking-wide">Politicas</h3><ul class="mt-6 grid gap-3 text-sm text-white/75"><li>Garantia</li><li>Envios</li><li>Privacidad</li><li>Devoluciones</li></ul></div>
-      </div>
+<footer class="mt-28">
+  <div class="relative overflow-visible rounded-t-[3rem] bg-ink px-5 pb-20 pt-28 text-white sm:px-10 lg:px-16 lg:pb-24 lg:pt-32">
+    <div class="absolute -top-12 left-8 rounded-[2rem] bg-aqua px-12 py-5 font-display text-3xl font-black uppercase leading-none text-teal-900 sm:left-20 md:px-16 md:text-4xl lg:left-36">Milapro<br />Home</div>
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-24">
+      <div><h3 class="text-xl font-medium uppercase tracking-wide">Catalogo</h3><ul class="mt-12 grid gap-5 text-base text-white"><li class="footer-link-marker footer-link-marker-orange">Rattan sintetico</li><li class="footer-link-marker footer-link-marker-orange">Plastico</li><li class="footer-link-marker footer-link-marker-orange">Aluminio</li><li class="footer-link-marker footer-link-marker-orange">Sombrillas</li></ul></div>
+      <div><h3 class="text-xl font-medium uppercase tracking-wide">Explora</h3><ul class="mt-12 grid gap-5 text-base text-white"><li class="footer-link-marker"><a href="/about/">Acerca de</a></li><li class="footer-link-marker">Proyectos a la medida</li><li class="footer-link-marker">Pergolas</li><li class="footer-link-marker">Plantas</li></ul></div>
+      <div><h3 class="text-xl font-medium uppercase tracking-wide">Atencion</h3><ul class="mt-12 grid gap-5 text-base text-white"><li class="footer-link-marker"><a href="/#reviews">Opiniones</a></li><li class="footer-link-marker">Asesoria personalizada</li><li class="footer-link-marker">Alianzas comerciales</li><li class="footer-link-marker">Soporte al cliente</li></ul></div>
+      <div><h3 class="text-xl font-medium uppercase tracking-wide">Politicas</h3><ul class="mt-12 grid gap-5 text-base text-white"><li class="footer-link-marker">Garantia</li><li class="footer-link-marker">Envios</li><li class="footer-link-marker">Privacidad</li><li class="footer-link-marker">Devoluciones</li></ul></div>
     </div>
-  </Container>
-  <div class="bg-sand py-8">
+  </div>
+  <div class="bg-sand py-10">
     <Container class="grid gap-6 md:grid-cols-[1fr_1fr_auto] md:items-center">
       <Newsletter />
       <p class="text-sm text-muted">Correo de atencion: ventas@milaprohome.com<br />Muebles para exterior, proyectos a la medida y alianzas comerciales.</p>
@@ -24,3 +22,25 @@ import { Facebook, Instagram, Youtube } from 'lucide-astro';
     </Container>
   </div>
 </footer>
+
+<style>
+  .footer-link-marker {
+    position: relative;
+    padding-left: 1.35rem;
+  }
+
+  .footer-link-marker::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 0.7rem;
+    height: 0.22rem;
+    border-radius: 999px;
+    background: rgb(var(--color-aqua));
+  }
+
+  .footer-link-marker-orange::before {
+    background: #f97316;
+  }
+</style>
