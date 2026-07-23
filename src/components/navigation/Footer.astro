@@ -1,7 +1,7 @@
 ---
 import Container from '@/components/common/Container.astro';
 import Newsletter from '@/components/sections/Newsletter.astro';
-import { Facebook, Instagram, Youtube } from 'lucide-astro';
+import { Facebook, Instagram } from 'lucide-astro';
 ---
 
 <footer class="mt-28">
@@ -18,7 +18,10 @@ import { Facebook, Instagram, Youtube } from 'lucide-astro';
     <Container class="grid gap-6 md:grid-cols-[1fr_1fr_auto] md:items-center">
       <Newsletter />
       <p class="text-sm text-muted">Correo de atencion: ventas@milaprohome.com<br />Muebles para exterior, proyectos a la medida y alianzas comerciales.</p>
-      <div class="flex gap-5 text-ink"><Facebook size={20} /><Instagram size={20} /><Youtube size={20} /></div>
+      <div class="flex gap-5 text-ink">
+        <a href="https://www.milaprohome.com/website/social/facebook" target="_blank" rel="noreferrer" aria-label="Facebook de Milapro Home"><Facebook size={20} /></a>
+        <a href="https://www.milaprohome.com/website/social/instagram" target="_blank" rel="noreferrer" aria-label="Instagram de Milapro Home"><Instagram size={20} /></a>
+      </div>
     </Container>
   </div>
 </footer>
