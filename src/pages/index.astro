@@ -4,13 +4,12 @@ import Button from '@/components/common/Button.astro';
 import SectionHeading from '@/components/common/SectionHeading.astro';
 import CategoryCard from '@/components/category/CategoryCard.astro';
 import ProductGrid from '@/components/product/ProductGrid.astro';
-import ContactCallout from '@/components/sections/ContactCallout.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { getFeaturedCategories } from '@/services/categoryService';
 import { getFeaturedProducts } from '@/services/productService';
 import { blogCards, customerReviews } from '@/data/siteContent';
 import { CreditCard, RotateCcw, ShieldCheck, Truck } from 'lucide-astro';
-import bgSrc from '@/styles/images/bg.webp';
+import bgSrc from '@/styles/images/bg.png';
 
 const categories = getFeaturedCategories();
 const products = getFeaturedProducts(4);
@@ -29,13 +28,13 @@ const instagramReels = [
 ---
 
 <MainLayout title="Milapro Home | Muebles para exterior" description="Catalogo visual de muebles para exterior, rattan sintetico, aluminio, plastico, sombrillas, pergolas y plantas.">
-  <section class="relative min-h-[520px] overflow-hidden">
-    <img class="absolute inset-0 h-full w-full object-none" src={bgSrc} alt="Comedor exterior frente al mar" width="1800" height="1000" />
+  <section class="relative min-h-[620px] overflow-hidden md:min-h-[720px]">
+    <img class="absolute inset-0 h-full w-full object-cover object-center" src={bgSrc} alt="Comedor exterior frente al mar" width="1800" height="1000" />
     <div class="absolute inset-0"></div>
-    <Container class="relative grid min-h-[520px] place-items-center py-20 text-center text-white">
+    <Container class="relative grid min-h-[620px] place-items-center py-24 text-center text-white md:min-h-[720px]">
       <div>
-        <h1 class="font-display text-5xl font-black uppercase leading-none tracking-tight sm:text-7xl lg:text-8xl">Oferta de verano</h1>
-        <p class="mt-2 text-3xl font-light uppercase sm:text-5xl">Hasta 50% de descuento</p>
+        <h1 class="font-display text-6xl font-black uppercase leading-none tracking-tight sm:text-8xl lg:text-9xl">Oferta de verano</h1>
+        <p class="mt-2 text-4xl font-light uppercase sm:text-6xl">Hasta 50% de descuento</p>
         <Button href="/products/" class="mt-6">Comprar ahora</Button>
       </div>
     </Container>
@@ -165,8 +164,6 @@ const instagramReels = [
         </div>
       </div>
     </section>
-
-    <ContactCallout />
   </Container>
 </MainLayout>
 

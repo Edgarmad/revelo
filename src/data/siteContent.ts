@@ -5,6 +5,7 @@ export const navItems: NavItem[] = [
   { label: '🔥 Productos', href: '/products/' },
   { label: 'Reviews', href: '/#reviews' },
   { label: 'About Us', href: '/about/' },
+  { label: 'Contacto', href: '/contact/' },
 ];
 
 export const customerReviews: CustomerReview[] = [
