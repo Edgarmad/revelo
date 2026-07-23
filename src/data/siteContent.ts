@@ -28,7 +28,7 @@ export const blogCards: BlogCard[] = [
   },
   {
     title: 'Texturas claras que si funcionan con familia y mascotas',
-    category: 'Linsy Home',
+    category: 'Milapro Home',
     image: 'https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=800&q=80',
     excerpt: 'Tapizados performance, tonos calidos y mantenimiento sencillo para el dia a dia.',
   },

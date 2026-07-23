@@ -20,7 +20,7 @@ if (!product) return Astro.redirect('/404/');
 const related = getRelatedProducts(product);
 ---
 
-<MainLayout title={`${product.name} | Linsy Home`} description={product.shortDescription}>
+<MainLayout title={`${product.name} | Milapro Home`} description={product.shortDescription}>
   <Container class="py-10">
     <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Products', href: '/products/' }, { label: product.name }]} />
     <div class="mt-8 grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">

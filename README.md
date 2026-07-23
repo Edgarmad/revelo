@@ -1,6 +1,6 @@
 # Revelo Catalog MVP
 
-Visual MVP de catalogo comercial inspirado en el PDF de referencia de Linsy Home. El proyecto usa Astro, TypeScript, Tailwind CSS, datos mock locales y salida estatica para HostGator.
+Visual MVP de catalogo comercial inspirado en el PDF de referencia de Milapro Home. El proyecto usa Astro, TypeScript, Tailwind CSS, datos mock locales y salida estatica para HostGator.
 
 ## Comandos
 

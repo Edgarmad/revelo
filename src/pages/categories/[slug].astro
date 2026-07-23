@@ -21,7 +21,7 @@ const categories = getAllCategories();
 const relatedCategories = categories.filter((item) => item.slug !== category.slug).slice(0, 4);
 ---
 
-<MainLayout title={`${category.name} | Linsy Home`} description={category.description}>
+<MainLayout title={`${category.name} | Milapro Home`} description={category.description}>
   <section class="relative overflow-hidden">
     <img class="absolute inset-0 h-full w-full object-cover" src={category.image} alt={category.name} width="1600" height="700" />
     <div class="absolute inset-0 bg-black/50"></div>
