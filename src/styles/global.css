@@ -38,6 +38,16 @@ img { max-width: 100%; display: block; }
   display: none;
 }
 
+@media (min-width: 1024px) {
+  .product-carousel {
+    scrollbar-width: none;
+  }
+
+  .product-carousel::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 :focus-visible {
   outline: 3px solid rgb(var(--color-aqua));
   outline-offset: 3px;

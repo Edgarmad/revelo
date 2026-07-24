@@ -3,17 +3,17 @@ import Container from '@/components/common/Container.astro';
 import Button from '@/components/common/Button.astro';
 import SectionHeading from '@/components/common/SectionHeading.astro';
 import CategoryCard from '@/components/category/CategoryCard.astro';
-import ProductGrid from '@/components/product/ProductGrid.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
-import { getFeaturedCategories } from '@/services/categoryService';
-import { getFeaturedProducts } from '@/services/productService';
+import { getAllCategories, getFeaturedCategories } from '@/services/categoryService';
+import { getAllProducts } from '@/services/productService';
 import { blogCards, customerReviews } from '@/data/siteContent';
-import { CreditCard, RotateCcw, ShieldCheck, Truck } from 'lucide-astro';
+import { CreditCard, RotateCcw, ShieldCheck, ShoppingBag, Truck } from 'lucide-astro';
 import bgSrc from '@/styles/images/bg.png';
 
 const categories = getFeaturedCategories(5);
-const productCategories = categories.filter((category) => ['plantas', 'aluminio', 'ratan', 'plastico', 'outlet'].includes(category.slug));
-const products = getFeaturedProducts(4);
+const productCategories = getAllCategories();
+const products = getAllProducts();
+const initialProductCategory = productCategories[0]?.slug;
 const featuredReviews = customerReviews.filter((review) => review.rating === 5);
 const instagramReels = [
   { url: 'https://www.instagram.com/milaprohome.mid/reel/DbE5EoXtMei/', tone: 'from-stone-200 via-stone-100 to-cocoa/50' },
@@ -64,21 +64,113 @@ const instagramReels = [
       </div>
     </section>
 
-    <section class="pb-16">
-      <div class="flex flex-wrap items-end justify-between gap-6">
-        <SectionHeading title="Nuestros productos" description="Colecciones para terrazas, jardines y proyectos comerciales con materiales resistentes al exterior." />
-        <Button href="/products/" variant="secondary">Ver todo</Button>
+    <section class="pb-20" data-product-section>
+      <div class="flex flex-wrap items-center justify-between gap-6">
+        <div>
+          <h2 class="font-display text-5xl font-light uppercase tracking-[0.08em] text-ink lg:text-6xl">Nuestros productos</h2>
+          <p class="mt-3 max-w-2xl leading-7 text-muted">Colecciones para terrazas, jardines y proyectos comerciales con materiales resistentes al exterior.</p>
+        </div>
+        <Button href="/products/">Ver todo</Button>
       </div>
-      <div class="mt-8 flex flex-wrap gap-3">
+
+      <div class="mt-8 flex flex-wrap gap-3" role="tablist" aria-label="Filtrar productos por categoria">
         {productCategories.map((category, index) => (
-          <a class={`rounded-pill px-4 py-2 text-xs font-semibold transition ${index === 0 ? 'bg-aqua text-ink' : 'bg-sand text-muted hover:text-ink'}`} href={`/categories/${category.slug}/`}>
+          <button class={`rounded-pill border px-5 py-2 text-xs font-semibold transition ${index === 0 ? 'border-aqua bg-aqua text-ink' : 'border-ink/30 bg-white text-muted hover:border-aqua hover:text-ink'}`} type="button" data-product-filter={category.slug} aria-selected={String(index === 0)}>
             {category.name}
-          </a>
+          </button>
         ))}
       </div>
-      <div class="mt-8"><ProductGrid products={products} /></div>
+
+      <div class="relative left-1/2 mt-8 w-screen -translate-x-1/2 overflow-hidden">
+        <div class="product-carousel flex snap-x snap-mandatory gap-8 overflow-x-auto px-6 pb-3 scroll-smooth lg:px-[max(2rem,calc((100vw-1180px)/2))]" tabindex="0" aria-label="Carrusel de productos">
+          {products.map((product) => {
+            const isInitial = initialProductCategory ? product.categories.includes(initialProductCategory) : true;
+
+            return (
+              <article class={`product-carousel-card group w-[78vw] max-w-[410px] shrink-0 snap-center rounded-[1.4rem] bg-[#f1f1f1] p-4 sm:w-[360px] ${isInitial ? '' : 'hidden'}`} data-product-card data-product-categories={product.categories.join(' ')}>
+                <a class="block" href={`/products/${product.slug}/`}>
+                  <div class="relative overflow-hidden rounded-xl bg-white">
+                    {product.badge && <span class="absolute left-3 top-3 z-10 bg-red-500 px-3 py-1 text-xs font-black text-white">{product.badge}</span>}
+                    <img class="aspect-[1.24/1] w-full object-cover transition duration-500 group-hover:scale-105" src={product.mainImage} alt={product.name} loading="lazy" width="700" height="565" />
+                  </div>
+                </a>
+                <div class="mt-5">
+                  <div class="flex items-start justify-between gap-3">
+                    <h3 class="min-h-10 text-sm font-medium leading-5 text-ink"><a class="hover:underline" href={`/products/${product.slug}/`}>{product.name}</a></h3>
+                    <a class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-aqua text-ink transition hover:bg-ink hover:text-white" href="/contact/" aria-label={`Solicitar informacion sobre ${product.name}`}><ShoppingBag size={17} /></a>
+                  </div>
+                  <div class="mt-3 flex items-center gap-2 text-sm">
+                    <span class="font-semibold text-ink">{product.price}</span>
+                    {product.compareAtPrice && <span class="text-muted line-through">{product.compareAtPrice}</span>}
+                  </div>
+                  {product.colors.length > 0 && (
+                    <div class="mt-4 flex gap-3" aria-label="Colores disponibles">
+                      {product.colors.slice(0, 6).map((color, index) => <span class={`h-7 w-7 rounded-full border ${index === 0 ? 'border-ink ring-2 ring-ink/20' : 'border-ink/10'}`} style={`background-color: ${color.hex}`} title={color.name}></span>)}
+                    </div>
+                  )}
+                  <a class="mt-5 flex min-h-11 items-center justify-between rounded-pill border border-ink/50 px-5 text-xs font-black uppercase tracking-wide transition hover:bg-ink hover:text-white" href={`/products/${product.slug}/`}>
+                    Ver detalle
+                    <span class="grid h-8 w-8 place-items-center rounded-full border border-current text-lg leading-none">↗</span>
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-center gap-4">
+        <button class="product-carousel-prev inline-flex h-8 min-w-16 items-center justify-center rounded-pill border border-ink/20 bg-white text-2xl leading-none transition hover:border-ink hover:bg-sand" type="button" aria-label="Productos anteriores">←</button>
+        <button class="product-carousel-next inline-flex h-8 min-w-16 items-center justify-center rounded-pill border border-ink/20 bg-white text-2xl leading-none transition hover:border-ink hover:bg-sand" type="button" aria-label="Productos siguientes">→</button>
+      </div>
     </section>
   </Container>
+
+  <script is:inline>
+    const productSection = document.querySelector('[data-product-section]');
+    const productCarousel = productSection?.querySelector('.product-carousel');
+    const productFilters = productSection?.querySelectorAll('[data-product-filter]') ?? [];
+    const productCards = productSection?.querySelectorAll('[data-product-card]') ?? [];
+    const productPreviousButton = productSection?.querySelector('.product-carousel-prev');
+    const productNextButton = productSection?.querySelector('.product-carousel-next');
+
+    const scrollProducts = (direction) => {
+      if (!productCarousel) return;
+      const firstVisibleCard = productCarousel.querySelector('[data-product-card]:not(.hidden)');
+      const distance = firstVisibleCard ? firstVisibleCard.getBoundingClientRect().width + 32 : 392;
+      productCarousel.scrollBy({ left: direction * distance, behavior: 'smooth' });
+    };
+
+    const setProductCategory = (category) => {
+      productFilters.forEach((filter) => {
+        const isActive = filter.getAttribute('data-product-filter') === category;
+        filter.setAttribute('aria-selected', String(isActive));
+        filter.classList.toggle('border-aqua', isActive);
+        filter.classList.toggle('bg-aqua', isActive);
+        filter.classList.toggle('text-ink', isActive);
+        filter.classList.toggle('border-ink/30', !isActive);
+        filter.classList.toggle('bg-white', !isActive);
+        filter.classList.toggle('text-muted', !isActive);
+      });
+
+      productCards.forEach((card) => {
+        const categories = card.getAttribute('data-product-categories') ?? '';
+        card.classList.toggle('hidden', !categories.split(' ').includes(category));
+      });
+
+      productCarousel?.scrollTo({ left: 0, behavior: 'smooth' });
+    };
+
+    productFilters.forEach((filter) => {
+      filter.addEventListener('click', () => {
+        const category = filter.getAttribute('data-product-filter');
+        if (category) setProductCategory(category);
+      });
+    });
+
+    productPreviousButton?.addEventListener('click', () => scrollProducts(-1));
+    productNextButton?.addEventListener('click', () => scrollProducts(1));
+  </script>
 
   <section class="relative mt-10 overflow-hidden rounded-t-[3rem] bg-aqua px-5 py-14 sm:px-8 md:py-20 lg:px-12">
     <div class="mx-auto max-w-[1800px]">
