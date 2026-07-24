@@ -8,12 +8,12 @@ interface Props {
 const { category } = Astro.props;
 ---
 
-<a href={`/categories/${category.slug}/`} class="group block">
+<a href={`/categories/${category.slug}/`} class="group block w-[154px] shrink-0 snap-start sm:w-auto">
   <div class="overflow-hidden rounded-xl bg-sand">
-    <img class="aspect-[4/5] h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]" src={category.image} alt={`Ambiente de ${category.name}`} loading="lazy" width="900" height="1125" />
+    <img class="aspect-square h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:aspect-[4/5]" src={category.image} alt={`Ambiente de ${category.name}`} loading="lazy" width="900" height="1125" />
   </div>
   <div class="mt-4 text-center">
-    <p class="text-xs font-extrabold uppercase tracking-wide text-ink">{category.eyebrow}</p>
+    <p class="text-sm font-extrabold uppercase tracking-wide text-ink sm:text-xs">{category.eyebrow}</p>
     <p class="mt-1 text-sm text-muted">{category.name}</p>
   </div>
 </a>

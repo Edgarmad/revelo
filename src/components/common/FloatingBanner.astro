@@ -47,7 +47,7 @@ import bannerImage from '@/styles/images/banner_img.jpeg';
     position: fixed;
     inset: 0;
     z-index: 100;
-    display: grid;
+    display: none;
     place-items: center;
     padding: 18px;
   }
@@ -198,6 +198,7 @@ import bannerImage from '@/styles/images/banner_img.jpeg';
 
   @media (min-width: 900px) {
     .floating-banner {
+      display: grid;
       padding: 32px;
     }
 

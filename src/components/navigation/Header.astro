@@ -1,7 +1,7 @@
 ---
 import { navItems } from '@/data/siteContent';
 import Container from '@/components/common/Container.astro';
-import { ChevronDown, Menu, X } from 'lucide-astro';
+import { ChevronDown, Menu, Search, ShoppingBag, X } from 'lucide-astro';
 import { getAllCategories } from '@/services/categoryService';
 import { getFeaturedProducts } from '@/services/productService';
 import logoSrc from '@/styles/images/Logo Mila.svg';
@@ -14,14 +14,15 @@ const menuProducts = getFeaturedProducts(4);
 
 <header class="sticky top-0 z-50 bg-white shadow-sm">
   <div class="bg-ink py-2 text-white">
-    <Container class="flex items-center justify-center gap-3 text-xs font-bold">
+    <Container class="flex items-center justify-center gap-3 overflow-hidden whitespace-nowrap text-xs font-bold">
       <span>Oferta de verano - Hasta 50% de descuento</span>
       <a class="rounded-pill bg-aqua px-4 py-1 text-ink" href="/products/">Ver ofertas</a>
     </Container>
   </div>
-  <Container class="flex min-h-[82px] items-center justify-between gap-4 lg:grid lg:grid-cols-[188px_minmax(0,1fr)_128px]">
-    <a href="/" class="inline-flex items-center" aria-label="Milapro Home">
-      <img class="h-auto w-[188px] max-w-[42vw]" src={logoSrc} alt="Milapro Home" width="188" height="25" />
+  <Container class="grid min-h-[56px] grid-cols-[48px_minmax(0,1fr)_96px] items-center gap-2 bg-white shadow-[0_6px_14px_rgb(35_31_28/0.12)] lg:min-h-[82px] lg:grid-cols-[188px_minmax(0,1fr)_128px] lg:gap-4 lg:shadow-none">
+    <button class="grid h-11 w-11 place-items-center justify-self-start text-ink lg:hidden" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><Menu size={25} /></button>
+    <a href="/" class="inline-flex items-center justify-self-center lg:justify-self-start" aria-label="Milapro Home">
+      <img class="h-auto w-[78px] lg:w-[188px] lg:max-w-[42vw]" src={logoSrc} alt="Milapro Home" width="188" height="25" />
     </a>
     <nav class="hidden items-center gap-[34px] text-sm font-bold text-[#332b1e] lg:flex lg:justify-self-center" aria-label="Navegación principal">
       {
@@ -104,19 +105,36 @@ const menuProducts = getFeaturedProducts(4);
       }
     </nav>
     <a class="hidden h-11 items-center justify-center rounded-pill bg-aqua px-6 text-sm font-black uppercase text-ink transition hover:bg-ink hover:text-white lg:inline-flex" href="/contact/">Contactar</a>
-    <button class="grid h-11 w-11 place-items-center rounded-full border border-ink/15 lg:hidden" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><Menu size={22} /></button>
+    <div class="flex items-center justify-self-end lg:hidden">
+      <a class="grid h-11 w-11 place-items-center text-ink" href="/products/" aria-label="Buscar productos"><Search size={22} /></a>
+      <a class="grid h-11 w-11 place-items-center text-ink" href="/contact/" aria-label="Solicitar productos"><ShoppingBag size={22} /></a>
+    </div>
   </Container>
-  <div id="mobile-menu" class="hidden border-t border-ink/10 bg-white lg:hidden" data-mobile-menu>
-    <Container class="py-5">
-      <div class="mb-4 flex items-center justify-between">
-        <span class="font-bold">Menú</span>
-        <button class="grid h-10 w-10 place-items-center rounded-full border border-ink/15" type="button" data-menu-close aria-label="Cerrar menú"><X size={20} /></button>
+  <div id="mobile-menu" class="fixed inset-0 top-0 z-[60] hidden bg-ink/45 pt-[33vh] lg:hidden" data-mobile-menu>
+    <div class="mx-6 flex min-h-[62vh] flex-col overflow-hidden rounded-t-xl bg-white shadow-2xl">
+      <div class="flex min-h-[60px] items-center justify-center gap-3 bg-[#f7f7f7] text-sm uppercase text-ink">
+        <button class="inline-flex items-center gap-3" type="button" data-menu-close aria-label="Cerrar menú"><X size={28} /> Close</button>
       </div>
-      <nav class="grid gap-3 text-base font-bold" aria-label="Navegación móvil">
-        {navItems.map((item) => <a class="rounded-xl bg-sand px-4 py-3" href={item.href}>{item.label}</a>)}
-        <a class="rounded-xl bg-aqua px-4 py-3 text-center font-black uppercase text-ink" href="/contact/">Contactar</a>
+      <nav class="grid gap-4 px-6 py-8 text-xl font-black text-ink" aria-label="Navegación móvil" data-mobile-menu-main>
+        <button class="flex items-center justify-between text-left" type="button" data-mobile-submenu-open="products"><span>Muebles para exterior</span><span class="grid h-6 min-w-16 place-items-center rounded-pill bg-aqua text-2xl font-light leading-none">→</span></button>
+        <a class="flex items-center justify-between" href="/products/"><span>🔥 Productos</span><span class="grid h-6 min-w-16 place-items-center rounded-pill bg-aqua text-2xl font-light leading-none">→</span></a>
+        <a href="/#reviews">Opiniones</a>
+        <a class="flex items-center justify-between" href="/about/"><span>Acerca de</span><span class="grid h-6 min-w-16 place-items-center rounded-pill bg-aqua text-2xl font-light leading-none">→</span></a>
+        <a href="/contact/">Contacto</a>
       </nav>
-    </Container>
+      <nav class="hidden px-6 py-8 text-ink" aria-label="Categorías móviles" data-mobile-menu-submenu>
+        <button class="mb-5 inline-flex items-center gap-3 text-base font-bold text-muted" type="button" data-mobile-submenu-back><span class="text-2xl leading-none">‹</span> Muebles para exterior</button>
+        <div class="grid gap-7">
+          {productCategories.map((category) => (
+            <a class="flex items-center justify-between text-2xl font-black uppercase" href={`/categories/${category.slug}/`}>
+              {category.name}
+              <span class="grid h-9 w-9 place-items-center rounded-full border border-ink/80 text-xl font-light leading-none">↗</span>
+            </a>
+          ))}
+        </div>
+      </nav>
+      <div class="mt-auto border-t border-ink/10 px-6 py-8 text-center text-sm text-muted">ventas@milaprohome.com</div>
+    </div>
   </div>
 </header>
 
@@ -157,12 +175,29 @@ const menuProducts = getFeaturedProducts(4);
     });
   });
 
+  const mobileMainMenu = menu?.querySelector<HTMLElement>('[data-mobile-menu-main]');
+  const mobileSubmenu = menu?.querySelector<HTMLElement>('[data-mobile-menu-submenu]');
+
   const setOpen = (open: boolean) => {
     menu?.classList.toggle('hidden', !open);
     toggle?.setAttribute('aria-expanded', String(open));
+    document.documentElement.classList.toggle('overflow-hidden', open);
+    if (!open) {
+      mobileSubmenu?.classList.add('hidden');
+      mobileMainMenu?.classList.remove('hidden');
+    }
   };
   toggle?.addEventListener('click', () => setOpen(menu?.classList.contains('hidden') ?? true));
   close?.addEventListener('click', () => setOpen(false));
+
+  menu?.querySelector<HTMLElement>('[data-mobile-submenu-open]')?.addEventListener('click', () => {
+    mobileMainMenu?.classList.add('hidden');
+    mobileSubmenu?.classList.remove('hidden');
+  });
+  menu?.querySelector<HTMLElement>('[data-mobile-submenu-back]')?.addEventListener('click', () => {
+    mobileSubmenu?.classList.add('hidden');
+    mobileMainMenu?.classList.remove('hidden');
+  });
 </script>
 
 <style>
