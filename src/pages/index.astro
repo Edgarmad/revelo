@@ -16,15 +16,15 @@ const products = getAllProducts();
 const initialProductCategory = productCategories[0]?.slug;
 const featuredReviews = customerReviews.filter((review) => review.rating === 5);
 const instagramReels = [
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DbE5EoXtMei/', tone: 'from-stone-200 via-stone-100 to-cocoa/50' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/Da6HAhoJtuT/', tone: 'from-sand via-white to-aqua/30' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DaLX89wR8Gn/', tone: 'from-cocoa/30 via-sand to-stone-200' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DTl0X5QD12n/', tone: 'from-zinc-200 via-sand to-cocoa/40' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DUJOXy7kdGP/', tone: 'from-white via-sand to-aqua/40' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DRU30uZgfVq/', tone: 'from-stone-100 via-white to-zinc-300' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DPouY0NklzU/', tone: 'from-cocoa/40 via-sand to-white' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DPUBKIkjWwX/', tone: 'from-aqua/30 via-white to-sand' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DOWnTiViefZ/', tone: 'from-zinc-300 via-stone-100 to-cocoa/30' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DbE5EoXtMei/', thumbnail: '/instagram-reels/reel-01.jpg' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/Da6HAhoJtuT/', thumbnail: '/instagram-reels/reel-02.jpg' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DaLX89wR8Gn/', thumbnail: '/instagram-reels/reel-03.jpg' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DTl0X5QD12n/', thumbnail: '/instagram-reels/reel-04.jpg' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DUJOXy7kdGP/', thumbnail: '/instagram-reels/reel-05.jpg' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DRU30uZgfVq/', thumbnail: '/instagram-reels/reel-06.jpg' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DPouY0NklzU/', thumbnail: '/instagram-reels/reel-07.jpg' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DPUBKIkjWwX/', thumbnail: '/instagram-reels/reel-08.jpg' },
+  { url: 'https://www.instagram.com/milaprohome.mid/reel/DOWnTiViefZ/', thumbnail: '/instagram-reels/reel-09.jpg' },
 ];
 ---
 
@@ -182,12 +182,14 @@ const instagramReels = [
         <div class="instagram-carousel mx-auto flex max-w-[1080px] snap-x snap-mandatory gap-4 overflow-x-auto pb-2 scroll-smooth" tabindex="0" aria-label="Videos de Instagram de Milapro Home">
           {instagramReels.map((reel, index) => (
             <a
-              class={`group relative aspect-[9/16] w-[44vw] max-w-[190px] shrink-0 snap-start overflow-hidden rounded-xl bg-gradient-to-br ${reel.tone} shadow-sm ring-1 ring-ink/10 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:w-[180px] lg:w-[190px]`}
+              class="group relative aspect-[9/16] w-[44vw] max-w-[190px] shrink-0 snap-start overflow-hidden rounded-xl bg-ink shadow-sm ring-1 ring-ink/10 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:w-[180px] lg:w-[190px]"
               href={reel.url}
               target="_blank"
               rel="noreferrer"
               aria-label={`Ver reel ${index + 1} de Milapro Home en Instagram`}
             >
+              <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src={reel.thumbnail} alt={`Thumbnail del reel ${index + 1} de Milapro Home`} loading="lazy" width="720" height="1280" />
+              <span class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-ink/20" aria-hidden="true"></span>
               <span class="absolute left-2 top-2 rounded-full bg-white/75 px-2 py-1 text-[10px] font-bold text-ink shadow-sm backdrop-blur">@milaprohome.mid</span>
               <span class="absolute right-2 top-2 grid h-6 w-6 place-items-center rounded-full bg-white/70 text-ink shadow-sm backdrop-blur" aria-hidden="true">
                 <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
