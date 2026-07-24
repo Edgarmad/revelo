@@ -1,4 +1,9 @@
 import type { Category } from '@/types/category';
+import aluminioImage from '@/styles/images/aluminio.png';
+import outletImage from '@/styles/images/outlet.png';
+import plantasImage from '@/styles/images/plantas.png';
+import plasticoImage from '@/styles/images/plastico.png';
+import ratanImage from '@/styles/images/ratan.png';
 
 export const categories: Category[] = [
   {
@@ -7,7 +12,7 @@ export const categories: Category[] = [
     name: 'Plantas',
     eyebrow: 'Decoración exterior',
     description: 'Acentos verdes para completar ambientes frescos, naturales y funcionales.',
-    image: 'https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=900&q=80',
+    image: plantasImage,
     featured: true,
     displayOrder: 1,
   },
@@ -17,7 +22,7 @@ export const categories: Category[] = [
     name: 'Aluminio',
     eyebrow: 'Alta durabilidad',
     description: 'Muebles ligeros y resistentes para terrazas, jardines y espacios exteriores de uso diario.',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80',
+    image: aluminioImage,
     featured: true,
     displayOrder: 2,
   },
@@ -27,7 +32,7 @@ export const categories: Category[] = [
     name: 'Ratán',
     eyebrow: 'Muebles para exterior',
     description: 'Salas, sillones y comedores tejidos para terrazas, jardines y áreas sociales al aire libre.',
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80',
+    image: ratanImage,
     featured: true,
     displayOrder: 3,
   },
@@ -37,7 +42,7 @@ export const categories: Category[] = [
     name: 'Plástico',
     eyebrow: 'Muebles para exterior',
     description: 'Piezas prácticas, fáciles de limpiar y resistentes para áreas exteriores de alto uso.',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80',
+    image: plasticoImage,
     featured: true,
     displayOrder: 4,
   },
@@ -47,7 +52,7 @@ export const categories: Category[] = [
     name: 'Outlet',
     eyebrow: 'Oportunidades especiales',
     description: 'Piezas seleccionadas con precios especiales para renovar espacios exteriores.',
-    image: 'https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80',
+    image: outletImage,
     featured: true,
     displayOrder: 5,
   },

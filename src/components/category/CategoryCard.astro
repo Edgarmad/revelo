@@ -10,7 +10,7 @@ const { category } = Astro.props;
 
 <a href={`/categories/${category.slug}/`} class="group block">
   <div class="overflow-hidden rounded-xl bg-sand">
-    <img class="aspect-[4/5] h-full w-full object-cover transition duration-500 group-hover:scale-105" src={category.image} alt={`Ambiente de ${category.name}`} loading="lazy" width="900" height="1125" />
+    <img class="aspect-[4/5] h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]" src={category.image} alt={`Ambiente de ${category.name}`} loading="lazy" width="900" height="1125" />
   </div>
   <div class="mt-4 text-center">
     <p class="text-xs font-extrabold uppercase tracking-wide text-ink">{category.eyebrow}</p>
