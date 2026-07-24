@@ -36,18 +36,18 @@ const related = getRelatedProducts(product);
         </div>
         <div class="mt-6 grid gap-3 text-sm text-muted sm:grid-cols-2">
           <p><strong class="text-ink">SKU:</strong> {product.sku}</p>
-          <p><strong class="text-ink">Disponibilidad:</strong> {product.available ? 'Disponible' : 'Proximamente'}</p>
-          <p><strong class="text-ink">Categoria:</strong> {product.category}</p>
+          <p><strong class="text-ink">Disponibilidad:</strong> {product.available ? 'Disponible' : 'Próximamente'}</p>
+          <p><strong class="text-ink">Categoría:</strong> {product.category}</p>
           <p><strong class="text-ink">Dimensiones:</strong> {product.dimensions}</p>
         </div>
-        <div class="mt-8 flex flex-wrap gap-3"><Button href="/contact/">Solicitar informacion</Button><Button href="/products/" variant="secondary">Volver al catalogo</Button></div>
+        <div class="mt-8 flex flex-wrap gap-3"><Button href="/contact/">Solicitar información</Button><Button href="/products/" variant="secondary">Volver al catálogo</Button></div>
       </section>
     </div>
     <section class="mt-14 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-      <div><SectionHeading title="Descripcion" description={product.description} /></div>
+      <div><SectionHeading title="Descripción" description={product.description} /></div>
       <ProductSpecifications specifications={product.specifications} />
     </section>
-    {related.length > 0 && <section class="mt-16"><SectionHeading title="Productos relacionados" description="Piezas de la misma familia o categoria." /><div class="mt-8"><ProductGrid products={related} /></div></section>}
+    {related.length > 0 && <section class="mt-16"><SectionHeading title="Productos relacionados" description="Piezas de la misma familia o categoría." /><div class="mt-8"><ProductGrid products={related} /></div></section>}
     <div class="mt-16"><ContactCallout /></div>
   </Container>
 </MainLayout>

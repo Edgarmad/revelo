@@ -4,21 +4,21 @@ import SectionHeading from '@/components/common/SectionHeading.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 ---
 
-<MainLayout title="Contacto | Milapro Home" description="Formulario visual para solicitar informacion de productos, colores y configuraciones.">
+<MainLayout title="Contacto | Milapro Home" description="Formulario visual para solicitar información de productos, colores y configuraciones.">
   <Container class="py-16">
     <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-      <SectionHeading eyebrow="Contactenos" title="Solicita informacion del producto" description="Compartenos los detalles de tu espacio y te ayudamos a elegir materiales, colores y configuracion." />
+      <SectionHeading eyebrow="Contáctenos" title="Solicita información del producto" description="Compártenos los detalles de tu espacio y te ayudamos a elegir materiales, colores y configuración." />
       <form id="contact-form" class="grid gap-5 rounded-[2rem] bg-sand p-6 md:p-8" novalidate>
         <div class="grid gap-5 md:grid-cols-2">
           <label class="grid gap-2 font-semibold">Nombre<input required name="name" class="min-h-12 rounded-xl border border-ink/15 px-4 font-normal" /></label>
-          <label class="grid gap-2 font-semibold">Correo electronico<input required type="email" name="email" class="min-h-12 rounded-xl border border-ink/15 px-4 font-normal" /></label>
-          <label class="grid gap-2 font-semibold">Telefono<input name="phone" class="min-h-12 rounded-xl border border-ink/15 px-4 font-normal" /></label>
-          <label class="grid gap-2 font-semibold">Producto de interes<input name="product" class="min-h-12 rounded-xl border border-ink/15 px-4 font-normal" placeholder="Sala exterior en rattan" /></label>
+          <label class="grid gap-2 font-semibold">Correo electrónico<input required type="email" name="email" class="min-h-12 rounded-xl border border-ink/15 px-4 font-normal" /></label>
+          <label class="grid gap-2 font-semibold">Teléfono<input name="phone" class="min-h-12 rounded-xl border border-ink/15 px-4 font-normal" /></label>
+          <label class="grid gap-2 font-semibold">Producto de interés<input name="product" class="min-h-12 rounded-xl border border-ink/15 px-4 font-normal" placeholder="Sala exterior en ratán" /></label>
         </div>
         <label class="grid gap-2 font-semibold">Asunto<input required name="subject" class="min-h-12 rounded-xl border border-ink/15 px-4 font-normal" /></label>
         <label class="grid gap-2 font-semibold">Mensaje<textarea required name="message" rows="5" class="rounded-xl border border-ink/15 p-4 font-normal"></textarea></label>
         <p class="hidden rounded-xl bg-aqua/30 p-4 text-sm font-semibold" data-form-success>Solicitud registrada. Pronto nos pondremos en contacto contigo.</p>
-        <p class="hidden rounded-xl bg-red-100 p-4 text-sm font-semibold text-red-800" data-form-error>Completa nombre, correo electronico, asunto y mensaje para continuar.</p>
+        <p class="hidden rounded-xl bg-red-100 p-4 text-sm font-semibold text-red-800" data-form-error>Completa nombre, correo electrónico, asunto y mensaje para continuar.</p>
         <button class="min-h-12 rounded-pill bg-ink px-8 text-sm font-extrabold uppercase tracking-wide text-white transition hover:bg-cocoa" type="submit">Enviar solicitud</button>
       </form>
     </div>

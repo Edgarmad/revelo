@@ -7,12 +7,12 @@ import MainLayout from '@/layouts/MainLayout.astro';
 import { blogCards } from '@/data/siteContent';
 ---
 
-<MainLayout title="Blogs & Inspirations | Milapro Home" description="Consejos e inspiracion para elegir muebles, materiales y soluciones para espacios exteriores.">
+<MainLayout title="Blogs e inspiraciones | Milapro Home" description="Consejos e inspiración para elegir muebles, materiales y soluciones para espacios exteriores.">
   <Container class="py-14">
-    <Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: 'Blogs & Inspirations' }]} />
+    <Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: 'Blogs e inspiraciones' }]} />
     <section class="mt-8 rounded-[2.4rem] bg-sand p-8 md:p-12">
       <div class="max-w-3xl">
-        <SectionHeading eyebrow="Milapro Home" title="Blogs & Inspirations" description="Guias practicas para transformar terrazas, jardines y proyectos comerciales con muebles de exterior funcionales y duraderos." />
+        <SectionHeading eyebrow="Milapro Home" title="Blogs e inspiraciones" description="Guías prácticas para transformar terrazas, jardines y proyectos comerciales con muebles de exterior funcionales y duraderos." />
       </div>
     </section>
 
@@ -26,7 +26,7 @@ import { blogCards } from '@/data/siteContent';
             <p class="text-xs font-semibold uppercase tracking-wide text-cocoa">{card.category}</p>
             <h2 class="mt-3 text-xl font-bold text-ink"><a class="transition hover:text-cocoa" href={`/blogs/${card.slug}/`}>{card.title}</a></h2>
             <p class="mt-3 text-sm leading-6 text-muted">{card.excerpt}</p>
-            <Button href={`/blogs/${card.slug}/`} variant="secondary" class="mt-6">Leer mas</Button>
+            <Button href={`/blogs/${card.slug}/`} variant="secondary" class="mt-6">Leer más</Button>
           </div>
         </article>
       ))}

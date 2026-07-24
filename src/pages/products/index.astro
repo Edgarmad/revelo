@@ -12,17 +12,17 @@ const products = getAllProducts();
 const categories = getAllCategories();
 ---
 
-<MainLayout title="Productos | Milapro Home" description="Explora muebles de exterior en rattan sintetico, plastico, aluminio, sombrillas, pergolas y plantas.">
+<MainLayout title="Productos | Milapro Home" description="Explora muebles de exterior en ratán sintético, plástico, aluminio, sombrillas, pérgolas y plantas.">
   <Container class="py-14">
-    <SectionHeading eyebrow="Catalogo" title="Nuestros productos" description="Filtra muebles y complementos para terrazas, jardines y proyectos comerciales." />
+    <SectionHeading eyebrow="Catálogo" title="Nuestros productos" description="Filtra muebles y complementos para terrazas, jardines y proyectos comerciales." />
     <div class="mt-8"><FilterControls categories={categories} /></div>
     <div class="mt-6 flex items-center justify-between text-sm text-muted">
       <span data-product-count>{products.length} productos</span>
       <label class="flex items-center gap-2">Ordenar
-        <select class="rounded-pill border border-ink/15 px-4 py-2"><option>Destacados</option><option>Precio de menor a mayor</option><option>Mas recientes</option></select>
+        <select class="rounded-pill border border-ink/15 px-4 py-2"><option>Destacados</option><option>Precio de menor a mayor</option><option>Más recientes</option></select>
       </label>
     </div>
     <div class="mt-8"><ProductGrid products={products} /></div>
-    <div class="mt-8" data-empty-state hidden><EmptyState title="No encontramos productos" description="Ajusta la busqueda, categoria, color o disponibilidad para ver mas opciones del catalogo." /></div>
+    <div class="mt-8" data-empty-state hidden><EmptyState title="No encontramos productos" description="Ajusta la búsqueda, categoría, color o disponibilidad para ver más opciones del catálogo." /></div>
   </Container>
 </MainLayout>

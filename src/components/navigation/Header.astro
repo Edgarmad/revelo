@@ -21,10 +21,10 @@ const menuProducts = getFeaturedProducts(4);
     <a href="/" class="inline-flex items-center" aria-label="Milapro Home">
       <img class="h-auto w-[188px] max-w-[42vw]" src={logoSrc} alt="Milapro Home" width="188" height="25" />
     </a>
-    <nav class="hidden items-center gap-[34px] text-sm font-bold text-[#332b1e] lg:flex lg:justify-self-center" aria-label="Navegacion principal">
+    <nav class="hidden items-center gap-[34px] text-sm font-bold text-[#332b1e] lg:flex lg:justify-self-center" aria-label="Navegación principal">
       {
         navItems.map((item) => {
-          if (item.label === 'Muebles De Exterior') {
+          if (item.label === 'Muebles de exterior') {
             return (
               <div class="py-8" data-mega-item>
                 <a class="inline-flex items-center gap-1 transition hover:text-aqua focus-visible:text-aqua" href={item.href} data-mega-trigger>
@@ -35,7 +35,7 @@ const menuProducts = getFeaturedProducts(4);
                   <Container class="grid gap-12 py-12 lg:grid-cols-[0.95fr_1.05fr]">
                     <div>
                       <p class="text-sm font-black uppercase tracking-[0.18em] text-aqua">Muebles de exterior</p>
-                      <h2 class="mt-4 font-display text-5xl font-light uppercase tracking-wide text-ink">Compra por categoria</h2>
+                      <h2 class="mt-4 font-display text-5xl font-light uppercase tracking-wide text-ink">Compra por categoría</h2>
                       <div class="mt-8 flex flex-wrap gap-3">
                         {menuCategories.map((category, index) => (
                           <a class={`rounded-pill border px-5 py-2 text-xs font-semibold transition ${index === 0 ? 'border-aqua bg-aqua text-ink' : 'border-ink/25 hover:border-aqua hover:text-aqua'}`} href={`/categories/${category.slug}/`}>
@@ -102,15 +102,15 @@ const menuProducts = getFeaturedProducts(4);
       }
     </nav>
     <a class="hidden h-11 items-center justify-center rounded-pill bg-aqua px-6 text-sm font-black uppercase text-ink transition hover:bg-ink hover:text-white lg:inline-flex" href="/contact/">Contactar</a>
-    <button class="grid h-11 w-11 place-items-center rounded-full border border-ink/15 lg:hidden" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu"><Menu size={22} /></button>
+    <button class="grid h-11 w-11 place-items-center rounded-full border border-ink/15 lg:hidden" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><Menu size={22} /></button>
   </Container>
   <div id="mobile-menu" class="hidden border-t border-ink/10 bg-white lg:hidden" data-mobile-menu>
     <Container class="py-5">
       <div class="mb-4 flex items-center justify-between">
-        <span class="font-bold">Menu</span>
-        <button class="grid h-10 w-10 place-items-center rounded-full border border-ink/15" type="button" data-menu-close aria-label="Cerrar menu"><X size={20} /></button>
+        <span class="font-bold">Menú</span>
+        <button class="grid h-10 w-10 place-items-center rounded-full border border-ink/15" type="button" data-menu-close aria-label="Cerrar menú"><X size={20} /></button>
       </div>
-      <nav class="grid gap-3 text-base font-bold" aria-label="Navegacion movil">
+      <nav class="grid gap-3 text-base font-bold" aria-label="Navegación móvil">
         {navItems.map((item) => <a class="rounded-xl bg-sand px-4 py-3" href={item.href}>{item.label}</a>)}
         <a class="rounded-xl bg-aqua px-4 py-3 text-center font-black uppercase text-ink" href="/contact/">Contactar</a>
       </nav>

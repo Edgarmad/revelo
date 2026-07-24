@@ -17,7 +17,7 @@ const { blog } = Astro.props;
 
 <MainLayout title={`${blog.title} | Milapro Home`} description={blog.excerpt}>
   <Container class="py-14">
-    <Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: 'Blogs & Inspirations', href: '/blogs/' }, { label: blog.title }]} />
+    <Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: 'Blogs e inspiraciones', href: '/blogs/' }, { label: blog.title }]} />
 
     <article class="mt-8 overflow-hidden rounded-[2.4rem] bg-sand">
       <img class="aspect-[16/9] w-full object-cover" src={blog.image} alt={blog.title} width="1200" height="675" />
@@ -32,7 +32,7 @@ const { blog } = Astro.props;
 
         <div class="mt-10 flex flex-wrap gap-4">
           <Button href="/blogs/" variant="secondary">Volver a blogs</Button>
-          <Button href="/contact/">Solicitar asesoria</Button>
+          <Button href="/contact/">Solicitar asesoría</Button>
         </div>
       </div>
     </article>

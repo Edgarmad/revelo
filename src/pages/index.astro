@@ -27,7 +27,7 @@ const instagramReels = [
 ];
 ---
 
-<MainLayout title="Milapro Home | Muebles para exterior" description="Catalogo visual de muebles para exterior, rattan sintetico, aluminio, plastico, sombrillas, pergolas y plantas.">
+<MainLayout title="Milapro Home | Muebles para exterior" description="Catálogo visual de muebles para exterior, ratán sintético, aluminio, plástico, sombrillas, pérgolas y plantas.">
   <section class="relative min-h-[620px] overflow-hidden md:min-h-[720px]">
     <img class="absolute inset-0 h-full w-full object-cover object-center" src={bgSrc} alt="Comedor exterior frente al mar" width="1800" height="1000" />
     <div class="absolute inset-0"></div>
@@ -43,10 +43,10 @@ const instagramReels = [
   <Container>
     <section class="grid border-b border-ink/10 py-10 sm:grid-cols-2 lg:grid-cols-4">
       {[
-        { icon: Truck, label: 'Envio disponible' },
-        { icon: ShieldCheck, label: 'Garantia de tres anos' },
+        { icon: Truck, label: 'Envío disponible' },
+        { icon: ShieldCheck, label: 'Garantía de tres años' },
         { icon: CreditCard, label: 'Pagos en cuotas' },
-        { icon: RotateCcw, label: 'Asesoria postventa' },
+        { icon: RotateCcw, label: 'Asesoría postventa' },
       ].map((benefit) => (
         <div class="flex flex-col items-center gap-3 border-ink/10 py-6 text-center lg:border-r last:border-r-0">
           <benefit.icon class="text-aqua" size={30} />
@@ -57,7 +57,7 @@ const instagramReels = [
 
     <section class="py-14">
       <h2 class="font-display text-4xl font-light tracking-tight text-ink sm:text-5xl">Milapro Home - Transforma tu exterior</h2>
-      <p class="mt-10 text-2xl font-light uppercase tracking-wide text-cocoa">Compra por categoria</p>
+      <p class="mt-10 text-2xl font-light uppercase tracking-wide text-cocoa">Compra por categoría</p>
       <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {categories.map((category) => <CategoryCard category={category} />)}
       </div>
@@ -69,7 +69,7 @@ const instagramReels = [
         <Button href="/products/" variant="secondary">Ver todo</Button>
       </div>
       <div class="mt-8 flex flex-wrap gap-3">
-        {['Rattan sintetico', 'Plastico', 'Aluminio', 'Sombrillas', 'Pergolas'].map((item, index) => <span class={`rounded-pill px-4 py-2 text-xs font-semibold ${index === 0 ? 'bg-aqua text-ink' : 'bg-sand text-muted'}`}>{item}</span>)}
+        {['Ratán sintético', 'Plástico', 'Aluminio', 'Sombrillas', 'Pérgolas'].map((item, index) => <span class={`rounded-pill px-4 py-2 text-xs font-semibold ${index === 0 ? 'bg-aqua text-ink' : 'bg-sand text-muted'}`}>{item}</span>)}
       </div>
       <div class="mt-8"><ProductGrid products={products} /></div>
     </section>
@@ -128,7 +128,7 @@ const instagramReels = [
   <Container>
     <section class="py-16">
       <div class="flex flex-wrap items-end justify-between gap-6">
-        <SectionHeading title="Blogs & Inspirations" description="Consejos para elegir materiales, crear sombra y transformar espacios exteriores con soluciones funcionales." />
+        <SectionHeading title="Blogs e inspiraciones" description="Consejos para elegir materiales, crear sombra y transformar espacios exteriores con soluciones funcionales." />
         <Button href="/blogs/">Ver todo</Button>
       </div>
       <div class="mt-8 grid gap-8 md:grid-cols-3">
@@ -157,8 +157,8 @@ const instagramReels = [
             <h3 class="review-product mt-5 font-black uppercase text-ink">{featuredReviews[0].product}</h3>
             <p class="review-quote mt-5 max-w-xl text-base leading-7 text-muted">{featuredReviews[0].quote}</p>
             <div class="mt-7 flex gap-4">
-              <button class="review-prev inline-flex h-8 min-w-16 items-center justify-center rounded-pill border border-ink/20 bg-white text-2xl leading-none transition hover:border-ink hover:bg-sand" type="button" aria-label="Opinion anterior">←</button>
-              <button class="review-next inline-flex h-8 min-w-16 items-center justify-center rounded-pill border border-ink/20 bg-white text-2xl leading-none transition hover:border-ink hover:bg-sand" type="button" aria-label="Opinion siguiente">→</button>
+              <button class="review-prev inline-flex h-8 min-w-16 items-center justify-center rounded-pill border border-ink/20 bg-white text-2xl leading-none transition hover:border-ink hover:bg-sand" type="button" aria-label="Opinión anterior">←</button>
+              <button class="review-next inline-flex h-8 min-w-16 items-center justify-center rounded-pill border border-ink/20 bg-white text-2xl leading-none transition hover:border-ink hover:bg-sand" type="button" aria-label="Opinión siguiente">→</button>
             </div>
           </div>
         </div>
