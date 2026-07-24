@@ -1,1 +1,0 @@
-import"./hoisted.dfe4a29a.js";document.querySelectorAll("[data-gallery]").forEach(a=>{const e=a.querySelector("[data-gallery-main]");a.querySelectorAll("[data-gallery-thumb]").forEach(r=>{r.addEventListener("click",()=>{e&&(e.src=r.dataset.galleryThumb??e.src)})})});

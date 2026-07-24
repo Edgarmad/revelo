@@ -26,12 +26,12 @@ const menuProducts = getFeaturedProducts(4);
         navItems.map((item) => {
           if (item.label === 'Muebles De Exterior') {
             return (
-              <div class="group py-8">
-                <a class="inline-flex items-center gap-1 transition group-hover:text-aqua focus-visible:text-aqua" href={item.href}>
+              <div class="py-8" data-mega-item>
+                <a class="inline-flex items-center gap-1 transition hover:text-aqua focus-visible:text-aqua" href={item.href} data-mega-trigger>
                   {item.label}
-                  <ChevronDown class="transition group-hover:rotate-180" size={14} />
+                  <ChevronDown class="transition" size={14} data-mega-chevron />
                 </a>
-                <div class="pointer-events-none absolute left-0 top-full w-full translate-y-2 border-t border-ink/10 bg-white opacity-0 shadow-2xl transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <div class="mega-menu-panel pointer-events-none absolute left-0 top-full w-full translate-y-2 border-t border-ink/10 bg-white opacity-0 shadow-2xl transition duration-200" data-mega-panel>
                   <Container class="grid gap-12 py-12 lg:grid-cols-[0.95fr_1.05fr]">
                     <div>
                       <p class="text-sm font-black uppercase tracking-[0.18em] text-aqua">Muebles de exterior</p>
@@ -60,12 +60,12 @@ const menuProducts = getFeaturedProducts(4);
 
           if (item.label === '🔥 Productos') {
             return (
-              <div class="group py-8">
-                <a class="inline-flex items-center gap-1 transition group-hover:text-aqua focus-visible:text-aqua" href={item.href}>
+              <div class="py-8" data-mega-item>
+                <a class="inline-flex items-center gap-1 transition hover:text-aqua focus-visible:text-aqua" href={item.href} data-mega-trigger>
                   {item.label}
-                  <ChevronDown class="transition group-hover:rotate-180" size={14} />
+                  <ChevronDown class="transition" size={14} data-mega-chevron />
                 </a>
-                <div class="pointer-events-none absolute left-0 top-full w-full translate-y-2 border-t border-ink/10 bg-white opacity-0 shadow-2xl transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <div class="mega-menu-panel pointer-events-none absolute left-0 top-full w-full translate-y-2 border-t border-ink/10 bg-white opacity-0 shadow-2xl transition duration-200" data-mega-panel>
                   <Container class="grid gap-12 py-12 lg:grid-cols-[0.95fr_1.05fr]">
                     <div>
                       <p class="text-sm font-black uppercase tracking-[0.18em] text-aqua">Productos</p>
@@ -122,6 +122,39 @@ const menuProducts = getFeaturedProducts(4);
   const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
   const close = document.querySelector<HTMLButtonElement>('[data-menu-close]');
   const menu = document.querySelector<HTMLElement>('[data-mobile-menu]');
+  const megaItems = document.querySelectorAll<HTMLElement>('[data-mega-item]');
+  let megaCloseTimer: ReturnType<typeof setTimeout> | undefined;
+
+  const closeMegaMenus = () => {
+    megaItems.forEach((item) => {
+      item.querySelector<HTMLElement>('[data-mega-trigger]')?.classList.remove('text-aqua');
+      item.querySelector<HTMLElement>('[data-mega-chevron]')?.classList.remove('rotate-180');
+      item.querySelector<HTMLElement>('[data-mega-panel]')?.classList.remove('mega-menu-panel-open');
+    });
+  };
+
+  const openMegaMenu = (item: HTMLElement) => {
+    window.clearTimeout(megaCloseTimer);
+    closeMegaMenus();
+    item.querySelector<HTMLElement>('[data-mega-trigger]')?.classList.add('text-aqua');
+    item.querySelector<HTMLElement>('[data-mega-chevron]')?.classList.add('rotate-180');
+    item.querySelector<HTMLElement>('[data-mega-panel]')?.classList.add('mega-menu-panel-open');
+  };
+
+  const scheduleMegaClose = () => {
+    window.clearTimeout(megaCloseTimer);
+    megaCloseTimer = window.setTimeout(closeMegaMenus, 500);
+  };
+
+  megaItems.forEach((item) => {
+    item.addEventListener('mouseenter', () => openMegaMenu(item));
+    item.addEventListener('mouseleave', scheduleMegaClose);
+    item.addEventListener('focusin', () => openMegaMenu(item));
+    item.addEventListener('focusout', (event) => {
+      if (!item.contains(event.relatedTarget as Node | null)) scheduleMegaClose();
+    });
+  });
+
   const setOpen = (open: boolean) => {
     menu?.classList.toggle('hidden', !open);
     toggle?.setAttribute('aria-expanded', String(open));
@@ -129,3 +162,11 @@ const menuProducts = getFeaturedProducts(4);
   toggle?.addEventListener('click', () => setOpen(menu?.classList.contains('hidden') ?? true));
   close?.addEventListener('click', () => setOpen(false));
 </script>
+
+<style>
+  .mega-menu-panel-open {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

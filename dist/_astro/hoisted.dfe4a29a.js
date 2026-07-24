@@ -1,1 +1,0 @@
-const t=document.querySelector("[data-menu-toggle]"),s=document.querySelector("[data-menu-close]"),n=document.querySelector("[data-mobile-menu]"),c=e=>{n?.classList.toggle("hidden",!e),t?.setAttribute("aria-expanded",String(e))};t?.addEventListener("click",()=>c(n?.classList.contains("hidden")??!0));s?.addEventListener("click",()=>c(!1));
