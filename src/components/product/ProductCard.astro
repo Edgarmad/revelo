@@ -24,7 +24,7 @@ const { product } = Astro.props;
       <span class="font-semibold text-ink">{product.price}</span>
       {product.compareAtPrice && <span class="text-muted line-through">{product.compareAtPrice}</span>}
     </div>
-    <div class="mt-3"><ProductColorSelector colors={product.colors} /></div>
+    {product.colors.length > 0 && <div class="mt-3"><ProductColorSelector colors={product.colors} /></div>}
     <div class="mt-4 flex items-center gap-2">
       <a class="flex min-h-11 flex-1 items-center justify-center rounded-pill border border-ink/40 bg-white px-4 text-xs font-extrabold uppercase tracking-wide transition hover:bg-ink hover:text-white" href={`/products/${product.slug}/`}>Ver detalle</a>
       <a class="grid h-11 w-11 place-items-center rounded-full bg-aqua text-ink transition hover:bg-ink hover:text-white" href="/contact/" aria-label={`Solicitar información sobre ${product.name}`}><ShoppingBag size={18} /></a>

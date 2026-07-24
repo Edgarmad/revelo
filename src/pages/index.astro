@@ -11,7 +11,8 @@ import { blogCards, customerReviews } from '@/data/siteContent';
 import { CreditCard, RotateCcw, ShieldCheck, Truck } from 'lucide-astro';
 import bgSrc from '@/styles/images/bg.png';
 
-const categories = getFeaturedCategories();
+const categories = getFeaturedCategories(5);
+const productCategories = categories.filter((category) => ['plantas', 'aluminio', 'ratan', 'plastico', 'outlet'].includes(category.slug));
 const products = getFeaturedProducts(4);
 const featuredReviews = customerReviews.filter((review) => review.rating === 5);
 const instagramReels = [
@@ -69,7 +70,11 @@ const instagramReels = [
         <Button href="/products/" variant="secondary">Ver todo</Button>
       </div>
       <div class="mt-8 flex flex-wrap gap-3">
-        {['Ratán sintético', 'Plástico', 'Aluminio', 'Sombrillas', 'Pérgolas'].map((item, index) => <span class={`rounded-pill px-4 py-2 text-xs font-semibold ${index === 0 ? 'bg-aqua text-ink' : 'bg-sand text-muted'}`}>{item}</span>)}
+        {productCategories.map((category, index) => (
+          <a class={`rounded-pill px-4 py-2 text-xs font-semibold transition ${index === 0 ? 'bg-aqua text-ink' : 'bg-sand text-muted hover:text-ink'}`} href={`/categories/${category.slug}/`}>
+            {category.name}
+          </a>
+        ))}
       </div>
       <div class="mt-8"><ProductGrid products={products} /></div>
     </section>

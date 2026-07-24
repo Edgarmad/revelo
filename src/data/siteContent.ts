@@ -1,7 +1,7 @@
 import type { BlogCard, CustomerReview, NavItem } from '@/types/site';
 
 export const navItems: NavItem[] = [
-  { label: 'Muebles de exterior', href: '/categories/exterior/' },
+  { label: 'Muebles para exterior', href: '/categories/ratan/' },
   { label: '🔥 Productos', href: '/products/' },
   { label: 'Opiniones', href: '/#reviews' },
   { label: 'Acerca de', href: '/about/' },
