@@ -1,0 +1,1 @@
+import"./hoisted.2de4783c.js";const t=document.querySelector("#contact-form"),r=document.querySelector("[data-form-success]"),c=document.querySelector("[data-form-error]");t?.addEventListener("submit",o=>{o.preventDefault();const e=t.checkValidity();r?.classList.toggle("hidden",!e),c?.classList.toggle("hidden",e),e||t.reportValidity()});

@@ -2,11 +2,14 @@
 import Container from '@/components/common/Container.astro';
 import Newsletter from '@/components/sections/Newsletter.astro';
 import { Facebook, Instagram } from 'lucide-astro';
+import logoSrc from '@/styles/images/Logo Mila.svg';
 ---
 
 <footer class="mt-28">
   <div class="relative overflow-visible rounded-t-[3rem] bg-ink px-5 pb-20 pt-28 text-white sm:px-10 lg:px-16 lg:pb-24 lg:pt-32">
-    <div class="absolute -top-12 left-8 rounded-[2rem] bg-aqua px-12 py-5 font-display text-3xl font-black uppercase leading-none text-teal-900 sm:left-20 md:px-16 md:text-4xl lg:left-36">Milapro<br />Home</div>
+    <div class="absolute -top-[38px] left-7 flex min-h-[94px] w-[228px] items-center justify-center rounded-[1.4rem] bg-aqua px-5 sm:left-14 lg:left-28">
+      <img class="h-auto w-[188px] max-w-[58vw]" src={logoSrc} alt="Milapro Home" width="188" height="25" />
+    </div>
     <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-24">
       <div><h3 class="text-xl font-medium uppercase tracking-wide">Catálogo</h3><ul class="mt-12 grid gap-5 text-base text-white"><li class="footer-link-marker footer-link-marker-orange">Ratán sintético</li><li class="footer-link-marker footer-link-marker-orange">Plástico</li><li class="footer-link-marker footer-link-marker-orange">Aluminio</li><li class="footer-link-marker footer-link-marker-orange">Sombrillas</li></ul></div>
       <div><h3 class="text-xl font-medium uppercase tracking-wide">Explora</h3><ul class="mt-12 grid gap-5 text-base text-white"><li class="footer-link-marker"><a href="/about/">Acerca de</a></li><li class="footer-link-marker">Proyectos a la medida</li><li class="footer-link-marker">Pérgolas</li><li class="footer-link-marker">Plantas</li></ul></div>

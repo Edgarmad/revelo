@@ -1,0 +1,233 @@
+---
+import { Mail, X } from 'lucide-astro';
+import bannerImage from '@/styles/images/banner_img.jpeg';
+---
+
+<div class="floating-banner" data-floating-banner role="dialog" aria-modal="true" aria-labelledby="floating-banner-title">
+  <div class="floating-banner__backdrop" data-floating-banner-close></div>
+  <section class="floating-banner__card">
+    <button class="floating-banner__close" type="button" data-floating-banner-close aria-label="Cerrar banner">
+      <X size={22} />
+    </button>
+
+    <img class="floating-banner__image" src={bannerImage} alt="Sala exterior con muebles Milapro Home" />
+
+    <div class="floating-banner__content">
+      <p class="floating-banner__eyebrow">Oferta por tiempo limitado</p>
+      <h2 id="floating-banner-title" class="floating-banner__title">Obtén hasta 50% OFF</h2>
+      <p class="floating-banner__text">Déjanos tu correo y recibe promociones, novedades y asesoría para renovar tus espacios exteriores.</p>
+
+      <form class="floating-banner__form" action="/contact/">
+        <label class="sr-only" for="floating-banner-email">Correo electrónico</label>
+        <input id="floating-banner-email" class="floating-banner__input" type="email" name="email" placeholder="E-mail" autocomplete="email" />
+        <button class="floating-banner__button" type="submit">
+          <Mail size={20} />
+          Suscribirme
+        </button>
+      </form>
+
+      <button class="floating-banner__no-thanks" type="button" data-floating-banner-close>No gracias</button>
+    </div>
+  </section>
+</div>
+
+<script>
+  const banner = document.querySelector<HTMLElement>('[data-floating-banner]');
+  const closeButtons = document.querySelectorAll<HTMLElement>('[data-floating-banner-close]');
+
+  closeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      banner?.classList.add('floating-banner--hidden');
+    });
+  });
+</script>
+
+<style>
+  .floating-banner {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+  }
+
+  .floating-banner--hidden {
+    display: none;
+  }
+
+  .floating-banner__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgb(35 31 28 / 0.62);
+    backdrop-filter: blur(2px);
+  }
+
+  .floating-banner__card {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 530px);
+    max-height: calc(100vh - 36px);
+    overflow: auto;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 24px 80px rgb(35 31 28 / 0.28);
+  }
+
+  .floating-banner__close {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    z-index: 2;
+    display: grid;
+    height: 42px;
+    width: 42px;
+    place-items: center;
+    border: 0;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.92);
+    color: rgb(var(--color-ink));
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgb(35 31 28 / 0.16);
+  }
+
+  .floating-banner__image {
+    width: 100%;
+    aspect-ratio: 1.08 / 1;
+    object-fit: cover;
+  }
+
+  .floating-banner__content {
+    padding: 28px 22px 24px;
+    text-align: center;
+  }
+
+  .floating-banner__eyebrow {
+    margin: 0 0 10px;
+    color: rgb(var(--color-cocoa));
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .floating-banner__title {
+    margin: 0;
+    color: rgb(var(--color-ink));
+    font-family: Inter Tight, Inter, ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(2.1rem, 9vw, 3.3rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+  }
+
+  .floating-banner__text {
+    margin: 14px auto 22px;
+    max-width: 31rem;
+    color: rgb(var(--color-muted));
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .floating-banner__form {
+    display: grid;
+    gap: 12px;
+  }
+
+  .floating-banner__input {
+    min-height: 60px;
+    width: 100%;
+    border: 2px solid rgb(var(--color-ink));
+    border-radius: 16px;
+    padding: 0 20px;
+    color: rgb(var(--color-ink));
+    font: inherit;
+    font-size: 1rem;
+  }
+
+  .floating-banner__input::placeholder {
+    color: rgb(105 98 91 / 0.45);
+  }
+
+  .floating-banner__button {
+    display: inline-flex;
+    min-height: 62px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 0;
+    border-radius: 18px;
+    background: rgb(var(--color-aqua));
+    color: rgb(var(--color-ink));
+    cursor: pointer;
+    font: inherit;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+  }
+
+  .floating-banner__button:hover {
+    background: rgb(var(--color-ink));
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  .floating-banner__no-thanks {
+    margin-top: 16px;
+    border: 0;
+    border-bottom: 1px solid currentColor;
+    background: transparent;
+    color: rgb(var(--color-muted));
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.92rem;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (min-width: 900px) {
+    .floating-banner {
+      padding: 32px;
+    }
+
+    .floating-banner__card {
+      display: grid;
+      width: min(92vw, 920px);
+      grid-template-columns: 1.03fr 0.97fr;
+      overflow: hidden;
+      border-radius: 28px;
+    }
+
+    .floating-banner__image {
+      height: 100%;
+      min-height: 520px;
+      aspect-ratio: auto;
+    }
+
+    .floating-banner__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 54px 42px 42px;
+    }
+
+    .floating-banner__title {
+      font-size: clamp(3rem, 5vw, 4.35rem);
+    }
+
+    .floating-banner__text {
+      font-size: 1.05rem;
+    }
+  }
+</style>

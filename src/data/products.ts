@@ -866,7 +866,7 @@ const inventory: InventoryProduct[] = [
     "name": "Silla peonia",
     "category": "plastico",
     "collection": "Plastico",
-    "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=80",
+    "image": "/client-images/decoracion/decoracion-11.jpg",
     "price": 1699.0,
     "colors": [
       {
@@ -908,7 +908,7 @@ const inventory: InventoryProduct[] = [
     "name": "Gerbera con apoyabrazos",
     "category": "plastico",
     "collection": "Plastico",
-    "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=80",
+    "image": "/client-images/decoracion/decoracion-12.jpg",
     "price": 1799.0,
     "colors": [
       {
@@ -1112,7 +1112,7 @@ const inventory: InventoryProduct[] = [
     "name": "Mecedra datura",
     "category": "plastico",
     "collection": "Plastico",
-    "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=80",
+    "image": "/client-images/decoracion/decoracion-13.jpg",
     "price": 2099.0,
     "colors": [
       {
