@@ -14,15 +14,15 @@ const menuProducts = getFeaturedProducts(4);
 
 <header class="sticky top-0 z-50 bg-white shadow-sm">
   <div class="bg-ink py-2 text-white">
-    <Container class="flex items-center justify-center gap-3 overflow-hidden whitespace-nowrap text-xs font-bold">
-      <span>Oferta de verano - Hasta 50% de descuento</span>
-      <a class="rounded-pill bg-aqua px-4 py-1 text-ink" href="/products/">Ver ofertas</a>
+    <Container class="relative flex min-h-6 items-center overflow-hidden whitespace-nowrap text-xs font-bold">
+      <span class="promo-marquee">Oferta de verano - Hasta 50% de descuento</span>
+      <a class="relative z-10 ml-auto shrink-0 rounded-pill bg-aqua px-4 py-1 text-ink" href="/products/">Ver ofertas</a>
     </Container>
   </div>
   <Container class="grid min-h-[56px] grid-cols-[48px_minmax(0,1fr)_96px] items-center gap-2 bg-white shadow-[0_6px_14px_rgb(35_31_28/0.12)] lg:min-h-[82px] lg:grid-cols-[188px_minmax(0,1fr)_128px] lg:gap-4 lg:shadow-none">
     <button class="grid h-11 w-11 place-items-center justify-self-start text-ink lg:hidden" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><Menu size={25} /></button>
     <a href="/" class="inline-flex items-center justify-self-center lg:justify-self-start" aria-label="Milapro Home">
-      <img class="h-auto w-[78px] lg:w-[188px] lg:max-w-[42vw]" src={logoSrc} alt="Milapro Home" width="188" height="25" />
+      <img class="h-[25px] w-auto lg:h-auto lg:w-[188px] lg:max-w-[42vw]" src={logoSrc} alt="Milapro Home" width="188" height="25" />
     </a>
     <nav class="hidden items-center gap-[34px] text-sm font-bold text-[#332b1e] lg:flex lg:justify-self-center" aria-label="Navegación principal">
       {
@@ -205,5 +205,21 @@ const menuProducts = getFeaturedProducts(4);
     pointer-events: auto;
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .promo-marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: promo-marquee 14s linear infinite;
+  }
+
+  @keyframes promo-marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
   }
 </style>
