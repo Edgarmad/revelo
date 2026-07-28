@@ -3,18 +3,11 @@ import type { Product } from '@/types/product';
 type InventoryProduct = Pick<Product, 'slug' | 'name' | 'category' | 'collection' | 'colors' | 'available' | 'featured'> & {
   image: string;
   price: number;
+  compareAtPrice?: number;
 };
 
 const formatPrice = (price: number) =>
   new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
-
-const discountedProductSlugs = new Set([
-  'plantas-ave-de-paraiso',
-  'aluminio-onega',
-  'ratan-madrid',
-  'plastico-silla-narciso',
-  'outlet-mecedora-girona',
-]);
 
 const inventory: InventoryProduct[] = [
   {
@@ -23,7 +16,8 @@ const inventory: InventoryProduct[] = [
     "category": "plantas",
     "collection": "Plantas",
     "image": "/product-images/plantas-ave-de-paraiso.png",
-    "price": 999.0,
+    "price": 699.0,
+    "compareAtPrice": 999.0,
     "colors": [],
     "available": true,
     "featured": true
@@ -34,7 +28,8 @@ const inventory: InventoryProduct[] = [
     "category": "plantas",
     "collection": "Plantas",
     "image": "/product-images/plantas-palma-areca-hb.png",
-    "price": 1699.0,
+    "price": 899.0,
+    "compareAtPrice": 1698.0,
     "colors": [],
     "available": true,
     "featured": false
@@ -45,7 +40,8 @@ const inventory: InventoryProduct[] = [
     "category": "plantas",
     "collection": "Plantas",
     "image": "/product-images/plantas-palma-areca-aa.png",
-    "price": 999.0,
+    "price": 699.0,
+    "compareAtPrice": 998.0,
     "colors": [],
     "available": true,
     "featured": false
@@ -56,7 +52,8 @@ const inventory: InventoryProduct[] = [
     "category": "plantas",
     "collection": "Plantas",
     "image": "/product-images/plantas-olivo-fa.png",
-    "price": 1479.0,
+    "price": 799.0,
+    "compareAtPrice": 1479.0,
     "colors": [],
     "available": true,
     "featured": false
@@ -67,7 +64,8 @@ const inventory: InventoryProduct[] = [
     "category": "plantas",
     "collection": "Plantas",
     "image": "/product-images/plantas-olivo-ga.png",
-    "price": 1459.0,
+    "price": 899.0,
+    "compareAtPrice": 1698.0,
     "colors": [],
     "available": true,
     "featured": false
@@ -78,7 +76,8 @@ const inventory: InventoryProduct[] = [
     "category": "plantas",
     "collection": "Plantas",
     "image": "/product-images/plantas-olivo-eb.png",
-    "price": 1669.0,
+    "price": 899.0,
+    "compareAtPrice": 1669.0,
     "colors": [],
     "available": true,
     "featured": false
@@ -89,7 +88,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-onega.png",
-    "price": 79200.0,
+    "price": 55440.0,
+    "compareAtPrice": 79200.0,
     "colors": [
       {
         "id": "gris",
@@ -107,7 +107,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-onega-esquinero.png",
-    "price": 92290.0,
+    "price": 64603.0,
+    "compareAtPrice": 92289.99,
     "colors": [
       {
         "id": "gris",
@@ -143,7 +144,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-caspio.png",
-    "price": 48700.0,
+    "price": 34090.0,
+    "compareAtPrice": 48700.0,
     "colors": [
       {
         "id": "gris",
@@ -161,7 +163,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-caspio-esquinero.png",
-    "price": 71670.0,
+    "price": 50169.0,
+    "compareAtPrice": 71670.0,
     "colors": [
       {
         "id": "gris",
@@ -179,7 +182,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-silla-caspio.png",
-    "price": 6400.0,
+    "price": 4480.0,
+    "compareAtPrice": 6400.0,
     "colors": [
       {
         "id": "gris",
@@ -197,7 +201,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-sillones-casio.png",
-    "price": 25000.0,
+    "price": 17500.0,
+    "compareAtPrice": 25000.0,
     "colors": [
       {
         "id": "gris",
@@ -215,7 +220,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-mesa-volga-1-6.png",
-    "price": 25740.0,
+    "price": 18018.0,
+    "compareAtPrice": 25740.0,
     "colors": [
       {
         "id": "gris",
@@ -233,7 +239,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-mesa-volga-2-3.png",
-    "price": 29570.0,
+    "price": 20699.0,
+    "compareAtPrice": 29570.0,
     "colors": [
       {
         "id": "gris",
@@ -269,7 +276,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-malaui.png",
-    "price": 58810.0,
+    "price": 41167.0,
+    "compareAtPrice": 58810.0,
     "colors": [
       {
         "id": "gris",
@@ -287,7 +295,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-silla-malaui.png",
-    "price": 7260.0,
+    "price": 5082.0,
+    "compareAtPrice": 7260.0,
     "colors": [
       {
         "id": "gris",
@@ -359,7 +368,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-ontario-gris.png",
-    "price": 81150.0,
+    "price": 56805.0,
+    "compareAtPrice": 81150.0,
     "colors": [
       {
         "id": "gris",
@@ -377,7 +387,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-ontario-beige.png",
-    "price": 81150.0,
+    "price": 56805.0,
+    "compareAtPrice": 81150.0,
     "colors": [
       {
         "id": "beige",
@@ -395,7 +406,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-sillon-ind-ontario-gris.png",
-    "price": 19980.0,
+    "price": 13986.0,
+    "compareAtPrice": 19980.0,
     "colors": [
       {
         "id": "gris",
@@ -413,7 +425,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-sillon-ind-onrario-beige.png",
-    "price": 19980.0,
+    "price": 13986.0,
+    "compareAtPrice": 19980.0,
     "colors": [
       {
         "id": "beige",
@@ -431,7 +444,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-llona-4-ax.png",
-    "price": 63200.0,
+    "price": 44240.0,
+    "compareAtPrice": 63200.0,
     "colors": [
       {
         "id": "gris",
@@ -449,7 +463,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-llona-5-ax.png",
-    "price": 75800.0,
+    "price": 53060.0,
+    "compareAtPrice": 75800.0,
     "colors": [
       {
         "id": "beige",
@@ -467,7 +482,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-llona-esquinero.png",
-    "price": 59400.0,
+    "price": 41580.0,
+    "compareAtPrice": 59400.0,
     "colors": [
       {
         "id": "blanca",
@@ -521,7 +537,8 @@ const inventory: InventoryProduct[] = [
     "category": "aluminio",
     "collection": "Aluminio",
     "image": "/product-images/aluminio-bahia-esquinera.png",
-    "price": 61800.0,
+    "price": 43260.0,
+    "compareAtPrice": 61800.0,
     "colors": [
       {
         "id": "blanca",
@@ -539,7 +556,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-madrid.png",
-    "price": 51500.0,
+    "price": 25750.0,
+    "compareAtPrice": 51500.0,
     "colors": [
       {
         "id": "beige",
@@ -563,7 +581,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-barcelona-2.png",
-    "price": 22500.0,
+    "price": 11250.0,
+    "compareAtPrice": 22500.0,
     "colors": [
       {
         "id": "gris",
@@ -581,7 +600,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-barcelona-4.png",
-    "price": 45000.0,
+    "price": 22500.0,
+    "compareAtPrice": 45000.0,
     "colors": [
       {
         "id": "gris",
@@ -599,7 +619,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-barcelona-6.png",
-    "price": 65000.0,
+    "price": 32500.0,
+    "compareAtPrice": 65000.0,
     "colors": [
       {
         "id": "gris",
@@ -617,7 +638,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-sevilla.png",
-    "price": 33500.0,
+    "price": 16750.0,
+    "compareAtPrice": 33500.0,
     "colors": [
       {
         "id": "gris",
@@ -635,7 +657,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-bilbao.png",
-    "price": 39500.0,
+    "price": 19750.0,
+    "compareAtPrice": 39500.0,
     "colors": [
       {
         "id": "gris",
@@ -653,7 +676,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-malaga.png",
-    "price": 58000.0,
+    "price": 29000.0,
+    "compareAtPrice": 58000.0,
     "colors": [
       {
         "id": "gris",
@@ -671,7 +695,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-malaga-petit.png",
-    "price": 49500.0,
+    "price": 24750.0,
+    "compareAtPrice": 49500.0,
     "colors": [
       {
         "id": "gris",
@@ -689,7 +714,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-marbella.png",
-    "price": 49500.0,
+    "price": 23250.0,
+    "compareAtPrice": 46500.0,
     "colors": [
       {
         "id": "gris",
@@ -707,7 +733,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-granada.png",
-    "price": 23999.0,
+    "price": 11999.50,
+    "compareAtPrice": 23999.0,
     "colors": [
       {
         "id": "gris",
@@ -725,7 +752,8 @@ const inventory: InventoryProduct[] = [
     "category": "ratan",
     "collection": "Ratan",
     "image": "/product-images/ratan-ibiza.png",
-    "price": 72500.0,
+    "price": 36250.0,
+    "compareAtPrice": 72500.0,
     "colors": [
       {
         "id": "gris",
@@ -743,7 +771,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-silla-narciso.png",
-    "price": 1199.0,
+    "price": 719.40,
+    "compareAtPrice": 1199.0,
     "colors": [
       {
         "id": "blanca",
@@ -785,7 +814,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-narciso-con-aopyabrazos.jpg",
-    "price": 1299.0,
+    "price": 779.40,
+    "compareAtPrice": 1299.0,
     "colors": [
       {
         "id": "blanca",
@@ -815,7 +845,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-silla-zinnia.jpg",
-    "price": 1499.0,
+    "price": 899.26,
+    "compareAtPrice": 1199.0,
     "colors": [
       {
         "id": "azul-turquesa",
@@ -851,7 +882,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-silla-dalia.png",
-    "price": 1799.0,
+    "price": 1079.40,
+    "compareAtPrice": 1799.0,
     "colors": [
       {
         "id": "ginger",
@@ -875,7 +907,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-silla-peonia.jpg",
-    "price": 1699.0,
+    "price": 1274.26,
+    "compareAtPrice": 1699.0,
     "colors": [
       {
         "id": "chocolate",
@@ -899,7 +932,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-silla-gerbera.png",
-    "price": 1699.0,
+    "price": 1019.41,
+    "compareAtPrice": 1699.0,
     "colors": [
       {
         "id": "marco-gris-asiento-cafe",
@@ -917,7 +951,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/client-images/decoracion/decoracion-12.jpg",
-    "price": 1799.0,
+    "price": 1079.40,
+    "compareAtPrice": 1799.0,
     "colors": [
       {
         "id": "marco-gris-asiento-kakhi",
@@ -935,7 +970,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-silla-calendula.png",
-    "price": 1899.0,
+    "price": 1424.25,
+    "compareAtPrice": 1899.0,
     "colors": [
       {
         "id": "mostaza",
@@ -959,7 +995,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-silla-alta-narciso.jpg",
-    "price": 1499.0,
+    "price": 974.35,
+    "compareAtPrice": 1499.0,
     "colors": [
       {
         "id": "blanca",
@@ -995,7 +1032,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-silla-alta-zinnia.jpg",
-    "price": 1699.0,
+    "price": 1274.26,
+    "compareAtPrice": 1699.0,
     "colors": [
       {
         "id": "azul-turquesa",
@@ -1157,7 +1195,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-mecedora-iris.png",
-    "price": 3399.0,
+    "price": 2549.25,
+    "compareAtPrice": 3399.0,
     "colors": [
       {
         "id": "blanca",
@@ -1271,7 +1310,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-mesa-auxiliar-narciso.png",
-    "price": 1399.0,
+    "price": 909.36,
+    "compareAtPrice": 1399.0,
     "colors": [
       {
         "id": "blanca",
@@ -1307,7 +1347,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-aster-mesa-con-almacenamiento.png",
-    "price": 1799.0,
+    "price": 1349.25,
+    "compareAtPrice": 1799.0,
     "colors": [
       {
         "id": "blanca",
@@ -1373,7 +1414,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-mesa-cala.jpg",
-    "price": 5499.0,
+    "price": 3299.40,
+    "compareAtPrice": 5499.0,
     "colors": [
       {
         "id": "blanca",
@@ -1469,7 +1511,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-mesa-loto.jpg",
-    "price": 2199.0,
+    "price": 1649.25,
+    "compareAtPrice": 2199.0,
     "colors": [
       {
         "id": "blanca",
@@ -1505,7 +1548,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-camastro-raflessia.jpg",
-    "price": 5999.0,
+    "price": 3599.40,
+    "compareAtPrice": 5999.0,
     "colors": [
       {
         "id": "gris-oscuro",
@@ -1577,7 +1621,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-mesa-nilo-2m.png",
-    "price": 19850.0,
+    "price": 13895.0,
+    "compareAtPrice": 19850.0,
     "colors": [
       {
         "id": "beige",
@@ -1601,7 +1646,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-mesa-nilo-1-6m.png",
-    "price": 15850.0,
+    "price": 11095.0,
+    "compareAtPrice": 15850.0,
     "colors": [
       {
         "id": "beige",
@@ -1625,7 +1671,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-mesa-licerna.png",
-    "price": 11650.0,
+    "price": 8155.0,
+    "compareAtPrice": 11650.0,
     "colors": [
       {
         "id": "blanca",
@@ -1649,7 +1696,8 @@ const inventory: InventoryProduct[] = [
     "category": "plastico",
     "collection": "Plastico",
     "image": "/product-images/plastico-mesa-leman.png",
-    "price": 18650.0,
+    "price": 13055.0,
+    "compareAtPrice": 18650.0,
     "colors": [
       {
         "id": "blanca",
@@ -1715,7 +1763,8 @@ const inventory: InventoryProduct[] = [
     "category": "outlet",
     "collection": "Outlet",
     "image": "/product-images/outlet-turkana.png",
-    "price": 42999.0,
+    "price": 21499.50,
+    "compareAtPrice": 42999.0,
     "colors": [
       {
         "id": "gris",
@@ -1733,7 +1782,8 @@ const inventory: InventoryProduct[] = [
     "category": "outlet",
     "collection": "Outlet",
     "image": "/product-images/outlet-nyasa.png",
-    "price": 29200.0,
+    "price": 14600.0,
+    "compareAtPrice": 29200.0,
     "colors": [
       {
         "id": "beige",
@@ -1751,7 +1801,8 @@ const inventory: InventoryProduct[] = [
     "category": "outlet",
     "collection": "Outlet",
     "image": "/product-images/outlet-ladoga.png",
-    "price": 42999.0,
+    "price": 30099.0,
+    "compareAtPrice": 42999.0,
     "colors": [
       {
         "id": "blanca",
@@ -1769,7 +1820,8 @@ const inventory: InventoryProduct[] = [
     "category": "outlet",
     "collection": "Outlet",
     "image": "/product-images/outlet-liena.png",
-    "price": 42999.0,
+    "price": 30099.0,
+    "compareAtPrice": 42999.0,
     "colors": [
       {
         "id": "gris",
@@ -1783,28 +1835,33 @@ const inventory: InventoryProduct[] = [
   }
 ];
 
-export const products: Product[] = inventory.map((product, index) => ({
-  id: `product-${product.slug}`,
-  slug: product.slug,
-  name: product.name,
-  shortDescription: `${product.name} disponible en ${product.collection}.`,
-  description: `${product.name} forma parte del inventario actual de ${product.collection.toLowerCase()} para espacios exteriores.`,
-  mainImage: product.image.replace(/\.(png|jpe?g)$/i, '.webp'),
-  gallery: [product.image.replace(/\.(png|jpe?g)$/i, '.webp')],
-  category: product.category,
-  categories: discountedProductSlugs.has(product.slug) ? [product.category, 'descuentos'] : [product.category],
-  collection: product.collection,
-  brand: 'Milapro Home',
-  sku: product.slug.toUpperCase(),
-  colors: product.colors,
-  materials: [],
-  dimensions: 'Consultar disponibilidad',
-  featured: product.featured,
-  available: product.available,
-  displayOrder: index + 1,
-  tags: [product.category],
-  specifications: [{ label: 'Categoria', value: product.collection }],
-  price: formatPrice(product.price),
-  compareAtPrice: discountedProductSlugs.has(product.slug) ? formatPrice(Math.round(product.price * 1.25)) : undefined,
-  badge: discountedProductSlugs.has(product.slug) ? '20% OFF' : undefined,
-}));
+export const products: Product[] = inventory.map((product, index) => {
+  const hasDiscount = product.compareAtPrice !== undefined;
+  const discountPercentage = hasDiscount ? Math.round((1 - product.price / product.compareAtPrice!) * 100) : undefined;
+
+  return {
+    id: `product-${product.slug}`,
+    slug: product.slug,
+    name: product.name,
+    shortDescription: `${product.name} disponible en ${product.collection}.`,
+    description: `${product.name} forma parte del inventario actual de ${product.collection.toLowerCase()} para espacios exteriores.`,
+    mainImage: product.image.replace(/\.(png|jpe?g)$/i, '.webp'),
+    gallery: [product.image.replace(/\.(png|jpe?g)$/i, '.webp')],
+    category: product.category,
+    categories: hasDiscount ? [product.category, 'descuentos'] : [product.category],
+    collection: product.collection,
+    brand: 'Milapro Home',
+    sku: product.slug.toUpperCase(),
+    colors: product.colors,
+    materials: [],
+    dimensions: 'Consultar disponibilidad',
+    featured: product.featured,
+    available: product.available,
+    displayOrder: index + 1,
+    tags: [product.category],
+    specifications: [{ label: 'Categoria', value: product.collection }],
+    price: formatPrice(product.price),
+    compareAtPrice: hasDiscount ? formatPrice(product.compareAtPrice!) : undefined,
+    badge: discountPercentage ? `${discountPercentage}% OFF` : undefined,
+  };
+});
