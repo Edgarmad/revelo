@@ -19,6 +19,7 @@ if (!category) return Astro.redirect('/404/');
 const products = getProductsByCategory(category.slug);
 const categories = getAllCategories();
 const relatedCategories = categories.filter((item) => item.slug !== category.slug).slice(0, 4);
+const showRelatedCategories = category.slug !== 'descuentos';
 ---
 
 <MainLayout title={`${category.name} | Milapro Home`} description={category.description}>
@@ -35,9 +36,11 @@ const relatedCategories = categories.filter((item) => item.slug !== category.slu
   <Container class="py-14">
     <FilterControls categories={categories} />
     <div class="mt-8"><ProductGrid products={products} /></div>
-    <section class="mt-16">
-      <div class="flex flex-wrap items-end justify-between gap-6"><SectionHeading title="Categorías relacionadas" description="Explora otras líneas del catálogo visual." /><Button href="/products/" variant="secondary">Todo el catálogo</Button></div>
-      <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">{relatedCategories.map((item) => <CategoryCard category={item} />)}</div>
-    </section>
+    {showRelatedCategories && (
+      <section class="mt-16">
+        <div class="flex flex-wrap items-end justify-between gap-6"><SectionHeading title="Categorías relacionadas" description="Explora otras líneas del catálogo visual." /><Button href="/products/" variant="secondary">Ver descuentos</Button></div>
+        <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">{relatedCategories.map((item) => <CategoryCard category={item} />)}</div>
+      </section>
+    )}
   </Container>
 </MainLayout>

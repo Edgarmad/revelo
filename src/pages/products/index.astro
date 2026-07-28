@@ -1,28 +1,19 @@
 ---
 import Container from '@/components/common/Container.astro';
-import EmptyState from '@/components/common/EmptyState.astro';
 import SectionHeading from '@/components/common/SectionHeading.astro';
-import FilterControls from '@/components/filters/FilterControls.astro';
 import ProductGrid from '@/components/product/ProductGrid.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
-import { getAllCategories } from '@/services/categoryService';
-import { getAllProducts } from '@/services/productService';
+import { getDiscountedProducts } from '@/services/productService';
 
-const products = getAllProducts();
-const categories = getAllCategories();
+const products = getDiscountedProducts();
 ---
 
-<MainLayout title="Productos | Milapro Home" description="Explora muebles de exterior en ratán sintético, plástico, aluminio, sombrillas, pérgolas y plantas.">
+<MainLayout title="Productos con descuento | Milapro Home" description="Explora una selección de productos con descuento en plantas, aluminio, ratán, plástico y outlet.">
   <Container class="py-14">
-    <SectionHeading eyebrow="Catálogo" title="Nuestros productos" description="Filtra muebles y complementos para terrazas, jardines y proyectos comerciales." />
-    <div class="mt-8"><FilterControls categories={categories} /></div>
+    <SectionHeading eyebrow="Ofertas" title="Productos con descuento" description="Una selección de cada categoría con precios especiales para terrazas, jardines y proyectos comerciales." />
     <div class="mt-6 flex items-center justify-between text-sm text-muted">
       <span data-product-count>{products.length} productos</span>
-      <label class="flex items-center gap-2">Ordenar
-        <select class="rounded-pill border border-ink/15 px-4 py-2"><option>Destacados</option><option>Precio de menor a mayor</option><option>Más recientes</option></select>
-      </label>
     </div>
     <div class="mt-8"><ProductGrid products={products} /></div>
-    <div class="mt-8" data-empty-state hidden><EmptyState title="No encontramos productos" description="Ajusta la búsqueda, categoría, color o disponibilidad para ver más opciones del catálogo." /></div>
   </Container>
 </MainLayout>

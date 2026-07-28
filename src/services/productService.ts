@@ -11,6 +11,10 @@ export function getFeaturedProducts(limit = 4): Product[] {
   return getAllProducts().filter((product) => product.featured).slice(0, limit);
 }
 
+export function getDiscountedProducts(): Product[] {
+  return getProductsByCategory('descuentos');
+}
+
 export function getProductBySlug(slug: string): Product | undefined {
   return products.find((product) => product.slug === slug);
 }

@@ -11,7 +11,7 @@ interface Props {
 const { product } = Astro.props;
 ---
 
-<article class="product-card group rounded-soft bg-sand p-4" data-name={product.name.toLowerCase()} data-category={product.category} data-colors={product.colors.map((color) => color.name.toLowerCase()).join(' ')} data-available={String(product.available)}>
+<article class="product-card group rounded-soft bg-sand p-4" data-name={product.name.toLowerCase()} data-categories={product.categories.join(' ')} data-colors={product.colors.map((color) => color.name.toLowerCase()).join(' ')} data-available={String(product.available)}>
   <a href={`/products/${product.slug}/`} class="block">
     <div class="relative overflow-hidden rounded-2xl bg-white">
       {product.badge && <div class="absolute left-3 top-3 z-10"><Badge tone={product.badge.toLowerCase().includes('save') ? 'red' : 'aqua'}>{product.badge}</Badge></div>}

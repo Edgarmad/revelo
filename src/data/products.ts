@@ -8,6 +8,14 @@ type InventoryProduct = Pick<Product, 'slug' | 'name' | 'category' | 'collection
 const formatPrice = (price: number) =>
   new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
 
+const discountedProductSlugs = new Set([
+  'plantas-ave-de-paraiso',
+  'aluminio-onega',
+  'ratan-madrid',
+  'plastico-silla-narciso',
+  'outlet-mecedora-girona',
+]);
+
 const inventory: InventoryProduct[] = [
   {
     "slug": "plantas-ave-de-paraiso",
@@ -1784,7 +1792,7 @@ export const products: Product[] = inventory.map((product, index) => ({
   mainImage: product.image,
   gallery: [product.image],
   category: product.category,
-  categories: [product.category],
+  categories: discountedProductSlugs.has(product.slug) ? [product.category, 'descuentos'] : [product.category],
   collection: product.collection,
   brand: 'Milapro Home',
   sku: product.slug.toUpperCase(),
@@ -1797,4 +1805,6 @@ export const products: Product[] = inventory.map((product, index) => ({
   tags: [product.category],
   specifications: [{ label: 'Categoria', value: product.collection }],
   price: formatPrice(product.price),
+  compareAtPrice: discountedProductSlugs.has(product.slug) ? formatPrice(Math.round(product.price * 1.25)) : undefined,
+  badge: discountedProductSlugs.has(product.slug) ? '20% OFF' : undefined,
 }));

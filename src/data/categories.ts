@@ -56,4 +56,14 @@ export const categories: Category[] = [
     featured: true,
     displayOrder: 5,
   },
+  {
+    id: 'cat-discounts',
+    slug: 'descuentos',
+    name: 'Descuentos',
+    eyebrow: 'Precios especiales',
+    description: 'Selección de productos con descuento para renovar terrazas, jardines y espacios exteriores.',
+    image: outletImage,
+    featured: true,
+    displayOrder: 6,
+  },
 ];

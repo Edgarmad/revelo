@@ -2,19 +2,77 @@
 import Container from '@/components/common/Container.astro';
 import Button from '@/components/common/Button.astro';
 import SectionHeading from '@/components/common/SectionHeading.astro';
-import CategoryCard from '@/components/category/CategoryCard.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
-import { getAllCategories, getFeaturedCategories } from '@/services/categoryService';
+import { getAllCategories } from '@/services/categoryService';
 import { getAllProducts } from '@/services/productService';
 import { blogCards, customerReviews } from '@/data/siteContent';
-import { CreditCard, RotateCcw, ShieldCheck, ShoppingBag, Truck } from 'lucide-astro';
+import { CreditCard, MapPin, Navigation, RotateCcw, ShieldCheck, ShoppingBag, Truck } from 'lucide-astro';
 import bgSrc from '@/styles/images/bg.png';
 
-const categories = getFeaturedCategories(5);
 const productCategories = getAllCategories();
 const products = getAllProducts();
 const initialProductCategory = productCategories[0]?.slug;
 const featuredReviews = customerReviews.filter((review) => review.rating === 5);
+const showroomImage = '/showroom/milapro-showroom.jpeg';
+const mapsUrl = 'https://maps.app.goo.gl/RrV1bT5APbgSTim37?g_st=ic';
+const mapEmbedUrl = 'https://www.google.com/maps?q=Milapro%20Home%20Merida&output=embed';
+const productTypeCards = [
+  {
+    type: 'sillas',
+    title: 'Sillas',
+    eyebrow: 'Comedor y terraza',
+    description: 'Modelos individuales para exterior, restaurantes y proyectos de alto uso.',
+    image: '/product-images/plastico-silla-narciso.png',
+  },
+  {
+    type: 'mesas',
+    title: 'Mesas',
+    eyebrow: 'Auxiliares y comedor',
+    description: 'Mesas para reuniones, terrazas y espacios sociales al aire libre.',
+    image: '/product-images/plastico-mesa-cala.jpg',
+  },
+  {
+    type: 'salas',
+    title: 'Salas',
+    eyebrow: 'Muebles lounge',
+    description: 'Sets, sillones y piezas para crear zonas cómodas de descanso exterior.',
+    image: '/product-images/ratan-madrid.png',
+  },
+  {
+    type: 'camastros',
+    title: 'Camastros',
+    eyebrow: 'Piscina y descanso',
+    description: 'Opciones resistentes para hoteles, terrazas y áreas de sol.',
+    image: '/product-images/plastico-camastro-raflessia.jpg',
+  },
+  {
+    type: 'plantas',
+    title: 'Plantas',
+    eyebrow: 'Decoración exterior',
+    description: 'Acentos verdes para completar ambientes frescos y naturales.',
+    image: '/product-images/plantas-ave-de-paraiso.png',
+  },
+];
+const getProductTypes = (product: (typeof products)[number]) => {
+  const text = `${product.slug} ${product.name} ${product.category}`.toLowerCase();
+  const types: string[] = [];
+
+  if (text.includes('silla') || text.includes('silleta')) types.push('sillas');
+  if (text.includes('mesa')) types.push('mesas');
+  if (text.includes('sillon') || text.includes('sillones') || text.includes('set') || text.includes('ratan')) types.push('salas');
+  if (text.includes('camastro')) types.push('camastros');
+  if (text.includes('planta')) types.push('plantas');
+
+  return types.join(' ');
+};
+const localBusinessSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FurnitureStore',
+  name: 'Milapro Home',
+  image: showroomImage,
+  hasMap: mapsUrl,
+  url: Astro.site?.toString() ?? Astro.url.origin,
+});
 const instagramReels = [
   { url: 'https://www.instagram.com/milaprohome.mid/reel/DbE5EoXtMei/', thumbnail: '/instagram-reels/reel-01.jpg' },
   { url: 'https://www.instagram.com/milaprohome.mid/reel/Da6HAhoJtuT/', thumbnail: '/instagram-reels/reel-02.jpg' },
@@ -29,6 +87,8 @@ const instagramReels = [
 ---
 
 <MainLayout title="Milapro Home | Muebles para exterior" description="Catálogo visual de muebles para exterior, ratán sintético, aluminio, plástico, sombrillas, pérgolas y plantas.">
+  <script type="application/ld+json" set:html={localBusinessSchema} />
+
   <section class="relative min-h-[600px] overflow-hidden md:min-h-[720px]">
     <img class="absolute inset-0 h-full w-full object-cover object-center" src={bgSrc} alt="Comedor exterior frente al mar" width="1800" height="1000" />
     <div class="absolute inset-0"></div>
@@ -44,8 +104,8 @@ const instagramReels = [
   <Container>
     <section class="grid grid-cols-4 border-b border-ink/10 py-7 lg:py-10">
       {[
-        { icon: Truck, label: 'Envío disponible' },
-        { icon: ShieldCheck, label: 'Garantía de tres años' },
+        { icon: Truck, label: 'Cotiza tu envío' },
+        { icon: ShieldCheck, label: 'Garantía de un año' },
         { icon: CreditCard, label: 'Pagos en cuotas' },
         { icon: RotateCcw, label: 'Asesoría postventa' },
       ].map((benefit) => (
@@ -58,13 +118,23 @@ const instagramReels = [
 
     <section class="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
       <h2 class="font-display text-[28px] font-light leading-tight tracking-tight text-ink sm:text-5xl lg:text-6xl">Milapro Home - Transforma tu exterior</h2>
-      <p class="mt-4 text-sm font-light uppercase tracking-wide text-cocoa sm:text-xl lg:mt-10">Compra por categoría</p>
+      <p class="mt-4 text-sm font-light uppercase tracking-wide text-cocoa sm:text-xl lg:mt-10">Compra por tipo de producto</p>
       <div class="mt-4 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-2 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-5 xl:gap-10">
-        {categories.map((category) => <CategoryCard category={category} />)}
+        {productTypeCards.map((card) => (
+          <a href="#productos" class="group block w-[154px] shrink-0 snap-start sm:w-auto" data-product-type-card={card.type}>
+            <div class="overflow-hidden rounded-xl bg-sand">
+              <img class="aspect-square h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:aspect-[4/5]" src={card.image} alt={`${card.title} para exterior en Milapro Home`} loading="lazy" width="900" height="1125" />
+            </div>
+            <div class="mt-4 text-center">
+              <p class="text-sm font-extrabold uppercase tracking-wide text-ink sm:text-xs">{card.eyebrow}</p>
+              <p class="mt-1 text-sm text-muted">{card.title}</p>
+            </div>
+          </a>
+        ))}
       </div>
     </section>
 
-    <section class="pb-14 lg:pb-20" data-product-section>
+    <section id="productos" class="scroll-mt-28 pb-14 lg:pb-20" data-product-section>
       <div class="flex items-center justify-between gap-4">
         <div>
           <h2 class="font-display text-[26px] font-light uppercase tracking-[0.04em] text-ink lg:text-6xl lg:tracking-[0.08em]">Nuestros productos</h2>
@@ -87,7 +157,7 @@ const instagramReels = [
             const isInitial = initialProductCategory ? product.categories.includes(initialProductCategory) : true;
 
             return (
-              <article class={`product-carousel-card group w-[78vw] max-w-[410px] shrink-0 snap-center rounded-[1.4rem] bg-[#f1f1f1] p-3 sm:w-[360px] lg:p-4 ${isInitial ? '' : 'hidden'}`} data-product-card data-product-categories={product.categories.join(' ')}>
+              <article class={`product-carousel-card group w-[78vw] max-w-[410px] shrink-0 snap-center rounded-[1.4rem] bg-[#f1f1f1] p-3 sm:w-[360px] lg:p-4 ${isInitial ? '' : 'hidden'}`} data-product-card data-product-categories={product.categories.join(' ')} data-product-types={getProductTypes(product)}>
                 <a class="block" href={`/products/${product.slug}/`}>
                   <div class="relative overflow-hidden rounded-xl bg-white">
                     {product.badge && <span class="absolute left-3 top-3 z-10 bg-red-500 px-3 py-1 text-xs font-black text-white">{product.badge}</span>}
@@ -130,6 +200,7 @@ const instagramReels = [
     const productSection = document.querySelector('[data-product-section]');
     const productCarousel = productSection?.querySelector('.product-carousel');
     const productFilters = productSection?.querySelectorAll('[data-product-filter]') ?? [];
+    const productTypeCards = document.querySelectorAll('[data-product-type-card]');
     const productCards = productSection?.querySelectorAll('[data-product-card]') ?? [];
     const productPreviousButton = productSection?.querySelector('.product-carousel-prev');
     const productNextButton = productSection?.querySelector('.product-carousel-next');
@@ -161,6 +232,21 @@ const instagramReels = [
       productCarousel?.scrollTo({ left: 0, behavior: 'smooth' });
     };
 
+    const setProductType = (type) => {
+      productFilters.forEach((filter) => {
+        filter.setAttribute('aria-selected', 'false');
+        filter.classList.remove('border-aqua', 'bg-aqua', 'text-ink');
+        filter.classList.add('border-ink/30', 'bg-white', 'text-muted');
+      });
+
+      productCards.forEach((card) => {
+        const types = card.getAttribute('data-product-types') ?? '';
+        card.classList.toggle('hidden', !types.split(' ').includes(type));
+      });
+
+      productCarousel?.scrollTo({ left: 0, behavior: 'smooth' });
+    };
+
     productFilters.forEach((filter) => {
       filter.addEventListener('click', () => {
         const category = filter.getAttribute('data-product-filter');
@@ -168,9 +254,33 @@ const instagramReels = [
       });
     });
 
+    productTypeCards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const type = card.getAttribute('data-product-type-card');
+        if (type) setProductType(type);
+      });
+    });
+
     productPreviousButton?.addEventListener('click', () => scrollProducts(-1));
     productNextButton?.addEventListener('click', () => scrollProducts(1));
   </script>
+
+  <section class="overflow-hidden bg-[#f1f1f1] px-5 py-16 sm:px-8 md:py-20 lg:px-12">
+    <div class="mx-auto grid max-w-[1180px] gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch lg:gap-10">
+      <div class="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-ink/10">
+        <img class="h-full min-h-[360px] w-full object-cover" src={showroomImage} alt="Showroom de Milapro Home con muebles para exterior" loading="lazy" width="1080" height="1350" />
+      </div>
+      <div class="grid overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-ink/10 lg:grid-rows-[auto_minmax(320px,1fr)]">
+        <div class="p-6 sm:p-8 lg:p-10">
+          <p class="inline-flex items-center gap-2 rounded-pill bg-aqua px-4 py-2 text-xs font-black uppercase tracking-wide text-ink"><MapPin size={16} /> Visítanos</p>
+          <h2 class="mt-5 font-display text-[30px] font-light uppercase leading-tight tracking-[0.04em] text-ink sm:text-5xl lg:text-6xl">Conoce nuestro showroom</h2>
+          <p class="mt-4 max-w-2xl text-base leading-7 text-muted">Ven a Milapro Home y prueba materiales, colores y proporciones antes de elegir tus muebles para terraza, jardín o proyecto comercial.</p>
+          <a class="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-pill bg-ink px-6 text-sm font-black uppercase text-white transition hover:bg-cocoa" href={mapsUrl} target="_blank" rel="noreferrer"><Navigation size={17} /> Abrir ubicación</a>
+        </div>
+        <iframe class="h-[320px] w-full border-0 lg:h-full" src={mapEmbedUrl} loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicación de Milapro Home"></iframe>
+      </div>
+    </div>
+  </section>
 
   <section class="relative mt-6 overflow-hidden rounded-t-[2.4rem] bg-aqua px-5 py-16 sm:px-8 md:py-20 lg:mt-10 lg:rounded-t-[3rem] lg:px-12">
     <div class="mx-auto max-w-[1800px]">

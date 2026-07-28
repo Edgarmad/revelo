@@ -47,7 +47,7 @@ const { categories } = Astro.props;
 
     cards.forEach((card) => {
       const matchesSearch = !search || (card.dataset.name ?? '').includes(search);
-      const matchesCategory = category === 'all' || card.dataset.category === category;
+      const matchesCategory = category === 'all' || (card.dataset.categories ?? '').split(' ').includes(category);
       const matchesColor = !color || (card.dataset.colors ?? '').includes(color);
       const matchesAvailable = available === 'all' || card.dataset.available === available;
       const show = matchesSearch && matchesCategory && matchesColor && matchesAvailable;
