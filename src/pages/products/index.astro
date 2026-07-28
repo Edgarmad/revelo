@@ -1,19 +1,27 @@
 ---
 import Container from '@/components/common/Container.astro';
+import EmptyState from '@/components/common/EmptyState.astro';
+import FilterControls from '@/components/filters/FilterControls.astro';
 import SectionHeading from '@/components/common/SectionHeading.astro';
 import ProductGrid from '@/components/product/ProductGrid.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
-import { getDiscountedProducts } from '@/services/productService';
+import { getAllCategories } from '@/services/categoryService';
+import { getAllProducts } from '@/services/productService';
 
-const products = getDiscountedProducts();
+const products = getAllProducts();
+const categories = getAllCategories();
 ---
 
-<MainLayout title="Productos con descuento | Milapro Home" description="Explora una selección de productos con descuento en plantas, aluminio, ratán, plástico y outlet.">
+<MainLayout title="Productos | Milapro Home" description="Explora el catálogo de productos para exterior y filtra por categoría, promociones, color y disponibilidad.">
   <Container class="py-14">
-    <SectionHeading eyebrow="Ofertas" title="Productos con descuento" description="Una selección de cada categoría con precios especiales para terrazas, jardines y proyectos comerciales." />
+    <SectionHeading eyebrow="Catálogo" title="Productos" description="Explora todos los productos y usa los filtros para ver categorías específicas o piezas con promoción." />
+    <div class="mt-8"><FilterControls categories={categories} /></div>
     <div class="mt-6 flex items-center justify-between text-sm text-muted">
       <span data-product-count>{products.length} productos</span>
     </div>
     <div class="mt-8"><ProductGrid products={products} /></div>
+    <div class="mt-8" data-empty-state hidden>
+      <EmptyState title="No encontramos productos" description="Prueba cambiando la categoría, promoción, color o disponibilidad." />
+    </div>
   </Container>
 </MainLayout>

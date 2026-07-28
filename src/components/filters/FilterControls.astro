@@ -8,21 +8,27 @@ interface Props {
 const { categories } = Astro.props;
 ---
 
-<form id="catalog-filters" class="grid gap-3 rounded-soft border border-ink/10 bg-white p-4 shadow-sm md:grid-cols-4" aria-label="Filtros de productos">
-  <label class="grid gap-2 text-sm font-semibold text-ink">Buscar
-    <input class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" type="search" name="search" placeholder="Ratán, sombrilla..." />
+<form id="catalog-filters" class="grid gap-4 rounded-soft border border-ink/10 bg-white p-4 shadow-sm md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" aria-label="Filtros de productos">
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Buscar
+    <input class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" type="search" name="search" placeholder="Ratán, sombrilla..." />
   </label>
-  <label class="grid gap-2 text-sm font-semibold text-ink">Categoría
-    <select class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" name="category">
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Categoría
+    <select class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" name="category">
       <option value="all">Todas</option>
       {categories.map((category) => <option value={category.slug}>{category.name}</option>)}
     </select>
   </label>
-  <label class="grid gap-2 text-sm font-semibold text-ink">Color
-    <input class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" type="text" name="color" placeholder="Crema, natural..." />
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Promociones
+    <select class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" name="promotion">
+      <option value="all">Todos</option>
+      <option value="only">Con promoción</option>
+    </select>
   </label>
-  <label class="grid gap-2 text-sm font-semibold text-ink">Disponibilidad
-    <select class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" name="available">
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Color
+    <input class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" type="text" name="color" placeholder="Crema, natural..." />
+  </label>
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Disponibilidad
+    <select class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" name="available">
       <option value="all">Todo</option>
       <option value="true">Disponible</option>
       <option value="false">Próximamente</option>
@@ -36,21 +42,31 @@ const { categories } = Astro.props;
   const count = document.querySelector<HTMLElement>('[data-product-count]');
   const cards = Array.from(document.querySelectorAll<HTMLElement>('.product-card'));
 
+  const promotionField = form?.elements.namedItem('promotion') as HTMLSelectElement | null;
+  const query = new URLSearchParams(window.location.search);
+
+  if (promotionField && query.get('promociones') === '1') {
+    promotionField.value = 'only';
+  }
+
   function applyFilters() {
     if (!form) return;
     const data = new FormData(form);
     const search = String(data.get('search') ?? '').toLowerCase();
     const category = String(data.get('category') ?? 'all');
+    const promotion = String(data.get('promotion') ?? 'all');
     const color = String(data.get('color') ?? '').toLowerCase();
     const available = String(data.get('available') ?? 'all');
     let visible = 0;
 
     cards.forEach((card) => {
       const matchesSearch = !search || (card.dataset.name ?? '').includes(search);
-      const matchesCategory = category === 'all' || (card.dataset.categories ?? '').split(' ').includes(category);
+      const categories = (card.dataset.categories ?? '').split(' ');
+      const matchesCategory = category === 'all' || categories.includes(category);
+      const matchesPromotion = promotion === 'all' || categories.includes('descuentos');
       const matchesColor = !color || (card.dataset.colors ?? '').includes(color);
       const matchesAvailable = available === 'all' || card.dataset.available === available;
-      const show = matchesSearch && matchesCategory && matchesColor && matchesAvailable;
+      const show = matchesSearch && matchesCategory && matchesPromotion && matchesColor && matchesAvailable;
       card.style.display = show ? '' : 'none';
       if (show) visible += 1;
     });
@@ -61,4 +77,5 @@ const { categories } = Astro.props;
 
   form?.addEventListener('input', applyFilters);
   form?.addEventListener('change', applyFilters);
+  applyFilters();
 </script>

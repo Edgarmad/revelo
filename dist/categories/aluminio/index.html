@@ -9,14 +9,14 @@
     <meta property="og:type" content="website">
     <link rel="icon" href="/favicon.ico">
     <title>Aluminio | Milapro Home</title>
-  <link rel="stylesheet" href="/_astro/404.acb6e659.css" /><script type="module" src="/_astro/hoisted.6e45dccd.js"></script></head>
+  <link rel="stylesheet" href="/_astro/404.66256314.css" /><script type="module" src="/_astro/hoisted.f0abea11.js"></script></head>
   <body>
     <header class="sticky top-0 z-50 bg-white shadow-sm astro-MB6PVX4C">
   <div class="bg-ink py-2 text-white astro-MB6PVX4C">
     <div class="mx-auto w-full max-w-site px-5 sm:px-6 lg:px-8 relative flex min-h-6 items-center overflow-hidden whitespace-nowrap text-xs font-bold astro-MB6PVX4C">
   
       <span class="promo-marquee astro-MB6PVX4C">Oferta de verano - Hasta 50% de descuento</span>
-      <a class="relative z-10 ml-auto shrink-0 rounded-pill bg-aqua px-4 py-1 text-ink astro-MB6PVX4C" href="/products/">Ver ofertas</a>
+      <a class="relative z-10 ml-auto shrink-0 rounded-pill bg-aqua px-4 py-1 text-ink astro-MB6PVX4C" href="/products/?promociones=1">Ver ofertas</a>
     
 </div>
   </div>
@@ -77,7 +77,7 @@
 </div>
                 </div>
               </div><div class="py-8 astro-MB6PVX4C" data-mega-item>
-                <a class="inline-flex items-center gap-1 transition hover:text-aqua focus-visible:text-aqua astro-MB6PVX4C" href="/products/" data-mega-trigger>
+                <a class="inline-flex items-center gap-1 transition hover:text-aqua focus-visible:text-aqua astro-MB6PVX4C" href="/products/?promociones=1" data-mega-trigger>
                   🔥 Productos
                   <svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="14" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" data-mega-chevron class="lucide lucide-chevron-down transition astro-MB6PVX4C">
 	
@@ -690,7 +690,7 @@
       </div>
       <nav class="grid gap-4 px-6 py-8 text-xl font-black text-ink astro-MB6PVX4C" aria-label="Navegación móvil" data-mobile-menu-main>
         <button class="flex items-center justify-between text-left astro-MB6PVX4C" type="button" data-mobile-submenu-open="products"><span class="astro-MB6PVX4C">Muebles para exterior</span><span class="grid h-6 min-w-16 place-items-center rounded-pill bg-aqua text-2xl font-light leading-none astro-MB6PVX4C">→</span></button>
-        <a class="flex items-center justify-between astro-MB6PVX4C" href="/products/"><span class="astro-MB6PVX4C">🔥 Productos</span><span class="grid h-6 min-w-16 place-items-center rounded-pill bg-aqua text-2xl font-light leading-none astro-MB6PVX4C">→</span></a>
+        <a class="flex items-center justify-between astro-MB6PVX4C" href="/products/?promociones=1"><span class="astro-MB6PVX4C">🔥 Productos</span><span class="grid h-6 min-w-16 place-items-center rounded-pill bg-aqua text-2xl font-light leading-none astro-MB6PVX4C">→</span></a>
         <a href="/#reviews" class="astro-MB6PVX4C">Opiniones</a>
         <a class="flex items-center justify-between astro-MB6PVX4C" href="/about/"><span class="astro-MB6PVX4C">Acerca de</span><span class="grid h-6 min-w-16 place-items-center rounded-pill bg-aqua text-2xl font-light leading-none astro-MB6PVX4C">→</span></a>
         <a href="/contact/" class="astro-MB6PVX4C">Contacto</a>
@@ -743,21 +743,27 @@
   </section>
   <div class="mx-auto w-full max-w-site px-5 sm:px-6 lg:px-8 py-14">
   
-    <form id="catalog-filters" class="grid gap-3 rounded-soft border border-ink/10 bg-white p-4 shadow-sm md:grid-cols-4" aria-label="Filtros de productos">
-  <label class="grid gap-2 text-sm font-semibold text-ink">Buscar
-    <input class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" type="search" name="search" placeholder="Ratán, sombrilla...">
+    <form id="catalog-filters" class="grid gap-4 rounded-soft border border-ink/10 bg-white p-4 shadow-sm md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" aria-label="Filtros de productos">
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Buscar
+    <input class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" type="search" name="search" placeholder="Ratán, sombrilla...">
   </label>
-  <label class="grid gap-2 text-sm font-semibold text-ink">Categoría
-    <select class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" name="category">
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Categoría
+    <select class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" name="category">
       <option value="all">Todas</option>
       <option value="plantas">Plantas</option><option value="aluminio">Aluminio</option><option value="ratan">Ratán</option><option value="plastico">Plástico</option><option value="outlet">Outlet</option><option value="descuentos">Descuentos</option>
     </select>
   </label>
-  <label class="grid gap-2 text-sm font-semibold text-ink">Color
-    <input class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" type="text" name="color" placeholder="Crema, natural...">
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Promociones
+    <select class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" name="promotion">
+      <option value="all">Todos</option>
+      <option value="only">Con promoción</option>
+    </select>
   </label>
-  <label class="grid gap-2 text-sm font-semibold text-ink">Disponibilidad
-    <select class="min-h-11 rounded-pill border border-ink/15 px-4 font-normal" name="available">
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Color
+    <input class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" type="text" name="color" placeholder="Crema, natural...">
+  </label>
+  <label class="grid min-w-0 gap-2 text-sm font-semibold text-ink">Disponibilidad
+    <select class="min-h-11 w-full rounded-pill border border-ink/15 px-4 font-normal" name="available">
       <option value="all">Todo</option>
       <option value="true">Disponible</option>
       <option value="false">Próximamente</option>
