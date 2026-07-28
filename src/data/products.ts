@@ -874,7 +874,7 @@ const inventory: InventoryProduct[] = [
     "name": "Silla peonia",
     "category": "plastico",
     "collection": "Plastico",
-    "image": "/client-images/decoracion/decoracion-11.jpg",
+    "image": "/product-images/plastico-silla-peonia.jpg",
     "price": 1699.0,
     "colors": [
       {
@@ -1789,8 +1789,8 @@ export const products: Product[] = inventory.map((product, index) => ({
   name: product.name,
   shortDescription: `${product.name} disponible en ${product.collection}.`,
   description: `${product.name} forma parte del inventario actual de ${product.collection.toLowerCase()} para espacios exteriores.`,
-  mainImage: product.image,
-  gallery: [product.image],
+  mainImage: product.image.replace(/\.(png|jpe?g)$/i, '.webp'),
+  gallery: [product.image.replace(/\.(png|jpe?g)$/i, '.webp')],
   category: product.category,
   categories: discountedProductSlugs.has(product.slug) ? [product.category, 'descuentos'] : [product.category],
   collection: product.collection,
