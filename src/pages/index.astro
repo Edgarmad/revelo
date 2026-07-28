@@ -32,18 +32,32 @@ const productTypeCards = [
     image: '/product-images/plastico-mesa-cala.webp',
   },
   {
-    type: 'salas',
-    title: 'Salas',
+    type: 'muebles',
+    title: 'Muebles',
     eyebrow: 'Muebles lounge',
     description: 'Sets, sillones y piezas para crear zonas cómodas de descanso exterior.',
     image: '/product-images/ratan-madrid.webp',
   },
   {
+    type: 'pergolas',
+    title: 'Pérgolas',
+    eyebrow: 'Sombra arquitectónica',
+    description: 'Estructuras para crear sombra y definir áreas exteriores.',
+    image: '/product-images/pergolas-home.jpeg',
+  },
+  {
+    type: 'sombrillas',
+    title: 'Sombrillas',
+    eyebrow: 'Sombra flexible',
+    description: 'Soluciones de sombra para terrazas, jardines y albercas.',
+    image: '/product-images/sombrillas-home.jpeg',
+  },
+  {
     type: 'camastros',
-    title: 'Camastros',
+    title: 'Camastro',
     eyebrow: 'Piscina y descanso',
     description: 'Opciones resistentes para hoteles, terrazas y áreas de sol.',
-    image: '/product-images/plastico-camastro-raflessia.webp',
+    image: '/product-images/camastros-home.png',
   },
   {
     type: 'plantas',
@@ -59,7 +73,9 @@ const getProductTypes = (product: (typeof products)[number]) => {
 
   if (text.includes('silla') || text.includes('silleta')) types.push('sillas');
   if (text.includes('mesa')) types.push('mesas');
-  if (text.includes('sillon') || text.includes('sillones') || text.includes('set') || text.includes('ratan')) types.push('salas');
+  if (text.includes('sillon') || text.includes('sillones') || text.includes('set') || text.includes('ratan')) types.push('muebles');
+  if (text.includes('pergola') || text.includes('pérgola')) types.push('pergolas');
+  if (text.includes('sombrilla')) types.push('sombrillas');
   if (text.includes('camastro')) types.push('camastros');
   if (text.includes('planta')) types.push('plantas');
 
@@ -119,11 +135,11 @@ const instagramReels = [
     <section class="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
       <h2 class="font-display text-[28px] font-light leading-tight tracking-tight text-ink sm:text-5xl lg:text-6xl">Milapro Home - Transforma tu exterior</h2>
       <p class="mt-4 text-sm font-light uppercase tracking-wide text-cocoa sm:text-xl lg:mt-10">Compra por tipo de producto</p>
-      <div class="mt-4 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-2 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-5 xl:gap-10">
+      <div class="mt-4 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-2 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-7 lg:gap-4 xl:gap-6">
         {productTypeCards.map((card) => (
           <a href="#productos" class="group block w-[154px] shrink-0 snap-start sm:w-auto" data-product-type-card={card.type}>
-            <div class="overflow-hidden rounded-xl bg-sand">
-              <img class="aspect-square h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:aspect-[4/5]" src={card.image} alt={`${card.title} para exterior en Milapro Home`} loading="lazy" width="900" height="1125" />
+            <div class="overflow-hidden rounded-xl bg-white">
+              <img class="aspect-square h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.04] sm:aspect-[4/5]" src={card.image} alt={`${card.title} para exterior en Milapro Home`} loading="lazy" width="900" height="1125" />
             </div>
             <div class="mt-4 text-center">
               <p class="text-sm font-extrabold uppercase tracking-wide text-ink sm:text-xs">{card.eyebrow}</p>
