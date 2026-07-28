@@ -8,7 +8,14 @@ import logoSrc from '@/styles/images/Logo Mila.svg';
 
 const menuCategories = getAllCategories();
 const furnitureCategories = menuCategories.filter((category) => ['aluminio', 'ratan', 'plastico'].includes(category.slug));
-const menuProducts = getDiscountedProducts();
+const menuProductCategories = new Set<string>();
+const menuProducts = getDiscountedProducts()
+  .filter((product) => {
+    if (menuProductCategories.has(product.category)) return false;
+    menuProductCategories.add(product.category);
+    return true;
+  })
+  .slice(0, 5);
 const searchProducts = getAllProducts();
 const promotionsHref = '/products/?promociones=1';
 ---
