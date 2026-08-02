@@ -6,6 +6,13 @@ type InventoryProduct = Pick<Product, 'slug' | 'name' | 'category' | 'collection
   compareAtPrice?: number;
 };
 
+const categoryAliases: Record<string, string[]> = {
+  plantas: ['planta', 'plantas', 'plant', 'plants', 'decoracion', 'decoración'],
+  ratan: ['ratan', 'ratán', 'rattan', 'sala', 'sofa', 'sofá', 'sillon', 'sillón', 'living room', 'couch', 'outdoor sofa'],
+  aluminio: ['aluminio', 'aluminum', 'sala', 'mesa', 'mesas', 'comedor', 'dining room', 'dining table', 'table', 'chair', 'silla'],
+  plastico: ['plastico', 'plástico', 'plastic', 'mesa', 'mesas', 'comedor', 'dining room', 'dining table', 'table', 'chair', 'silla'],
+};
+
 const formatPrice = (price: number) =>
   new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
 
@@ -1858,7 +1865,7 @@ export const products: Product[] = inventory.map((product, index) => {
     featured: product.featured,
     available: product.available,
     displayOrder: index + 1,
-    tags: [product.category],
+    tags: Array.from(new Set([product.category, product.collection, ...(categoryAliases[product.category] ?? [])])),
     specifications: [{ label: 'Categoria', value: product.collection }],
     price: formatPrice(product.price),
     compareAtPrice: hasDiscount ? formatPrice(product.compareAtPrice!) : undefined,

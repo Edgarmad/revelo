@@ -3,14 +3,18 @@ import Container from '@/components/common/Container.astro';
 import Button from '@/components/common/Button.astro';
 import SectionHeading from '@/components/common/SectionHeading.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
+import { getAllBlogs } from '@/services/blogService';
 import { getAllCategories } from '@/services/categoryService';
 import { getAllProducts } from '@/services/productService';
-import { blogCards, customerReviews } from '@/data/siteContent';
+import { getVisibleReels } from '@/services/reelService';
+import { customerReviews } from '@/data/siteContent';
 import { CreditCard, MapPin, Navigation, RotateCcw, ShieldCheck, ShoppingBag, Truck } from 'lucide-astro';
 import bgSrc from '@/styles/images/bg.png';
 
-const productCategories = getAllCategories();
-const products = getAllProducts();
+const productCategories = await getAllCategories();
+const products = await getAllProducts();
+const blogCards = await getAllBlogs();
+const instagramReels = await getVisibleReels();
 const initialProductCategory = productCategories[0]?.slug;
 const featuredReviews = customerReviews.filter((review) => review.rating === 5);
 const showroomImage = '/showroom/milapro-showroom.jpeg';
@@ -89,17 +93,6 @@ const localBusinessSchema = JSON.stringify({
   hasMap: mapsUrl,
   url: Astro.site?.toString() ?? Astro.url.origin,
 });
-const instagramReels = [
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DbE5EoXtMei/', thumbnail: '/instagram-reels/reel-01.jpg' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/Da6HAhoJtuT/', thumbnail: '/instagram-reels/reel-02.jpg' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DaLX89wR8Gn/', thumbnail: '/instagram-reels/reel-03.jpg' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DTl0X5QD12n/', thumbnail: '/instagram-reels/reel-04.jpg' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DUJOXy7kdGP/', thumbnail: '/instagram-reels/reel-05.jpg' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DRU30uZgfVq/', thumbnail: '/instagram-reels/reel-06.jpg' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DPouY0NklzU/', thumbnail: '/instagram-reels/reel-07.jpg' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DPUBKIkjWwX/', thumbnail: '/instagram-reels/reel-08.jpg' },
-  { url: 'https://www.instagram.com/milaprohome.mid/reel/DOWnTiViefZ/', thumbnail: '/instagram-reels/reel-09.jpg' },
-];
 ---
 
 <MainLayout title="Milapro Home | Muebles para exterior" description="Catálogo visual de muebles para exterior, ratán sintético, aluminio, plástico, sombrillas, pérgolas y plantas.">

@@ -1,0 +1,69 @@
+---
+import Container from '@/components/common/Container.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+import logoSrc from '@/styles/images/Logo Mila.svg';
+---
+
+<MainLayout title="Póliza de Garantía | Milapro Home" description="Póliza de garantía de Milapro Home para muebles de exterior.">
+  <Container class="py-14 lg:py-20">
+    <article class="mx-auto max-w-5xl rounded-[2rem] bg-white px-6 py-8 shadow-xl ring-1 ring-ink/10 sm:px-10 lg:px-16 lg:py-14">
+      <header class="grid gap-8 sm:grid-cols-[1fr_auto] sm:items-start">
+        <div>
+          <p class="text-sm font-black uppercase tracking-[0.18em] text-aqua">Milapro Home</p>
+          <h1 class="mt-4 font-display text-4xl font-black tracking-tight text-ink sm:text-5xl lg:text-6xl">Póliza de Garantía</h1>
+        </div>
+        <img class="w-36 sm:w-44" src={logoSrc} alt="Milapro Home" width="188" height="25" />
+      </header>
+
+      <div class="mt-9 space-y-9 text-lg leading-relaxed text-ink">
+        <p>En <strong>MILA PRO HOME</strong>, diseñamos piezas para resistir el paso del tiempo y los elementos. Esta póliza respalda nuestro compromiso con la excelencia.</p>
+
+        <section>
+          <h2 class="text-2xl font-black">1. Vigencia de la Garantía</h2>
+          <p class="mt-2">Esta garantía entra en vigor a partir de la fecha de entrega del producto y cubre:</p>
+          <p><strong>1 año</strong> en defectos de fabricación en la estructura de:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li>Aluminio.</li>
+            <li>Acero inoxidable.</li>
+            <li>Polipropileno.</li>
+            <li>Madera plástica (Polywood).</li>
+            <li>Cuerdas sintéticas y acabados superficiales.</li>
+            <li>Rattán.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">2. ¿Qué cubrimos?</h2>
+          <p class="mt-2">Nos hacemos responsables por cualquier defecto de materiales o mano de obra bajo condiciones de uso normal:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li>Corrosión excesiva o prematura de la estructura.</li>
+            <li>Deterioro anormal de los textiles por exposición a rayos UV (decoloración extrema fuera de los parámetros estándar).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">3. Exclusiones de Garantía.</h2>
+          <p class="mt-2">Para mantener la transparencia, esta garantía no aplica en los siguientes casos:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li><strong>Mal uso o negligencia:</strong> Daños por cortes, quemaduras, manchas de químicos, golpes accidentales o por mascotas.</li>
+            <li><strong>Fuerza mayor:</strong> Daños causados por desastres naturales extremos (huracanes, inundaciones, granizo).</li>
+            <li><strong>Falta de mantenimiento:</strong> Desgaste por acumulación de salitre o suciedad si no se siguen las guías de limpieza.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">4. Proceso de Reclamación</h2>
+          <p class="mt-2">Si algo no está bien, queremos arreglarlo. Solo necesitas:</p>
+          <ol class="mt-2 list-decimal space-y-1 pl-7">
+            <li>Tener tu comprobante de compra a la mano.</li>
+            <li>Enviar fotos y una breve descripción del problema al número <strong>(999) 455 3932</strong>.</li>
+            <li>Nuestro equipo técnico evaluará el caso en un plazo de <strong>5 días hábiles</strong>.</li>
+            <li>Si el reclamo procede, <strong>MILA PRO HOME</strong> podrá optar por reparar la pieza o sustituirla por una nueva o de características similares.</li>
+          </ol>
+        </section>
+
+        <p class="font-black italic">Recuerda que un mueble bien cuidado dura el doble.<br />Recomendamos siempre que la sala esté bajo techo.</p>
+      </div>
+    </article>
+  </Container>
+</MainLayout>

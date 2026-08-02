@@ -11,13 +11,13 @@ import ContactCallout from '@/components/sections/ContactCallout.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { getProductBySlug, getProductSlugs, getRelatedProducts } from '@/services/productService';
 
-export function getStaticPaths() {
-  return getProductSlugs().map((slug) => ({ params: { slug } }));
+export async function getStaticPaths() {
+  return (await getProductSlugs()).map((slug) => ({ params: { slug } }));
 }
 
-const product = getProductBySlug(Astro.params.slug ?? '');
+const product = await getProductBySlug(Astro.params.slug ?? '');
 if (!product) return Astro.redirect('/404/');
-const related = getRelatedProducts(product);
+const related = await getRelatedProducts(product);
 ---
 
 <MainLayout title={`${product.name} | Milapro Home`} description={product.shortDescription}>

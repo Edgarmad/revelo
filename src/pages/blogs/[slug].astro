@@ -3,16 +3,14 @@ import Button from '@/components/common/Button.astro';
 import Container from '@/components/common/Container.astro';
 import Breadcrumbs from '@/components/common/Breadcrumbs.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
-import { blogCards } from '@/data/siteContent';
+import { getBlogBySlug, getBlogSlugs } from '@/services/blogService';
 
-export function getStaticPaths() {
-  return blogCards.map((blog) => ({
-    params: { slug: blog.slug },
-    props: { blog },
-  }));
+export async function getStaticPaths() {
+  return (await getBlogSlugs()).map((slug) => ({ params: { slug } }));
 }
 
-const { blog } = Astro.props;
+const blog = await getBlogBySlug(Astro.params.slug ?? '');
+if (!blog) return Astro.redirect('/404/');
 ---
 
 <MainLayout title={`${blog.title} | Milapro Home`} description={blog.excerpt}>

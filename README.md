@@ -40,28 +40,36 @@ src/
 - `/contact/` formulario visual con validación local, sin envío real.
 - `/404.html` página de error personalizada.
 
-## Datos y Futuro WordPress
+## WordPress Headless
 
-Los componentes no importan datos mock directamente. El flujo actual es:
+El proyecto ahora está preparado para usar WordPress como CMS headless sin cambiar el frontend visual aprobado. El flujo es:
 
 ```text
-src/data -> src/services -> src/pages -> components via props
+WordPress REST API -> src/services -> src/pages -> components via props
 ```
 
-En la fase WordPress Headless se reemplazaría o extendería `src/services/productService.ts` y `src/services/categoryService.ts` para consumir la REST API de WordPress, manteniendo los componentes visuales.
+Si `WORDPRESS_API_URL` no está configurada o WordPress no responde, los servicios usan los datos locales de `src/data` como fallback para no romper el build.
+
+La estructura CMS vive en el plugin propio `wordpress/plugins/milapro-headless-cms` y el entorno local usa Docker:
+
+```bash
+docker compose up -d
+```
+
+Documentación completa: `docs/wordpress-headless.md`.
 
 ## Despliegue HostGator
 
-1. Ejecutar `npm run build`.
-2. Subir el contenido de `dist/` a `public_html`.
-3. No se requiere proceso Node.js en producción.
-4. El archivo `.htaccess` generado desde `public/.htaccess` define `404.html` como página de error.
+1. WordPress se instala en HostGator como CMS, preferentemente en `cms.example.com`.
+2. GitHub Actions ejecuta `npm run build` leyendo la REST API de WordPress.
+3. GitHub Actions sube `dist/` a HostGator por FTP.
+4. El plugin de WordPress dispara el workflow cuando se actualizan productos, categorías, reels o blogs.
+5. No se requiere proceso Node.js en producción.
 
 ## Diferido Intencionalmente
 
 - Backend, base de datos y autenticación.
-- WordPress, WooCommerce o llamadas a APIs externas.
-- Carrito, checkout, pagos y órdenes.
+- WooCommerce, carrito, checkout, pagos y órdenes.
 - Envío real del formulario de contacto.
 - Persistencia de favoritos o analítica.
 - Filtrado avanzado conectado a inventario real.

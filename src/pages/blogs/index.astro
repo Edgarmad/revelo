@@ -4,7 +4,9 @@ import Container from '@/components/common/Container.astro';
 import SectionHeading from '@/components/common/SectionHeading.astro';
 import Breadcrumbs from '@/components/common/Breadcrumbs.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
-import { blogCards } from '@/data/siteContent';
+import { getAllBlogs } from '@/services/blogService';
+
+const blogCards = await getAllBlogs();
 ---
 
 <MainLayout title="Blogs e inspiraciones | Milapro Home" description="Consejos e inspiración para elegir muebles, materiales y soluciones para espacios exteriores.">

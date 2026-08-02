@@ -1,22 +1,22 @@
 ---
 import { navItems } from '@/data/siteContent';
 import Container from '@/components/common/Container.astro';
-import { ChevronDown, Menu, Search, ShoppingBag, X } from 'lucide-astro';
+import { ChevronDown, Menu, MessageCircle, Search, ShoppingBag, X } from 'lucide-astro';
 import { getAllCategories } from '@/services/categoryService';
 import { getAllProducts, getDiscountedProducts } from '@/services/productService';
 import logoSrc from '@/styles/images/Logo Mila.svg';
 
-const menuCategories = getAllCategories();
+const menuCategories = await getAllCategories();
 const furnitureCategories = menuCategories.filter((category) => ['aluminio', 'ratan', 'plastico'].includes(category.slug));
 const menuProductCategories = new Set<string>();
-const menuProducts = getDiscountedProducts()
+const menuProducts = (await getDiscountedProducts())
   .filter((product) => {
     if (menuProductCategories.has(product.category)) return false;
     menuProductCategories.add(product.category);
     return true;
   })
   .slice(0, 5);
-const searchProducts = getAllProducts();
+const searchProducts = await getAllProducts();
 const promotionsHref = '/products/?promociones=1';
 ---
 
@@ -114,7 +114,7 @@ const promotionsHref = '/products/?promociones=1';
       }
     </nav>
     <div class="relative hidden items-center justify-self-end gap-2 lg:flex" data-product-search>
-      <a class="h-11 items-center justify-center rounded-pill bg-aqua px-6 text-sm font-black uppercase text-ink transition hover:bg-ink hover:text-white lg:inline-flex" href="/contact/">Contactar</a>
+      <a class="h-11 items-center justify-center gap-2 rounded-pill bg-[#25d366] px-5 text-sm font-black uppercase text-ink transition hover:bg-ink hover:text-white lg:inline-flex" href="https://wa.me/529994553932" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp de Milapro Home"><MessageCircle size={18} /> WhatsApp</a>
       <button class="grid h-11 w-11 place-items-center rounded-full border border-ink/15 text-ink transition hover:border-aqua hover:bg-aqua/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" type="button" data-product-search-toggle aria-expanded="false" aria-controls="desktop-product-search" aria-label="Abrir buscador de productos"><Search size={20} /></button>
       <div id="desktop-product-search" class="absolute right-0 top-[calc(100%+14px)] hidden w-[420px] overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-2xl" data-product-search-panel>
         <div class="flex items-center gap-3 border-b border-ink/10 px-4 py-3">
@@ -124,7 +124,7 @@ const promotionsHref = '/products/?promociones=1';
         </div>
         <div class="max-h-[420px] overflow-y-auto p-3" data-product-search-results>
           {searchProducts.map((product, index) => (
-            <a class:list={["flex items-center gap-3 rounded-xl p-2 transition hover:bg-sand", index >= 8 && "hidden"]} href={`/products/${product.slug}/`} data-product-result data-search-text={`${product.name} ${product.collection} ${product.category}`}>
+            <a class:list={["flex items-center gap-3 rounded-xl p-2 transition hover:bg-sand", index >= 8 && "hidden"]} href={`/products/${product.slug}/`} data-product-result data-search-text={`${product.name} ${product.collection} ${product.category} ${product.tags.join(' ')}`}>
               <img class="h-14 w-14 rounded-lg bg-sand object-cover" src={product.mainImage} alt="" loading="lazy" width="56" height="56" />
               <span class="min-w-0">
                 <span class="block truncate text-sm font-black text-ink">{product.name}</span>

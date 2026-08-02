@@ -9,7 +9,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "wp:seed:build": "node scripts/build-wordpress-seed.mjs",
+    "wp:seed:import": "docker compose --profile tools run --rm wpcli wp eval-file /var/www/html/migration/import-seed.php",
+    "wp:seed": "npm run wp:seed:build && npm run wp:seed:import"
   },
   "dependencies": {
     "@astrojs/tailwind": "3.1.3",

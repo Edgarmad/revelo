@@ -8,8 +8,8 @@ import MainLayout from '@/layouts/MainLayout.astro';
 import { getAllCategories } from '@/services/categoryService';
 import { getAllProducts } from '@/services/productService';
 
-const products = getAllProducts();
-const categories = getAllCategories();
+const products = await getAllProducts();
+const categories = await getAllCategories();
 ---
 
 <MainLayout title="Productos | Milapro Home" description="Explora el catálogo de productos para exterior y filtra por categoría, promociones, color y disponibilidad.">

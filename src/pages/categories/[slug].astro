@@ -10,14 +10,14 @@ import MainLayout from '@/layouts/MainLayout.astro';
 import { getAllCategories, getCategoryBySlug, getCategorySlugs } from '@/services/categoryService';
 import { getProductsByCategory } from '@/services/productService';
 
-export function getStaticPaths() {
-  return getCategorySlugs().map((slug) => ({ params: { slug } }));
+export async function getStaticPaths() {
+  return (await getCategorySlugs()).map((slug) => ({ params: { slug } }));
 }
 
-const category = getCategoryBySlug(Astro.params.slug ?? '');
+const category = await getCategoryBySlug(Astro.params.slug ?? '');
 if (!category) return Astro.redirect('/404/');
-const products = getProductsByCategory(category.slug);
-const categories = getAllCategories();
+const products = await getProductsByCategory(category.slug);
+const categories = await getAllCategories();
 const relatedCategories = categories.filter((item) => item.slug !== category.slug).slice(0, 4);
 const showRelatedCategories = category.slug !== 'descuentos';
 ---
