@@ -1,0 +1,55 @@
+{
+  "sourceRoot": "PRODUCTOS MILA WEB",
+  "status": "obsolete",
+  "obsoleteReason": "Este manifest fue generado con el criterio anterior estricto. El criterio vigente acepta multiples imagenes principales: la primera sera destacada y las restantes iran a galeria. Regenerar antes de importar.",
+  "criteria": "Criterio anterior: productos con exactamente una imagen principal, fondo/foto real, medidas y variantes con nombres de color claros.",
+  "products": [
+    {
+      "category": "aluminio",
+      "sourceCategory": "ALUMINIO",
+      "name": "Silla Malaui",
+      "slug": "silla-malaui",
+      "sourceDirectory": "ALUMINIO/SILLA MALAUI",
+      "mainImage": "ALUMINIO/SILLA MALAUI/IMAGEN PRINCIPAL/IMG_4864.PNG",
+      "gallery": [
+        "ALUMINIO/SILLA MALAUI/Fondo real/IMG_4863.PNG",
+        "ALUMINIO/SILLA MALAUI/Medida/IMG_4862.PNG"
+      ],
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "image": "ALUMINIO/SILLA MALAUI/Variante/Beige.PNG",
+          "available": true
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "image": "ALUMINIO/SILLA MALAUI/Variante/Gris.PNG",
+          "available": true
+        }
+      ]
+    },
+    {
+      "category": "aluminio",
+      "sourceCategory": "ALUMINIO",
+      "name": "Sillon Ind Onrario Beige",
+      "slug": "sillon-ind-onrario-beige",
+      "sourceDirectoryMatch": "ALUMINIO/*ONRARIO BEIGE",
+      "sourceDirectoryNote": "La consola muestra caracteres corruptos en el nombre original. Resolver por patron antes de copiar archivos.",
+      "mainImage": "ALUMINIO/*ONRARIO BEIGE/Imagen principal/IMG_4892.JPG",
+      "gallery": [
+        "ALUMINIO/*ONRARIO BEIGE/Fondo real/IMG_4890.PNG",
+        "ALUMINIO/*ONRARIO BEIGE/Medidas/IMG_4889.PNG"
+      ],
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "image": "ALUMINIO/*ONRARIO BEIGE/Variante/Beige.JPG",
+          "available": true
+        }
+      ]
+    }
+  ]
+}

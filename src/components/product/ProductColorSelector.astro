@@ -9,8 +9,20 @@ interface Props {
 const { colors, labelledBy } = Astro.props;
 ---
 
-<div class="flex flex-wrap gap-2" aria-labelledby={labelledBy}>
+<div class="flex flex-wrap gap-2" aria-labelledby={labelledBy} data-color-selector>
   {colors.map((color) => (
-    <span class={`h-6 w-6 rounded-full border-2 ${color.available ? 'border-ink/25' : 'border-red-300 opacity-40'} shadow-sm`} title={color.name} style={`background:${color.hex}`} aria-label={`${color.name}${color.available ? '' : ', no disponible'}`}></span>
+    <button class={`h-6 w-6 rounded-full border-2 ${color.available ? 'border-ink/25' : 'border-red-300 opacity-40'} shadow-sm focus-visible:outline-aqua`} type="button" title={color.name} style={`background:${color.hex}`} aria-label={`${color.name}${color.available ? '' : ', no disponible'}`} data-color-image={color.image ?? ''}></button>
   ))}
 </div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-color-image]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const image = button.dataset.colorImage;
+      if (!image) return;
+
+      const main = document.querySelector<HTMLImageElement>('[data-gallery-main]');
+      if (main) main.src = image;
+    });
+  });
+</script>

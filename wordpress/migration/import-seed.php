@@ -150,7 +150,9 @@ foreach ($seed['categories'] ?? [] as $category) {
     milapro_seed_update_field('featured', milapro_seed_bool($category['featured'] ?? true), $target);
 }
 
+$seed_product_slugs = [];
 foreach ($seed['products'] ?? [] as $product) {
+    $seed_product_slugs[] = $product['slug'];
     $post_id = milapro_seed_upsert_post('products', $product['slug'], [
         'post_title' => $product['name'],
         'post_excerpt' => $product['shortDescription'],
@@ -189,9 +191,21 @@ foreach ($seed['products'] ?? [] as $product) {
     milapro_seed_update_field('dimensions', $product['dimensions'] ?? '', $post_id);
     milapro_seed_update_field('main_image', $main_image_id, $post_id);
     milapro_seed_update_field('gallery_images', array_map(fn ($image_id) => ['image' => $image_id], $gallery_ids), $post_id);
-    milapro_seed_update_field('colors', $product['colors'] ?? [], $post_id);
+    $colors = [];
+    foreach ($product['colors'] ?? [] as $color) {
+        $color_image_id = milapro_seed_attachment($color['image'] ?? null, $product['name'] . ' ' . ($color['name'] ?? ''));
+        $color['image'] = $color_image_id ?: ($color['image'] ?? '');
+        $colors[] = $color;
+    }
+    milapro_seed_update_field('colors', $colors, $post_id);
     milapro_seed_update_field('variants', [], $post_id);
     milapro_seed_update_field('specifications', $product['specifications'] ?? [], $post_id);
+}
+
+foreach (get_posts(['post_type' => 'products', 'post_status' => 'publish', 'numberposts' => -1]) as $existing_product) {
+    if (!in_array($existing_product->post_name, $seed_product_slugs, true)) {
+        wp_update_post(['ID' => $existing_product->ID, 'post_status' => 'draft']);
+    }
 }
 
 foreach ($seed['reels'] ?? [] as $reel) {

@@ -1,0 +1,1 @@
+document.querySelectorAll("[data-color-image]").forEach(e=>{e.addEventListener("click",()=>{const a=e.dataset.colorImage;if(!a)return;const c=document.querySelector("[data-gallery-main]");c&&(c.src=a)})});

@@ -290,7 +290,12 @@ function milapro_product_details(int $post_id): array
         'brand' => (string) (get_post_meta($post_id, '_milapro_brand', true) ?: 'Milapro Home'),
         'dimensions' => (string) get_post_meta($post_id, '_milapro_dimensions', true),
         'keywords' => (string) (get_post_meta($post_id, '_milapro_keywords', true) ?: (function_exists('get_field') ? get_field('keywords', $post_id) : '')),
-        'colors' => milapro_meta_array($post_id, '_milapro_colors'),
+        'colors' => array_map(function ($color): array {
+            if (is_array($color) && isset($color['image'])) {
+                $color['image'] = milapro_media_url($color['image']);
+            }
+            return is_array($color) ? $color : [];
+        }, milapro_meta_array($post_id, '_milapro_colors')),
         'variants' => milapro_meta_array($post_id, '_milapro_variants'),
         'specifications' => milapro_meta_array($post_id, '_milapro_specifications'),
         'gallery_images' => milapro_meta_array($post_id, '_milapro_gallery_images'),

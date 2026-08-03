@@ -1,0 +1,1 @@
+import"./ProductColorSelector.astro_astro_type_script_index_0_lang.f9e3eb84.js";import"./hoisted.4ae636b6.js";document.querySelectorAll("[data-gallery]").forEach(a=>{const e=a.querySelector("[data-gallery-main]");a.querySelectorAll("[data-gallery-thumb]").forEach(r=>{r.addEventListener("click",()=>{e&&(e.src=r.dataset.galleryThumb??e.src)})})});

@@ -1,0 +1,5165 @@
+{
+  "sourceRoot": "PRODUCTOS MILA WEB",
+  "generatedAt": "2026-08-03T15:20:19.346Z",
+  "criteria": "Imagen principal requerida. Imagenes principales adicionales, fondo/foto real y medidas van a galeria si existen. Variantes sin imagen se omiten; sin variantes implica version default.",
+  "products": [
+    {
+      "slug": "aluminio-bahia-esquinera",
+      "name": "Bahia Esquinera",
+      "shortDescription": "Bahia Esquinera disponible en Aluminio.",
+      "description": "Bahia Esquinera forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-bahia-esquinera/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-bahia-esquinera/main-01.png",
+        "/productos-mila-web/aluminio-bahia-esquinera/gallery-real-01.png",
+        "/productos-mila-web/aluminio-bahia-esquinera/gallery-real-02.png",
+        "/productos-mila-web/aluminio-bahia-esquinera/gallery-real-03.png",
+        "/productos-mila-web/aluminio-bahia-esquinera/gallery-measures-04.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-BAHIA-ESQUINERA",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/aluminio-bahia-esquinera/variant-blanco-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1000,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 43260,
+      "compareAtPrice": 61800,
+      "sourceDirectory": "ALUMINIO/BAHÍA ESQUINERA",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/BAHÍA ESQUINERA/Imagen principal/IMG_0440.PNG",
+        "gallery": [
+          "ALUMINIO/BAHÍA ESQUINERA/Fondo real/Gemini_Generated_Image_sfwf22sfwf22sfwf.png",
+          "ALUMINIO/BAHÍA ESQUINERA/Fondo real/Gemini_Generated_Image_v2w2edv2w2edv2w2.png",
+          "ALUMINIO/BAHÍA ESQUINERA/Fondo real/IMG_0434.PNG",
+          "ALUMINIO/BAHÍA ESQUINERA/Medidas/IMG_0435.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "ALUMINIO/BAHÍA ESQUINERA/Variedades/Blanco/IMG_0441.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-camastro-sena",
+      "name": "Camastro Sena",
+      "shortDescription": "Camastro Sena disponible en Aluminio.",
+      "description": "Camastro Sena forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-camastro-sena/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-camastro-sena/main-01.png",
+        "/productos-mila-web/aluminio-camastro-sena/gallery-main-01.png",
+        "/productos-mila-web/aluminio-camastro-sena/gallery-real-02.png",
+        "/productos-mila-web/aluminio-camastro-sena/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-CAMASTRO-SENA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-camastro-sena/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1001,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 21980,
+      "sourceDirectory": "ALUMINIO/CAMASTRO SENA",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/CAMASTRO SENA/IMAGEN PRINCIPAL/IMG_4857.PNG",
+        "gallery": [
+          "ALUMINIO/CAMASTRO SENA/IMAGEN PRINCIPAL/IMG_4858.PNG",
+          "ALUMINIO/CAMASTRO SENA/Fondo real/IMG_4854.PNG",
+          "ALUMINIO/CAMASTRO SENA/Medidas/IMG_4856.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/CAMASTRO SENA/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-caspio",
+      "name": "Caspio",
+      "shortDescription": "Caspio disponible en Aluminio.",
+      "description": "Caspio forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-caspio/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-caspio/main-01.png",
+        "/productos-mila-web/aluminio-caspio/gallery-main-01.png",
+        "/productos-mila-web/aluminio-caspio/gallery-real-02.jpeg",
+        "/productos-mila-web/aluminio-caspio/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-CASPIO",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-caspio/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1002,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 34090,
+      "compareAtPrice": 48700,
+      "sourceDirectory": "ALUMINIO/Caspio",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/Caspio/Imagen principal/8.png",
+        "gallery": [
+          "ALUMINIO/Caspio/Imagen principal/CASPIO.png",
+          "ALUMINIO/Caspio/Fondo real/38500b86-a10a-4b55-8ccd-279eb07c8c09.jpeg",
+          "ALUMINIO/Caspio/Medidas/IMG_0377.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/Caspio/Variedades/Gris/CASPIO.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-caspio-esquinero",
+      "name": "Caspio Esquinero",
+      "shortDescription": "Caspio Esquinero disponible en Aluminio.",
+      "description": "Caspio Esquinero forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-caspio-esquinero/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/aluminio-caspio-esquinero/main-01.jpeg",
+        "/productos-mila-web/aluminio-caspio-esquinero/gallery-main-01.jpeg",
+        "/productos-mila-web/aluminio-caspio-esquinero/gallery-main-02.jpeg",
+        "/productos-mila-web/aluminio-caspio-esquinero/gallery-main-03.jpeg",
+        "/productos-mila-web/aluminio-caspio-esquinero/gallery-main-04.jpeg",
+        "/productos-mila-web/aluminio-caspio-esquinero/gallery-main-05.jpeg",
+        "/productos-mila-web/aluminio-caspio-esquinero/gallery-main-06.jpeg",
+        "/productos-mila-web/aluminio-caspio-esquinero/gallery-main-07.jpeg",
+        "/productos-mila-web/aluminio-caspio-esquinero/gallery-real-08.png",
+        "/productos-mila-web/aluminio-caspio-esquinero/gallery-measures-09.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-CASPIO-ESQUINERO",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-caspio-esquinero/variant-gris-01.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1003,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 50169,
+      "compareAtPrice": 71670,
+      "sourceDirectory": "ALUMINIO/CASPIO ESQUINERO",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/CASPIO ESQUINERO/IMAGEN PRINCIPAL/BANCA.jpeg",
+        "gallery": [
+          "ALUMINIO/CASPIO ESQUINERO/IMAGEN PRINCIPAL/CASPIO MODULAR.jpeg",
+          "ALUMINIO/CASPIO ESQUINERO/IMAGEN PRINCIPAL/ESQUINERO.jpeg",
+          "ALUMINIO/CASPIO ESQUINERO/IMAGEN PRINCIPAL/MESA.jpeg",
+          "ALUMINIO/CASPIO ESQUINERO/IMAGEN PRINCIPAL/OTOMANA.jpeg",
+          "ALUMINIO/CASPIO ESQUINERO/IMAGEN PRINCIPAL/SILLÓN DERECHO.jpeg",
+          "ALUMINIO/CASPIO ESQUINERO/IMAGEN PRINCIPAL/SILLÓN IZQUIERDO.jpeg",
+          "ALUMINIO/CASPIO ESQUINERO/IMAGEN PRINCIPAL/SILLÓN.jpeg",
+          "ALUMINIO/CASPIO ESQUINERO/Fondo real/IMG_4839.PNG",
+          "ALUMINIO/CASPIO ESQUINERO/Medidas/IMG_4838.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/CASPIO ESQUINERO/Variante/Gris.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-llona-4-ax",
+      "name": "Llona 4 Ax",
+      "shortDescription": "Llona 4 Ax disponible en Aluminio.",
+      "description": "Llona 4 Ax forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-llona-4-ax/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-llona-4-ax/main-01.png",
+        "/productos-mila-web/aluminio-llona-4-ax/gallery-main-01.png",
+        "/productos-mila-web/aluminio-llona-4-ax/gallery-real-02.png",
+        "/productos-mila-web/aluminio-llona-4-ax/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-LLONA-4-AX",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-llona-4-ax/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1004,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 44240,
+      "compareAtPrice": 63200,
+      "sourceDirectory": "ALUMINIO/LLONA 4 AX",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/LLONA 4 AX/Imagen principal/IMG_0410.PNG",
+        "gallery": [
+          "ALUMINIO/LLONA 4 AX/Imagen principal/IMG_0411.PNG",
+          "ALUMINIO/LLONA 4 AX/Fondo real/Gemini_Generated_Image_age12nage12nage1.png",
+          "ALUMINIO/LLONA 4 AX/Medidas/IMG_0407.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/LLONA 4 AX/Variedades/Gris/IMG_0410.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-llona-5-ax",
+      "name": "Llona 5 Ax",
+      "shortDescription": "Llona 5 Ax disponible en Aluminio.",
+      "description": "Llona 5 Ax forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-llona-5-ax/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-llona-5-ax/main-01.png",
+        "/productos-mila-web/aluminio-llona-5-ax/gallery-main-01.png",
+        "/productos-mila-web/aluminio-llona-5-ax/gallery-real-02.png",
+        "/productos-mila-web/aluminio-llona-5-ax/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-LLONA-5-AX",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/aluminio-llona-5-ax/variant-beige-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1005,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 53060,
+      "compareAtPrice": 75800,
+      "sourceDirectory": "ALUMINIO/LLONA 5 AX",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/LLONA 5 AX/Imagen principal/IMG_0413.PNG",
+        "gallery": [
+          "ALUMINIO/LLONA 5 AX/Imagen principal/IMG_0415.PNG",
+          "ALUMINIO/LLONA 5 AX/Fondo real/IMG_0414.PNG",
+          "ALUMINIO/LLONA 5 AX/Medidas/IMG_0412.PNG"
+        ],
+        "variants": [
+          {
+            "name": "BEIGE",
+            "image": "ALUMINIO/LLONA 5 AX/Variedades/BEIGE/IMG_0413.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-llona-esquinero",
+      "name": "Llona Esquinero",
+      "shortDescription": "Llona Esquinero disponible en Aluminio.",
+      "description": "Llona Esquinero forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-llona-esquinero/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-llona-esquinero/main-01.png",
+        "/productos-mila-web/aluminio-llona-esquinero/gallery-main-01.png",
+        "/productos-mila-web/aluminio-llona-esquinero/gallery-real-02.png",
+        "/productos-mila-web/aluminio-llona-esquinero/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-LLONA-ESQUINERO",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/aluminio-llona-esquinero/variant-blanco-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1006,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 41580,
+      "compareAtPrice": 59400,
+      "sourceDirectory": "ALUMINIO/LLONA ESQUINERO",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/LLONA ESQUINERO/Imagen principal/IMG_0422.PNG",
+        "gallery": [
+          "ALUMINIO/LLONA ESQUINERO/Imagen principal/IMG_0423.PNG",
+          "ALUMINIO/LLONA ESQUINERO/Fondo real/IMG_0416.PNG",
+          "ALUMINIO/LLONA ESQUINERO/Medidas/IMG_0418.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "ALUMINIO/LLONA ESQUINERO/Variedades/Blanco/IMG_0424.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-llona-mesa-auxiliar",
+      "name": "Llona Mesa Auxiliar",
+      "shortDescription": "Llona Mesa Auxiliar disponible en Aluminio.",
+      "description": "Llona Mesa Auxiliar forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-llona-mesa-auxiliar/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-llona-mesa-auxiliar/main-01.png",
+        "/productos-mila-web/aluminio-llona-mesa-auxiliar/gallery-main-01.png",
+        "/productos-mila-web/aluminio-llona-mesa-auxiliar/gallery-real-02.png",
+        "/productos-mila-web/aluminio-llona-mesa-auxiliar/gallery-real-03.png",
+        "/productos-mila-web/aluminio-llona-mesa-auxiliar/gallery-measures-04.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-LLONA-MESA-AUXILIAR",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/aluminio-llona-mesa-auxiliar/variant-beige-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1007,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 4560,
+      "sourceDirectory": "ALUMINIO/LLONA MESA AUXILIAR",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/LLONA MESA AUXILIAR/Imagen principal/IMG_0431.PNG",
+        "gallery": [
+          "ALUMINIO/LLONA MESA AUXILIAR/Imagen principal/IMG_0432.PNG",
+          "ALUMINIO/LLONA MESA AUXILIAR/Fondo real/Gemini_Generated_Image_gi8mq0gi8mq0gi8m.png",
+          "ALUMINIO/LLONA MESA AUXILIAR/Fondo real/Gemini_Generated_Image_m35u0xm35u0xm35u.png",
+          "ALUMINIO/LLONA MESA AUXILIAR/Medidas/5072 (2).png"
+        ],
+        "variants": [
+          {
+            "name": "BEIGE",
+            "image": "ALUMINIO/LLONA MESA AUXILIAR/Variedades/BEIGE/IMG_0433.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-malaui",
+      "name": "Malaui",
+      "shortDescription": "Malaui disponible en Aluminio.",
+      "description": "Malaui forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-malaui/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-malaui/main-01.png",
+        "/productos-mila-web/aluminio-malaui/gallery-main-01.png",
+        "/productos-mila-web/aluminio-malaui/gallery-real-02.png",
+        "/productos-mila-web/aluminio-malaui/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MALAUI",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-malaui/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1008,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 41167,
+      "compareAtPrice": 58810,
+      "sourceDirectory": "ALUMINIO/MALAUI",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/MALAUI/Imagen principal/B3888060-5893-41B1-950A-4678FD8B252A.png",
+        "gallery": [
+          "ALUMINIO/MALAUI/Imagen principal/FCA4CE5C-57A2-4BAA-943F-64BE77219BE2.png",
+          "ALUMINIO/MALAUI/Fondo real/IMG_0387.PNG",
+          "ALUMINIO/MALAUI/Medidas/IMG_0389.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/MALAUI/Variantes/Gris/FCA4CE5C-57A2-4BAA-943F-64BE77219BE2.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-mesa-elba",
+      "name": "Mesa Elba",
+      "shortDescription": "Mesa Elba disponible en Aluminio.",
+      "description": "Mesa Elba forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-mesa-elba/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-mesa-elba/main-01.png",
+        "/productos-mila-web/aluminio-mesa-elba/gallery-main-01.png",
+        "/productos-mila-web/aluminio-mesa-elba/gallery-real-02.png",
+        "/productos-mila-web/aluminio-mesa-elba/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-ELBA",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/aluminio-mesa-elba/variant-beige-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1009,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 29570,
+      "sourceDirectory": "ALUMINIO/MESA ELBA",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/MESA ELBA/IMAGEN PRINCIPAL/IMG_4870.PNG",
+        "gallery": [
+          "ALUMINIO/MESA ELBA/IMAGEN PRINCIPAL/IMG_4871.PNG",
+          "ALUMINIO/MESA ELBA/Fondo real/IMG_4867.PNG",
+          "ALUMINIO/MESA ELBA/Medidas/IMG_4869.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Beige",
+            "image": "ALUMINIO/MESA ELBA/Variante/Beige.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-mesa-erie",
+      "name": "Mesa Erie",
+      "shortDescription": "Mesa Erie disponible en Aluminio.",
+      "description": "Mesa Erie forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-mesa-erie/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/aluminio-mesa-erie/main-01.jpeg",
+        "/productos-mila-web/aluminio-mesa-erie/gallery-main-01.jpeg",
+        "/productos-mila-web/aluminio-mesa-erie/gallery-real-02.png",
+        "/productos-mila-web/aluminio-mesa-erie/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-ERIE",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/aluminio-mesa-erie/variant-blanco-01.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1010,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 20460,
+      "sourceDirectory": "ALUMINIO/MESA ERIE",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/MESA ERIE/Imagen principal/ERIE 2.jpeg",
+        "gallery": [
+          "ALUMINIO/MESA ERIE/Imagen principal/ERIE.jpeg",
+          "ALUMINIO/MESA ERIE/Fondo real/C9DCAC6B-DB9D-4761-86F8-B19CAF97747F.png",
+          "ALUMINIO/MESA ERIE/Medidas/IMG_0394.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "ALUMINIO/MESA ERIE/Variedades/Blanco/ERIE.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-mesa-volga-1-6",
+      "name": "Mesa Volga 1.6",
+      "shortDescription": "Mesa Volga 1.6 disponible en Aluminio.",
+      "description": "Mesa Volga 1.6 forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-mesa-volga-1-6/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-mesa-volga-1-6/main-01.png",
+        "/productos-mila-web/aluminio-mesa-volga-1-6/gallery-main-01.png",
+        "/productos-mila-web/aluminio-mesa-volga-1-6/gallery-real-02.png",
+        "/productos-mila-web/aluminio-mesa-volga-1-6/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-VOLGA-1-6",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-mesa-volga-1-6/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1011,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 18018,
+      "compareAtPrice": 25740,
+      "sourceDirectory": "ALUMINIO/MESA VOLGA 1.6",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/MESA VOLGA 1.6/IMAGEN PRINCIPAL/IMG_4848.PNG",
+        "gallery": [
+          "ALUMINIO/MESA VOLGA 1.6/IMAGEN PRINCIPAL/IMG_4849.PNG",
+          "ALUMINIO/MESA VOLGA 1.6/Fondo real/IMG_4851.PNG",
+          "ALUMINIO/MESA VOLGA 1.6/Medidas/IMG_4850.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/MESA VOLGA 1.6/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-mesa-volga-2-3",
+      "name": "Mesa Volga 2.3",
+      "shortDescription": "Mesa Volga 2.3 disponible en Aluminio.",
+      "description": "Mesa Volga 2.3 forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-mesa-volga-2-3/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-mesa-volga-2-3/main-01.png",
+        "/productos-mila-web/aluminio-mesa-volga-2-3/gallery-main-01.png",
+        "/productos-mila-web/aluminio-mesa-volga-2-3/gallery-real-02.png",
+        "/productos-mila-web/aluminio-mesa-volga-2-3/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-VOLGA-2-3",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-mesa-volga-2-3/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1012,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 20699,
+      "compareAtPrice": 29570,
+      "sourceDirectory": "ALUMINIO/MESA VOLGA 2.3",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/MESA VOLGA 2.3/Imagen principal/32C553A2-C329-41DE-8F8C-58E19141CFA5.png",
+        "gallery": [
+          "ALUMINIO/MESA VOLGA 2.3/Imagen principal/C3263784-FB1A-4901-AEAF-E861860F4259.png",
+          "ALUMINIO/MESA VOLGA 2.3/Fondo real/3474B276-CFD8-4D5E-BFD0-899CCBDC3F08.png",
+          "ALUMINIO/MESA VOLGA 2.3/Medidas/IMG_0383.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/MESA VOLGA 2.3/Variedades/Gris/32C553A2-C329-41DE-8F8C-58E19141CFA5.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-onega",
+      "name": "Onega",
+      "shortDescription": "Onega disponible en Aluminio.",
+      "description": "Onega forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-onega/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-onega/main-01.png",
+        "/productos-mila-web/aluminio-onega/gallery-main-01.png",
+        "/productos-mila-web/aluminio-onega/gallery-main-02.png",
+        "/productos-mila-web/aluminio-onega/gallery-real-03.png",
+        "/productos-mila-web/aluminio-onega/gallery-measures-04.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-ONEGA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-onega/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": true,
+      "available": true,
+      "displayOrder": 1013,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 55440,
+      "compareAtPrice": 79200,
+      "sourceDirectory": "ALUMINIO/ONEGA",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/ONEGA/IMAGEN PRINCIPAL/IMG_4815.PNG",
+        "gallery": [
+          "ALUMINIO/ONEGA/IMAGEN PRINCIPAL/IMG_4816.PNG",
+          "ALUMINIO/ONEGA/IMAGEN PRINCIPAL/IMG_4817.PNG",
+          "ALUMINIO/ONEGA/Fondo real/IMG_4814.PNG",
+          "ALUMINIO/ONEGA/Medidas/IMG_4813.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/ONEGA/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-onega-esquinero",
+      "name": "Onega Esquinero",
+      "shortDescription": "Onega Esquinero disponible en Aluminio.",
+      "description": "Onega Esquinero forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-onega-esquinero/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/aluminio-onega-esquinero/main-01.jpeg",
+        "/productos-mila-web/aluminio-onega-esquinero/gallery-main-01.png",
+        "/productos-mila-web/aluminio-onega-esquinero/gallery-main-02.png",
+        "/productos-mila-web/aluminio-onega-esquinero/gallery-main-03.png",
+        "/productos-mila-web/aluminio-onega-esquinero/gallery-main-04.jpeg",
+        "/productos-mila-web/aluminio-onega-esquinero/gallery-main-05.jpeg",
+        "/productos-mila-web/aluminio-onega-esquinero/gallery-main-06.jpeg",
+        "/productos-mila-web/aluminio-onega-esquinero/gallery-main-07.jpeg",
+        "/productos-mila-web/aluminio-onega-esquinero/gallery-real-08.png",
+        "/productos-mila-web/aluminio-onega-esquinero/gallery-measures-09.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-ONEGA-ESQUINERO",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-onega-esquinero/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1014,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 64603,
+      "compareAtPrice": 92289.99,
+      "sourceDirectory": "ALUMINIO/ONEGA ESQUINERO",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/ONEGA ESQUINERO/IMAGEN PRINCIPAL/ESQUINERO.jpeg",
+        "gallery": [
+          "ALUMINIO/ONEGA ESQUINERO/IMAGEN PRINCIPAL/IMG_4822.PNG",
+          "ALUMINIO/ONEGA ESQUINERO/IMAGEN PRINCIPAL/IMG_4823.PNG",
+          "ALUMINIO/ONEGA ESQUINERO/IMAGEN PRINCIPAL/IMG_4823(1).PNG",
+          "ALUMINIO/ONEGA ESQUINERO/IMAGEN PRINCIPAL/MESA.jpeg",
+          "ALUMINIO/ONEGA ESQUINERO/IMAGEN PRINCIPAL/SILLÓN DERECHO.jpeg",
+          "ALUMINIO/ONEGA ESQUINERO/IMAGEN PRINCIPAL/SILLÓN IZQUIERDO.jpeg",
+          "ALUMINIO/ONEGA ESQUINERO/IMAGEN PRINCIPAL/SILLÓN.jpeg",
+          "ALUMINIO/ONEGA ESQUINERO/Fondo real/IMG_4819.PNG",
+          "ALUMINIO/ONEGA ESQUINERO/Medidas/IMG_4820.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/ONEGA ESQUINERO/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-ontario-beige",
+      "name": "Ontario Beige",
+      "shortDescription": "Ontario Beige disponible en Aluminio.",
+      "description": "Ontario Beige forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-ontario-beige/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-ontario-beige/main-01.png",
+        "/productos-mila-web/aluminio-ontario-beige/gallery-main-01.jpeg",
+        "/productos-mila-web/aluminio-ontario-beige/gallery-real-02.png",
+        "/productos-mila-web/aluminio-ontario-beige/gallery-real-03.jpeg",
+        "/productos-mila-web/aluminio-ontario-beige/gallery-measures-04.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-ONTARIO-BEIGE",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/aluminio-ontario-beige/variant-beige-01.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1015,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 56805,
+      "compareAtPrice": 81150,
+      "sourceDirectory": "ALUMINIO/Ontario BEIGE",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/Ontario BEIGE/Imagen principal/34.png",
+        "gallery": [
+          "ALUMINIO/Ontario BEIGE/Imagen principal/IMG_9137.jpeg",
+          "ALUMINIO/Ontario BEIGE/Fondo real/_genera_una_imagen_relista_de__Nano_Banana_2_50517.png",
+          "ALUMINIO/Ontario BEIGE/Fondo real/cff6b86e-a624-4c9d-ae89-77fb66afdbff.jpeg",
+          "ALUMINIO/Ontario BEIGE/Medidas/IMG_0406.PNG"
+        ],
+        "variants": [
+          {
+            "name": "BEIGE",
+            "image": "ALUMINIO/Ontario BEIGE/Variedades/BEIGE/IMG_9137.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-ontario-gris",
+      "name": "Ontario Gris",
+      "shortDescription": "Ontario Gris disponible en Aluminio.",
+      "description": "Ontario Gris forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-ontario-gris/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-ontario-gris/main-01.png",
+        "/productos-mila-web/aluminio-ontario-gris/gallery-main-01.png",
+        "/productos-mila-web/aluminio-ontario-gris/gallery-real-02.png",
+        "/productos-mila-web/aluminio-ontario-gris/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-ONTARIO-GRIS",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-ontario-gris/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1016,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 56805,
+      "compareAtPrice": 81150,
+      "sourceDirectory": "ALUMINIO/ONTARIO GRIS",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/ONTARIO GRIS/IMAGEN PRINCIPAL/IMG_4880.PNG",
+        "gallery": [
+          "ALUMINIO/ONTARIO GRIS/IMAGEN PRINCIPAL/IMG_4881.PNG",
+          "ALUMINIO/ONTARIO GRIS/Fondo real/IMG_4877.PNG",
+          "ALUMINIO/ONTARIO GRIS/Medida/IMG_4879.PNG"
+        ],
+        "variants": [
+          {
+            "name": "gris",
+            "image": "ALUMINIO/ONTARIO GRIS/Variante/gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-silla-caspio",
+      "name": "Silla Caspio",
+      "shortDescription": "Silla Caspio disponible en Aluminio.",
+      "description": "Silla Caspio forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-silla-caspio/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-silla-caspio/main-01.png",
+        "/productos-mila-web/aluminio-silla-caspio/gallery-main-01.png",
+        "/productos-mila-web/aluminio-silla-caspio/gallery-main-02.png",
+        "/productos-mila-web/aluminio-silla-caspio/gallery-real-03.png",
+        "/productos-mila-web/aluminio-silla-caspio/gallery-measures-04.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLA-CASPIO",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-silla-caspio/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1017,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 4480,
+      "compareAtPrice": 6400,
+      "sourceDirectory": "ALUMINIO/SILLA CASPIO",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/SILLA CASPIO/IMAGEN PRINCIPAL/IMG_4842.PNG",
+        "gallery": [
+          "ALUMINIO/SILLA CASPIO/IMAGEN PRINCIPAL/IMG_4843.PNG",
+          "ALUMINIO/SILLA CASPIO/IMAGEN PRINCIPAL/IMG_4844.PNG",
+          "ALUMINIO/SILLA CASPIO/Fondo real/IMG_4845.PNG",
+          "ALUMINIO/SILLA CASPIO/Medidas/IMG_4841.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/SILLA CASPIO/VARIANTE/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-silla-erie",
+      "name": "Silla Erie",
+      "shortDescription": "Silla Erie disponible en Aluminio.",
+      "description": "Silla Erie forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-silla-erie/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-silla-erie/main-01.png",
+        "/productos-mila-web/aluminio-silla-erie/gallery-main-01.jpeg",
+        "/productos-mila-web/aluminio-silla-erie/gallery-real-02.jpeg",
+        "/productos-mila-web/aluminio-silla-erie/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLA-ERIE",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-silla-erie/variant-gris-01.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1018,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 4750,
+      "sourceDirectory": "ALUMINIO/Silla ERIE",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/Silla ERIE/Imagen principal/15.png",
+        "gallery": [
+          "ALUMINIO/Silla ERIE/Imagen principal/SILLA ERIE.jpeg",
+          "ALUMINIO/Silla ERIE/Fondo real/f355f6bb-61cc-472c-9bd7-6d76518760f8.jpeg",
+          "ALUMINIO/Silla ERIE/Medidas/IMG_0401.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/Silla ERIE/Variedades/Gris/SILLA ERIE.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-silla-malaui",
+      "name": "Silla Malaui",
+      "shortDescription": "Silla Malaui disponible en Aluminio.",
+      "description": "Silla Malaui forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-silla-malaui/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-silla-malaui/main-01.png",
+        "/productos-mila-web/aluminio-silla-malaui/gallery-real-01.png",
+        "/productos-mila-web/aluminio-silla-malaui/gallery-measures-02.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLA-MALAUI",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/aluminio-silla-malaui/variant-beige-01.png",
+          "available": true
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-silla-malaui/variant-gris-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1019,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 5082,
+      "compareAtPrice": 7260,
+      "sourceDirectory": "ALUMINIO/SILLA MALAUI",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/SILLA MALAUI/IMAGEN PRINCIPAL/IMG_4864.PNG",
+        "gallery": [
+          "ALUMINIO/SILLA MALAUI/Fondo real/IMG_4863.PNG",
+          "ALUMINIO/SILLA MALAUI/Medida/IMG_4862.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Beige",
+            "image": "ALUMINIO/SILLA MALAUI/Variante/Beige.PNG"
+          },
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/SILLA MALAUI/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-sillon-extra-llona",
+      "name": "Sillon Extra Llona",
+      "shortDescription": "Sillon Extra Llona disponible en Aluminio.",
+      "description": "Sillon Extra Llona forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-sillon-extra-llona/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-sillon-extra-llona/main-01.png",
+        "/productos-mila-web/aluminio-sillon-extra-llona/gallery-real-01.png",
+        "/productos-mila-web/aluminio-sillon-extra-llona/gallery-real-02.png",
+        "/productos-mila-web/aluminio-sillon-extra-llona/gallery-real-03.png",
+        "/productos-mila-web/aluminio-sillon-extra-llona/gallery-real-04.png",
+        "/productos-mila-web/aluminio-sillon-extra-llona/gallery-real-05.png",
+        "/productos-mila-web/aluminio-sillon-extra-llona/gallery-measures-06.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLON-EXTRA-LLONA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-sillon-extra-llona/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1020,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 12160,
+      "sourceDirectory": "ALUMINIO/SILLÓN EXTRA LLONA",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/SILLÓN EXTRA LLONA/Imagen principal/IMG_0421.PNG",
+        "gallery": [
+          "ALUMINIO/SILLÓN EXTRA LLONA/Fondo real/Gemini_Generated_Image_71fys671fys671fy.png",
+          "ALUMINIO/SILLÓN EXTRA LLONA/Fondo real/Gemini_Generated_Image_flexs8flexs8flex.png",
+          "ALUMINIO/SILLÓN EXTRA LLONA/Fondo real/Gemini_Generated_Image_gi8mq0gi8mq0gi8m.png",
+          "ALUMINIO/SILLÓN EXTRA LLONA/Fondo real/Gemini_Generated_Image_m35u0xm35u0xm35u.png",
+          "ALUMINIO/SILLÓN EXTRA LLONA/Fondo real/IMG_0420.PNG",
+          "ALUMINIO/SILLÓN EXTRA LLONA/Medidas/IMG_0419.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/SILLÓN EXTRA LLONA/Variedades/Gris/IMG_0421.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-sillon-ind-onrario-beige",
+      "name": "Sillon Ind Onrario Beige",
+      "shortDescription": "Sillon Ind Onrario Beige disponible en Aluminio.",
+      "description": "Sillon Ind Onrario Beige forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-sillon-ind-onrario-beige/main-01.jpg",
+      "gallery": [
+        "/productos-mila-web/aluminio-sillon-ind-onrario-beige/main-01.jpg",
+        "/productos-mila-web/aluminio-sillon-ind-onrario-beige/gallery-real-01.png",
+        "/productos-mila-web/aluminio-sillon-ind-onrario-beige/gallery-measures-02.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLON-IND-ONRARIO-BEIGE",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/aluminio-sillon-ind-onrario-beige/variant-beige-01.jpg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1021,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 13986,
+      "compareAtPrice": 19980,
+      "sourceDirectory": "ALUMINIO/SILLÓN IND ONRARIO BEIGE",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/SILLÓN IND ONRARIO BEIGE/Imagen principal/IMG_4892.JPG",
+        "gallery": [
+          "ALUMINIO/SILLÓN IND ONRARIO BEIGE/Fondo real/IMG_4890.PNG",
+          "ALUMINIO/SILLÓN IND ONRARIO BEIGE/Medidas/IMG_4889.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Beige",
+            "image": "ALUMINIO/SILLÓN IND ONRARIO BEIGE/Variante/Beige.JPG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-sillon-ind-ontario-gris",
+      "name": "Sillon Ind Ontario Gris",
+      "shortDescription": "Sillon Ind Ontario Gris disponible en Aluminio.",
+      "description": "Sillon Ind Ontario Gris forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-sillon-ind-ontario-gris/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-sillon-ind-ontario-gris/main-01.png",
+        "/productos-mila-web/aluminio-sillon-ind-ontario-gris/gallery-main-01.png",
+        "/productos-mila-web/aluminio-sillon-ind-ontario-gris/gallery-real-02.png",
+        "/productos-mila-web/aluminio-sillon-ind-ontario-gris/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLON-IND-ONTARIO-GRIS",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-sillon-ind-ontario-gris/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1022,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 13986,
+      "compareAtPrice": 19980,
+      "sourceDirectory": "ALUMINIO/SILLÓN IND ONTARIO GRIS",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/SILLÓN IND ONTARIO GRIS/Imagen principal/IMG_4885.PNG",
+        "gallery": [
+          "ALUMINIO/SILLÓN IND ONTARIO GRIS/Imagen principal/IMG_4886.PNG",
+          "ALUMINIO/SILLÓN IND ONTARIO GRIS/Fondo real/IMG_4887.PNG",
+          "ALUMINIO/SILLÓN IND ONTARIO GRIS/Medidas/IMG_4884.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/SILLÓN IND ONTARIO GRIS/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aluminio-sillones-casio",
+      "name": "Sillones Casio",
+      "shortDescription": "Sillones Casio disponible en Aluminio.",
+      "description": "Sillones Casio forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/aluminio-sillones-casio/main-01.png",
+      "gallery": [
+        "/productos-mila-web/aluminio-sillones-casio/main-01.png",
+        "/productos-mila-web/aluminio-sillones-casio/gallery-main-01.png",
+        "/productos-mila-web/aluminio-sillones-casio/gallery-real-02.png",
+        "/productos-mila-web/aluminio-sillones-casio/gallery-measures-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio",
+        "descuentos"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLONES-CASIO",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/aluminio-sillones-casio/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1023,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        }
+      ],
+      "price": 17500,
+      "compareAtPrice": 25000,
+      "sourceDirectory": "ALUMINIO/SILLONES CASIO",
+      "sourceFiles": {
+        "mainImage": "ALUMINIO/SILLONES CASIO/Imagen principal/77534DBA-6591-4E77-B543-F486911E339B.png",
+        "gallery": [
+          "ALUMINIO/SILLONES CASIO/Imagen principal/B3A6B5A9-8173-4A39-AC07-16AAF289BBA1.png",
+          "ALUMINIO/SILLONES CASIO/Fondo real/AF220333-E35F-4A02-8302-DBD384A857E8.png",
+          "ALUMINIO/SILLONES CASIO/Medidas/IMG_0378.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "ALUMINIO/SILLONES CASIO/Variedades/Gris/77534DBA-6591-4E77-B543-F486911E339B.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "outlet-camastro-victoria",
+      "name": "Camastro Victoria",
+      "shortDescription": "Camastro Victoria disponible en Outlet.",
+      "description": "Camastro Victoria forma parte del inventario actual de outlet para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/outlet-camastro-victoria/main-01.png",
+      "gallery": [
+        "/productos-mila-web/outlet-camastro-victoria/main-01.png",
+        "/productos-mila-web/outlet-camastro-victoria/gallery-main-01.png",
+        "/productos-mila-web/outlet-camastro-victoria/gallery-real-02.png"
+      ],
+      "category": "outlet",
+      "categories": [
+        "outlet"
+      ],
+      "collection": "Outlet",
+      "brand": "Milapro Home",
+      "sku": "OUTLET-CAMASTRO-VICTORIA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/outlet-camastro-victoria/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1024,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Outlet"
+        }
+      ],
+      "price": 7999,
+      "sourceDirectory": "OUTLET/Camastro victoria",
+      "sourceFiles": {
+        "mainImage": "OUTLET/Camastro victoria/Imagen principal/05C3A6D2-C173-4C5D-A47D-F72287E7A1BE.png",
+        "gallery": [
+          "OUTLET/Camastro victoria/Imagen principal/D319D9AB-6E1B-43EB-A492-B4DEF66AAA39.png",
+          "OUTLET/Camastro victoria/Fondo real/IMG_0367.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "OUTLET/Camastro victoria/Variedades/Gris/05C3A6D2-C173-4C5D-A47D-F72287E7A1BE.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "outlet-ladoga",
+      "name": "Ladoga",
+      "shortDescription": "Ladoga disponible en Outlet.",
+      "description": "Ladoga forma parte del inventario actual de outlet para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/outlet-ladoga/main-01.png",
+      "gallery": [
+        "/productos-mila-web/outlet-ladoga/main-01.png",
+        "/productos-mila-web/outlet-ladoga/gallery-main-01.png",
+        "/productos-mila-web/outlet-ladoga/gallery-real-02.png"
+      ],
+      "category": "outlet",
+      "categories": [
+        "outlet",
+        "descuentos"
+      ],
+      "collection": "Outlet",
+      "brand": "Milapro Home",
+      "sku": "OUTLET-LADOGA",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/outlet-ladoga/variant-blanca-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1025,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Outlet"
+        }
+      ],
+      "price": 30099,
+      "compareAtPrice": 42999,
+      "sourceDirectory": "OUTLET/LADOGA",
+      "sourceFiles": {
+        "mainImage": "OUTLET/LADOGA/Imagen principal/2135A38D-E9AC-4EEF-BCED-CBF6F14B2AF5.png",
+        "gallery": [
+          "OUTLET/LADOGA/Imagen principal/57D01548-B9F4-4BB7-9F1B-74D09B2B2054.png",
+          "OUTLET/LADOGA/Fondo real/IMG_0370.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "OUTLET/LADOGA/Variedades/Blanca/2135A38D-E9AC-4EEF-BCED-CBF6F14B2AF5.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "outlet-liena",
+      "name": "Liena",
+      "shortDescription": "Liena disponible en Outlet.",
+      "description": "Liena forma parte del inventario actual de outlet para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/outlet-liena/main-01.png",
+      "gallery": [
+        "/productos-mila-web/outlet-liena/main-01.png",
+        "/productos-mila-web/outlet-liena/gallery-main-01.png",
+        "/productos-mila-web/outlet-liena/gallery-main-02.png",
+        "/productos-mila-web/outlet-liena/gallery-real-03.png"
+      ],
+      "category": "outlet",
+      "categories": [
+        "outlet",
+        "descuentos"
+      ],
+      "collection": "Outlet",
+      "brand": "Milapro Home",
+      "sku": "OUTLET-LIENA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/outlet-liena/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1026,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Outlet"
+        }
+      ],
+      "price": 30099,
+      "compareAtPrice": 42999,
+      "sourceDirectory": "OUTLET/LIENA",
+      "sourceFiles": {
+        "mainImage": "OUTLET/LIENA/IMAGEN PRINCIPAL/IMG_4809.PNG",
+        "gallery": [
+          "OUTLET/LIENA/IMAGEN PRINCIPAL/IMG_4810.PNG",
+          "OUTLET/LIENA/IMAGEN PRINCIPAL/IMG_4811.PNG",
+          "OUTLET/LIENA/Fondo real/IMG_4808.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "OUTLET/LIENA/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "outlet-mecedora-girona",
+      "name": "Mecedora Girona",
+      "shortDescription": "Mecedora Girona disponible en Outlet.",
+      "description": "Mecedora Girona forma parte del inventario actual de outlet para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/outlet-mecedora-girona/main-01.png",
+      "gallery": [
+        "/productos-mila-web/outlet-mecedora-girona/main-01.png",
+        "/productos-mila-web/outlet-mecedora-girona/gallery-main-01.png",
+        "/productos-mila-web/outlet-mecedora-girona/gallery-real-02.png",
+        "/productos-mila-web/outlet-mecedora-girona/gallery-real-03.png"
+      ],
+      "category": "outlet",
+      "categories": [
+        "outlet"
+      ],
+      "collection": "Outlet",
+      "brand": "Milapro Home",
+      "sku": "OUTLET-MECEDORA-GIRONA",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/outlet-mecedora-girona/variant-blanco-01.png",
+          "available": true
+        },
+        {
+          "id": "negro",
+          "name": "Negro",
+          "hex": "#222222",
+          "image": "/productos-mila-web/outlet-mecedora-girona/variant-negro-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1027,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Outlet"
+        }
+      ],
+      "price": 7999,
+      "sourceDirectory": "OUTLET/MECEDORA GIRONA",
+      "sourceFiles": {
+        "mainImage": "OUTLET/MECEDORA GIRONA/Imagen principal/IMG_4799.PNG",
+        "gallery": [
+          "OUTLET/MECEDORA GIRONA/Imagen principal/IMG_4800.PNG",
+          "OUTLET/MECEDORA GIRONA/Fondo real/IMG_4797.PNG",
+          "OUTLET/MECEDORA GIRONA/Fondo real/IMG_4798.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "OUTLET/MECEDORA GIRONA/Variante/Blanco.PNG"
+          },
+          {
+            "name": "Negro",
+            "image": "OUTLET/MECEDORA GIRONA/Variante/Negro.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "outlet-nyasa",
+      "name": "Nyasa",
+      "shortDescription": "Nyasa disponible en Outlet.",
+      "description": "Nyasa forma parte del inventario actual de outlet para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/outlet-nyasa/main-01.png",
+      "gallery": [
+        "/productos-mila-web/outlet-nyasa/main-01.png",
+        "/productos-mila-web/outlet-nyasa/gallery-main-01.png",
+        "/productos-mila-web/outlet-nyasa/gallery-real-02.png"
+      ],
+      "category": "outlet",
+      "categories": [
+        "outlet",
+        "descuentos"
+      ],
+      "collection": "Outlet",
+      "brand": "Milapro Home",
+      "sku": "OUTLET-NYASA",
+      "colors": [],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1028,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Outlet"
+        }
+      ],
+      "price": 14600,
+      "compareAtPrice": 29200,
+      "sourceDirectory": "OUTLET/NYASA",
+      "sourceFiles": {
+        "mainImage": "OUTLET/NYASA/Imagen principal/IMG_4806.PNG",
+        "gallery": [
+          "OUTLET/NYASA/Imagen principal/IMG_4807.PNG",
+          "OUTLET/NYASA/Fondo real/IMG_4805.PNG"
+        ],
+        "variants": []
+      }
+    },
+    {
+      "slug": "outlet-turkana",
+      "name": "Turkana",
+      "shortDescription": "Turkana disponible en Outlet.",
+      "description": "Turkana forma parte del inventario actual de outlet para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/outlet-turkana/main-01.png",
+      "gallery": [
+        "/productos-mila-web/outlet-turkana/main-01.png",
+        "/productos-mila-web/outlet-turkana/gallery-main-01.png",
+        "/productos-mila-web/outlet-turkana/gallery-real-02.png"
+      ],
+      "category": "outlet",
+      "categories": [
+        "outlet",
+        "descuentos"
+      ],
+      "collection": "Outlet",
+      "brand": "Milapro Home",
+      "sku": "OUTLET-TURKANA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/outlet-turkana/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1029,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Outlet"
+        }
+      ],
+      "price": 21499.5,
+      "compareAtPrice": 42999,
+      "sourceDirectory": "OUTLET/TURKANA",
+      "sourceFiles": {
+        "mainImage": "OUTLET/TURKANA/Imagen principal/IMG_4803.PNG",
+        "gallery": [
+          "OUTLET/TURKANA/Imagen principal/IMG_4804.PNG",
+          "OUTLET/TURKANA/Fondo real/IMG_4802.PNG"
+        ],
+        "variants": [
+          {
+            "name": "gris",
+            "image": "OUTLET/TURKANA/Variante/gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plantas-ave-paraiso",
+      "name": "Ave Paraiso",
+      "shortDescription": "Ave Paraiso disponible en Plantas.",
+      "description": "Ave Paraiso forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plantas-ave-paraiso/main-01.jpg",
+      "gallery": [
+        "/productos-mila-web/plantas-ave-paraiso/main-01.jpg",
+        "/productos-mila-web/plantas-ave-paraiso/gallery-main-01.jpg",
+        "/productos-mila-web/plantas-ave-paraiso/gallery-real-02.jpg"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas",
+        "descuentos"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-AVE-PARAISO",
+      "colors": [
+        {
+          "id": "1-60",
+          "name": "1.60",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plantas-ave-paraiso/variant-1-60-01.jpg",
+          "available": true
+        },
+        {
+          "id": "1-80",
+          "name": "1.80",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plantas-ave-paraiso/variant-1-80-02.jpg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": true,
+      "available": true,
+      "displayOrder": 1030,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        }
+      ],
+      "price": 699,
+      "compareAtPrice": 999,
+      "sourceDirectory": "PLANTAS/AVE PARAISO",
+      "sourceFiles": {
+        "mainImage": "PLANTAS/AVE PARAISO/Imagen principal/IMG_4898.JPG",
+        "gallery": [
+          "PLANTAS/AVE PARAISO/Imagen principal/IMG_4899.JPG",
+          "PLANTAS/AVE PARAISO/Fondo real/IMG_4900.JPG"
+        ],
+        "variants": [
+          {
+            "name": "1.60",
+            "image": "PLANTAS/AVE PARAISO/Variante/1.60.JPG"
+          },
+          {
+            "name": "1.80",
+            "image": "PLANTAS/AVE PARAISO/Variante/1.80.JPG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plantas-olivo-eb",
+      "name": "Olivo Eb",
+      "shortDescription": "Olivo Eb disponible en Plantas.",
+      "description": "Olivo Eb forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plantas-olivo-eb/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plantas-olivo-eb/main-01.png",
+        "/productos-mila-web/plantas-olivo-eb/gallery-main-01.jpg",
+        "/productos-mila-web/plantas-olivo-eb/gallery-real-02.jpg",
+        "/productos-mila-web/plantas-olivo-eb/gallery-measures-03.jpg",
+        "/productos-mila-web/plantas-olivo-eb/gallery-measures-04.jpg"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas",
+        "descuentos"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-OLIVO-EB",
+      "colors": [],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1031,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        }
+      ],
+      "price": 899,
+      "compareAtPrice": 1669,
+      "sourceDirectory": "PLANTAS/OLIVO EB",
+      "sourceFiles": {
+        "mainImage": "PLANTAS/OLIVO EB/Imagen principal/IMG_4923.PNG",
+        "gallery": [
+          "PLANTAS/OLIVO EB/Imagen principal/IMG_4924.JPG",
+          "PLANTAS/OLIVO EB/Fondo real/IMG_4927.JPG",
+          "PLANTAS/OLIVO EB/Medidas/IMG_4925.JPG",
+          "PLANTAS/OLIVO EB/Medidas/IMG_4926.JPG"
+        ],
+        "variants": []
+      }
+    },
+    {
+      "slug": "plantas-olivo-fa",
+      "name": "Olivo Fa",
+      "shortDescription": "Olivo Fa disponible en Plantas.",
+      "description": "Olivo Fa forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plantas-olivo-fa/main-01.jpg",
+      "gallery": [
+        "/productos-mila-web/plantas-olivo-fa/main-01.jpg",
+        "/productos-mila-web/plantas-olivo-fa/gallery-real-01.jpg"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas",
+        "descuentos"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-OLIVO-FA",
+      "colors": [
+        {
+          "id": "1-50",
+          "name": "1.50",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plantas-olivo-fa/variant-1-50-01.jpg",
+          "available": true
+        },
+        {
+          "id": "1-80",
+          "name": "1.80",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plantas-olivo-fa/variant-1-80-02.jpg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1032,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        }
+      ],
+      "price": 799,
+      "compareAtPrice": 1479,
+      "sourceDirectory": "PLANTAS/OLIVO FA",
+      "sourceFiles": {
+        "mainImage": "PLANTAS/OLIVO FA/Imagen principal/IMG_4912.JPG",
+        "gallery": [
+          "PLANTAS/OLIVO FA/Fondo real/IMG_4915.JPG"
+        ],
+        "variants": [
+          {
+            "name": "1.50",
+            "image": "PLANTAS/OLIVO FA/Variante/1.50.JPG"
+          },
+          {
+            "name": "1.80",
+            "image": "PLANTAS/OLIVO FA/Variante/1.80.JPG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plantas-olivo-ga",
+      "name": "Olivo Ga",
+      "shortDescription": "Olivo Ga disponible en Plantas.",
+      "description": "Olivo Ga forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plantas-olivo-ga/main-01.jpg",
+      "gallery": [
+        "/productos-mila-web/plantas-olivo-ga/main-01.jpg",
+        "/productos-mila-web/plantas-olivo-ga/gallery-main-01.png",
+        "/productos-mila-web/plantas-olivo-ga/gallery-real-02.jpg",
+        "/productos-mila-web/plantas-olivo-ga/gallery-measures-03.jpg",
+        "/productos-mila-web/plantas-olivo-ga/gallery-measures-04.jpg"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas",
+        "descuentos"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-OLIVO-GA",
+      "colors": [],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1033,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        }
+      ],
+      "price": 899,
+      "compareAtPrice": 1698,
+      "sourceDirectory": "PLANTAS/OLIVO GA",
+      "sourceFiles": {
+        "mainImage": "PLANTAS/OLIVO GA/imagen principal/IMG_4917.JPG",
+        "gallery": [
+          "PLANTAS/OLIVO GA/imagen principal/IMG_4921.PNG",
+          "PLANTAS/OLIVO GA/Fondo real/IMG_4920.JPG",
+          "PLANTAS/OLIVO GA/Medidas/1.50.JPG",
+          "PLANTAS/OLIVO GA/Medidas/1.80.JPG"
+        ],
+        "variants": []
+      }
+    },
+    {
+      "slug": "plantas-palma-areca",
+      "name": "Palma Areca",
+      "shortDescription": "Palma Areca disponible en Plantas.",
+      "description": "Palma Areca forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plantas-palma-areca/main-01.jpg",
+      "gallery": [
+        "/productos-mila-web/plantas-palma-areca/main-01.jpg",
+        "/productos-mila-web/plantas-palma-areca/gallery-real-01.jpg"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas",
+        "descuentos"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-PALMA-ARECA",
+      "colors": [
+        {
+          "id": "1-40",
+          "name": "1.40",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plantas-palma-areca/variant-1-40-01.jpg",
+          "available": true
+        },
+        {
+          "id": "1-80",
+          "name": "1.80",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plantas-palma-areca/variant-1-80-02.jpg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1034,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        }
+      ],
+      "price": 899,
+      "compareAtPrice": 1698,
+      "sourceDirectory": "PLANTAS/PALMA ARECA",
+      "sourceFiles": {
+        "mainImage": "PLANTAS/PALMA ARECA/IMAGEN PRINCIPAL/IMG_4903.JPG",
+        "gallery": [
+          "PLANTAS/PALMA ARECA/Fondo real/IMG_4906.JPG"
+        ],
+        "variants": [
+          {
+            "name": "1.40",
+            "image": "PLANTAS/PALMA ARECA/Variante/1.40.JPG"
+          },
+          {
+            "name": "1.80",
+            "image": "PLANTAS/PALMA ARECA/Variante/1.80.JPG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plantas-palma-areca-hb",
+      "name": "Palma Areca Hb",
+      "shortDescription": "Palma Areca Hb disponible en Plantas.",
+      "description": "Palma Areca Hb forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plantas-palma-areca-hb/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plantas-palma-areca-hb/main-01.png",
+        "/productos-mila-web/plantas-palma-areca-hb/gallery-real-01.jpg",
+        "/productos-mila-web/plantas-palma-areca-hb/gallery-measures-02.jpg",
+        "/productos-mila-web/plantas-palma-areca-hb/gallery-measures-03.jpg"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas",
+        "descuentos"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-PALMA-ARECA-HB",
+      "colors": [],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1035,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        }
+      ],
+      "price": 899,
+      "compareAtPrice": 1698,
+      "sourceDirectory": "PLANTAS/PALMA ARECA HB",
+      "sourceFiles": {
+        "mainImage": "PLANTAS/PALMA ARECA HB/Imagen principal/IMG_4907.PNG",
+        "gallery": [
+          "PLANTAS/PALMA ARECA HB/Fondo real/IMG_4910.JPG",
+          "PLANTAS/PALMA ARECA HB/Medidas/1.40.JPG",
+          "PLANTAS/PALMA ARECA HB/Medidas/1.80.JPG"
+        ],
+        "variants": []
+      }
+    },
+    {
+      "slug": "plastico-aster-mesa-con-almacenamiento",
+      "name": "Aster Mesa Con Almacenamiento",
+      "shortDescription": "Aster Mesa Con Almacenamiento disponible en Plastico.",
+      "description": "Aster Mesa Con Almacenamiento forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/main-01.jpeg",
+        "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/gallery-main-01.jpeg",
+        "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/gallery-real-02.png",
+        "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-ASTER-MESA-CON-ALMACENAMIENTO",
+      "colors": [
+        {
+          "id": "azul-oceano",
+          "name": "Azul Oceano",
+          "hex": "#315f7d",
+          "image": "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/variant-azul-oceano-01.jpeg",
+          "available": true
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/variant-blanco-02.jpeg",
+          "available": true
+        },
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#7a533b",
+          "image": "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/variant-cafe-03.jpeg",
+          "available": true
+        },
+        {
+          "id": "mostaza",
+          "name": "Mostaza",
+          "hex": "#c59a2f",
+          "image": "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/variant-mostaza-04.jpeg",
+          "available": true
+        },
+        {
+          "id": "multicolor",
+          "name": "Multicolor",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/variant-multicolor-05.jpeg",
+          "available": true
+        },
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "/productos-mila-web/plastico-aster-mesa-con-almacenamiento/variant-verde-militar-06.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1036,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1349.25,
+      "compareAtPrice": 1799,
+      "sourceDirectory": "PLASTICO/ASTER MESA CON ALMACENAMIENTO",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/ASTER MESA CON ALMACENAMIENTO/IMAGEN PRINCIPAL/IMG_8001.jpeg",
+        "gallery": [
+          "PLASTICO/ASTER MESA CON ALMACENAMIENTO/IMAGEN PRINCIPAL/IMG_8003.jpeg",
+          "PLASTICO/ASTER MESA CON ALMACENAMIENTO/Fondo real/genera_una_imagen_realista_de__Nano_Banana_2_61034.png",
+          "PLASTICO/ASTER MESA CON ALMACENAMIENTO/Medidas/PP-232.png"
+        ],
+        "variants": [
+          {
+            "name": "Azul oceano",
+            "image": "PLASTICO/ASTER MESA CON ALMACENAMIENTO/Variante/Azul oceano.jpeg"
+          },
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/ASTER MESA CON ALMACENAMIENTO/Variante/Blanco.jpeg"
+          },
+          {
+            "name": "Cafe",
+            "image": "PLASTICO/ASTER MESA CON ALMACENAMIENTO/Variante/Café .jpeg"
+          },
+          {
+            "name": "Mostaza",
+            "image": "PLASTICO/ASTER MESA CON ALMACENAMIENTO/Variante/Mostaza.jpeg"
+          },
+          {
+            "name": "Multicolor",
+            "image": "PLASTICO/ASTER MESA CON ALMACENAMIENTO/Variante/Multicolor.jpeg"
+          },
+          {
+            "name": "Verde militar",
+            "image": "PLASTICO/ASTER MESA CON ALMACENAMIENTO/Variante/Verde militar.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-banca-narciso",
+      "name": "Banca Narciso",
+      "shortDescription": "Banca Narciso disponible en Plastico.",
+      "description": "Banca Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-banca-narciso/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/plastico-banca-narciso/main-01.jpeg",
+        "/productos-mila-web/plastico-banca-narciso/gallery-main-01.jpeg",
+        "/productos-mila-web/plastico-banca-narciso/gallery-real-02.jpeg",
+        "/productos-mila-web/plastico-banca-narciso/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-BANCA-NARCISO",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-banca-narciso/variant-blanco-01.jpeg",
+          "available": true
+        },
+        {
+          "id": "greige",
+          "name": "Greige",
+          "hex": "#b8afa2",
+          "image": "/productos-mila-web/plastico-banca-narciso/variant-greige-02.png",
+          "available": true
+        },
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "/productos-mila-web/plastico-banca-narciso/variant-gris-oscuro-03.png",
+          "available": true
+        },
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "/productos-mila-web/plastico-banca-narciso/variant-verde-militar-04.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1037,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 3899,
+      "sourceDirectory": "PLASTICO/BANCA NARCISO",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/BANCA NARCISO/IMAGEN PRINCIPAL/IMG_7783.jpeg",
+        "gallery": [
+          "PLASTICO/BANCA NARCISO/IMAGEN PRINCIPAL/IMG_7784.jpeg",
+          "PLASTICO/BANCA NARCISO/Fondo real/af902bac-ff25-4688-8358-3b85749f8363.jpeg",
+          "PLASTICO/BANCA NARCISO/Medidas/PP-776C.png"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/BANCA NARCISO/Variantes/Blanco.jpeg"
+          },
+          {
+            "name": "Greige",
+            "image": "PLASTICO/BANCA NARCISO/Variantes/Greige .PNG"
+          },
+          {
+            "name": "Gris oscuro",
+            "image": "PLASTICO/BANCA NARCISO/Variantes/Gris oscuro .PNG"
+          },
+          {
+            "name": "Verde militar",
+            "image": "PLASTICO/BANCA NARCISO/Variantes/Verde militar.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-camastro-raflessia",
+      "name": "Camastro Raflessia",
+      "shortDescription": "Camastro Raflessia disponible en Plastico.",
+      "description": "Camastro Raflessia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-camastro-raflessia/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-camastro-raflessia/main-01.png",
+        "/productos-mila-web/plastico-camastro-raflessia/gallery-main-01.png",
+        "/productos-mila-web/plastico-camastro-raflessia/gallery-real-02.png",
+        "/productos-mila-web/plastico-camastro-raflessia/gallery-measures-03.jpeg"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-CAMASTRO-RAFLESSIA",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-camastro-raflessia/variant-blanco-01.png",
+          "available": true
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/plastico-camastro-raflessia/variant-gris-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1038,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 3599.4,
+      "compareAtPrice": 5999,
+      "sourceDirectory": "PLASTICO/CAMASTRO RAFLESSIA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/CAMASTRO RAFLESSIA/IMAGEN PRINCIPAL/IMG_4727.PNG",
+        "gallery": [
+          "PLASTICO/CAMASTRO RAFLESSIA/IMAGEN PRINCIPAL/IMG_4732.PNG",
+          "PLASTICO/CAMASTRO RAFLESSIA/Fondo real/IMG_4728.PNG",
+          "PLASTICO/CAMASTRO RAFLESSIA/Medidas/PP-789.jpeg"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/CAMASTRO RAFLESSIA/Variantes/Blanco.PNG"
+          },
+          {
+            "name": "Gris",
+            "image": "PLASTICO/CAMASTRO RAFLESSIA/Variantes/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-gerbera-con-apoyabrazos",
+      "name": "Gerbera Con Apoyabrazos",
+      "shortDescription": "Gerbera Con Apoyabrazos disponible en Plastico.",
+      "description": "Gerbera Con Apoyabrazos forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-gerbera-con-apoyabrazos/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-gerbera-con-apoyabrazos/main-01.png",
+        "/productos-mila-web/plastico-gerbera-con-apoyabrazos/gallery-main-01.png",
+        "/productos-mila-web/plastico-gerbera-con-apoyabrazos/gallery-main-02.png",
+        "/productos-mila-web/plastico-gerbera-con-apoyabrazos/gallery-real-03.png",
+        "/productos-mila-web/plastico-gerbera-con-apoyabrazos/gallery-measures-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-GERBERA-CON-APOYABRAZOS",
+      "colors": [],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1039,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1079.4,
+      "compareAtPrice": 1799,
+      "sourceDirectory": "PLASTICO/GERBERA CON APOYABRAZOS",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/GERBERA CON APOYABRAZOS/IMAGEN PRINCIPAL/IMG_4583.PNG",
+        "gallery": [
+          "PLASTICO/GERBERA CON APOYABRAZOS/IMAGEN PRINCIPAL/IMG_4584.PNG",
+          "PLASTICO/GERBERA CON APOYABRAZOS/IMAGEN PRINCIPAL/IMG_4585.PNG",
+          "PLASTICO/GERBERA CON APOYABRAZOS/Fondo real/genera_una_imagen_realista_de__Nano_Banana_Pro_59882.png",
+          "PLASTICO/GERBERA CON APOYABRAZOS/Medidas/IMG_4582.PNG"
+        ],
+        "variants": []
+      }
+    },
+    {
+      "slug": "plastico-mecedora-datura",
+      "name": "Mecedora Datura",
+      "shortDescription": "Mecedora Datura disponible en Plastico.",
+      "description": "Mecedora Datura forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mecedora-datura/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mecedora-datura/main-01.png",
+        "/productos-mila-web/plastico-mecedora-datura/gallery-main-01.jpeg",
+        "/productos-mila-web/plastico-mecedora-datura/gallery-main-02.jpeg",
+        "/productos-mila-web/plastico-mecedora-datura/gallery-real-03.jpeg",
+        "/productos-mila-web/plastico-mecedora-datura/gallery-measures-04.jpeg"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MECEDORA-DATURA",
+      "colors": [
+        {
+          "id": "azul",
+          "name": "Azul",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plastico-mecedora-datura/variant-azul-01.png",
+          "available": true
+        },
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#7a533b",
+          "image": "/productos-mila-web/plastico-mecedora-datura/variant-cafe-02.png",
+          "available": true
+        },
+        {
+          "id": "naranja",
+          "name": "Naranja",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plastico-mecedora-datura/variant-naranja-03.png",
+          "available": true
+        },
+        {
+          "id": "verde",
+          "name": "Verde",
+          "hex": "#6f7f55",
+          "image": "/productos-mila-web/plastico-mecedora-datura/variant-verde-04.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1040,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 2099,
+      "sourceDirectory": "PLASTICO/MECEDORA DATURA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MECEDORA DATURA/IMAGEN PRINCIPAL/32.png",
+        "gallery": [
+          "PLASTICO/MECEDORA DATURA/IMAGEN PRINCIPAL/IMG_8148.jpeg",
+          "PLASTICO/MECEDORA DATURA/IMAGEN PRINCIPAL/IMG_8152.jpeg",
+          "PLASTICO/MECEDORA DATURA/Fondo real/ee10f4c6-863e-4e83-916d-43f181861d02.jpeg",
+          "PLASTICO/MECEDORA DATURA/Medidas/PP-850B.jpeg"
+        ],
+        "variants": [
+          {
+            "name": "azul",
+            "image": "PLASTICO/MECEDORA DATURA/Variantes/azul.png"
+          },
+          {
+            "name": "cafe",
+            "image": "PLASTICO/MECEDORA DATURA/Variantes/cafe.png"
+          },
+          {
+            "name": "naranja",
+            "image": "PLASTICO/MECEDORA DATURA/Variantes/naranja.png"
+          },
+          {
+            "name": "verde",
+            "image": "PLASTICO/MECEDORA DATURA/Variantes/verde.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mecedora-iris",
+      "name": "Mecedora Iris",
+      "shortDescription": "Mecedora Iris disponible en Plastico.",
+      "description": "Mecedora Iris forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mecedora-iris/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/plastico-mecedora-iris/main-01.jpeg",
+        "/productos-mila-web/plastico-mecedora-iris/gallery-main-01.jpeg",
+        "/productos-mila-web/plastico-mecedora-iris/gallery-real-02.png",
+        "/productos-mila-web/plastico-mecedora-iris/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MECEDORA-IRIS",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mecedora-iris/variant-blanca-01.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1041,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 2549.25,
+      "compareAtPrice": 3399,
+      "sourceDirectory": "PLASTICO/Mecedora Iris",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/Mecedora Iris/IMAGEN PRINCIPAL/IMG_5569.jpeg",
+        "gallery": [
+          "PLASTICO/Mecedora Iris/IMAGEN PRINCIPAL/IMG_5577.jpeg",
+          "PLASTICO/Mecedora Iris/Fondo real/IMG_4656.PNG",
+          "PLASTICO/Mecedora Iris/Medidas/IMG_4654.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/Mecedora Iris/VARIANTES/Blanca.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-auxiliar-anturio",
+      "name": "Mesa Auxiliar Anturio",
+      "shortDescription": "Mesa Auxiliar Anturio disponible en Plastico.",
+      "description": "Mesa Auxiliar Anturio forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-auxiliar-anturio/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-auxiliar-anturio/main-01.png",
+        "/productos-mila-web/plastico-mesa-auxiliar-anturio/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-auxiliar-anturio/gallery-real-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-AUXILIAR-ANTURIO",
+      "colors": [
+        {
+          "id": "verde-olivo",
+          "name": "Verde Olivo",
+          "hex": "#6f7350",
+          "image": "/productos-mila-web/plastico-mesa-auxiliar-anturio/variant-verde-olivo-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1042,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1700,
+      "sourceDirectory": "PLASTICO/Mesa Auxiliar Anturio",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/Mesa Auxiliar Anturio/Imagen principal/030E3DD0-305D-4F50-988D-36F8A440CF35.png",
+        "gallery": [
+          "PLASTICO/Mesa Auxiliar Anturio/Imagen principal/F4B30874-E753-465B-AD68-678895F5867E.png",
+          "PLASTICO/Mesa Auxiliar Anturio/Fondo real/FED00096-390B-4BF7-9C06-85784F00FEBA.png"
+        ],
+        "variants": [
+          {
+            "name": "Verde olivo",
+            "image": "PLASTICO/Mesa Auxiliar Anturio/Variantes/Verde olivo/531E98A9-1E5E-4268-9622-75F2FF57A923.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-auxiliar-iris",
+      "name": "Mesa Auxiliar Iris",
+      "shortDescription": "Mesa Auxiliar Iris disponible en Plastico.",
+      "description": "Mesa Auxiliar Iris forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-auxiliar-iris/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-auxiliar-iris/main-01.png",
+        "/productos-mila-web/plastico-mesa-auxiliar-iris/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-auxiliar-iris/gallery-real-02.jpg"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-AUXILIAR-IRIS",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-auxiliar-iris/variant-blanco-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1043,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1399,
+      "sourceDirectory": "PLASTICO/MESA AUXILIAR IRIS",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA AUXILIAR IRIS/Imagen principal/48AFDDF0-D142-4E0C-80F1-DBB0DF278338.png",
+        "gallery": [
+          "PLASTICO/MESA AUXILIAR IRIS/Imagen principal/C26E9D21-C15E-416A-B188-DA28D9D23B0B.png",
+          "PLASTICO/MESA AUXILIAR IRIS/Fondo real/IMG_0302.JPG"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/MESA AUXILIAR IRIS/Variantes/Blanco.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-auxiliar-narciso",
+      "name": "Mesa Auxiliar Narciso",
+      "shortDescription": "Mesa Auxiliar Narciso disponible en Plastico.",
+      "description": "Mesa Auxiliar Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-auxiliar-narciso/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-auxiliar-narciso/main-01.jpeg",
+        "/productos-mila-web/plastico-mesa-auxiliar-narciso/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-auxiliar-narciso/gallery-real-02.png",
+        "/productos-mila-web/plastico-mesa-auxiliar-narciso/gallery-measures-03.jpg"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-AUXILIAR-NARCISO",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-auxiliar-narciso/variant-blanca-01.png",
+          "available": true
+        },
+        {
+          "id": "greige",
+          "name": "Greige",
+          "hex": "#b8afa2",
+          "image": "/productos-mila-web/plastico-mesa-auxiliar-narciso/variant-greige-02.png",
+          "available": true
+        },
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "/productos-mila-web/plastico-mesa-auxiliar-narciso/variant-verde-militar-03.png",
+          "available": true
+        },
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "/productos-mila-web/plastico-mesa-auxiliar-narciso/variant-gris-oscuro-04.jpg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1044,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 909.36,
+      "compareAtPrice": 1399,
+      "sourceDirectory": "PLASTICO/MESA AUXILIAR NARCISO",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA AUXILIAR NARCISO/Imagen principal/IMG_5815.jpeg",
+        "gallery": [
+          "PLASTICO/MESA AUXILIAR NARCISO/Imagen principal/Textura_.png",
+          "PLASTICO/MESA AUXILIAR NARCISO/Fondo real/IMG_0305.PNG",
+          "PLASTICO/MESA AUXILIAR NARCISO/Medidas/IMG_0310.JPG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/MESA AUXILIAR NARCISO/Variantes/Blanca/Blanca.png"
+          },
+          {
+            "name": "Greige",
+            "image": "PLASTICO/MESA AUXILIAR NARCISO/Variantes/Greige/61A353FA-EA11-44A2-BBF0-A88DC3FCB345.png"
+          },
+          {
+            "name": "Verde militar",
+            "image": "PLASTICO/MESA AUXILIAR NARCISO/Variantes/Verde militar/Verde militar_.png"
+          },
+          {
+            "name": "Gris oscuro",
+            "image": "PLASTICO/MESA AUXILIAR NARCISO/Variantes/Gris oscuro_.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-cala",
+      "name": "Mesa Cala",
+      "shortDescription": "Mesa Cala disponible en Plastico.",
+      "description": "Mesa Cala forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-cala/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-cala/main-01.png",
+        "/productos-mila-web/plastico-mesa-cala/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-cala/gallery-real-02.png",
+        "/productos-mila-web/plastico-mesa-cala/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-CALA",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-cala/variant-blanco-01.png",
+          "available": true
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/plastico-mesa-cala/variant-gris-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1045,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 3299.4,
+      "compareAtPrice": 5499,
+      "sourceDirectory": "PLASTICO/Mesa Cala",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/Mesa Cala/Imagen principal/46AA821B-5AE1-48C0-A928-B35545ACA23F.png",
+        "gallery": [
+          "PLASTICO/Mesa Cala/Imagen principal/4FD013E1-4697-4623-93D3-E3BFD19448F1.png",
+          "PLASTICO/Mesa Cala/Foto real/IMG_0316.PNG",
+          "PLASTICO/Mesa Cala/Medidas/IMG_0317.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/Mesa Cala/ Variedades/Blanco/46AA821B-5AE1-48C0-A928-B35545ACA23F.png"
+          },
+          {
+            "name": "Gris",
+            "image": "PLASTICO/Mesa Cala/ Variedades/Gris/8D81096A-55FF-480C-8627-62F0B11F1761.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-cala-s-central",
+      "name": "Mesa Cala S Central",
+      "shortDescription": "Mesa Cala S Central disponible en Plastico.",
+      "description": "Mesa Cala S Central forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-cala-s-central/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-cala-s-central/main-01.png",
+        "/productos-mila-web/plastico-mesa-cala-s-central/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-cala-s-central/gallery-real-02.png",
+        "/productos-mila-web/plastico-mesa-cala-s-central/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-CALA-S-CENTRAL",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-cala-s-central/variant-blanca-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1046,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 4499,
+      "sourceDirectory": "PLASTICO/MESA CALA S CENTRAL",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA CALA S CENTRAL/IMAGEN PRINCIPAL/Gemini_Generated_Image_65tddl65tddl65td (1).png",
+        "gallery": [
+          "PLASTICO/MESA CALA S CENTRAL/IMAGEN PRINCIPAL/IMG_4704.PNG",
+          "PLASTICO/MESA CALA S CENTRAL/Fondo real/IMG_4707.PNG",
+          "PLASTICO/MESA CALA S CENTRAL/Medidas/IMG_4706.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/MESA CALA S CENTRAL/Variantes/Blanca.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-comedor-cala",
+      "name": "Mesa Comedor Cala",
+      "shortDescription": "Mesa Comedor Cala disponible en Plastico.",
+      "description": "Mesa Comedor Cala forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-comedor-cala/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-comedor-cala/main-01.png",
+        "/productos-mila-web/plastico-mesa-comedor-cala/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-comedor-cala/gallery-real-02.png",
+        "/productos-mila-web/plastico-mesa-comedor-cala/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-COMEDOR-CALA",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-comedor-cala/variant-blanca-01.png",
+          "available": true
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/plastico-mesa-comedor-cala/variant-gris-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1047,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 19999,
+      "sourceDirectory": "PLASTICO/MESA COMEDOR CALA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA COMEDOR CALA/Imagen principal/A662A24A-7013-4714-AA38-EDA7E578C206.png",
+        "gallery": [
+          "PLASTICO/MESA COMEDOR CALA/Imagen principal/EB031D16-AE13-40C4-88E2-B203F510279D.png",
+          "PLASTICO/MESA COMEDOR CALA/Fondo real/IMG_0318.PNG",
+          "PLASTICO/MESA COMEDOR CALA/Medidas/IMG_0319.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/MESA COMEDOR CALA/Variedades/Blanca/A662A24A-7013-4714-AA38-EDA7E578C206.png"
+          },
+          {
+            "name": "Gris",
+            "image": "PLASTICO/MESA COMEDOR CALA/Variedades/Gris/AA43120F-3BF1-4EED-B042-9E6CD0D030D6.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-leman",
+      "name": "Mesa Leman",
+      "shortDescription": "Mesa Leman disponible en Plastico.",
+      "description": "Mesa Leman forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-leman/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-leman/main-01.png",
+        "/productos-mila-web/plastico-mesa-leman/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-leman/gallery-main-02.png",
+        "/productos-mila-web/plastico-mesa-leman/gallery-real-03.png",
+        "/productos-mila-web/plastico-mesa-leman/gallery-measures-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-LEMAN",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-leman/variant-blanca-01.png",
+          "available": true
+        },
+        {
+          "id": "negro",
+          "name": "Negro",
+          "hex": "#222222",
+          "image": "/productos-mila-web/plastico-mesa-leman/variant-negro-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1048,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 13055,
+      "compareAtPrice": 18650,
+      "sourceDirectory": "PLASTICO/MESA LEMAN",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA LEMAN/IMAGEN PRINCIPAL/IMG_4757.PNG",
+        "gallery": [
+          "PLASTICO/MESA LEMAN/IMAGEN PRINCIPAL/IMG_4759.PNG",
+          "PLASTICO/MESA LEMAN/IMAGEN PRINCIPAL/IMG_4760.PNG",
+          "PLASTICO/MESA LEMAN/Fondo real/IMG_4761.PNG",
+          "PLASTICO/MESA LEMAN/Medidas/677117桌子展开.png"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/MESA LEMAN/Variante/Blanca.PNG"
+          },
+          {
+            "name": "Negro",
+            "image": "PLASTICO/MESA LEMAN/Variante/Negro.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-licerna",
+      "name": "Mesa Licerna",
+      "shortDescription": "Mesa Licerna disponible en Plastico.",
+      "description": "Mesa Licerna forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-licerna/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-licerna/main-01.png",
+        "/productos-mila-web/plastico-mesa-licerna/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-licerna/gallery-real-02.png",
+        "/productos-mila-web/plastico-mesa-licerna/gallery-real-03.png",
+        "/productos-mila-web/plastico-mesa-licerna/gallery-measures-04.jpg"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-LICERNA",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-licerna/variant-blanca-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1049,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 8155,
+      "compareAtPrice": 11650,
+      "sourceDirectory": "PLASTICO/MESA LICERNA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA LICERNA/Imagen principal/99C58AB7-F7B3-4E22-AC48-CF652FBDB976.png",
+        "gallery": [
+          "PLASTICO/MESA LICERNA/Imagen principal/9FF1493E-337B-40B3-8E4D-0AC3F4BE4A04.png",
+          "PLASTICO/MESA LICERNA/Fondo real/4872A1F9-F7CF-465D-8F2E-2BF4C80CD50A.png",
+          "PLASTICO/MESA LICERNA/Fondo real/A6CD4DBF-905A-4867-A977-9288F35034E7.png",
+          "PLASTICO/MESA LICERNA/Medidas/IMG_0340.JPG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/MESA LICERNA/Variedades/Blanca/blanca.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-loto",
+      "name": "Mesa Loto",
+      "shortDescription": "Mesa Loto disponible en Plastico.",
+      "description": "Mesa Loto forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-loto/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-loto/main-01.png",
+        "/productos-mila-web/plastico-mesa-loto/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-loto/gallery-real-02.png",
+        "/productos-mila-web/plastico-mesa-loto/gallery-real-03.png",
+        "/productos-mila-web/plastico-mesa-loto/gallery-measures-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-LOTO",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-loto/variant-blanca-01.png",
+          "available": true
+        },
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "/productos-mila-web/plastico-mesa-loto/variant-gris-oscuro-02.png",
+          "available": true
+        },
+        {
+          "id": "negra",
+          "name": "Negra",
+          "hex": "#222222",
+          "image": "/productos-mila-web/plastico-mesa-loto/variant-negra-03.png",
+          "available": true
+        },
+        {
+          "id": "verde-olivo",
+          "name": "Verde Olivo",
+          "hex": "#6f7350",
+          "image": "/productos-mila-web/plastico-mesa-loto/variant-verde-olivo-04.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1050,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1649.25,
+      "compareAtPrice": 2199,
+      "sourceDirectory": "PLASTICO/MESA LOTO",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA LOTO/Imagen principal/737900DD-2008-4A25-B395-813424CA29B5.png",
+        "gallery": [
+          "PLASTICO/MESA LOTO/Imagen principal/8CBF9C08-DDE8-4807-AC70-E9CA8DE93D9B.png",
+          "PLASTICO/MESA LOTO/Foto real/IMG_0327.PNG",
+          "PLASTICO/MESA LOTO/Foto real/IMG_0328.PNG",
+          "PLASTICO/MESA LOTO/Medidas/IMG_0329.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/MESA LOTO/Variedades/Blanca/14DD1138-CD6C-4EF3-A83F-5485D34B89BB.png"
+          },
+          {
+            "name": "Gris oscuro",
+            "image": "PLASTICO/MESA LOTO/Variedades/Gris oscuro/D9E7A6F4-5E2B-434D-A510-98DB8C9AA1BE.png"
+          },
+          {
+            "name": "Negra",
+            "image": "PLASTICO/MESA LOTO/Variedades/Negra/859466A9-2760-49F9-B2C3-6048878B0720.png"
+          },
+          {
+            "name": "Verde olivo",
+            "image": "PLASTICO/MESA LOTO/Variedades/Verde olivo/B1D0C0EA-3DAA-47D6-A4BC-289D1E7E5A7F.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-nilo-1-6m",
+      "name": "Mesa Nilo 1.6m",
+      "shortDescription": "Mesa Nilo 1.6m disponible en Plastico.",
+      "description": "Mesa Nilo 1.6m forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-nilo-1-6m/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-nilo-1-6m/main-01.png",
+        "/productos-mila-web/plastico-mesa-nilo-1-6m/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-nilo-1-6m/gallery-real-02.png",
+        "/productos-mila-web/plastico-mesa-nilo-1-6m/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-NILO-1-6M",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/plastico-mesa-nilo-1-6m/variant-beige-01.png",
+          "available": true
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-nilo-1-6m/variant-blanco-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1051,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 11095,
+      "compareAtPrice": 15850,
+      "sourceDirectory": "PLASTICO/MESA NILO 1.6M",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA NILO 1.6M/Imagen principal/IMG_4752.PNG",
+        "gallery": [
+          "PLASTICO/MESA NILO 1.6M/Imagen principal/IMG_4753.PNG",
+          "PLASTICO/MESA NILO 1.6M/Fondo real/IMG_4754.PNG",
+          "PLASTICO/MESA NILO 1.6M/Medidas/5027桌子C.png"
+        ],
+        "variants": [
+          {
+            "name": "Beige",
+            "image": "PLASTICO/MESA NILO 1.6M/Variantes/Beige.PNG"
+          },
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/MESA NILO 1.6M/Variantes/Blanco.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-nilo-2m",
+      "name": "Mesa Nilo 2m",
+      "shortDescription": "Mesa Nilo 2m disponible en Plastico.",
+      "description": "Mesa Nilo 2m forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-nilo-2m/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-nilo-2m/main-01.png",
+        "/productos-mila-web/plastico-mesa-nilo-2m/gallery-main-01.png",
+        "/productos-mila-web/plastico-mesa-nilo-2m/gallery-main-02.png",
+        "/productos-mila-web/plastico-mesa-nilo-2m/gallery-main-03.png",
+        "/productos-mila-web/plastico-mesa-nilo-2m/gallery-real-04.png",
+        "/productos-mila-web/plastico-mesa-nilo-2m/gallery-measures-05.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-NILO-2M",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/plastico-mesa-nilo-2m/variant-beige-01.png",
+          "available": true
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-nilo-2m/variant-blanco-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1052,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 13895,
+      "compareAtPrice": 19850,
+      "sourceDirectory": "PLASTICO/MESA NILO 2M",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA NILO 2M/IMAGEN PRINCIPAL/IMG_4748.PNG",
+        "gallery": [
+          "PLASTICO/MESA NILO 2M/IMAGEN PRINCIPAL/IMG_4750.PNG",
+          "PLASTICO/MESA NILO 2M/IMAGEN PRINCIPAL/IMG_4752.PNG",
+          "PLASTICO/MESA NILO 2M/IMAGEN PRINCIPAL/IMG_4753.PNG",
+          "PLASTICO/MESA NILO 2M/Fondo real/IMG_4754.PNG",
+          "PLASTICO/MESA NILO 2M/Medidas/5027桌子W.png"
+        ],
+        "variants": [
+          {
+            "name": "BEIGE",
+            "image": "PLASTICO/MESA NILO 2M/Variantes/BEIGE.PNG"
+          },
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/MESA NILO 2M/Variantes/Blanco.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-mesa-rectangular-narciso",
+      "name": "Mesa Rectangular Narciso",
+      "shortDescription": "Mesa Rectangular Narciso disponible en Plastico.",
+      "description": "Mesa Rectangular Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-mesa-rectangular-narciso/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/plastico-mesa-rectangular-narciso/main-01.jpeg",
+        "/productos-mila-web/plastico-mesa-rectangular-narciso/gallery-main-01.jpeg",
+        "/productos-mila-web/plastico-mesa-rectangular-narciso/gallery-real-02.png",
+        "/productos-mila-web/plastico-mesa-rectangular-narciso/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-RECTANGULAR-NARCISO",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-mesa-rectangular-narciso/variant-blanco-01.jpeg",
+          "available": true
+        },
+        {
+          "id": "greige",
+          "name": "Greige",
+          "hex": "#b8afa2",
+          "image": "/productos-mila-web/plastico-mesa-rectangular-narciso/variant-greige-02.png",
+          "available": true
+        },
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "/productos-mila-web/plastico-mesa-rectangular-narciso/variant-gris-oscuro-03.png",
+          "available": true
+        },
+        {
+          "id": "olivo",
+          "name": "Olivo",
+          "hex": "#6f7350",
+          "image": "/productos-mila-web/plastico-mesa-rectangular-narciso/variant-olivo-04.jpeg",
+          "available": true
+        },
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "/productos-mila-web/plastico-mesa-rectangular-narciso/variant-verde-militar-05.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1053,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1999,
+      "sourceDirectory": "PLASTICO/MESA RECTANGULAR NARCISO",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/MESA RECTANGULAR NARCISO/IMAGEN PRINCIPAL/IMG_7482.jpeg",
+        "gallery": [
+          "PLASTICO/MESA RECTANGULAR NARCISO/IMAGEN PRINCIPAL/IMG_7483.jpeg",
+          "PLASTICO/MESA RECTANGULAR NARCISO/Fondo real/IMG_4669.PNG",
+          "PLASTICO/MESA RECTANGULAR NARCISO/Medidas/CT-231.png"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/MESA RECTANGULAR NARCISO/Variante/Blanco .jpeg"
+          },
+          {
+            "name": "Greige",
+            "image": "PLASTICO/MESA RECTANGULAR NARCISO/Variante/Greige.PNG"
+          },
+          {
+            "name": "Gris oscuro",
+            "image": "PLASTICO/MESA RECTANGULAR NARCISO/Variante/Gris oscuro.PNG"
+          },
+          {
+            "name": "Olivo",
+            "image": "PLASTICO/MESA RECTANGULAR NARCISO/Variante/Olivo.jpeg"
+          },
+          {
+            "name": "Verde militar",
+            "image": "PLASTICO/MESA RECTANGULAR NARCISO/Variante/Verde militar .jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-narciso-con-aopyabrazos",
+      "name": "Narciso Con Aopyabrazos",
+      "shortDescription": "Narciso Con Aopyabrazos disponible en Plastico.",
+      "description": "Narciso Con Aopyabrazos forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-narciso-con-aopyabrazos/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-narciso-con-aopyabrazos/main-01.png",
+        "/productos-mila-web/plastico-narciso-con-aopyabrazos/gallery-main-01.png",
+        "/productos-mila-web/plastico-narciso-con-aopyabrazos/gallery-main-02.png",
+        "/productos-mila-web/plastico-narciso-con-aopyabrazos/gallery-real-03.jpeg",
+        "/productos-mila-web/plastico-narciso-con-aopyabrazos/gallery-measures-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-NARCISO-CON-AOPYABRAZOS",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-narciso-con-aopyabrazos/variant-blanca-01.png",
+          "available": true
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/plastico-narciso-con-aopyabrazos/variant-gris-02.png",
+          "available": true
+        },
+        {
+          "id": "verde",
+          "name": "Verde",
+          "hex": "#6f7f55",
+          "image": "/productos-mila-web/plastico-narciso-con-aopyabrazos/variant-verde-03.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1054,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 779.4,
+      "compareAtPrice": 1299,
+      "sourceDirectory": "PLASTICO/NARCISO CON AOPYABRAZOS",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/NARCISO CON AOPYABRAZOS/Imagen principal/IMG_4535.PNG",
+        "gallery": [
+          "PLASTICO/NARCISO CON AOPYABRAZOS/Imagen principal/IMG_4536.PNG",
+          "PLASTICO/NARCISO CON AOPYABRAZOS/Imagen principal/IMG_4537.PNG",
+          "PLASTICO/NARCISO CON AOPYABRAZOS/Fondo real/56972c22-529a-48d0-92b6-3d718ee113b2.jpeg",
+          "PLASTICO/NARCISO CON AOPYABRAZOS/Medidas/IMG_4541.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/NARCISO CON AOPYABRAZOS/Variantes/Blanca.PNG"
+          },
+          {
+            "name": "Gris",
+            "image": "PLASTICO/NARCISO CON AOPYABRAZOS/Variantes/Gris.PNG"
+          },
+          {
+            "name": "Verde",
+            "image": "PLASTICO/NARCISO CON AOPYABRAZOS/Variantes/Verde.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-set-craspedia",
+      "name": "Set Craspedia",
+      "shortDescription": "Set Craspedia disponible en Plastico.",
+      "description": "Set Craspedia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-set-craspedia/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-set-craspedia/main-01.png",
+        "/productos-mila-web/plastico-set-craspedia/gallery-main-01.png",
+        "/productos-mila-web/plastico-set-craspedia/gallery-main-02.png",
+        "/productos-mila-web/plastico-set-craspedia/gallery-real-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SET-CRASPEDIA",
+      "colors": [
+        {
+          "id": "amarillo",
+          "name": "Amarillo",
+          "hex": "#d6a722",
+          "image": "/productos-mila-web/plastico-set-craspedia/variant-amarillo-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1055,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 17899,
+      "sourceDirectory": "PLASTICO/SET CRASPEDIA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SET CRASPEDIA/IMAGEN PRINCIPAL/IMG_4739.PNG",
+        "gallery": [
+          "PLASTICO/SET CRASPEDIA/IMAGEN PRINCIPAL/IMG_4740.PNG",
+          "PLASTICO/SET CRASPEDIA/IMAGEN PRINCIPAL/IMG_4741.PNG",
+          "PLASTICO/SET CRASPEDIA/Fondo real/IMG_4735.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Amarillo",
+            "image": "PLASTICO/SET CRASPEDIA/Variante/Amarillo.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-set-iris",
+      "name": "Set Iris",
+      "shortDescription": "Set Iris disponible en Plastico.",
+      "description": "Set Iris forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-set-iris/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-set-iris/main-01.png",
+        "/productos-mila-web/plastico-set-iris/gallery-main-01.png",
+        "/productos-mila-web/plastico-set-iris/gallery-real-02.png",
+        "/productos-mila-web/plastico-set-iris/gallery-real-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SET-IRIS",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-set-iris/variant-blanco-01.png",
+          "available": true
+        },
+        {
+          "id": "naranja",
+          "name": "Naranja",
+          "hex": "#cccccc",
+          "image": "/productos-mila-web/plastico-set-iris/variant-naranja-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1056,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 17899,
+      "sourceDirectory": "PLASTICO/SET IRIS",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SET IRIS/Imagen principal/IMG_4743.PNG",
+        "gallery": [
+          "PLASTICO/SET IRIS/Imagen principal/IMG_4744.PNG",
+          "PLASTICO/SET IRIS/Foto real/IMG_0338.PNG",
+          "PLASTICO/SET IRIS/Foto real/IMG_0339.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/SET IRIS/Variantes/Blanco.PNG"
+          },
+          {
+            "name": "Naranja",
+            "image": "PLASTICO/SET IRIS/Variantes/Naranja.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silla-alta-datura",
+      "name": "Silla Alta Datura",
+      "shortDescription": "Silla Alta Datura disponible en Plastico.",
+      "description": "Silla Alta Datura forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silla-alta-datura/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-silla-alta-datura/main-01.png",
+        "/productos-mila-web/plastico-silla-alta-datura/gallery-main-01.png",
+        "/productos-mila-web/plastico-silla-alta-datura/gallery-measures-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-ALTA-DATURA",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/plastico-silla-alta-datura/variant-beige-01.png",
+          "available": true
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/plastico-silla-alta-datura/variant-gris-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1057,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 2299,
+      "sourceDirectory": "PLASTICO/SILLA ALTA DATURA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLA ALTA DATURA/IMAGEN PRINCIPAL/26.png",
+        "gallery": [
+          "PLASTICO/SILLA ALTA DATURA/IMAGEN PRINCIPAL/IMG_4613.PNG",
+          "PLASTICO/SILLA ALTA DATURA/Medidas/PP-851-1.png"
+        ],
+        "variants": [
+          {
+            "name": "Beige",
+            "image": "PLASTICO/SILLA ALTA DATURA/Variantes/Beige .PNG"
+          },
+          {
+            "name": "Gris",
+            "image": "PLASTICO/SILLA ALTA DATURA/Variantes/Gris.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silla-alta-narciso",
+      "name": "Silla Alta Narciso",
+      "shortDescription": "Silla Alta Narciso disponible en Plastico.",
+      "description": "Silla Alta Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silla-alta-narciso/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/plastico-silla-alta-narciso/main-01.jpeg",
+        "/productos-mila-web/plastico-silla-alta-narciso/gallery-main-01.jpeg",
+        "/productos-mila-web/plastico-silla-alta-narciso/gallery-measures-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-ALTA-NARCISO",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-silla-alta-narciso/variant-blanca-01.jpeg",
+          "available": true
+        },
+        {
+          "id": "greige",
+          "name": "Greige",
+          "hex": "#b8afa2",
+          "image": "/productos-mila-web/plastico-silla-alta-narciso/variant-greige-02.jpeg",
+          "available": true
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/plastico-silla-alta-narciso/variant-gris-03.png",
+          "available": true
+        },
+        {
+          "id": "verde",
+          "name": "Verde",
+          "hex": "#6f7f55",
+          "image": "/productos-mila-web/plastico-silla-alta-narciso/variant-verde-04.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1058,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 974.35,
+      "compareAtPrice": 1499,
+      "sourceDirectory": "PLASTICO/SILLA ALTA NARCISO",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLA ALTA NARCISO/IMAGEN PRINCIPAL/IMG_7538.jpeg",
+        "gallery": [
+          "PLASTICO/SILLA ALTA NARCISO/IMAGEN PRINCIPAL/IMG_7539.jpeg",
+          "PLASTICO/SILLA ALTA NARCISO/Medidas/IMG_4597.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/SILLA ALTA NARCISO/Variantes/Blanca .jpeg"
+          },
+          {
+            "name": "Greige",
+            "image": "PLASTICO/SILLA ALTA NARCISO/Variantes/Greige .jpeg"
+          },
+          {
+            "name": "Gris",
+            "image": "PLASTICO/SILLA ALTA NARCISO/Variantes/Gris .PNG"
+          },
+          {
+            "name": "Verde",
+            "image": "PLASTICO/SILLA ALTA NARCISO/Variantes/Verde.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silla-alta-zinnia",
+      "name": "Silla Alta Zinnia",
+      "shortDescription": "Silla Alta Zinnia disponible en Plastico.",
+      "description": "Silla Alta Zinnia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silla-alta-zinnia/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-silla-alta-zinnia/main-01.png",
+        "/productos-mila-web/plastico-silla-alta-zinnia/gallery-main-01.png",
+        "/productos-mila-web/plastico-silla-alta-zinnia/gallery-real-02.png",
+        "/productos-mila-web/plastico-silla-alta-zinnia/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-ALTA-ZINNIA",
+      "colors": [
+        {
+          "id": "azul-turquesa",
+          "name": "Azul Turquesa",
+          "hex": "#2aa6a1",
+          "image": "/productos-mila-web/plastico-silla-alta-zinnia/variant-azul-turquesa-01.png",
+          "available": true
+        },
+        {
+          "id": "mostaza",
+          "name": "Mostaza",
+          "hex": "#c59a2f",
+          "image": "/productos-mila-web/plastico-silla-alta-zinnia/variant-mostaza-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1059,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1274.26,
+      "compareAtPrice": 1699,
+      "sourceDirectory": "PLASTICO/SILLA ALTA ZINNIA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLA ALTA ZINNIA/IMAGEN PRINCIPAL/Gemini_Generated_Image_pcz58bpcz58bpcz5.png",
+        "gallery": [
+          "PLASTICO/SILLA ALTA ZINNIA/IMAGEN PRINCIPAL/Gemini_Generated_Image_y1cmaty1cmaty1cm.png",
+          "PLASTICO/SILLA ALTA ZINNIA/Fondo real/IMG_4607.PNG",
+          "PLASTICO/SILLA ALTA ZINNIA/Medidas/IMG_4608.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Azul turquesa",
+            "image": "PLASTICO/SILLA ALTA ZINNIA/Variantes/Azul turquesa.png"
+          },
+          {
+            "name": "Mostaza",
+            "image": "PLASTICO/SILLA ALTA ZINNIA/Variantes/Mostaza.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silla-calendula",
+      "name": "Silla Calendula",
+      "shortDescription": "Silla Calendula disponible en Plastico.",
+      "description": "Silla Calendula forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silla-calendula/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-silla-calendula/main-01.png",
+        "/productos-mila-web/plastico-silla-calendula/gallery-main-01.png",
+        "/productos-mila-web/plastico-silla-calendula/gallery-real-02.png",
+        "/productos-mila-web/plastico-silla-calendula/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-CALENDULA",
+      "colors": [
+        {
+          "id": "mostaza",
+          "name": "Mostaza",
+          "hex": "#c59a2f",
+          "image": "/productos-mila-web/plastico-silla-calendula/variant-mostaza-01.png",
+          "available": true
+        },
+        {
+          "id": "rojo-carmin",
+          "name": "Rojo Carmin",
+          "hex": "#8d1f2d",
+          "image": "/productos-mila-web/plastico-silla-calendula/variant-rojo-carmin-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1060,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1424.25,
+      "compareAtPrice": 1899,
+      "sourceDirectory": "PLASTICO/SILLA CALENDULA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLA CALENDULA/Imagen principal/25.png",
+        "gallery": [
+          "PLASTICO/SILLA CALENDULA/Imagen principal/IMG_4587.PNG",
+          "PLASTICO/SILLA CALENDULA/Fondo real/IMG_4589.PNG",
+          "PLASTICO/SILLA CALENDULA/Medidas/IMG_4588.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Mostaza",
+            "image": "PLASTICO/SILLA CALENDULA/Variantes/Mostaza.png"
+          },
+          {
+            "name": "Rojo carmin",
+            "image": "PLASTICO/SILLA CALENDULA/Variantes/Rojo carmin.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silla-dalia",
+      "name": "Silla Dalia",
+      "shortDescription": "Silla Dalia disponible en Plastico.",
+      "description": "Silla Dalia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silla-dalia/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-silla-dalia/main-01.png",
+        "/productos-mila-web/plastico-silla-dalia/gallery-main-01.png",
+        "/productos-mila-web/plastico-silla-dalia/gallery-real-02.jpeg",
+        "/productos-mila-web/plastico-silla-dalia/gallery-measures-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-DALIA",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-silla-dalia/variant-blanco-01.png",
+          "available": true
+        },
+        {
+          "id": "ginger",
+          "name": "Ginger",
+          "hex": "#b56f3a",
+          "image": "/productos-mila-web/plastico-silla-dalia/variant-ginger-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1061,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1079.4,
+      "compareAtPrice": 1799,
+      "sourceDirectory": "PLASTICO/SILLA DALIA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLA DALIA/IMAGEN PRINCIPAL/11.png",
+        "gallery": [
+          "PLASTICO/SILLA DALIA/IMAGEN PRINCIPAL/IMG_4558.PNG",
+          "PLASTICO/SILLA DALIA/Fondo real/ac4c7559-c4c5-47a7-ba29-082132e6f096.jpeg",
+          "PLASTICO/SILLA DALIA/Medidas/IMG_4560.PNG"
+        ],
+        "variants": [
+          {
+            "name": "blanco",
+            "image": "PLASTICO/SILLA DALIA/VARIANTES/blanco .png"
+          },
+          {
+            "name": "ginger",
+            "image": "PLASTICO/SILLA DALIA/VARIANTES/ginger .png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silla-gerbera",
+      "name": "Silla Gerbera",
+      "shortDescription": "Silla Gerbera disponible en Plastico.",
+      "description": "Silla Gerbera forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silla-gerbera/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-silla-gerbera/main-01.png",
+        "/productos-mila-web/plastico-silla-gerbera/gallery-main-01.png",
+        "/productos-mila-web/plastico-silla-gerbera/gallery-main-02.png",
+        "/productos-mila-web/plastico-silla-gerbera/gallery-real-03.jpeg",
+        "/productos-mila-web/plastico-silla-gerbera/gallery-measures-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-GERBERA",
+      "colors": [
+        {
+          "id": "marco-gris-asiento-cafe",
+          "name": "Marco Gris Asiento Cafe",
+          "hex": "#77736b",
+          "image": "/productos-mila-web/plastico-silla-gerbera/variant-marco-gris-asiento-cafe-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1062,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1019.41,
+      "compareAtPrice": 1699,
+      "sourceDirectory": "PLASTICO/SILLA GERBERA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLA GERBERA/IMAGEN PRINCIPAL/21.png",
+        "gallery": [
+          "PLASTICO/SILLA GERBERA/IMAGEN PRINCIPAL/IMG_4578.PNG",
+          "PLASTICO/SILLA GERBERA/IMAGEN PRINCIPAL/IMG_4579.PNG",
+          "PLASTICO/SILLA GERBERA/Fondo real/15905217-0457-4829-8c8b-06af6d55f350.jpeg",
+          "PLASTICO/SILLA GERBERA/Medidas/IMG_4586.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Marco gris asiento cafe",
+            "image": "PLASTICO/SILLA GERBERA/Variante/Marco gris asiento café.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silla-narciso",
+      "name": "Silla Narciso",
+      "shortDescription": "Silla Narciso disponible en Plastico.",
+      "description": "Silla Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silla-narciso/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-silla-narciso/main-01.png",
+        "/productos-mila-web/plastico-silla-narciso/gallery-main-01.png",
+        "/productos-mila-web/plastico-silla-narciso/gallery-main-02.png",
+        "/productos-mila-web/plastico-silla-narciso/gallery-real-03.jpeg",
+        "/productos-mila-web/plastico-silla-narciso/gallery-measures-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-NARCISO",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-silla-narciso/variant-blanco-01.png",
+          "available": true
+        },
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#7a533b",
+          "image": "/productos-mila-web/plastico-silla-narciso/variant-cafe-02.png",
+          "available": true
+        },
+        {
+          "id": "greie",
+          "name": "Greie",
+          "hex": "#b8afa2",
+          "image": "/productos-mila-web/plastico-silla-narciso/variant-greie-03.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": true,
+      "available": true,
+      "displayOrder": 1063,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 719.4,
+      "compareAtPrice": 1199,
+      "sourceDirectory": "PLASTICO/SILLA NARCISO",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLA NARCISO/Imagen principal/de espalda .PNG",
+        "gallery": [
+          "PLASTICO/SILLA NARCISO/Imagen principal/de frente .PNG",
+          "PLASTICO/SILLA NARCISO/Imagen principal/de lado.PNG",
+          "PLASTICO/SILLA NARCISO/Fondo real/81b0a0e9-337d-4e35-a79a-644cb6867e93.jpeg",
+          "PLASTICO/SILLA NARCISO/Medidas/IMG_4533.PNG"
+        ],
+        "variants": [
+          {
+            "name": "blanco",
+            "image": "PLASTICO/SILLA NARCISO/Variantes/blanco .PNG"
+          },
+          {
+            "name": "cafe",
+            "image": "PLASTICO/SILLA NARCISO/Variantes/café .PNG"
+          },
+          {
+            "name": "greie",
+            "image": "PLASTICO/SILLA NARCISO/Variantes/greie.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silla-peonia",
+      "name": "Silla Peonia",
+      "shortDescription": "Silla Peonia disponible en Plastico.",
+      "description": "Silla Peonia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silla-peonia/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-silla-peonia/main-01.png",
+        "/productos-mila-web/plastico-silla-peonia/gallery-main-01.png",
+        "/productos-mila-web/plastico-silla-peonia/gallery-main-02.png",
+        "/productos-mila-web/plastico-silla-peonia/gallery-real-03.png",
+        "/productos-mila-web/plastico-silla-peonia/gallery-measures-04.jpeg"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-PEONIA",
+      "colors": [
+        {
+          "id": "chocolate",
+          "name": "Chocolate",
+          "hex": "#5b372c",
+          "image": "/productos-mila-web/plastico-silla-peonia/variant-chocolate-01.png",
+          "available": true
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki",
+          "hex": "#b8aa86",
+          "image": "/productos-mila-web/plastico-silla-peonia/variant-khaki-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1064,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1274.26,
+      "compareAtPrice": 1699,
+      "sourceDirectory": "PLASTICO/SILLA PEONIA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLA PEONIA/IMAGEN PRINCIPAL/IMG_4562.PNG",
+        "gallery": [
+          "PLASTICO/SILLA PEONIA/IMAGEN PRINCIPAL/IMG_4564.PNG",
+          "PLASTICO/SILLA PEONIA/IMAGEN PRINCIPAL/IMG_4565.PNG",
+          "PLASTICO/SILLA PEONIA/Fondo real/IMG_4567.PNG",
+          "PLASTICO/SILLA PEONIA/Medidas/PP-951.jpeg"
+        ],
+        "variants": [
+          {
+            "name": "Chocolate",
+            "image": "PLASTICO/SILLA PEONIA/Variantes/Chocolate.PNG"
+          },
+          {
+            "name": "Khaki",
+            "image": "PLASTICO/SILLA PEONIA/Variantes/Khaki .png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silla-zinnia",
+      "name": "Silla Zinnia",
+      "shortDescription": "Silla Zinnia disponible en Plastico.",
+      "description": "Silla Zinnia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silla-zinnia/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-silla-zinnia/main-01.png",
+        "/productos-mila-web/plastico-silla-zinnia/gallery-main-01.png",
+        "/productos-mila-web/plastico-silla-zinnia/gallery-main-02.png",
+        "/productos-mila-web/plastico-silla-zinnia/gallery-real-03.jpeg",
+        "/productos-mila-web/plastico-silla-zinnia/gallery-measures-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico",
+        "descuentos"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-ZINNIA",
+      "colors": [
+        {
+          "id": "azul-turquesa",
+          "name": "Azul Turquesa",
+          "hex": "#2aa6a1",
+          "image": "/productos-mila-web/plastico-silla-zinnia/variant-azul-turquesa-01.png",
+          "available": true
+        },
+        {
+          "id": "mostaza",
+          "name": "Mostaza",
+          "hex": "#c59a2f",
+          "image": "/productos-mila-web/plastico-silla-zinnia/variant-mostaza-02.png",
+          "available": true
+        },
+        {
+          "id": "negro",
+          "name": "Negro",
+          "hex": "#222222",
+          "image": "/productos-mila-web/plastico-silla-zinnia/variant-negro-03.png",
+          "available": true
+        },
+        {
+          "id": "verde-livo",
+          "name": "Verde Livo",
+          "hex": "#6f7350",
+          "image": "/productos-mila-web/plastico-silla-zinnia/variant-verde-livo-04.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1065,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 899.26,
+      "compareAtPrice": 1199,
+      "sourceDirectory": "PLASTICO/SILLA ZINNIA",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLA ZINNIA/IMAGEN PRINCIPAL/IMG_4547.PNG",
+        "gallery": [
+          "PLASTICO/SILLA ZINNIA/IMAGEN PRINCIPAL/IMG_4548.PNG",
+          "PLASTICO/SILLA ZINNIA/IMAGEN PRINCIPAL/IMG_4549.PNG",
+          "PLASTICO/SILLA ZINNIA/Fondo real/6d5bc558-3fae-4e42-a7a2-1d65818080e0.jpeg",
+          "PLASTICO/SILLA ZINNIA/Medidas/PP-902.png"
+        ],
+        "variants": [
+          {
+            "name": "azul turquesa",
+            "image": "PLASTICO/SILLA ZINNIA/VARIANTES/azul turquesa .png"
+          },
+          {
+            "name": "mostaza",
+            "image": "PLASTICO/SILLA ZINNIA/VARIANTES/mostaza .png"
+          },
+          {
+            "name": "negro",
+            "image": "PLASTICO/SILLA ZINNIA/VARIANTES/negro.PNG"
+          },
+          {
+            "name": "verde livo",
+            "image": "PLASTICO/SILLA ZINNIA/VARIANTES/verde livo .png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-silleta-iris",
+      "name": "Silleta Iris",
+      "shortDescription": "Silleta Iris disponible en Plastico.",
+      "description": "Silleta Iris forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-silleta-iris/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-silleta-iris/main-01.png",
+        "/productos-mila-web/plastico-silleta-iris/gallery-main-01.png",
+        "/productos-mila-web/plastico-silleta-iris/gallery-main-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLETA-IRIS",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-silleta-iris/variant-blanco-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1066,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 2899,
+      "sourceDirectory": "PLASTICO/SILLETA IRIS",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLETA IRIS/Imagen principal/IMG_4650.PNG",
+        "gallery": [
+          "PLASTICO/SILLETA IRIS/Imagen principal/IMG_4651.PNG",
+          "PLASTICO/SILLETA IRIS/Imagen principal/IMG_4652.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanco",
+            "image": "PLASTICO/SILLETA IRIS/Variante/Blanco .PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-sillon-anturio",
+      "name": "Sillon Anturio",
+      "shortDescription": "Sillon Anturio disponible en Plastico.",
+      "description": "Sillon Anturio forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-sillon-anturio/main-01.png",
+      "gallery": [
+        "/productos-mila-web/plastico-sillon-anturio/main-01.png",
+        "/productos-mila-web/plastico-sillon-anturio/gallery-main-01.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLON-ANTURIO",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-sillon-anturio/variant-blanca-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1067,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 2249,
+      "sourceDirectory": "PLASTICO/SILLON ANTURIO",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLON ANTURIO/IMAGEN PRINCIPAL/IMG_4658.PNG",
+        "gallery": [
+          "PLASTICO/SILLON ANTURIO/IMAGEN PRINCIPAL/IMG_4659.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/SILLON ANTURIO/Variante/Blanca.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "plastico-sillones-narciso",
+      "name": "Sillones Narciso",
+      "shortDescription": "Sillones Narciso disponible en Plastico.",
+      "description": "Sillones Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/plastico-sillones-narciso/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/plastico-sillones-narciso/main-01.jpeg",
+        "/productos-mila-web/plastico-sillones-narciso/gallery-main-01.png",
+        "/productos-mila-web/plastico-sillones-narciso/gallery-measures-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLONES-NARCISO",
+      "colors": [
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "/productos-mila-web/plastico-sillones-narciso/variant-blanca-01.png",
+          "available": true
+        },
+        {
+          "id": "greige",
+          "name": "Greige",
+          "hex": "#b8afa2",
+          "image": "/productos-mila-web/plastico-sillones-narciso/variant-greige-02.jpeg",
+          "available": true
+        },
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "/productos-mila-web/plastico-sillones-narciso/variant-gris-oscuro-03.png",
+          "available": true
+        },
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "/productos-mila-web/plastico-sillones-narciso/variant-verde-militar-04.png",
+          "available": true
+        },
+        {
+          "id": "verde-olivo",
+          "name": "Verde Olivo",
+          "hex": "#6f7350",
+          "image": "/productos-mila-web/plastico-sillones-narciso/variant-verde-olivo-05.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1068,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        }
+      ],
+      "price": 1699,
+      "sourceDirectory": "PLASTICO/SILLONES NARCISO",
+      "sourceFiles": {
+        "mainImage": "PLASTICO/SILLONES NARCISO/IMAGEN PRINCIPAL/GR-19 ..jpeg",
+        "gallery": [
+          "PLASTICO/SILLONES NARCISO/IMAGEN PRINCIPAL/IMG_4617.PNG",
+          "PLASTICO/SILLONES NARCISO/Medidas/IMG_4624.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Blanca",
+            "image": "PLASTICO/SILLONES NARCISO/Variantes/Blanca.PNG"
+          },
+          {
+            "name": "Greige",
+            "image": "PLASTICO/SILLONES NARCISO/Variantes/Greige .jpeg"
+          },
+          {
+            "name": "Gris oscuro",
+            "image": "PLASTICO/SILLONES NARCISO/Variantes/Gris oscuro.PNG"
+          },
+          {
+            "name": "Verde militar",
+            "image": "PLASTICO/SILLONES NARCISO/Variantes/Verde militar.PNG"
+          },
+          {
+            "name": "Verde olivo",
+            "image": "PLASTICO/SILLONES NARCISO/Variantes/Verde olivo.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-barcelona-2",
+      "name": "Barcelona 2",
+      "shortDescription": "Barcelona 2 disponible en Ratan.",
+      "description": "Barcelona 2 forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-barcelona-2/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-barcelona-2/main-01.png",
+        "/productos-mila-web/ratan-barcelona-2/gallery-main-01.jpeg",
+        "/productos-mila-web/ratan-barcelona-2/gallery-real-02.png",
+        "/productos-mila-web/ratan-barcelona-2/gallery-measures-03.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-BARCELONA-2",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-barcelona-2/variant-gris-01.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1069,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 11250,
+      "compareAtPrice": 22500,
+      "sourceDirectory": "RATAN/Barcelona 2",
+      "sourceFiles": {
+        "mainImage": "RATAN/Barcelona 2/Imagen principal/3BCEFBF5-5F84-4591-9B0B-CBE3A9696515.png",
+        "gallery": [
+          "RATAN/Barcelona 2/Imagen principal/85d1d0eb-b7e3-4ae7-910c-f2770219a6ba.jpeg",
+          "RATAN/Barcelona 2/Fondo Real/IMG_0346.PNG",
+          "RATAN/Barcelona 2/Medidas/IMG_0347.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "RATAN/Barcelona 2/Variedades/Gris/85d1d0eb-b7e3-4ae7-910c-f2770219a6ba.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-barcelona-4",
+      "name": "Barcelona 4",
+      "shortDescription": "Barcelona 4 disponible en Ratan.",
+      "description": "Barcelona 4 forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-barcelona-4/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-barcelona-4/main-01.png",
+        "/productos-mila-web/ratan-barcelona-4/gallery-main-01.png",
+        "/productos-mila-web/ratan-barcelona-4/gallery-real-02.png",
+        "/productos-mila-web/ratan-barcelona-4/gallery-measures-03.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-BARCELONA-4",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-barcelona-4/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1070,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 22500,
+      "compareAtPrice": 45000,
+      "sourceDirectory": "RATAN/Barcelona 4",
+      "sourceFiles": {
+        "mainImage": "RATAN/Barcelona 4/Imagen principal/IMG_4775.PNG",
+        "gallery": [
+          "RATAN/Barcelona 4/Imagen principal/IMG_4776.PNG",
+          "RATAN/Barcelona 4/Fondo real/IMG_4773.PNG",
+          "RATAN/Barcelona 4/Medidas/IMG_4774.PNG"
+        ],
+        "variants": [
+          {
+            "name": "GRIS",
+            "image": "RATAN/Barcelona 4/Variante/GRIS.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-barcelona-6",
+      "name": "Barcelona 6",
+      "shortDescription": "Barcelona 6 disponible en Ratan.",
+      "description": "Barcelona 6 forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-barcelona-6/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-barcelona-6/main-01.png",
+        "/productos-mila-web/ratan-barcelona-6/gallery-main-01.png",
+        "/productos-mila-web/ratan-barcelona-6/gallery-real-02.png",
+        "/productos-mila-web/ratan-barcelona-6/gallery-measures-03.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-BARCELONA-6",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-barcelona-6/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1071,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 32500,
+      "compareAtPrice": 65000,
+      "sourceDirectory": "RATAN/Barcelona 6",
+      "sourceFiles": {
+        "mainImage": "RATAN/Barcelona 6/IMAGEN PRINCIPAL/IMG_4779.PNG",
+        "gallery": [
+          "RATAN/Barcelona 6/IMAGEN PRINCIPAL/IMG_4780.PNG",
+          "RATAN/Barcelona 6/FONDO REAL/IMG_4777.PNG",
+          "RATAN/Barcelona 6/Medidas/IMG_4781.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "RATAN/Barcelona 6/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-bilbao",
+      "name": "Bilbao",
+      "shortDescription": "Bilbao disponible en Ratan.",
+      "description": "Bilbao forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-bilbao/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-bilbao/main-01.png",
+        "/productos-mila-web/ratan-bilbao/gallery-main-01.png",
+        "/productos-mila-web/ratan-bilbao/gallery-real-02.png",
+        "/productos-mila-web/ratan-bilbao/gallery-measures-03.png",
+        "/productos-mila-web/ratan-bilbao/gallery-measures-04.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-BILBAO",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-bilbao/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1072,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 19750,
+      "compareAtPrice": 39500,
+      "sourceDirectory": "RATAN/BILBAO",
+      "sourceFiles": {
+        "mainImage": "RATAN/BILBAO/IMAGEN PRINCIPAL/IMG_4785.PNG",
+        "gallery": [
+          "RATAN/BILBAO/IMAGEN PRINCIPAL/IMG_4786.PNG",
+          "RATAN/BILBAO/Fondo real/IMG_4784.PNG",
+          "RATAN/BILBAO/Medidas/IMG_4782.PNG",
+          "RATAN/BILBAO/Medidas/IMG_4783.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "RATAN/BILBAO/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-granada",
+      "name": "Granada",
+      "shortDescription": "Granada disponible en Ratan.",
+      "description": "Granada forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-granada/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-granada/main-01.png",
+        "/productos-mila-web/ratan-granada/gallery-main-01.png",
+        "/productos-mila-web/ratan-granada/gallery-real-02.png",
+        "/productos-mila-web/ratan-granada/gallery-measures-03.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-GRANADA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-granada/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1073,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 11999.5,
+      "compareAtPrice": 23999,
+      "sourceDirectory": "RATAN/Granada",
+      "sourceFiles": {
+        "mainImage": "RATAN/Granada/Imagen principal/5.png",
+        "gallery": [
+          "RATAN/Granada/Imagen principal/DF3583C7-1970-49DD-B040-E1AE9B762583.png",
+          "RATAN/Granada/Fondo real/0772A142-EDA7-4823-B7B7-D96F98F171E9.png",
+          "RATAN/Granada/Medidas/36.png"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "RATAN/Granada/Variedades/Gris/5.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-ibiza",
+      "name": "Ibiza",
+      "shortDescription": "Ibiza disponible en Ratan.",
+      "description": "Ibiza forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-ibiza/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-ibiza/main-01.png",
+        "/productos-mila-web/ratan-ibiza/gallery-main-01.png",
+        "/productos-mila-web/ratan-ibiza/gallery-real-02.png",
+        "/productos-mila-web/ratan-ibiza/gallery-measures-03.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-IBIZA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-ibiza/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1074,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 36250,
+      "compareAtPrice": 72500,
+      "sourceDirectory": "RATAN/IBIZA",
+      "sourceFiles": {
+        "mainImage": "RATAN/IBIZA/IMAGEN PRINCIPAL/IMG_4795.PNG",
+        "gallery": [
+          "RATAN/IBIZA/IMAGEN PRINCIPAL/IMG_4796.PNG",
+          "RATAN/IBIZA/Fondo real/IMG_4794.PNG",
+          "RATAN/IBIZA/Medidas/IMG_4793.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "RATAN/IBIZA/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-madrid",
+      "name": "Madrid",
+      "shortDescription": "Madrid disponible en Ratan.",
+      "description": "Madrid forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-madrid/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-madrid/main-01.png",
+        "/productos-mila-web/ratan-madrid/gallery-main-01.png",
+        "/productos-mila-web/ratan-madrid/gallery-real-02.png",
+        "/productos-mila-web/ratan-madrid/gallery-measures-03.png",
+        "/productos-mila-web/ratan-madrid/gallery-measures-04.png",
+        "/productos-mila-web/ratan-madrid/gallery-measures-05.png",
+        "/productos-mila-web/ratan-madrid/gallery-measures-06.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-MADRID",
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "/productos-mila-web/ratan-madrid/variant-beige-01.png",
+          "available": true
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-madrid/variant-gris-02.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": true,
+      "available": true,
+      "displayOrder": 1075,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 25750,
+      "compareAtPrice": 51500,
+      "sourceDirectory": "RATAN/MADRID",
+      "sourceFiles": {
+        "mainImage": "RATAN/MADRID/IMAGEN PRINCIPAL/IMG_4770.PNG",
+        "gallery": [
+          "RATAN/MADRID/IMAGEN PRINCIPAL/IMG_4771.PNG",
+          "RATAN/MADRID/Fondo real/IMG_4762.PNG",
+          "RATAN/MADRID/Medidas/IMG_4764.PNG",
+          "RATAN/MADRID/Medidas/IMG_4765.PNG",
+          "RATAN/MADRID/Medidas/IMG_4768.PNG",
+          "RATAN/MADRID/Medidas/IMG_4769.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Beige",
+            "image": "RATAN/MADRID/VARIANTE/Beige.PNG"
+          },
+          {
+            "name": "Gris",
+            "image": "RATAN/MADRID/VARIANTE/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-malaga",
+      "name": "Malaga",
+      "shortDescription": "Malaga disponible en Ratan.",
+      "description": "Malaga forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-malaga/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-malaga/main-01.png",
+        "/productos-mila-web/ratan-malaga/gallery-main-01.png",
+        "/productos-mila-web/ratan-malaga/gallery-real-02.png",
+        "/productos-mila-web/ratan-malaga/gallery-measures-03.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-MALAGA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-malaga/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1076,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 29000,
+      "compareAtPrice": 58000,
+      "sourceDirectory": "RATAN/MÁLAGA",
+      "sourceFiles": {
+        "mainImage": "RATAN/MÁLAGA/Imagen principal/1.png",
+        "gallery": [
+          "RATAN/MÁLAGA/Imagen principal/D2FBFFB1-C840-4E1B-9A21-543DD1CFE0A2.png",
+          "RATAN/MÁLAGA/Fondo real/E2057F36-17FE-4AE7-9E2F-DBF75C4AC52D.png",
+          "RATAN/MÁLAGA/Medidas/32.png"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "RATAN/MÁLAGA/Variedades/Gris/1.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-malaga-petit",
+      "name": "Malaga Petit",
+      "shortDescription": "Malaga Petit disponible en Ratan.",
+      "description": "Malaga Petit forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-malaga-petit/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-malaga-petit/main-01.png",
+        "/productos-mila-web/ratan-malaga-petit/gallery-main-01.png",
+        "/productos-mila-web/ratan-malaga-petit/gallery-real-02.jpeg",
+        "/productos-mila-web/ratan-malaga-petit/gallery-measures-03.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-MALAGA-PETIT",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-malaga-petit/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1077,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 24750,
+      "compareAtPrice": 49500,
+      "sourceDirectory": "RATAN/MÁLAGA PETIT",
+      "sourceFiles": {
+        "mainImage": "RATAN/MÁLAGA PETIT/Imagen principal/2.png",
+        "gallery": [
+          "RATAN/MÁLAGA PETIT/Imagen principal/D2FBFFB1-C840-4E1B-9A21-543DD1CFE0A2.png",
+          "RATAN/MÁLAGA PETIT/Fondo real/bf17473e-ba7a-4250-ab5b-9e6ffa64cc1b.jpeg",
+          "RATAN/MÁLAGA PETIT/Medidas/33.png"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "RATAN/MÁLAGA PETIT/Variedades/Gris/2.png"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-marbella",
+      "name": "Marbella",
+      "shortDescription": "Marbella disponible en Ratan.",
+      "description": "Marbella forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-marbella/main-01.png",
+      "gallery": [
+        "/productos-mila-web/ratan-marbella/main-01.png",
+        "/productos-mila-web/ratan-marbella/gallery-main-01.png",
+        "/productos-mila-web/ratan-marbella/gallery-real-02.png",
+        "/productos-mila-web/ratan-marbella/gallery-measures-03.png",
+        "/productos-mila-web/ratan-marbella/gallery-measures-04.png",
+        "/productos-mila-web/ratan-marbella/gallery-measures-05.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-MARBELLA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-marbella/variant-gris-01.png",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1078,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 23250,
+      "compareAtPrice": 46500,
+      "sourceDirectory": "RATAN/MARBELLA",
+      "sourceFiles": {
+        "mainImage": "RATAN/MARBELLA/IMAGEN PRINCIPAL/IMG_4791.PNG",
+        "gallery": [
+          "RATAN/MARBELLA/IMAGEN PRINCIPAL/IMG_4792.PNG",
+          "RATAN/MARBELLA/Fondo real/IMG_4787.PNG",
+          "RATAN/MARBELLA/Medidas/IMG_4788.PNG",
+          "RATAN/MARBELLA/Medidas/IMG_4789.PNG",
+          "RATAN/MARBELLA/Medidas/IMG_4790.PNG"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "RATAN/MARBELLA/Variante/Gris.PNG"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ratan-sevilla",
+      "name": "Sevilla",
+      "shortDescription": "Sevilla disponible en Ratan.",
+      "description": "Sevilla forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "/productos-mila-web/ratan-sevilla/main-01.jpeg",
+      "gallery": [
+        "/productos-mila-web/ratan-sevilla/main-01.jpeg",
+        "/productos-mila-web/ratan-sevilla/gallery-main-01.png",
+        "/productos-mila-web/ratan-sevilla/gallery-real-02.jpeg",
+        "/productos-mila-web/ratan-sevilla/gallery-measures-03.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan",
+        "descuentos"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-SEVILLA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "/productos-mila-web/ratan-sevilla/variant-gris-01.jpeg",
+          "available": true
+        }
+      ],
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1079,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        }
+      ],
+      "price": 16750,
+      "compareAtPrice": 33500,
+      "sourceDirectory": "RATAN/Sevilla",
+      "sourceFiles": {
+        "mainImage": "RATAN/Sevilla/Imagen principal/bd397150-0977-4423-8bfd-9e6079061af9.jpeg",
+        "gallery": [
+          "RATAN/Sevilla/Imagen principal/F5C01496-0617-47BC-A48B-233043D55FCB.png",
+          "RATAN/Sevilla/Fondo real/d021ed71-d74d-452e-a260-f23e82a78699.jpeg",
+          "RATAN/Sevilla/Medidas/28.png"
+        ],
+        "variants": [
+          {
+            "name": "Gris",
+            "image": "RATAN/Sevilla/Variedades/Gris/bd397150-0977-4423-8bfd-9e6079061af9.jpeg"
+          }
+        ]
+      }
+    }
+  ]
+}

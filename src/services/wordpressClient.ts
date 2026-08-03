@@ -75,7 +75,9 @@ export function decodeHtml(value = ''): string {
 }
 
 export function wpImageUrl(image: unknown): string | undefined {
-  if (!image || typeof image !== 'object') return undefined;
+  if (!image) return undefined;
+  if (typeof image === 'string') return image;
+  if (typeof image !== 'object') return undefined;
   const candidate = image as { url?: string; source_url?: string; sizes?: Record<string, string | { url?: string }> };
   if (candidate.sizes?.large && typeof candidate.sizes.large === 'object') return candidate.sizes.large.url;
   if (typeof candidate.sizes?.large === 'string') return candidate.sizes.large;

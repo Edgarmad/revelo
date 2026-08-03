@@ -3,6 +3,7 @@ import { dirname, resolve } from 'node:path';
 
 const root = process.cwd();
 const outputPath = resolve(root, 'wordpress/migration/seed.json');
+const productosMilaWebPath = resolve(root, 'wordpress/migration/productos-mila-web-products.json');
 
 const formatPrice = (price) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
 
@@ -94,6 +95,25 @@ const products = inventory.map((product, index) => {
     badge: discountPercentage ? `${discountPercentage}% OFF` : undefined,
   };
 });
+
+if (existsSync(productosMilaWebPath)) {
+  const productosMilaWeb = JSON.parse(readFileSync(productosMilaWebPath, 'utf8'));
+  const migratedProducts = Array.isArray(productosMilaWeb.products) ? productosMilaWeb.products : [];
+  products.length = 0;
+
+  migratedProducts.forEach((migratedProduct, index) => {
+    const hasDiscount = migratedProduct.compareAtPrice !== undefined;
+    const discountPercentage = hasDiscount ? Math.round((1 - migratedProduct.price / migratedProduct.compareAtPrice) * 100) : undefined;
+
+    products.push({
+      ...migratedProduct,
+      displayOrder: index + 1,
+      formattedPrice: formatPrice(migratedProduct.price),
+      formattedCompareAtPrice: hasDiscount ? formatPrice(migratedProduct.compareAtPrice) : undefined,
+      badge: discountPercentage ? `${discountPercentage}% OFF` : undefined,
+    });
+  });
+}
 
 const reels = [
   { slug: 'reel-01', title: 'Reel 1', videoUrl: 'https://www.instagram.com/milaprohome.mid/reel/DbE5EoXtMei/', sourceImage: '/instagram-reels/reel-01.jpg', platform: 'instagram', displayOrder: 1, visible: true },
