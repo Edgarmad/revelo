@@ -6,7 +6,6 @@ import { ArrowRight } from 'lucide-astro';
   <label class="sr-only" for="newsletter-email">Correo electrónico</label>
   <input id="newsletter-email" class="min-h-10 flex-1 rounded-pill px-4 text-sm" type="email" name="email" placeholder="Correo electrónico" autocomplete="email" required />
   <input type="hidden" name="source" value="footer-newsletter" />
-  <input class="absolute -left-[9999px] h-px w-px opacity-0" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
   <button class="grid h-10 w-14 place-items-center rounded-pill bg-aqua text-ink disabled:cursor-wait disabled:opacity-70" type="submit" aria-label="Enviar correo"><ArrowRight size={20} /></button>
   <p class="basis-full px-4 text-xs text-muted data-[error=true]:text-red-700" data-subscribe-status hidden></p>
 </form>

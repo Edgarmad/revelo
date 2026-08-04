@@ -13,12 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $config = load_config();
 $email = strtolower(trim((string) ($_POST['email'] ?? '')));
 $source = trim((string) ($_POST['source'] ?? 'newsletter'));
-$honeypot = trim((string) ($_POST['website'] ?? ''));
-
-if ($honeypot !== '') {
-    echo json_encode(['ok' => true, 'message' => 'Gracias por suscribirte.']);
-    exit;
-}
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(422);
@@ -48,9 +42,11 @@ $htmlBody = '<!doctype html><html lang="es"><body style="margin:0;background:#f6
 
 try {
     smtp_send($config, $email, $subject, $textBody, $htmlBody, $source);
+    newsletter_log($config, 'sent', ['to' => $email, 'source' => $source]);
     echo json_encode(['ok' => true, 'message' => 'Gracias por suscribirte. Revisa tu correo.']);
 } catch (Throwable $error) {
     error_log('Newsletter SMTP error: ' . $error->getMessage());
+    newsletter_log($config, 'error', ['to' => $email, 'source' => $source, 'error' => $error->getMessage()]);
     http_response_code(500);
     echo json_encode(['ok' => false, 'message' => 'No pudimos enviar el correo. Intenta de nuevo mas tarde.']);
 }
@@ -68,6 +64,8 @@ function load_config(): array
         'smtp_pass' => getenv('NEWSLETTER_SMTP_PASS') ?: '',
         'from_email' => getenv('NEWSLETTER_FROM_EMAIL') ?: '',
         'from_name' => getenv('NEWSLETTER_FROM_NAME') ?: 'Milapro Home',
+        'bcc_email' => getenv('NEWSLETTER_BCC_EMAIL') ?: '',
+        'debug_log' => getenv('NEWSLETTER_DEBUG_LOG') === 'true',
     ], is_array($fileConfig) ? $fileConfig : []);
 
     foreach (['smtp_host', 'smtp_user', 'smtp_pass', 'from_email'] as $key) {
@@ -124,15 +122,22 @@ function smtp_send(array $config, string $to, string $subject, string $textBody,
     smtp_command($socket, base64_encode((string) $config['smtp_pass']), 235);
     smtp_command($socket, 'MAIL FROM:<' . (string) $config['from_email'] . '>', 250);
     smtp_command($socket, 'RCPT TO:<' . $to . '>', [250, 251]);
+
+    $bcc = trim((string) ($config['bcc_email'] ?? ''));
+    if ($bcc !== '' && filter_var($bcc, FILTER_VALIDATE_EMAIL) && strtolower($bcc) !== strtolower($to)) {
+        smtp_command($socket, 'RCPT TO:<' . $bcc . '>', [250, 251]);
+    }
     smtp_command($socket, 'DATA', 354);
 
     $boundary = 'milapro_' . bin2hex(random_bytes(12));
     $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
     $headers = [
+        'Date: ' . date(DATE_RFC2822),
         'From: ' . encode_header((string) $config['from_name']) . ' <' . (string) $config['from_email'] . '>',
         'Reply-To: ' . (string) $config['from_email'],
         'To: <' . $to . '>',
         'Subject: ' . $encodedSubject,
+        'Message-ID: <' . bin2hex(random_bytes(16)) . '@milaprohome.com>',
         'MIME-Version: 1.0',
         'Content-Type: multipart/alternative; boundary="' . $boundary . '"',
         'X-Milapro-Source: ' . preg_replace('/[^a-z0-9_-]/i', '', $source),
@@ -186,4 +191,19 @@ function normalize_smtp_body(string $body): string
     $body = str_replace(["\r\n", "\r"], "\n", $body);
     $body = preg_replace('/^\./m', '..', $body);
     return str_replace("\n", "\r\n", $body);
+}
+
+function newsletter_log(array $config, string $event, array $context): void
+{
+    if (empty($config['debug_log'])) {
+        return;
+    }
+
+    $entry = [
+        'time' => date(DATE_ATOM),
+        'event' => $event,
+        'context' => $context,
+    ];
+
+    file_put_contents(__DIR__ . '/subscribe-debug.log', json_encode($entry) . PHP_EOL, FILE_APPEND | LOCK_EX);
 }

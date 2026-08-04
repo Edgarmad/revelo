@@ -21,7 +21,6 @@ import bannerImage from '@/styles/images/banner_img.jpeg';
         <label class="sr-only" for="floating-banner-email">Correo electrónico</label>
         <input id="floating-banner-email" class="floating-banner__input" type="email" name="email" placeholder="E-mail" autocomplete="email" required />
         <input type="hidden" name="source" value="floating-banner" />
-        <input class="floating-banner__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <button class="floating-banner__button" type="submit">
           <Mail size={20} />
           Suscribirme
@@ -192,14 +191,6 @@ import bannerImage from '@/styles/images/banner_img.jpeg';
 
   .floating-banner__status[data-error="true"] {
     color: #9f2d20;
-  }
-
-  .floating-banner__trap {
-    position: absolute;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
   }
 
   .floating-banner__no-thanks {

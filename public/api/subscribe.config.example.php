@@ -8,4 +8,6 @@ return [
     'smtp_pass' => 'REPLACE_WITH_SMTP_PASSWORD',
     'from_email' => 'ventas@milaprohome.com',
     'from_name' => 'Milapro Home',
+    'bcc_email' => 'ventas@milaprohome.com',
+    'debug_log' => false,
 ];
