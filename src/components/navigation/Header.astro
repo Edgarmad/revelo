@@ -1,13 +1,13 @@
 ---
 import { navItems } from '@/data/siteContent';
 import Container from '@/components/common/Container.astro';
-import { ChevronDown, Menu, MessageCircle, Search, X } from 'lucide-astro';
+import { ChevronDown, Facebook, Instagram, Menu, MessageCircle, Search, X } from 'lucide-astro';
 import { getAllCategories } from '@/services/categoryService';
 import { getAllProducts, getDiscountedProducts } from '@/services/productService';
 import logoSrc from '@/styles/images/Logo Mila.svg';
 
 const menuCategories = await getAllCategories();
-const furnitureCategories = menuCategories.filter((category) => ['aluminio', 'ratan', 'plastico'].includes(category.slug));
+const furnitureCategories = menuCategories.filter((category) => ['aluminio', 'ratan', 'plastico', 'plantas'].includes(category.slug));
 const menuProductCategories = new Set<string>();
 const menuProducts = (await getDiscountedProducts())
   .filter((product) => {
@@ -27,12 +27,12 @@ const promotionsHref = '/products/?promociones=1';
       <a class="relative z-10 ml-auto shrink-0 rounded-pill bg-aqua px-4 py-1 text-ink" href={promotionsHref}>Ver ofertas</a>
     </Container>
   </div>
-  <Container class="relative grid min-h-[56px] grid-cols-[48px_minmax(0,1fr)_96px] items-center gap-2 bg-white shadow-[0_6px_14px_rgb(35_31_28/0.12)] lg:min-h-[82px] lg:grid-cols-[260px_minmax(0,1fr)_188px] lg:gap-4 lg:shadow-none">
+  <Container class="relative grid min-h-[56px] grid-cols-[48px_minmax(0,1fr)_96px] items-center gap-2 bg-white shadow-[0_6px_14px_rgb(35_31_28/0.12)] lg:min-h-[82px] lg:grid-cols-[220px_minmax(0,1fr)_auto] lg:gap-4 lg:shadow-none xl:grid-cols-[260px_minmax(0,1fr)_auto]">
     <button class="grid h-11 w-11 place-items-center justify-self-start text-ink lg:hidden" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><Menu size={25} /></button>
     <a href="/" class="inline-flex items-center justify-self-center lg:justify-self-start" aria-label="Milapro Home">
-      <img class="mt-[7px] h-[25px] w-auto lg:mt-0 lg:h-auto lg:w-[260px] lg:max-w-[42vw] lg:pt-[10px]" src={logoSrc} alt="Milapro Home" width="260" height="25" />
+      <img class="mt-[7px] h-[25px] w-auto lg:mt-0 lg:h-auto lg:w-[220px] lg:max-w-[42vw] lg:pt-[10px] xl:w-[260px]" src={logoSrc} alt="Milapro Home" width="260" height="25" />
     </a>
-    <nav class="hidden items-center gap-[34px] text-sm font-bold text-[#332b1e] lg:flex lg:justify-self-center" aria-label="Navegación principal">
+    <nav class="hidden items-center gap-5 text-sm font-bold text-[#332b1e] lg:flex lg:justify-self-center xl:gap-[34px]" aria-label="Navegación principal">
       {
         navItems.map((item) => {
           if (item.label === 'Muebles para exterior') {
@@ -113,33 +113,49 @@ const promotionsHref = '/products/?promociones=1';
         })
       }
     </nav>
-    <div class="relative hidden items-center justify-self-end gap-2 lg:flex" data-product-search>
-      <a class="h-11 items-center justify-center gap-2 rounded-pill bg-[#25d366] px-5 text-sm font-black uppercase text-ink transition hover:bg-ink hover:text-white lg:inline-flex" href="https://wa.me/529994553932" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp de Milapro Home"><MessageCircle size={18} /> WhatsApp</a>
-      <button class="grid h-11 w-11 place-items-center rounded-full border border-ink/15 text-ink transition hover:border-aqua hover:bg-aqua/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" type="button" data-product-search-toggle aria-expanded="false" aria-controls="desktop-product-search" aria-label="Abrir buscador de productos"><Search size={20} /></button>
-      <div id="desktop-product-search" class="absolute right-0 top-[calc(100%+14px)] hidden w-[420px] overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-2xl" data-product-search-panel>
-        <div class="flex items-center gap-3 border-b border-ink/10 px-4 py-3">
-          <Search class="shrink-0 text-aqua" size={20} />
-          <input class="h-11 min-w-0 flex-1 bg-transparent text-base font-semibold text-ink outline-none placeholder:text-muted" type="search" placeholder="Buscar productos" autocomplete="off" data-product-search-input />
-          <button class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-muted transition hover:bg-sand hover:text-ink" type="button" data-product-search-close aria-label="Cerrar buscador"><X size={18} /></button>
+    <div class="hidden items-center justify-self-end gap-2 lg:flex">
+      <div class="relative" data-product-search>
+        <button class="grid h-11 w-11 place-items-center rounded-full border border-ink/15 text-ink transition hover:border-aqua hover:bg-aqua/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" type="button" data-product-search-toggle aria-expanded="false" aria-controls="desktop-product-search" aria-label="Abrir buscador de productos"><Search size={20} /></button>
+        <div id="desktop-product-search" class="absolute right-0 top-[calc(100%+14px)] hidden w-[420px] overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-2xl" data-product-search-panel>
+          <div class="flex items-center gap-3 border-b border-ink/10 px-4 py-3">
+            <Search class="shrink-0 text-aqua" size={20} />
+            <input class="h-11 min-w-0 flex-1 bg-transparent text-base font-semibold text-ink outline-none placeholder:text-muted" type="search" placeholder="Buscar productos" autocomplete="off" data-product-search-input />
+            <button class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-muted transition hover:bg-sand hover:text-ink" type="button" data-product-search-close aria-label="Cerrar buscador"><X size={18} /></button>
+          </div>
+          <div class="max-h-[420px] overflow-y-auto p-3" data-product-search-results>
+            {searchProducts.map((product, index) => (
+              <a class:list={["flex items-center gap-3 rounded-xl p-2 transition hover:bg-sand", index >= 8 && "hidden"]} href={`/products/${product.slug}/`} data-product-result data-search-text={`${product.name} ${product.collection} ${product.category} ${product.tags.join(' ')}`}>
+                <img class="h-14 w-14 rounded-lg bg-sand object-cover" src={product.mainImage} alt="" loading="lazy" width="56" height="56" />
+                <span class="min-w-0">
+                  <span class="block truncate text-sm font-black text-ink">{product.name}</span>
+                  <span class="block text-xs font-semibold uppercase tracking-wide text-muted">{product.collection}</span>
+                </span>
+              </a>
+            ))}
+            <p class="hidden px-3 py-8 text-center text-sm font-semibold text-muted" data-product-search-empty>No encontramos productos con ese nombre.</p>
+          </div>
         </div>
-        <div class="max-h-[420px] overflow-y-auto p-3" data-product-search-results>
-          {searchProducts.map((product, index) => (
-            <a class:list={["flex items-center gap-3 rounded-xl p-2 transition hover:bg-sand", index >= 8 && "hidden"]} href={`/products/${product.slug}/`} data-product-result data-search-text={`${product.name} ${product.collection} ${product.category} ${product.tags.join(' ')}`}>
-              <img class="h-14 w-14 rounded-lg bg-sand object-cover" src={product.mainImage} alt="" loading="lazy" width="56" height="56" />
-              <span class="min-w-0">
-                <span class="block truncate text-sm font-black text-ink">{product.name}</span>
-                <span class="block text-xs font-semibold uppercase tracking-wide text-muted">{product.collection}</span>
-              </span>
-            </a>
-          ))}
-          <p class="hidden px-3 py-8 text-center text-sm font-semibold text-muted" data-product-search-empty>No encontramos productos con ese nombre.</p>
-        </div>
+      </div>
+      <a class="grid h-10 w-10 place-items-center rounded-full bg-[#25d366] text-ink transition hover:bg-ink hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" href="https://wa.me/529994553932" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp de Milapro Home"><MessageCircle size={18} /></a>
+      <div class="flex items-center gap-1 text-ink">
+        <a class="grid h-10 w-10 place-items-center rounded-full border border-ink/10 transition hover:border-aqua hover:bg-aqua/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" href="https://www.milaprohome.com/website/social/facebook" target="_blank" rel="noreferrer" aria-label="Facebook de Milapro Home"><Facebook size={18} /></a>
+        <a class="grid h-10 w-10 place-items-center rounded-full border border-ink/10 transition hover:border-aqua hover:bg-aqua/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" href="https://www.milaprohome.com/website/social/instagram" target="_blank" rel="noreferrer" aria-label="Instagram de Milapro Home"><Instagram size={18} /></a>
+        <a class="grid h-10 w-10 place-items-center rounded-full border border-ink/10 transition hover:border-aqua hover:bg-aqua/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" href="https://www.tiktok.com/@milapro.home?_r=1&_t=ZS-98ai5EvgcFE" target="_blank" rel="noreferrer" aria-label="TikTok de Milapro Home">
+          <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.82a5.72 5.72 0 0 0 3.31 1.06v3.36a9.05 9.05 0 0 1-3.31-.66v6.03a5.58 5.58 0 1 1-5.58-5.58c.33 0 .65.03.96.09v3.47a2.21 2.21 0 1 0 1.26 2v-13h3.36v3.23Z" /></svg>
+        </a>
       </div>
     </div>
     <div class="flex items-center justify-self-end lg:hidden">
       <a class="grid h-11 w-11 place-items-center text-ink" href="/products/" aria-label="Buscar productos"><Search size={22} /></a>
       <a class="grid h-11 w-11 place-items-center text-ink" href="https://wa.me/529994553932" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp de Milapro Home"><MessageCircle size={22} /></a>
     </div>
+  </Container>
+  <Container class="flex items-center justify-center gap-2 border-t border-ink/10 bg-white py-2 text-ink shadow-[0_6px_14px_rgb(35_31_28/0.08)] lg:hidden">
+    <a class="grid h-9 w-9 place-items-center rounded-full border border-ink/10 transition hover:border-aqua hover:bg-aqua/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" href="https://www.milaprohome.com/website/social/facebook" target="_blank" rel="noreferrer" aria-label="Facebook de Milapro Home"><Facebook size={17} /></a>
+    <a class="grid h-9 w-9 place-items-center rounded-full border border-ink/10 transition hover:border-aqua hover:bg-aqua/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" href="https://www.milaprohome.com/website/social/instagram" target="_blank" rel="noreferrer" aria-label="Instagram de Milapro Home"><Instagram size={17} /></a>
+    <a class="grid h-9 w-9 place-items-center rounded-full border border-ink/10 transition hover:border-aqua hover:bg-aqua/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-aqua" href="https://www.tiktok.com/@milapro.home?_r=1&_t=ZS-98ai5EvgcFE" target="_blank" rel="noreferrer" aria-label="TikTok de Milapro Home">
+      <svg class="h-[17px] w-[17px]" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 5.82a5.72 5.72 0 0 0 3.31 1.06v3.36a9.05 9.05 0 0 1-3.31-.66v6.03a5.58 5.58 0 1 1-5.58-5.58c.33 0 .65.03.96.09v3.47a2.21 2.21 0 1 0 1.26 2v-13h3.36v3.23Z" /></svg>
+    </a>
   </Container>
   <div id="mobile-menu" class="fixed inset-0 top-0 z-[60] hidden bg-ink/45 pt-[33vh] lg:hidden" data-mobile-menu>
     <div class="mx-6 flex min-h-[62vh] flex-col overflow-hidden rounded-t-xl bg-white shadow-2xl">
