@@ -11,7 +11,36 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+if (!function_exists('str_starts_with')) {
+    function str_starts_with(string $haystack, string $needle): bool
+    {
+        return $needle === '' || strpos($haystack, $needle) === 0;
+    }
+}
+
+if (!function_exists('str_contains')) {
+    function str_contains(string $haystack, string $needle): bool
+    {
+        return $needle === '' || strpos($haystack, $needle) !== false;
+    }
+}
+
 define('MILAPRO_HEADLESS_VERSION', '0.1.0');
+define('MILAPRO_HEADLESS_PLUGIN_FILE', __FILE__);
+define('MILAPRO_HEADLESS_PLUGIN_DIR', plugin_dir_path(__FILE__));
+
+$milapro_required_files = [
+    MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/class-seed-validator.php',
+    MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/class-seed-media-importer.php',
+    MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/class-seed-importer.php',
+    MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/class-seed-import-admin.php',
+];
+
+foreach ($milapro_required_files as $milapro_required_file) {
+    if (is_readable($milapro_required_file)) {
+        require_once $milapro_required_file;
+    }
+}
 
 add_action('init', 'milapro_register_content_models');
 add_action('acf/init', 'milapro_register_acf_fields');
@@ -29,6 +58,20 @@ add_action('deleted_post', 'milapro_trigger_rebuild_for_deleted_post', 20, 2);
 add_action('created_product_category', 'milapro_trigger_rebuild_for_term', 20, 2);
 add_action('edited_product_category', 'milapro_trigger_rebuild_for_term', 20, 2);
 add_action('delete_product_category', 'milapro_trigger_rebuild_for_deleted_term', 20, 4);
+if (class_exists('Milapro_Seed_Import_Admin')) {
+    add_action('plugins_loaded', ['Milapro_Seed_Import_Admin', 'init']);
+} else {
+    add_action('admin_notices', 'milapro_missing_importer_files_notice');
+}
+
+function milapro_missing_importer_files_notice(): void
+{
+    if (!current_user_can('manage_options')) {
+        return;
+    }
+
+    echo '<div class="notice notice-error"><p><strong>Milapro Headless CMS:</strong> faltan archivos internos del importador. Verifica que exista la carpeta <code>includes</code> dentro del plugin.</p></div>';
+}
 
 function milapro_register_content_models(): void
 {
@@ -456,7 +499,12 @@ function milapro_save_product_meta(int $post_id): void
     $main_image = (int) ($_POST['milapro_main_image'] ?? 0);
     update_post_meta($post_id, '_milapro_main_image', $main_image);
     if ($main_image) set_post_thumbnail($post_id, $main_image);
-    update_post_meta($post_id, '_milapro_gallery_images', array_values(array_filter(array_map(fn($id) => ['image' => (int) $id], $_POST['milapro_gallery_images'] ?? []), fn($item) => $item['image'] > 0)));
+    $gallery_images = array_map(function ($id) {
+        return ['image' => (int) $id];
+    }, $_POST['milapro_gallery_images'] ?? []);
+    update_post_meta($post_id, '_milapro_gallery_images', array_values(array_filter($gallery_images, function ($item) {
+        return $item['image'] > 0;
+    })));
     update_post_meta($post_id, '_milapro_colors', milapro_collect_colors());
     update_post_meta($post_id, '_milapro_variants', milapro_collect_variants());
     update_post_meta($post_id, '_milapro_specifications', milapro_collect_specs());
@@ -594,6 +642,10 @@ function milapro_media_url($image): string
 
 function milapro_trigger_rebuild_for_post(int $post_id, WP_Post $post, bool $update): void
 {
+    if (defined('MILAPRO_IMPORTING_SEED') && MILAPRO_IMPORTING_SEED) {
+        return;
+    }
+
     if (wp_is_post_revision($post_id) || wp_is_post_autosave($post_id)) {
         return;
     }
@@ -607,6 +659,10 @@ function milapro_trigger_rebuild_for_post(int $post_id, WP_Post $post, bool $upd
 
 function milapro_trigger_rebuild_for_deleted_post(int $post_id, WP_Post $post): void
 {
+    if (defined('MILAPRO_IMPORTING_SEED') && MILAPRO_IMPORTING_SEED) {
+        return;
+    }
+
     if (!in_array($post->post_type, ['products', 'reels', 'post'], true)) {
         return;
     }
@@ -616,11 +672,19 @@ function milapro_trigger_rebuild_for_deleted_post(int $post_id, WP_Post $post): 
 
 function milapro_trigger_rebuild_for_term(int $term_id, int $tt_id): void
 {
+    if (defined('MILAPRO_IMPORTING_SEED') && MILAPRO_IMPORTING_SEED) {
+        return;
+    }
+
     milapro_send_rebuild_webhook('product_category', (string) $term_id, 'saved');
 }
 
 function milapro_trigger_rebuild_for_deleted_term(int $term_id, int $tt_id, WP_Term $deleted_term, array $object_ids): void
 {
+    if (defined('MILAPRO_IMPORTING_SEED') && MILAPRO_IMPORTING_SEED) {
+        return;
+    }
+
     milapro_send_rebuild_webhook('product_category', (string) $term_id, 'deleted');
 }
 

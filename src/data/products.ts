@@ -1,4 +1,5 @@
 import type { Product } from '@/types/product';
+import seed from '../../wordpress/migration/seed.json';
 
 type InventoryProduct = Pick<Product, 'slug' | 'name' | 'category' | 'collection' | 'colors' | 'available' | 'featured'> & {
   image: string;
@@ -1842,7 +1843,63 @@ const inventory: InventoryProduct[] = [
   }
 ];
 
-export const products: Product[] = inventory.map((product, index) => {
+type SeedProduct = {
+  slug: string;
+  name: string;
+  shortDescription: string;
+  description: string;
+  sourceImage: string;
+  gallery: string[];
+  category: string;
+  categories: string[];
+  collection: string;
+  brand: string;
+  sku: string;
+  colors: Product['colors'];
+  materials: string[];
+  dimensions: string;
+  featured: boolean;
+  available: boolean;
+  displayOrder: number;
+  specifications: Product['specifications'];
+  price: number;
+  compareAtPrice?: number;
+  formattedPrice?: string;
+  formattedCompareAtPrice?: string;
+  badge?: string;
+};
+
+const migratedProducts = (seed.products as SeedProduct[] | undefined)?.map((product, index): Product => {
+  const hasDiscount = product.compareAtPrice !== undefined && product.compareAtPrice > product.price;
+
+  return {
+    id: `product-${product.slug}`,
+    slug: product.slug,
+    name: product.name,
+    shortDescription: product.shortDescription,
+    description: product.description,
+    mainImage: product.sourceImage,
+    gallery: product.gallery.length ? product.gallery : [product.sourceImage],
+    category: product.category,
+    categories: product.categories,
+    collection: product.collection,
+    brand: product.brand,
+    sku: product.sku,
+    colors: product.colors,
+    materials: product.materials,
+    dimensions: product.dimensions,
+    featured: product.featured,
+    available: product.available,
+    displayOrder: product.displayOrder ?? index + 1,
+    tags: Array.from(new Set([product.name, product.category, product.collection, ...(categoryAliases[product.category] ?? [])])),
+    specifications: product.specifications,
+    price: product.formattedPrice ?? formatPrice(product.price),
+    compareAtPrice: hasDiscount ? product.formattedCompareAtPrice ?? formatPrice(product.compareAtPrice!) : undefined,
+    badge: product.badge,
+  };
+}) ?? [];
+
+const fallbackProducts: Product[] = inventory.map((product, index) => {
   const hasDiscount = product.compareAtPrice !== undefined;
   const discountPercentage = hasDiscount ? Math.round((1 - product.price / product.compareAtPrice!) * 100) : undefined;
 
@@ -1872,3 +1929,5 @@ export const products: Product[] = inventory.map((product, index) => {
     badge: discountPercentage ? `${discountPercentage}% OFF` : undefined,
   };
 });
+
+export const products: Product[] = migratedProducts.length ? migratedProducts : fallbackProducts;

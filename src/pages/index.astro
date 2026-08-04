@@ -8,7 +8,7 @@ import { getAllCategories } from '@/services/categoryService';
 import { getAllProducts } from '@/services/productService';
 import { getVisibleReels } from '@/services/reelService';
 import { customerReviews } from '@/data/siteContent';
-import { CreditCard, MapPin, Navigation, RotateCcw, ShieldCheck, ShoppingBag, Truck } from 'lucide-astro';
+import { CreditCard, MapPin, Navigation, RotateCcw, ShieldCheck, ShoppingBag } from 'lucide-astro';
 import bgSrc from '@/styles/images/bg.png';
 
 const productCategories = await getAllCategories();
@@ -111,9 +111,8 @@ const localBusinessSchema = JSON.stringify({
   </section>
 
   <Container>
-    <section class="grid grid-cols-4 border-b border-ink/10 py-7 lg:py-10">
+    <section class="grid grid-cols-3 border-b border-ink/10 py-7 lg:py-10">
       {[
-        { icon: Truck, label: 'Cotiza tu envío' },
         { icon: ShieldCheck, label: 'Garantía de un año' },
         { icon: CreditCard, label: 'Pagos en cuotas' },
         { icon: RotateCcw, label: 'Asesoría postventa' },

@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "wp:products:build": "node scripts/build-productos-mila-web.mjs",
     "wp:seed:build": "node scripts/build-wordpress-seed.mjs",
+    "wp:seed:validate": "node scripts/validate-wordpress-seed.mjs",
     "wp:seed:import": "docker compose --profile tools run --rm wpcli wp eval-file /var/www/html/migration/import-seed.php",
     "wp:seed": "npm run wp:seed:build && npm run wp:seed:import"
   },
