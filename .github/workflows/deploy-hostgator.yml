@@ -13,6 +13,7 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     env:
       WORDPRESS_API_URL: ${{ secrets.WORDPRESS_API_URL }}
       WORDPRESS_SITE_URL: ${{ secrets.WORDPRESS_SITE_URL }}
@@ -33,11 +34,64 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
+      - name: Validate build output
+        env:
+          FTP_TARGET_DIR: ${{ secrets.FTP_TARGET_DIR }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${FTP_TARGET_DIR}" ]; then
+            echo "FTP_TARGET_DIR secret is required."
+            exit 1
+          fi
+
+          if [ "${FTP_TARGET_DIR}" != "/" ]; then
+            echo "FTP_TARGET_DIR must be / for the dedicated HostGator FTP account."
+            exit 1
+          fi
+
+          if [ ! -f "dist/index.html" ]; then
+            echo "dist/index.html was not found. Build output is invalid."
+            exit 1
+          fi
+
+          if [ -d "dist/cms" ]; then
+            echo "dist/ must not contain a cms/ directory."
+            exit 1
+          fi
+
+          du -sh dist
+
       - name: Deploy static build to HostGator
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          timeout: 120000
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            cms/
+            cms/**
+            backup/
+            backup/**
+            **/*.zip
+            **/*.ZIP
+            **/*.log
+            **/logs/**
+            **/error_log
+            **/.htaccess
+            **/*.ini
+            **/*.conf
+            **/*.config
+            .htaccess
+            .user.ini
+            php.ini
+            **/web.config

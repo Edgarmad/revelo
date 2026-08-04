@@ -6,6 +6,16 @@ import { decodeHtml, getFromWordPress, getPaginatedFromWordPress, stripHtml, wpB
 
 const byOrder = (a: Product, b: Product) => a.displayOrder - b.displayOrder;
 const formatPrice = (price: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
+const fallbackImage = '/client-images/decoracion/decoracion-01.jpg';
+const categoryPlaceholders: Record<string, string> = {
+  aluminio: '/product-images/camastros-home.png',
+  descuentos: '/client-images/decoracion/decoracion-01.jpg',
+  outlet: '/client-images/decoracion/decoracion-01.jpg',
+  plantas: '/product-images/plantas-ave-de-paraiso.webp',
+  plastico: '/product-images/plastico-silla-narciso.webp',
+  ratan: '/product-images/ratan-madrid.webp',
+};
+const localProductBySlug = new Map(products.map((product) => [normalizeSlug(product.slug), product]));
 
 interface WpProductAcf {
   price?: number | string;
@@ -47,7 +57,7 @@ export async function getAllProducts(): Promise<Product[]> {
 
   const categories = await getAllCategories();
   const categoryById = new Map(categories.map((category) => [Number(category.id.replace('cat-', '')), category]));
-  return wpProducts.map((product) => normalizeProduct(product, categoryById)).sort(byOrder);
+  return wpProducts.map((product) => normalizeProduct(product, categoryById, findLocalProduct(product.slug))).sort(byOrder);
 }
 
 export async function getFeaturedProducts(limit = 4): Promise<Product[]> {
@@ -63,7 +73,7 @@ export async function getProductBySlug(slug: string): Promise<Product | undefine
   if (wpProducts?.[0]) {
     const categories = await getAllCategories();
     const categoryById = new Map(categories.map((category) => [Number(category.id.replace('cat-', '')), category]));
-    return normalizeProduct(wpProducts[0], categoryById);
+    return normalizeProduct(wpProducts[0], categoryById, findLocalProduct(slug));
   }
 
   return products.find((product) => product.slug === slug);
@@ -85,7 +95,7 @@ export async function getProductSlugs(): Promise<string[]> {
   return wpProducts.map((product) => product.slug);
 }
 
-function normalizeProduct(product: WpProduct, categoryById: Map<number, { slug: string; name: string }>): Product {
+function normalizeProduct(product: WpProduct, categoryById: Map<number, { slug: string; name: string }>, localProduct?: Product): Product {
   const acf = product.product_details ?? product.acf ?? {};
   const title = decodeHtml(stripHtml(product.title.rendered));
   const termCategories = (product.product_category ?? []).map((id) => categoryById.get(id)).filter(Boolean) as Array<{ slug: string; name: string }>;
@@ -93,12 +103,27 @@ function normalizeProduct(product: WpProduct, categoryById: Map<number, { slug: 
   const priceRaw = Number(acf.price ?? 0);
   const compareAtPriceRaw = acf.compare_at_price ? Number(acf.compare_at_price) : undefined;
   const hasDiscount = compareAtPriceRaw !== undefined && compareAtPriceRaw > priceRaw;
-  const image = product.main_image_url || product._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/client-images/decoracion/decoracion-01.jpg';
-  const repeaterGallery = (acf.gallery_images ?? []).map((item) => wpImageUrl(item.image)).filter(Boolean) as string[];
-  const legacyGallery = (acf.gallery ?? []).map(wpImageUrl).filter(Boolean) as string[];
-  const gallery = product.gallery_urls?.length ? product.gallery_urls : repeaterGallery.length ? repeaterGallery : legacyGallery;
   const categories = termCategories.map((category) => category.slug);
   if (hasDiscount && !categories.includes('descuentos')) categories.push('descuentos');
+  const placeholder = getCategoryPlaceholder(categories, primaryCategory?.slug);
+  const image = firstValidImage([
+    product.main_image_url,
+    product._embedded?.['wp:featuredmedia']?.[0]?.source_url,
+    localProduct?.mainImage,
+    placeholder,
+    fallbackImage,
+  ]);
+  const repeaterGallery = uniqueImages((acf.gallery_images ?? []).map((item) => wpImageUrl(item.image)));
+  const legacyGallery = uniqueImages((acf.gallery ?? []).map(wpImageUrl));
+  const localGallery = uniqueImages(localProduct?.gallery ?? []);
+  const gallery = firstImageList([
+    uniqueImages(product.gallery_urls ?? []),
+    repeaterGallery,
+    legacyGallery,
+    localGallery,
+    uniqueImages([localProduct?.mainImage]),
+    uniqueImages([image]),
+  ]);
 
   return {
     id: `product-${product.id}`,
@@ -107,13 +132,13 @@ function normalizeProduct(product: WpProduct, categoryById: Map<number, { slug: 
     shortDescription: decodeHtml(stripHtml(product.excerpt?.rendered ?? '')) || `${title} disponible en ${acf.collection || primaryCategory?.name || 'Milapro Home'}.`,
     description: decodeHtml(stripHtml(product.content?.rendered ?? '')) || `${title} forma parte del inventario actual de Milapro Home.`,
     mainImage: image,
-    gallery: gallery.length ? gallery : [image],
+    gallery,
     category: primaryCategory?.slug ?? 'productos',
     categories: categories.length ? categories : ['productos'],
     collection: decodeHtml(acf.collection || primaryCategory?.name || 'Productos'),
     brand: decodeHtml(acf.brand || 'Milapro Home'),
     sku: acf.sku || product.slug.toUpperCase(),
-    colors: normalizeColors(acf.colors),
+    colors: normalizeColors(acf.colors, localProduct?.colors),
     materials: [],
     dimensions: decodeHtml(acf.dimensions || 'Consultar disponibilidad'),
     featured: wpBoolean(acf.featured),
@@ -139,12 +164,55 @@ function buildProductTags({ title, collection, categories, keywords }: { title: 
   return Array.from(new Set([title, collection, ...categories, ...categories.flatMap((category) => categoryAliases[category] ?? []), ...wpKeywords]));
 }
 
-function normalizeColors(colors: WpProductAcf['colors'] = []): ProductColor[] {
+function normalizeColors(colors: WpProductAcf['colors'] = [], localColors: ProductColor[] = []): ProductColor[] {
   return (colors ?? []).map((color) => ({
     id: color.id || color.name?.toLowerCase().replace(/\s+/g, '-') || 'color',
     name: color.name || 'Color',
     hex: color.hex || '#cccccc',
-    image: wpImageUrl(color.image),
+    image: wpImageUrl(color.image) || findLocalColor(color, localColors)?.image,
     available: wpBoolean(color.available, true),
   }));
+}
+
+function findLocalProduct(slug: string): Product | undefined {
+  return localProductBySlug.get(normalizeSlug(slug));
+}
+
+function findLocalColor(color: { id?: string; name?: string }, localColors: ProductColor[]): ProductColor | undefined {
+  const id = normalizeSlug(color.id ?? '');
+  const name = normalizeSlug(color.name ?? '');
+  return localColors.find((localColor) => {
+    if (id && normalizeSlug(localColor.id) === id) return true;
+    if (name && normalizeSlug(localColor.name) === name) return true;
+    return false;
+  });
+}
+
+function normalizeSlug(value = ''): string {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function firstValidImage(images: Array<string | undefined>): string {
+  return uniqueImages(images)[0] ?? fallbackImage;
+}
+
+function uniqueImages(images: Array<string | undefined>): string[] {
+  return Array.from(new Set(images.map((image) => image?.trim()).filter(Boolean) as string[]));
+}
+
+function firstImageList(lists: string[][]): string[] {
+  return lists.find((list) => list.length > 0) ?? [fallbackImage];
+}
+
+function getCategoryPlaceholder(categories: string[], primaryCategory?: string): string {
+  const category = [...categories, primaryCategory]
+    .filter((item): item is string => Boolean(item))
+    .sort((category) => (category === 'descuentos' || category === 'outlet' ? 1 : -1))
+    .find((item) => categoryPlaceholders[item]);
+  return category ? categoryPlaceholders[category] : fallbackImage;
 }
