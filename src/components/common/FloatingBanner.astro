@@ -17,13 +17,16 @@ import bannerImage from '@/styles/images/banner_img.jpeg';
       <h2 id="floating-banner-title" class="floating-banner__title">Obtén hasta 50% OFF</h2>
       <p class="floating-banner__text">Déjanos tu correo y recibe promociones, novedades y asesoría para renovar tus espacios exteriores.</p>
 
-      <form class="floating-banner__form" action="/contact/">
+      <form class="floating-banner__form" data-subscribe-form>
         <label class="sr-only" for="floating-banner-email">Correo electrónico</label>
-        <input id="floating-banner-email" class="floating-banner__input" type="email" name="email" placeholder="E-mail" autocomplete="email" />
+        <input id="floating-banner-email" class="floating-banner__input" type="email" name="email" placeholder="E-mail" autocomplete="email" required />
+        <input type="hidden" name="source" value="floating-banner" />
+        <input class="floating-banner__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <button class="floating-banner__button" type="submit">
           <Mail size={20} />
           Suscribirme
         </button>
+        <p class="floating-banner__status" data-subscribe-status hidden></p>
       </form>
 
       <button class="floating-banner__no-thanks" type="button" data-floating-banner-close>No gracias</button>
@@ -172,6 +175,31 @@ import bannerImage from '@/styles/images/banner_img.jpeg';
     background: rgb(var(--color-ink));
     color: white;
     transform: translateY(-1px);
+  }
+
+  .floating-banner__button:disabled {
+    cursor: wait;
+    opacity: 0.72;
+    transform: none;
+  }
+
+  .floating-banner__status {
+    margin: 0;
+    color: rgb(var(--color-muted));
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .floating-banner__status[data-error="true"] {
+    color: #9f2d20;
+  }
+
+  .floating-banner__trap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
   }
 
   .floating-banner__no-thanks {

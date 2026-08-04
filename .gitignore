@@ -3,3 +3,5 @@ node_modules
 PRODUCTOS MILA WEB
 .env
 dist/*.zip
+public/api/subscribe.config.php
+dist/api/subscribe.config.php

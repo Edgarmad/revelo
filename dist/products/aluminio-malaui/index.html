@@ -9,7 +9,7 @@
     <meta property="og:type" content="website">
     <link rel="icon" href="/favicon.ico">
     <title>Malaui | Milapro Home</title>
-  <link rel="stylesheet" href="/_astro/404.1112701f.css" /><script type="module" src="/_astro/hoisted.7c2fb8ec.js"></script></head>
+  <link rel="stylesheet" href="/_astro/404.24678e9c.css" /><script type="module" src="/_astro/hoisted.7c2fb8ec.js"></script></head>
   <body>
     <header class="sticky top-0 z-50 bg-white shadow-sm astro-MB6PVX4C">
   <div class="bg-ink py-2 text-white astro-MB6PVX4C">
@@ -946,15 +946,18 @@
   <div class="bg-white py-8 lg:bg-sand lg:py-10 astro-B2AVYOW5">
     <div class="mx-auto w-full max-w-site px-5 sm:px-6 lg:px-8 grid gap-6 text-center md:grid-cols-2 md:items-center md:text-left astro-B2AVYOW5">
   
-      <div class="hidden lg:block astro-B2AVYOW5"><form class="flex max-w-sm items-center gap-2 rounded-pill bg-white p-2" aria-label="Suscripcion visual">
+      <div class="hidden lg:block astro-B2AVYOW5"><form class="flex max-w-sm flex-wrap items-center gap-2 rounded-pill bg-white p-2" aria-label="Suscripcion visual" data-subscribe-form>
   <label class="sr-only" for="newsletter-email">Correo electrónico</label>
-  <input id="newsletter-email" class="min-h-10 flex-1 rounded-pill px-4 text-sm" type="email" placeholder="Correo electrónico">
-  <button class="grid h-10 w-14 place-items-center rounded-pill bg-aqua text-ink" type="button" aria-label="Enviar correo"><svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="20" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" class="lucide lucide-arrow-right">
+  <input id="newsletter-email" class="min-h-10 flex-1 rounded-pill px-4 text-sm" type="email" name="email" placeholder="Correo electrónico" autocomplete="email" required>
+  <input type="hidden" name="source" value="footer-newsletter">
+  <input class="absolute -left-[9999px] h-px w-px opacity-0" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <button class="grid h-10 w-14 place-items-center rounded-pill bg-aqua text-ink disabled:cursor-wait disabled:opacity-70" type="submit" aria-label="Enviar correo"><svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="20" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" class="lucide lucide-arrow-right">
 	
 	<path d="M5 12h14"></path>
 	<path d="m12 5 7 7-7 7"></path>
 
 </svg></button>
+  <p class="basis-full px-4 text-xs text-muted data-[error=true]:text-red-700" data-subscribe-status hidden></p>
 </form></div>
       <p class="text-[11px] text-muted lg:text-sm astro-B2AVYOW5">Correo de atención: ventas@milaprohome.com<br class="astro-B2AVYOW5">Muebles para exterior, proyectos a la medida y alianzas comerciales.</p>
     
@@ -962,5 +965,6 @@
   </div>
 </footer>
     
+    <script src="/scripts/subscribe.js" defer></script>
   </body>
 </html>
