@@ -54,10 +54,8 @@ add_action('product_category_edit_form_fields', 'milapro_category_edit_fields');
 add_action('created_product_category', 'milapro_save_category_fields');
 add_action('edited_product_category', 'milapro_save_category_fields');
 add_action('save_post', 'milapro_trigger_rebuild_for_post', 20, 3);
-add_action('deleted_post', 'milapro_trigger_rebuild_for_deleted_post', 20, 2);
 add_action('created_product_category', 'milapro_trigger_rebuild_for_term', 20, 2);
 add_action('edited_product_category', 'milapro_trigger_rebuild_for_term', 20, 2);
-add_action('delete_product_category', 'milapro_trigger_rebuild_for_deleted_term', 20, 4);
 if (class_exists('Milapro_Seed_Import_Admin')) {
     add_action('plugins_loaded', ['Milapro_Seed_Import_Admin', 'init']);
 } else {
@@ -654,20 +652,12 @@ function milapro_trigger_rebuild_for_post(int $post_id, WP_Post $post, bool $upd
         return;
     }
 
+    // Only published content affects the public Astro site.
+    if ($post->post_status !== 'publish') {
+        return;
+    }
+
     milapro_send_rebuild_webhook($post->post_type, (string) $post_id, $update ? 'updated' : 'created');
-}
-
-function milapro_trigger_rebuild_for_deleted_post(int $post_id, WP_Post $post): void
-{
-    if (defined('MILAPRO_IMPORTING_SEED') && MILAPRO_IMPORTING_SEED) {
-        return;
-    }
-
-    if (!in_array($post->post_type, ['products', 'reels', 'post'], true)) {
-        return;
-    }
-
-    milapro_send_rebuild_webhook($post->post_type, (string) $post_id, 'deleted');
 }
 
 function milapro_trigger_rebuild_for_term(int $term_id, int $tt_id): void
@@ -679,53 +669,45 @@ function milapro_trigger_rebuild_for_term(int $term_id, int $tt_id): void
     milapro_send_rebuild_webhook('product_category', (string) $term_id, 'saved');
 }
 
-function milapro_trigger_rebuild_for_deleted_term(int $term_id, int $tt_id, WP_Term $deleted_term, array $object_ids): void
+function milapro_send_rebuild_webhook(string $content_type, string $content_id, string $action): void
 {
-    if (defined('MILAPRO_IMPORTING_SEED') && MILAPRO_IMPORTING_SEED) {
+    static $sent = false;
+
+    // Multiple WordPress hooks can fire during one save; one rebuild per request is enough.
+    if ($sent) {
         return;
     }
 
-    milapro_send_rebuild_webhook('product_category', (string) $term_id, 'deleted');
-}
-
-function milapro_send_rebuild_webhook(string $content_type, string $content_id, string $action): void
-{
-    $webhook_url = defined('MILAPRO_REBUILD_WEBHOOK_URL') ? MILAPRO_REBUILD_WEBHOOK_URL : getenv('MILAPRO_REBUILD_WEBHOOK_URL');
-    $secret = defined('MILAPRO_REBUILD_WEBHOOK_SECRET') ? MILAPRO_REBUILD_WEBHOOK_SECRET : getenv('MILAPRO_REBUILD_WEBHOOK_SECRET');
+    $webhook_url = defined('MILAPRO_REBUILD_WEBHOOK_URL') ? MILAPRO_REBUILD_WEBHOOK_URL : '';
+    $secret = defined('MILAPRO_REBUILD_WEBHOOK_SECRET') ? MILAPRO_REBUILD_WEBHOOK_SECRET : '';
 
     if (!$webhook_url || !$secret) {
         return;
     }
 
-    $is_github_dispatch = str_contains($webhook_url, 'api.github.com') && str_contains($webhook_url, '/dispatches');
-    $payload = [
-        'content_type' => $content_type,
-        'content_id' => $content_id,
-        'action' => $action,
-        'site_url' => home_url(),
-        'timestamp' => time(),
-    ];
-
-    $headers = [
-        'Content-Type' => 'application/json',
-        'X-Milapro-Rebuild-Secret' => $secret,
-    ];
-    $body = $payload;
-
-    if ($is_github_dispatch) {
-        $headers['Accept'] = 'application/vnd.github+json';
-        $headers['Authorization'] = 'Bearer ' . $secret;
-        $headers['X-GitHub-Api-Version'] = '2022-11-28';
-        unset($headers['X-Milapro-Rebuild-Secret']);
-        $body = [
-            'event_type' => 'wordpress_content_changed',
-            'client_payload' => $payload,
-        ];
-    }
-
-    wp_remote_post($webhook_url, [
+    $sent = true;
+    $response = wp_remote_post($webhook_url, [
         'timeout' => 8,
-        'headers' => $headers,
-        'body' => wp_json_encode($body),
+        'headers' => [
+            'Accept' => 'application/vnd.github+json',
+            'Authorization' => 'Bearer ' . $secret,
+            'Content-Type' => 'application/json',
+            'User-Agent' => 'Milapro-Headless-CMS',
+        ],
+        'body' => wp_json_encode([
+            'event_type' => 'wordpress_content_changed',
+        ]),
     ]);
+
+    if (defined('WP_DEBUG') && WP_DEBUG) {
+        if (is_wp_error($response)) {
+            error_log('[Milapro rebuild webhook] ' . $response->get_error_message());
+            return;
+        }
+
+        $status_code = wp_remote_retrieve_response_code($response);
+        if ($status_code >= 400) {
+            error_log('[Milapro rebuild webhook] GitHub returned HTTP ' . $status_code . ': ' . wp_remote_retrieve_body($response));
+        }
+    }
 }
