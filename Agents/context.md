@@ -46,7 +46,7 @@ Do not use:
 
 The application must be deployable as static files on HostGator shared hosting.
 
-The production build must generate a `dist` directory that can be uploaded directly to `public_html`.
+The production build must generate a `dist` directory that can be uploaded directly to the HostGator FTP root `/`, which maps to the real public web root for this account.
 
 ---
 
@@ -600,7 +600,7 @@ The project will eventually be deployed to HostGator shared hosting.
 Prepare the project so that:
 
 * `npm run build` creates the complete static website
-* The contents of `dist` can be uploaded to `public_html`
+* The contents of `dist` can be uploaded to the HostGator FTP root `/`
 * No Node.js process is required in production
 * No server-side runtime is required
 * Internal routes work after static deployment

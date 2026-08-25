@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Milapro Headless CMS
  * Description: Content models and rebuild webhook for the Milapro headless WordPress CMS.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Milapro Home
  * Text Domain: milapro-headless-cms
  */
@@ -25,9 +25,24 @@ if (!function_exists('str_contains')) {
     }
 }
 
-define('MILAPRO_HEADLESS_VERSION', '0.1.0');
+define('MILAPRO_HEADLESS_VERSION', '0.1.1');
 define('MILAPRO_HEADLESS_PLUGIN_FILE', __FILE__);
-define('MILAPRO_HEADLESS_PLUGIN_DIR', plugin_dir_path(__FILE__));
+
+$milapro_plugin_dir = plugin_dir_path(__FILE__);
+$milapro_plugin_dir_candidates = [
+    $milapro_plugin_dir,
+    $milapro_plugin_dir . 'milapro-headless-cms/',
+    dirname($milapro_plugin_dir) . '/milapro-headless-cms/',
+];
+
+foreach ($milapro_plugin_dir_candidates as $milapro_plugin_dir_candidate) {
+    if (is_readable($milapro_plugin_dir_candidate . 'includes/class-seed-validator.php')) {
+        $milapro_plugin_dir = trailingslashit($milapro_plugin_dir_candidate);
+        break;
+    }
+}
+
+define('MILAPRO_HEADLESS_PLUGIN_DIR', $milapro_plugin_dir);
 
 $milapro_required_files = [
     MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/class-seed-validator.php',
@@ -47,15 +62,15 @@ add_action('acf/init', 'milapro_register_acf_fields');
 add_action('rest_api_init', 'milapro_register_rest_fields');
 add_action('add_meta_boxes', 'milapro_register_meta_boxes');
 add_action('admin_enqueue_scripts', 'milapro_enqueue_admin_assets');
+add_action('admin_head-edit.php', 'milapro_render_manual_deploy_button_script');
+add_action('admin_post_milapro_manual_deploy', 'milapro_handle_manual_deploy');
+add_action('admin_notices', 'milapro_manual_deploy_notice');
 add_action('save_post_products', 'milapro_save_product_meta');
 add_action('save_post_reels', 'milapro_save_reel_meta');
 add_action('product_category_add_form_fields', 'milapro_category_add_fields');
 add_action('product_category_edit_form_fields', 'milapro_category_edit_fields');
 add_action('created_product_category', 'milapro_save_category_fields');
 add_action('edited_product_category', 'milapro_save_category_fields');
-add_action('save_post', 'milapro_trigger_rebuild_for_post', 20, 3);
-add_action('created_product_category', 'milapro_trigger_rebuild_for_term', 20, 2);
-add_action('edited_product_category', 'milapro_trigger_rebuild_for_term', 20, 2);
 if (class_exists('Milapro_Seed_Import_Admin')) {
     add_action('plugins_loaded', ['Milapro_Seed_Import_Admin', 'init']);
 } else {
@@ -68,7 +83,21 @@ function milapro_missing_importer_files_notice(): void
         return;
     }
 
-    echo '<div class="notice notice-error"><p><strong>Milapro Headless CMS:</strong> faltan archivos internos del importador. Verifica que exista la carpeta <code>includes</code> dentro del plugin.</p></div>';
+    $files = [
+        'class-seed-validator.php',
+        'class-seed-media-importer.php',
+        'class-seed-importer.php',
+        'class-seed-import-admin.php',
+    ];
+
+    echo '<div class="notice notice-error"><p><strong>Milapro Headless CMS:</strong> faltan archivos internos del importador.</p>';
+    echo '<p>Ruta detectada: <code>' . esc_html(MILAPRO_HEADLESS_PLUGIN_DIR) . '</code></p>';
+    echo '<ul>';
+    foreach ($files as $file) {
+        $path = MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/' . $file;
+        echo '<li><code>includes/' . esc_html($file) . '</code>: ' . (is_readable($path) ? 'OK' : 'NO ENCONTRADO') . '</li>';
+    }
+    echo '</ul></div>';
 }
 
 function milapro_register_content_models(): void
@@ -292,27 +321,20 @@ function milapro_register_rest_fields(): void
 
     register_rest_field('products', 'gallery_urls', [
         'get_callback' => function (array $post): array {
-            $gallery = get_post_meta((int) $post['id'], '_milapro_gallery_images', true);
-            if (!is_array($gallery) && function_exists('get_field')) {
-                $gallery = get_field('gallery_images', $post['id']);
-            }
-            if (!is_array($gallery)) return [];
-
             return array_values(array_filter(array_map(function ($item): string {
                 if (is_array($item) && array_key_exists('image', $item)) {
                     return milapro_media_url($item['image']);
                 }
 
                 return milapro_media_url($item);
-            }, $gallery)));
+            }, milapro_product_gallery_images((int) $post['id']))));
         },
         'schema' => ['type' => 'array', 'items' => ['type' => 'string']],
     ]);
 
     register_rest_field('products', 'main_image_url', [
         'get_callback' => function (array $post): string {
-            $image = (int) get_post_meta((int) $post['id'], '_milapro_main_image', true);
-            return milapro_media_url($image) ?: get_the_post_thumbnail_url($post['id'], 'large') ?: '';
+            return milapro_product_main_image_url((int) $post['id']);
         },
         'schema' => ['type' => 'string'],
     ]);
@@ -339,9 +361,93 @@ function milapro_product_details(int $post_id): array
         }, milapro_meta_array($post_id, '_milapro_colors')),
         'variants' => milapro_meta_array($post_id, '_milapro_variants'),
         'specifications' => milapro_meta_array($post_id, '_milapro_specifications'),
-        'gallery_images' => milapro_meta_array($post_id, '_milapro_gallery_images'),
+        'gallery_images' => milapro_product_gallery_images($post_id),
         'main_image' => (int) get_post_meta($post_id, '_milapro_main_image', true),
+        'main_image_url' => milapro_product_main_image_url($post_id),
     ];
+}
+
+function milapro_product_gallery_images(int $post_id): array
+{
+    $gallery = get_post_meta($post_id, '_milapro_gallery_images', true);
+    if (is_array($gallery) && !empty($gallery)) {
+        return $gallery;
+    }
+
+    if (function_exists('get_field')) {
+        $acf_gallery = get_field('gallery_images', $post_id);
+        if (is_array($acf_gallery) && !empty($acf_gallery)) {
+            return $acf_gallery;
+        }
+    }
+
+    $seed_product = milapro_seed_product_for_post($post_id);
+    if (!$seed_product) {
+        return [];
+    }
+
+    $seed_gallery = $seed_product['gallery'] ?? [];
+    if (empty($seed_gallery) && !empty($seed_product['sourceImage'])) {
+        $seed_gallery = [$seed_product['sourceImage']];
+    }
+
+    return array_values(array_filter(array_map(function ($image): array {
+        return ['image' => is_string($image) ? $image : ''];
+    }, is_array($seed_gallery) ? $seed_gallery : []), function ($item): bool {
+        return $item['image'] !== '';
+    }));
+}
+
+function milapro_product_main_image_url(int $post_id): string
+{
+    $image = (int) get_post_meta($post_id, '_milapro_main_image', true);
+    $url = milapro_media_url($image) ?: get_the_post_thumbnail_url($post_id, 'large') ?: '';
+    if ($url) {
+        return $url;
+    }
+
+    $seed_product = milapro_seed_product_for_post($post_id);
+    return is_array($seed_product) ? milapro_media_url($seed_product['sourceImage'] ?? '') : '';
+}
+
+function milapro_seed_product_for_post(int $post_id): array
+{
+    $post = get_post($post_id);
+    if (!$post) {
+        return [];
+    }
+
+    $slug = (string) (get_post_meta($post_id, '_milapro_source_slug', true) ?: $post->post_name);
+    if (!$slug) {
+        return [];
+    }
+
+    $products = milapro_seed_products_by_slug();
+    return $products[$slug] ?? [];
+}
+
+function milapro_seed_products_by_slug(): array
+{
+    static $products = null;
+    if ($products !== null) {
+        return $products;
+    }
+
+    $products = [];
+    $upload_dir = wp_upload_dir();
+    if (!empty($upload_dir['basedir'])) {
+        $path = trailingslashit($upload_dir['basedir']) . 'milapro-seed/seed.json';
+        if (is_readable($path)) {
+            $seed = json_decode((string) file_get_contents($path), true);
+            foreach (($seed['products'] ?? []) as $product) {
+                if (is_array($product) && !empty($product['slug'])) {
+                    $products[sanitize_title($product['slug'])] = $product;
+                }
+            }
+        }
+    }
+
+    return $products;
 }
 
 function milapro_meta_array(int $post_id, string $key): array
@@ -369,6 +475,81 @@ function milapro_enqueue_admin_assets(string $hook): void
     wp_add_inline_style('wp-admin', milapro_admin_styles());
 }
 
+function milapro_render_manual_deploy_button_script(): void
+{
+    $screen = get_current_screen();
+    if (!$screen || !in_array($screen->post_type, ['products', 'reels'], true) || !current_user_can('edit_posts')) {
+        return;
+    }
+
+    $url = add_query_arg([
+        'action' => 'milapro_manual_deploy',
+        'post_type' => $screen->post_type,
+        '_wpnonce' => wp_create_nonce('milapro_manual_deploy_' . $screen->post_type),
+    ], admin_url('admin-post.php'));
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var addNewButton = document.querySelector('.wrap .page-title-action');
+      if (!addNewButton || document.querySelector('[data-milapro-deploy-button]')) return;
+      var deployButton = document.createElement('a');
+      deployButton.href = <?php echo wp_json_encode($url); ?>;
+      deployButton.className = 'page-title-action';
+      deployButton.dataset.milaproDeployButton = '1';
+      deployButton.textContent = 'Deploy';
+      addNewButton.insertAdjacentElement('afterend', deployButton);
+    });
+    </script>
+    <?php
+}
+
+function milapro_handle_manual_deploy(): void
+{
+    $post_type = sanitize_key($_GET['post_type'] ?? 'products');
+    if (!in_array($post_type, ['products', 'reels'], true)) {
+        $post_type = 'products';
+    }
+
+    if (!current_user_can('edit_posts')) {
+        wp_die('Unauthorized.', 403);
+    }
+
+    check_admin_referer('milapro_manual_deploy_' . $post_type);
+
+    $result = milapro_send_rebuild_webhook($post_type, 'manual-deploy', 'manual');
+    $redirect_url = add_query_arg('post_type', $post_type, admin_url('edit.php'));
+
+    if (is_wp_error($result)) {
+        $redirect_url = add_query_arg([
+            'milapro_deploy' => 'error',
+            'milapro_deploy_message' => $result->get_error_message(),
+        ], $redirect_url);
+    } else {
+        $redirect_url = add_query_arg('milapro_deploy', 'success', $redirect_url);
+    }
+
+    wp_safe_redirect($redirect_url);
+    exit;
+}
+
+function milapro_manual_deploy_notice(): void
+{
+    if (empty($_GET['milapro_deploy'])) {
+        return;
+    }
+
+    $status = sanitize_key($_GET['milapro_deploy']);
+    if ($status === 'success') {
+        echo '<div class="notice notice-success is-dismissible"><p><strong>Milapro:</strong> deploy started successfully.</p></div>';
+        return;
+    }
+
+    if ($status === 'error') {
+        $message = sanitize_text_field(wp_unslash($_GET['milapro_deploy_message'] ?? 'Could not start deploy.'));
+        echo '<div class="notice notice-error is-dismissible"><p><strong>Milapro:</strong> ' . esc_html($message) . '</p></div>';
+    }
+}
+
 function milapro_render_product_meta_box(WP_Post $post): void
 {
     wp_nonce_field('milapro_save_product_meta', 'milapro_product_nonce');
@@ -387,7 +568,7 @@ function milapro_render_product_meta_box(WP_Post $post): void
             <?php milapro_checkbox('Featured', 'milapro_featured', $details['featured']); ?>
         </div>
         <?php milapro_textarea('Search Keywords', 'milapro_keywords', $details['keywords'], 'Internal search terms separated by commas or line breaks. Example: sala, sofa, couch, living room.'); ?>
-        <?php milapro_main_image_field((int) $details['main_image']); ?>
+        <?php milapro_main_image_field((int) $details['main_image'], (string) $details['main_image_url']); ?>
         <?php milapro_gallery_field($details['gallery_images']); ?>
         <?php milapro_colors_field($details['colors']); ?>
         <?php milapro_variants_field($details['variants']); ?>
@@ -407,9 +588,11 @@ function milapro_render_reel_meta_box(WP_Post $post): void
         <?php milapro_input('Display Order', 'milapro_display_order', get_post_meta($post->ID, '_milapro_display_order', true) ?: 999, 'number', '1'); ?>
         <?php milapro_checkbox('Visible', 'milapro_is_visible', milapro_meta_bool(get_post_meta($post->ID, '_milapro_is_visible', true), true)); ?>
         <label class="milapro-field">Cover Image</label>
-        <div class="milapro-media-row">
+        <div class="milapro-media-row milapro-media-preview-row">
             <input type="hidden" name="milapro_cover_image" value="<?php echo esc_attr((string) $cover); ?>" data-media-input>
+            <?php echo milapro_media_preview_markup($cover); ?>
             <button type="button" class="button" data-media-select>Select Image</button>
+            <button type="button" class="button" data-media-remove>Remove Image</button>
             <span data-media-label><?php echo $cover ? esc_html(basename(get_attached_file($cover))) : 'No image selected'; ?></span>
         </div>
     </div>
@@ -431,21 +614,41 @@ function milapro_checkbox(string $label, string $name, bool $checked): void
     printf('<label class="milapro-field milapro-checkbox"><input type="checkbox" name="%s" value="1" %s> <span>%s</span></label>', esc_attr($name), checked($checked, true, false), esc_html($label));
 }
 
-function milapro_main_image_field(int $image_id = 0): void
+function milapro_media_preview_markup($image = 0): string
 {
-    echo '<h3>Main Image</h3><div class="milapro-media-row"><input type="hidden" name="milapro_main_image" value="' . esc_attr((string) $image_id) . '" data-media-input><button type="button" class="button" data-media-select>Select Main Image</button> <span data-media-label>' . esc_html($image_id ? basename(get_attached_file($image_id)) : 'No image selected') . '</span></div>';
+    $url = is_numeric($image) ? ((int) $image ? wp_get_attachment_image_url((int) $image, 'thumbnail') : '') : milapro_admin_preview_url(milapro_media_url($image));
+    $image_style = $url ? '' : ' style="display:none"';
+    $empty_style = $url ? ' style="display:none"' : '';
+
+    return '<span class="milapro-media-preview"><img src="' . esc_url($url ?: '') . '" alt="" data-media-preview' . $image_style . '><span data-media-empty' . $empty_style . '>No image selected</span></span>';
+}
+
+function milapro_admin_preview_url(string $url): string
+{
+    if ($url === '' || !str_starts_with($url, '/')) {
+        return $url;
+    }
+
+    $public_site_url = defined('MILAPRO_PUBLIC_SITE_URL') ? MILAPRO_PUBLIC_SITE_URL : 'https://www.milaprohome.com';
+    return untrailingslashit($public_site_url) . $url;
+}
+
+function milapro_main_image_field(int $image_id = 0, string $preview_url = ''): void
+{
+    echo '<h3>Main Image</h3><div class="milapro-media-row milapro-media-preview-row"><input type="hidden" name="milapro_main_image" value="' . esc_attr((string) $image_id) . '" data-media-input>' . milapro_media_preview_markup($image_id ?: $preview_url) . '<button type="button" class="button" data-media-select>Select Main Image</button> <button type="button" class="button" data-media-remove>Remove Image</button> <span data-media-label>' . esc_html($image_id ? basename(get_attached_file($image_id)) : ($preview_url ? basename($preview_url) : 'No image selected')) . '</span></div>';
 }
 
 function milapro_gallery_field(array $items): void
 {
     echo '<h3>Gallery Images</h3><div class="milapro-repeat" data-repeat="gallery">';
-    foreach ($items as $item) milapro_gallery_row((int) ($item['image'] ?? $item));
+    foreach ($items as $item) milapro_gallery_row($item['image'] ?? $item);
     echo '</div><button type="button" class="button" data-add-row="gallery">Add Gallery Image</button>';
 }
 
-function milapro_gallery_row(int $image_id = 0): void
+function milapro_gallery_row($image = 0): void
 {
-    echo '<div class="milapro-row" data-row="gallery"><input type="hidden" name="milapro_gallery_images[]" value="' . esc_attr((string) $image_id) . '" data-media-input><button type="button" class="button" data-media-select>Select Image</button> <span data-media-label>' . esc_html($image_id ? basename(get_attached_file($image_id)) : 'No image selected') . '</span> <button type="button" class="button-link-delete" data-remove-row>Remove</button></div>';
+    $label = is_numeric($image) && (int) $image ? basename(get_attached_file((int) $image)) : ($image ? basename((string) $image) : 'No image selected');
+    echo '<div class="milapro-row milapro-gallery-row" data-row="gallery"><input type="hidden" name="milapro_gallery_images[]" value="' . esc_attr((string) $image) . '" data-media-input>' . milapro_media_preview_markup($image) . '<button type="button" class="button" data-media-select>Select Image</button> <span data-media-label>' . esc_html($label) . '</span> <button type="button" class="button" data-move-row="up">Move up</button> <button type="button" class="button" data-move-row="down">Move down</button> <button type="button" class="button-link-delete" data-remove-row>Remove</button></div>';
 }
 
 function milapro_colors_field(array $items): void
@@ -497,11 +700,12 @@ function milapro_save_product_meta(int $post_id): void
     $main_image = (int) ($_POST['milapro_main_image'] ?? 0);
     update_post_meta($post_id, '_milapro_main_image', $main_image);
     if ($main_image) set_post_thumbnail($post_id, $main_image);
-    $gallery_images = array_map(function ($id) {
-        return ['image' => (int) $id];
+    $gallery_images = array_map(function ($image) {
+        $image = wp_unslash($image);
+        return ['image' => is_numeric($image) ? (int) $image : sanitize_text_field($image)];
     }, $_POST['milapro_gallery_images'] ?? []);
     update_post_meta($post_id, '_milapro_gallery_images', array_values(array_filter($gallery_images, function ($item) {
-        return $item['image'] > 0;
+        return is_numeric($item['image']) ? $item['image'] > 0 : $item['image'] !== '';
     })));
     update_post_meta($post_id, '_milapro_colors', milapro_collect_colors());
     update_post_meta($post_id, '_milapro_variants', milapro_collect_variants());
@@ -593,15 +797,34 @@ jQuery(function($) {
       const attachment = frame.state().get('selection').first().toJSON();
       row.find('[data-media-input]').val(attachment.id);
       row.find('[data-media-label]').text(attachment.filename || attachment.title || attachment.url);
+      row.find('[data-media-preview]').attr('src', attachment.sizes && attachment.sizes.thumbnail ? attachment.sizes.thumbnail.url : attachment.url).show();
+      row.find('[data-media-empty]').hide();
     });
     frame.open();
   });
+  $(document).on('click', '[data-media-remove]', function(e) {
+    e.preventDefault();
+    const row = $(this).closest('.milapro-row, .milapro-media-row, .form-field, td');
+    row.find('[data-media-input]').val('');
+    row.find('[data-media-label]').text('No image selected');
+    row.find('[data-media-preview]').attr('src', '').hide();
+    row.find('[data-media-empty]').show();
+  });
   $(document).on('click', '[data-remove-row]', function() { $(this).closest('.milapro-row').remove(); });
+  $(document).on('click', '[data-move-row]', function(e) {
+    e.preventDefault();
+    const row = $(this).closest('.milapro-row');
+    if ($(this).data('move-row') === 'up') {
+      row.prev('.milapro-row').before(row);
+    } else {
+      row.next('.milapro-row').after(row);
+    }
+  });
   $(document).on('click', '[data-add-row]', function() {
     const type = $(this).data('add-row');
     const target = $('[data-repeat="' + type + '"]');
     const rows = {
-      gallery: '<div class="milapro-row" data-row="gallery"><input type="hidden" name="milapro_gallery_images[]" data-media-input><button type="button" class="button" data-media-select>Select Image</button> <span data-media-label>No image selected</span> <button type="button" class="button-link-delete" data-remove-row>Remove</button></div>',
+      gallery: '<div class="milapro-row milapro-gallery-row" data-row="gallery"><input type="hidden" name="milapro_gallery_images[]" data-media-input><span class="milapro-media-preview"><img src="" alt="" data-media-preview style="display:none"><span data-media-empty>No image selected</span></span><button type="button" class="button" data-media-select>Select Image</button> <span data-media-label>No image selected</span> <button type="button" class="button" data-move-row="up">Move up</button> <button type="button" class="button" data-move-row="down">Move down</button> <button type="button" class="button-link-delete" data-remove-row>Remove</button></div>',
       colors: '<div class="milapro-row milapro-row-grid" data-row="colors"><input name="milapro_colors_name[]" placeholder="Name"><input name="milapro_colors_hex[]" type="color" value="#cccccc"><select name="milapro_colors_available[]"><option value="1">Available</option><option value="0">Not available</option></select><button type="button" class="button-link-delete" data-remove-row>Remove</button></div>',
       variants: '<div class="milapro-row milapro-row-grid" data-row="variants"><input name="milapro_variants_name[]" placeholder="Name"><input name="milapro_variants_price[]" type="number" step="0.01" placeholder="Price"><input name="milapro_variants_compare_at_price[]" type="number" step="0.01" placeholder="Compare at"><input name="milapro_variants_sku[]" placeholder="SKU"><button type="button" class="button-link-delete" data-remove-row>Remove</button></div>',
       specs: '<div class="milapro-row milapro-row-grid" data-row="specs"><input name="milapro_specs_label[]" placeholder="Label"><input name="milapro_specs_value[]" placeholder="Value"><button type="button" class="button-link-delete" data-remove-row>Remove</button></div>'
@@ -614,7 +837,7 @@ JS;
 
 function milapro_admin_styles(): string
 {
-    return '.milapro-fields{display:grid;gap:18px}.milapro-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.milapro-field{display:grid;gap:6px;font-weight:600}.milapro-field input,.milapro-field textarea{font-weight:400}.milapro-field small{font-weight:400;color:#646970}.milapro-checkbox{display:flex;align-items:center;gap:8px}.milapro-repeat{display:grid;gap:10px;margin-bottom:10px}.milapro-row{padding:10px;border:1px solid #dcdcde;background:#fff}.milapro-row-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:center}@media(max-width:900px){.milapro-grid,.milapro-row-grid{grid-template-columns:1fr}}';
+    return '.milapro-fields{display:grid;gap:18px}.milapro-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.milapro-field{display:grid;gap:6px;font-weight:600}.milapro-field input,.milapro-field textarea{font-weight:400}.milapro-field small{font-weight:400;color:#646970}.milapro-checkbox{display:flex;align-items:center;gap:8px}.milapro-repeat{display:grid;gap:10px;margin-bottom:10px}.milapro-row{padding:10px;border:1px solid #dcdcde;background:#fff}.milapro-gallery-row,.milapro-media-preview-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.milapro-media-preview{display:inline-flex;align-items:center;justify-content:center;width:76px;height:76px;border:1px solid #dcdcde;background:#f6f7f7;color:#646970;font-size:12px;text-align:center;overflow:hidden}.milapro-media-preview img{width:100%;height:100%;object-fit:cover}.milapro-row-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:center}@media(max-width:900px){.milapro-grid,.milapro-row-grid{grid-template-columns:1fr}}';
 }
 
 function milapro_media_url($image): string
@@ -633,6 +856,12 @@ function milapro_media_url($image): string
         }
 
         return $image['url'] ?? $image['source_url'] ?? '';
+    }
+
+    if (is_string($image)) {
+        if (str_starts_with($image, 'http://') || str_starts_with($image, 'https://') || str_starts_with($image, '/')) {
+            return $image;
+        }
     }
 
     return '';
@@ -669,20 +898,20 @@ function milapro_trigger_rebuild_for_term(int $term_id, int $tt_id): void
     milapro_send_rebuild_webhook('product_category', (string) $term_id, 'saved');
 }
 
-function milapro_send_rebuild_webhook(string $content_type, string $content_id, string $action): void
+function milapro_send_rebuild_webhook(string $content_type, string $content_id, string $action)
 {
     static $sent = false;
 
     // Multiple WordPress hooks can fire during one save; one rebuild per request is enough.
     if ($sent) {
-        return;
+        return true;
     }
 
     $webhook_url = defined('MILAPRO_REBUILD_WEBHOOK_URL') ? MILAPRO_REBUILD_WEBHOOK_URL : '';
     $secret = defined('MILAPRO_REBUILD_WEBHOOK_SECRET') ? MILAPRO_REBUILD_WEBHOOK_SECRET : '';
 
     if (!$webhook_url || !$secret) {
-        return;
+        return new WP_Error('milapro_rebuild_not_configured', 'Deploy webhook is not configured.');
     }
 
     $sent = true;
@@ -699,15 +928,26 @@ function milapro_send_rebuild_webhook(string $content_type, string $content_id, 
         ]),
     ]);
 
-    if (defined('WP_DEBUG') && WP_DEBUG) {
-        if (is_wp_error($response)) {
+    if (is_wp_error($response)) {
+        if (defined('WP_DEBUG') && WP_DEBUG) {
             error_log('[Milapro rebuild webhook] ' . $response->get_error_message());
-            return;
         }
 
-        $status_code = wp_remote_retrieve_response_code($response);
-        if ($status_code >= 400) {
+        return new WP_Error('milapro_rebuild_request_failed', 'Could not start deploy.');
+    }
+
+    $status_code = wp_remote_retrieve_response_code($response);
+    if ($status_code >= 400) {
+        if (defined('WP_DEBUG') && WP_DEBUG) {
             error_log('[Milapro rebuild webhook] GitHub returned HTTP ' . $status_code . ': ' . wp_remote_retrieve_body($response));
         }
+
+        return new WP_Error('milapro_rebuild_github_error', 'GitHub returned HTTP ' . $status_code . '.');
     }
+
+    if (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('[Milapro rebuild webhook] Repository dispatch sent for ' . $content_type . ' ' . $content_id . ' (' . $action . ').');
+    }
+
+    return true;
 }

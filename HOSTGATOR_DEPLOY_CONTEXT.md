@@ -10,7 +10,8 @@ Quiero desplegar un sitio web estático hecho con Astro en HostGator.
 - Output generado: `dist/`
 - El sitio está configurado como estático con `output: 'static'` en `astro.config.mjs`.
 - No necesito correr Node.js en HostGator.
-- El contenido de `dist/` debe subirse al directorio público del hosting, normalmente `/public_html/`.
+- El contenido de `dist/` debe subirse a la raíz FTP `/`, porque en esta cuenta `/` ya corresponde al directorio público real del hosting.
+- No usar `/public_html/`: esa carpeta fue creada por error el 23 de agosto o después y no es el web root real.
 
 ## CMS
 
@@ -31,7 +32,7 @@ WORDPRESS_API_TIMEOUT_MS=8000
 FTP_HOST=ftp.midominio.com
 FTP_USERNAME=usuario-ftp
 FTP_PASSWORD=password-ftp
-FTP_TARGET_DIR=/public_html/
+FTP_TARGET_DIR=/
 ```
 
 No debo compartir contraseñas ni tokens en el chat. Si necesito usarlos, debo pegarlos directamente en GitHub Secrets, HostGator o cPanel.
@@ -58,7 +59,7 @@ Ese workflow hace lo siguiente:
 2. Confirmar que el dominio principal apunta correctamente al hosting.
 3. Activar SSL para el dominio principal.
 4. Crear o confirmar una cuenta FTP.
-5. Confirmar el directorio destino del sitio público, normalmente `/public_html/`.
+5. Confirmar el directorio destino del sitio público. Para esta cuenta FTP debe ser `/`.
 6. Si usaré WordPress como CMS, instalar WordPress en `cms.midominio.com`.
 7. Activar SSL también para el subdominio del CMS.
 
@@ -237,7 +238,7 @@ Si se usa GitHub Actions para desplegar a HostGator, también hacen falta:
 FTP_HOST=...
 FTP_USERNAME=...
 FTP_PASSWORD=...
-FTP_TARGET_DIR=/public_html/
+FTP_TARGET_DIR=/
 ```
 
 No compartir credenciales en el chat.

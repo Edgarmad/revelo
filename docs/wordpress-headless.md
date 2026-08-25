@@ -102,7 +102,7 @@ WORDPRESS_API_TIMEOUT_MS=8000
 FTP_HOST=ftp.example.com
 FTP_USERNAME=hostgator-ftp-user
 FTP_PASSWORD=hostgator-ftp-password
-FTP_TARGET_DIR=/public_html/
+FTP_TARGET_DIR=/
 ```
 
 To let WordPress trigger the workflow, create a GitHub fine-grained token with access to dispatch repository events, then configure WordPress with:

@@ -16,6 +16,7 @@ class Milapro_Seed_Import_Admin
         add_action('wp_ajax_milapro_seed_upload', [self::class, 'upload']);
         add_action('wp_ajax_milapro_seed_validate', [self::class, 'validate_ajax']);
         add_action('wp_ajax_milapro_seed_import_batch', [self::class, 'import_batch']);
+        add_action('wp_ajax_milapro_update_product_prices', [self::class, 'update_product_prices']);
     }
 
     public static function menu(): void
@@ -66,6 +67,12 @@ class Milapro_Seed_Import_Admin
                 <div class="milapro-seed-progress"><span id="milapro-seed-progress-bar"></span></div>
                 <p class="milapro-seed-status" id="milapro-seed-status">Cargando herramienta...</p>
                 <pre class="milapro-seed-log" id="milapro-seed-log">Listo.</pre>
+            </div>
+
+            <div class="milapro-seed-card">
+                <h2>Actualización rápida de precios</h2>
+                <p>Corrige los precios verificados de agosto 2026 sin reimportar imágenes ni catálogo completo.</p>
+                <button type="button" class="button button-primary" id="milapro-update-product-prices">Actualizar precios verificados</button>
             </div>
         </div>
         <script>
@@ -185,12 +192,133 @@ class Milapro_Seed_Import_Admin
         ]);
     }
 
+    public static function update_product_prices(): void
+    {
+        self::guard();
+
+        $price_updates = [
+            'aluminio-bahia-esquinera' => 61800.00,
+            'aluminio-caspio' => 48700.00,
+            'aluminio-caspio-esquinero' => 71670.00,
+            'aluminio-llona-4-ax' => 63200.00,
+            'aluminio-llona-5-ax' => 75800.00,
+            'aluminio-llona-esquinero' => 59400.00,
+            'aluminio-malaui' => 58810.00,
+            'aluminio-mesa-volga-1-6' => 25740.00,
+            'aluminio-mesa-volga-2-3' => 29570.00,
+            'aluminio-onega' => 79200.00,
+            'aluminio-onega-esquinero' => 92289.99,
+            'aluminio-ontario-beige' => 81150.00,
+            'aluminio-ontario-gris' => 81150.00,
+            'aluminio-silla-caspio' => 6400.00,
+            'aluminio-silla-malaui' => 7260.00,
+            'aluminio-sillon-ind-onrario-beige' => 19980.00,
+            'aluminio-sillon-ind-ontario-gris' => 19980.00,
+            'aluminio-sillones-casio' => 25000.00,
+            'outlet-ladoga' => 42999.00,
+            'outlet-liena' => 42999.00,
+            'outlet-nyasa' => 29200.00,
+            'outlet-turkana' => 42999.00,
+            'plastico-aster-mesa-con-almacenamiento' => 1799.00,
+            'plastico-camastro-raflessia' => 5999.00,
+            'plastico-gerbera-con-apoyabrazos' => 1799.00,
+            'plastico-mecedora-iris' => 3399.00,
+            'plastico-mesa-auxiliar-narciso' => 1399.01,
+            'plastico-mesa-cala' => 5499.00,
+            'plastico-mesa-leman' => 18650.00,
+            'plastico-mesa-licerna' => 11650.00,
+            'plastico-mesa-loto' => 2199.00,
+            'plastico-mesa-nilo-1-6m' => 15850.00,
+            'plastico-mesa-nilo-2m' => 19850.00,
+            'plastico-narciso-con-aopyabrazos' => 1299.00,
+            'plastico-set-craspedia' => 17989.00,
+            'plastico-set-iris' => 17989.00,
+            'plastico-silla-alta-narciso' => 1499.00,
+            'plastico-silla-alta-zinnia' => 1699.00,
+            'plastico-silla-calendula' => 1899.00,
+            'plastico-silla-dalia' => 1799.00,
+            'plastico-silla-gerbera' => 1699.01,
+            'plastico-silla-narciso' => 1199.00,
+            'plastico-silla-peonia' => 1699.01,
+            'plastico-silla-zinnia' => 1199.00,
+            'ratan-barcelona-2' => 22500.00,
+            'ratan-barcelona-4' => 45000.00,
+            'ratan-barcelona-6' => 65000.00,
+            'ratan-bilbao' => 39500.00,
+            'ratan-granada' => 23999.00,
+            'ratan-ibiza' => 72500.00,
+            'ratan-madrid' => 51500.00,
+            'ratan-malaga' => 58000.00,
+            'ratan-malaga-petit' => 49500.00,
+            'ratan-marbella' => 46500.00,
+            'ratan-sevilla' => 33500.00,
+        ];
+
+        $report = ['updated' => 0, 'unchanged' => 0, 'missing' => []];
+        $discount_term = get_term_by('slug', 'descuentos', 'product_category');
+
+        foreach ($price_updates as $slug => $price) {
+            $post_id = self::product_id_by_slug($slug);
+            if (!$post_id) {
+                $report['missing'][] = $slug;
+                continue;
+            }
+
+            $current_price = (float) get_post_meta($post_id, '_milapro_price', true);
+            $current_compare_at = get_post_meta($post_id, '_milapro_compare_at_price', true);
+            if (abs($current_price - $price) <= 0.001 && $current_compare_at === '') {
+                $report['unchanged']++;
+                continue;
+            }
+
+            update_post_meta($post_id, '_milapro_price', $price);
+            delete_post_meta($post_id, '_milapro_compare_at_price');
+
+            if ($discount_term && !is_wp_error($discount_term)) {
+                wp_remove_object_terms($post_id, (int) $discount_term->term_id, 'product_category');
+            }
+
+            clean_post_cache($post_id);
+            $report['updated']++;
+        }
+
+        if ($report['updated'] > 0 && function_exists('milapro_send_rebuild_webhook')) {
+            milapro_send_rebuild_webhook('products', 'bulk-price-update-2026-08-09', 'updated');
+        }
+
+        wp_send_json_success($report);
+    }
+
     private static function guard(): void
     {
         if (!current_user_can('manage_options')) {
             wp_send_json_error(['message' => 'Unauthorized.'], 403);
         }
         check_ajax_referer(self::NONCE_ACTION, 'nonce');
+    }
+
+    private static function product_id_by_slug(string $slug): int
+    {
+        $posts = get_posts([
+            'name' => $slug,
+            'post_type' => 'products',
+            'post_status' => 'any',
+            'posts_per_page' => 1,
+            'fields' => 'ids',
+        ]);
+
+        if (!$posts) {
+            $posts = get_posts([
+                'post_type' => 'products',
+                'post_status' => 'any',
+                'posts_per_page' => 1,
+                'fields' => 'ids',
+                'meta_key' => '_milapro_source_slug',
+                'meta_value' => $slug,
+            ]);
+        }
+
+        return $posts ? (int) $posts[0] : 0;
     }
 
     private static function load_seed_or_error(): array
@@ -309,6 +437,15 @@ class Milapro_Seed_Import_Admin
     status('Continuando importación...', '');
     log('Continuando importación...');
     runBatch(false);
+  });
+
+  byId('milapro-update-product-prices').addEventListener('click', function() {
+    if (!confirm('Esto actualizará 55 precios verificados y quitará descuentos anteriores de esos productos. ¿Continuar?')) return;
+    status('Actualizando precios...', '');
+    log('Actualizando precios verificados...');
+    post({ action: 'milapro_update_product_prices', nonce })
+      .then((response) => { status('Precios actualizados.', 'ok'); log(response.data); })
+      .catch((error) => showError('Error al actualizar precios.', error));
   });
 
   function runBatch(reset) {

@@ -60,6 +60,8 @@ function load_config(): array
         'smtp_host' => getenv('NEWSLETTER_SMTP_HOST') ?: '',
         'smtp_port' => (int) (getenv('NEWSLETTER_SMTP_PORT') ?: 465),
         'smtp_secure' => getenv('NEWSLETTER_SMTP_SECURE') ?: 'ssl',
+        'smtp_timeout' => (int) (getenv('NEWSLETTER_SMTP_TIMEOUT') ?: 45),
+        'smtp_retries' => (int) (getenv('NEWSLETTER_SMTP_RETRIES') ?: 2),
         'smtp_user' => getenv('NEWSLETTER_SMTP_USER') ?: '',
         'smtp_pass' => getenv('NEWSLETTER_SMTP_PASS') ?: '',
         'from_email' => getenv('NEWSLETTER_FROM_EMAIL') ?: '',
@@ -98,14 +100,42 @@ function smtp_send(array $config, string $to, string $subject, string $textBody,
     $host = (string) $config['smtp_host'];
     $port = (int) $config['smtp_port'];
     $secure = strtolower((string) $config['smtp_secure']);
+    $timeout = max(10, (int) ($config['smtp_timeout'] ?? 45));
+    $retries = max(1, (int) ($config['smtp_retries'] ?? 2));
     $remote = ($secure === 'ssl' ? 'ssl://' : '') . $host . ':' . $port;
 
-    $socket = stream_socket_client($remote, $errno, $errstr, 20, STREAM_CLIENT_CONNECT);
-    if (!$socket) {
-        throw new RuntimeException("SMTP connection failed: $errstr ($errno)");
+    $context = stream_context_create([
+        'ssl' => [
+            'peer_name' => $host,
+            'SNI_enabled' => true,
+            'verify_peer' => true,
+            'verify_peer_name' => true,
+        ],
+    ]);
+
+    $socket = false;
+    $lastError = '';
+
+    for ($attempt = 1; $attempt <= $retries; $attempt++) {
+        $errno = 0;
+        $errstr = '';
+        $socket = stream_socket_client($remote, $errno, $errstr, $timeout, STREAM_CLIENT_CONNECT, $context);
+
+        if ($socket) {
+            break;
+        }
+
+        $lastError = trim($errstr) !== '' ? "$errstr ($errno)" : "connection failed with code $errno";
+        if ($attempt < $retries) {
+            usleep(500000);
+        }
     }
 
-    stream_set_timeout($socket, 20);
+    if (!$socket) {
+        throw new RuntimeException("SMTP connection failed after $retries attempt(s): $lastError");
+    }
+
+    stream_set_timeout($socket, $timeout);
     smtp_expect($socket, 220);
     smtp_command($socket, 'EHLO ' . ($_SERVER['SERVER_NAME'] ?? 'milaprohome.com'), 250);
 

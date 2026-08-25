@@ -4,6 +4,8 @@ return [
     'smtp_host' => 'mail.milaprohome.com',
     'smtp_port' => 465,
     'smtp_secure' => 'ssl',
+    'smtp_timeout' => 45,
+    'smtp_retries' => 2,
     'smtp_user' => 'ventas@milaprohome.com',
     'smtp_pass' => 'REPLACE_WITH_SMTP_PASSWORD',
     'from_email' => 'ventas@milaprohome.com',
