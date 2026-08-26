@@ -106,24 +106,17 @@ function normalizeProduct(product: WpProduct, categoryById: Map<number, { slug: 
   const categories = termCategories.map((category) => category.slug);
   if (hasDiscount && !categories.includes('descuentos')) categories.push('descuentos');
   const placeholder = getCategoryPlaceholder(categories, primaryCategory?.slug);
-  const image = firstValidImage([
+  const wpMainImage = uniqueImages([
     product.main_image_url,
     product._embedded?.['wp:featuredmedia']?.[0]?.source_url,
-    localProduct?.mainImage,
-    placeholder,
-    fallbackImage,
-  ]);
+  ])[0];
+  const image = wpMainImage ?? firstValidImage([localProduct?.mainImage, placeholder, fallbackImage]);
   const repeaterGallery = uniqueImages((acf.gallery_images ?? []).map((item) => wpImageUrl(item.image)));
-  const legacyGallery = uniqueImages((acf.gallery ?? []).map(wpImageUrl));
   const localGallery = uniqueImages(localProduct?.gallery ?? []);
-  const gallery = firstImageList([
-    uniqueImages(product.gallery_urls ?? []),
-    repeaterGallery,
-    legacyGallery,
-    localGallery,
-    uniqueImages([localProduct?.mainImage]),
-    uniqueImages([image]),
-  ]);
+  const wpGallery = firstImageList([uniqueImages(product.gallery_urls ?? []), repeaterGallery], []);
+  const gallery = wpGallery.length ? wpGallery : firstImageList([localGallery, uniqueImages([localProduct?.mainImage]), uniqueImages([image])]);
+
+  warnIfUsingLocalProductImages(product.slug, { hasWpMainImage: Boolean(wpMainImage), hasWpGallery: wpGallery.length > 0 });
 
   return {
     id: `product-${product.id}`,
@@ -205,8 +198,14 @@ function uniqueImages(images: Array<string | undefined>): string[] {
   return Array.from(new Set(images.map((image) => image?.trim()).filter(Boolean) as string[]));
 }
 
-function firstImageList(lists: string[][]): string[] {
-  return lists.find((list) => list.length > 0) ?? [fallbackImage];
+function firstImageList(lists: string[][], fallback: string[] = [fallbackImage]): string[] {
+  return lists.find((list) => list.length > 0) ?? fallback;
+}
+
+function warnIfUsingLocalProductImages(slug: string, { hasWpMainImage, hasWpGallery }: { hasWpMainImage: boolean; hasWpGallery: boolean }): void {
+  if (hasWpMainImage && hasWpGallery) return;
+  const missing = [!hasWpMainImage ? 'main image' : '', !hasWpGallery ? 'gallery' : ''].filter(Boolean).join(' and ');
+  console.warn(`[wordpress] product ${slug} is missing WP ${missing}; using local image fallback.`);
 }
 
 function getCategoryPlaceholder(categories: string[], primaryCategory?: string): string {

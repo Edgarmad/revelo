@@ -371,43 +371,47 @@ function milapro_product_gallery_images(int $post_id): array
 {
     $gallery = get_post_meta($post_id, '_milapro_gallery_images', true);
     if (is_array($gallery) && !empty($gallery)) {
-        return $gallery;
+        return milapro_normalize_gallery_images($gallery);
     }
 
     if (function_exists('get_field')) {
         $acf_gallery = get_field('gallery_images', $post_id);
         if (is_array($acf_gallery) && !empty($acf_gallery)) {
-            return $acf_gallery;
+            return milapro_normalize_gallery_images($acf_gallery);
         }
     }
 
-    $seed_product = milapro_seed_product_for_post($post_id);
-    if (!$seed_product) {
-        return [];
-    }
+    return [];
+}
 
-    $seed_gallery = $seed_product['gallery'] ?? [];
-    if (empty($seed_gallery) && !empty($seed_product['sourceImage'])) {
-        $seed_gallery = [$seed_product['sourceImage']];
-    }
-
-    return array_values(array_filter(array_map(function ($image): array {
-        return ['image' => is_string($image) ? $image : ''];
-    }, is_array($seed_gallery) ? $seed_gallery : []), function ($item): bool {
-        return $item['image'] !== '';
+function milapro_normalize_gallery_images(array $gallery): array
+{
+    return array_values(array_filter(array_map(function ($item): array {
+        $image = is_array($item) && array_key_exists('image', $item) ? $item['image'] : $item;
+        $image_id = milapro_attachment_id_from_value($image);
+        return ['image' => $image_id];
+    }, $gallery), function ($item): bool {
+        return $item['image'] > 0;
     }));
+}
+
+function milapro_attachment_id_from_value($image): int
+{
+    if (is_numeric($image)) {
+        return (int) $image;
+    }
+
+    if (is_array($image)) {
+        return (int) ($image['ID'] ?? $image['id'] ?? 0);
+    }
+
+    return 0;
 }
 
 function milapro_product_main_image_url(int $post_id): string
 {
     $image = (int) get_post_meta($post_id, '_milapro_main_image', true);
-    $url = milapro_media_url($image) ?: get_the_post_thumbnail_url($post_id, 'large') ?: '';
-    if ($url) {
-        return $url;
-    }
-
-    $seed_product = milapro_seed_product_for_post($post_id);
-    return is_array($seed_product) ? milapro_media_url($seed_product['sourceImage'] ?? '') : '';
+    return milapro_media_url($image) ?: get_the_post_thumbnail_url($post_id, 'large') ?: '';
 }
 
 function milapro_seed_product_for_post(int $post_id): array
@@ -701,11 +705,10 @@ function milapro_save_product_meta(int $post_id): void
     update_post_meta($post_id, '_milapro_main_image', $main_image);
     if ($main_image) set_post_thumbnail($post_id, $main_image);
     $gallery_images = array_map(function ($image) {
-        $image = wp_unslash($image);
-        return ['image' => is_numeric($image) ? (int) $image : sanitize_text_field($image)];
+        return ['image' => (int) wp_unslash($image)];
     }, $_POST['milapro_gallery_images'] ?? []);
     update_post_meta($post_id, '_milapro_gallery_images', array_values(array_filter($gallery_images, function ($item) {
-        return is_numeric($item['image']) ? $item['image'] > 0 : $item['image'] !== '';
+        return $item['image'] > 0;
     })));
     update_post_meta($post_id, '_milapro_colors', milapro_collect_colors());
     update_post_meta($post_id, '_milapro_variants', milapro_collect_variants());

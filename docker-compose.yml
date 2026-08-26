@@ -2,7 +2,7 @@ services:
   wordpress:
     image: wordpress:6.6-php8.2-apache
     ports:
-      - "8080:80"
+      - "${WORDPRESS_PORT:-8081}:80"
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_NAME: milapro
