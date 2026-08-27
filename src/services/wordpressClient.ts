@@ -36,6 +36,10 @@ function createWordPressUrl(path: string): URL {
     return url;
   }
 
+  if (cleanPath.startsWith('milapro/v1/') && apiUrl?.endsWith('/wp/v2')) {
+    return new URL(`${apiUrl.replace(/\/wp\/v2$/, '')}/${cleanPath}`);
+  }
+
   return new URL(`${apiUrl}/${cleanPath}`);
 }
 

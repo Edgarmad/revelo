@@ -60,10 +60,13 @@ foreach ($milapro_required_files as $milapro_required_file) {
 add_action('init', 'milapro_register_content_models');
 add_action('acf/init', 'milapro_register_acf_fields');
 add_action('rest_api_init', 'milapro_register_rest_fields');
+add_action('rest_api_init', 'milapro_register_rest_routes');
+add_action('admin_menu', 'milapro_register_admin_pages');
 add_action('add_meta_boxes', 'milapro_register_meta_boxes');
 add_action('admin_enqueue_scripts', 'milapro_enqueue_admin_assets');
 add_action('admin_head-edit.php', 'milapro_render_manual_deploy_button_script');
 add_action('admin_post_milapro_manual_deploy', 'milapro_handle_manual_deploy');
+add_action('admin_post_milapro_save_home_banners', 'milapro_handle_save_home_banners');
 add_action('admin_notices', 'milapro_manual_deploy_notice');
 add_action('save_post_products', 'milapro_save_product_meta');
 add_action('save_post_reels', 'milapro_save_reel_meta');
@@ -340,6 +343,85 @@ function milapro_register_rest_fields(): void
     ]);
 }
 
+function milapro_register_rest_routes(): void
+{
+    register_rest_route('milapro/v1', '/home-banners', [
+        'methods' => 'GET',
+        'callback' => function (): array {
+            return milapro_home_banners_for_rest();
+        },
+        'permission_callback' => '__return_true',
+    ]);
+}
+
+function milapro_register_admin_pages(): void
+{
+    add_submenu_page(
+        'edit.php?post_type=products',
+        'Home Banners',
+        'Home Banners',
+        'edit_posts',
+        'milapro-home-banners',
+        'milapro_render_home_banners_page'
+    );
+}
+
+function milapro_home_banner_slots(): array
+{
+    return [
+        'hero_banner' => [
+            'label' => 'Hero banner',
+            'eyebrow' => 'Oferta de verano',
+            'title' => 'Hasta 50% de descuento',
+            'text' => '',
+        ],
+        'popup_banner' => [
+            'label' => 'Popup banner',
+            'eyebrow' => 'Oferta por tiempo limitado',
+            'title' => 'Obtén hasta 50% OFF',
+            'text' => 'Déjanos tu correo y recibe promociones, novedades y asesoría para renovar tus espacios exteriores.',
+        ],
+        'carousel_banner' => [
+            'label' => 'Carousel banner',
+            'eyebrow' => 'Oferta de verano',
+            'title' => 'Hasta 50% de descuento',
+            'text' => '',
+        ],
+    ];
+}
+
+function milapro_home_banners(): array
+{
+    $saved = get_option('milapro_home_banners', []);
+    $saved = is_array($saved) ? $saved : [];
+    $banners = [];
+
+    foreach (milapro_home_banner_slots() as $key => $defaults) {
+        $banner = is_array($saved[$key] ?? null) ? $saved[$key] : [];
+        $banners[$key] = [
+            'eyebrow' => (string) ($banner['eyebrow'] ?? $defaults['eyebrow']),
+            'title' => (string) ($banner['title'] ?? $defaults['title']),
+            'text' => (string) ($banner['text'] ?? $defaults['text']),
+            'image' => (int) ($banner['image'] ?? 0),
+        ];
+    }
+
+    return $banners;
+}
+
+function milapro_home_banners_for_rest(): array
+{
+    return array_map(function (array $banner): array {
+        return [
+            'eyebrow' => $banner['eyebrow'],
+            'title' => $banner['title'],
+            'text' => $banner['text'],
+            'image' => $banner['image'],
+            'image_url' => milapro_media_url($banner['image']),
+        ];
+    }, milapro_home_banners());
+}
+
 function milapro_product_details(int $post_id): array
 {
     return [
@@ -510,7 +592,7 @@ function milapro_render_manual_deploy_button_script(): void
 function milapro_handle_manual_deploy(): void
 {
     $post_type = sanitize_key($_GET['post_type'] ?? 'products');
-    if (!in_array($post_type, ['products', 'reels'], true)) {
+    if (!in_array($post_type, ['products', 'reels', 'home_banners'], true)) {
         $post_type = 'products';
     }
 
@@ -521,7 +603,9 @@ function milapro_handle_manual_deploy(): void
     check_admin_referer('milapro_manual_deploy_' . $post_type);
 
     $result = milapro_send_rebuild_webhook($post_type, 'manual-deploy', 'manual');
-    $redirect_url = add_query_arg('post_type', $post_type, admin_url('edit.php'));
+    $redirect_url = $post_type === 'home_banners'
+        ? admin_url('edit.php?post_type=products&page=milapro-home-banners')
+        : add_query_arg('post_type', $post_type, admin_url('edit.php'));
 
     if (is_wp_error($result)) {
         $redirect_url = add_query_arg([
@@ -536,8 +620,88 @@ function milapro_handle_manual_deploy(): void
     exit;
 }
 
+function milapro_render_home_banners_page(): void
+{
+    if (!current_user_can('edit_posts')) {
+        wp_die('Unauthorized.', 403);
+    }
+
+    $banners = milapro_home_banners();
+    $deploy_url = add_query_arg([
+        'action' => 'milapro_manual_deploy',
+        'post_type' => 'home_banners',
+        '_wpnonce' => wp_create_nonce('milapro_manual_deploy_home_banners'),
+    ], admin_url('admin-post.php'));
+    ?>
+    <div class="wrap">
+        <h1>Home Banners</h1>
+        <p>Actualiza solo los textos e imagenes de los banners fijos del home. Guardar no inicia deploy automatico.</p>
+        <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" class="milapro-fields">
+            <input type="hidden" name="action" value="milapro_save_home_banners">
+            <?php wp_nonce_field('milapro_save_home_banners', 'milapro_home_banners_nonce'); ?>
+            <?php foreach (milapro_home_banner_slots() as $key => $slot): ?>
+                <?php $banner = $banners[$key]; ?>
+                <div class="milapro-banner-card">
+                    <h2><?php echo esc_html($slot['label']); ?></h2>
+                    <div class="milapro-grid">
+                        <?php milapro_input('Label text', 'milapro_home_banners[' . $key . '][eyebrow]', $banner['eyebrow']); ?>
+                        <?php milapro_input('Title text', 'milapro_home_banners[' . $key . '][title]', $banner['title']); ?>
+                    </div>
+                    <?php milapro_textarea('Secondary text', 'milapro_home_banners[' . $key . '][text]', $banner['text'], 'Solo se usa cuando el banner actual ya muestra texto secundario.'); ?>
+                    <label class="milapro-field">Image</label>
+                    <div class="milapro-media-row milapro-media-preview-row">
+                        <input type="hidden" name="milapro_home_banners[<?php echo esc_attr($key); ?>][image]" value="<?php echo esc_attr((string) $banner['image']); ?>" data-media-input>
+                        <?php echo milapro_media_preview_markup($banner['image']); ?>
+                        <button type="button" class="button" data-media-select>Select Image</button>
+                        <button type="button" class="button" data-media-remove>Remove Image</button>
+                        <span data-media-label><?php echo $banner['image'] ? esc_html(basename(get_attached_file($banner['image']))) : 'No image selected'; ?></span>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <p class="submit">
+                <button type="submit" class="button button-primary">Save banners</button>
+                <a class="button" href="<?php echo esc_url($deploy_url); ?>">Deploy</a>
+            </p>
+        </form>
+    </div>
+    <?php
+}
+
+function milapro_handle_save_home_banners(): void
+{
+    if (!current_user_can('edit_posts')) {
+        wp_die('Unauthorized.', 403);
+    }
+
+    if (!isset($_POST['milapro_home_banners_nonce']) || !wp_verify_nonce($_POST['milapro_home_banners_nonce'], 'milapro_save_home_banners')) {
+        wp_die('Invalid nonce.', 403);
+    }
+
+    $input = $_POST['milapro_home_banners'] ?? [];
+    $input = is_array($input) ? wp_unslash($input) : [];
+    $banners = [];
+
+    foreach (milapro_home_banner_slots() as $key => $slot) {
+        $banner = is_array($input[$key] ?? null) ? $input[$key] : [];
+        $banners[$key] = [
+            'eyebrow' => sanitize_text_field($banner['eyebrow'] ?? $slot['eyebrow']),
+            'title' => sanitize_text_field($banner['title'] ?? $slot['title']),
+            'text' => sanitize_textarea_field($banner['text'] ?? $slot['text']),
+            'image' => (int) ($banner['image'] ?? 0),
+        ];
+    }
+
+    update_option('milapro_home_banners', $banners, false);
+    wp_safe_redirect(add_query_arg('milapro_banners_saved', '1', admin_url('edit.php?post_type=products&page=milapro-home-banners')));
+    exit;
+}
+
 function milapro_manual_deploy_notice(): void
 {
+    if (!empty($_GET['milapro_banners_saved'])) {
+        echo '<div class="notice notice-success is-dismissible"><p><strong>Milapro:</strong> banners saved.</p></div>';
+    }
+
     if (empty($_GET['milapro_deploy'])) {
         return;
     }
@@ -840,7 +1004,7 @@ JS;
 
 function milapro_admin_styles(): string
 {
-    return '.milapro-fields{display:grid;gap:18px}.milapro-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.milapro-field{display:grid;gap:6px;font-weight:600}.milapro-field input,.milapro-field textarea{font-weight:400}.milapro-field small{font-weight:400;color:#646970}.milapro-checkbox{display:flex;align-items:center;gap:8px}.milapro-repeat{display:grid;gap:10px;margin-bottom:10px}.milapro-row{padding:10px;border:1px solid #dcdcde;background:#fff}.milapro-gallery-row,.milapro-media-preview-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.milapro-media-preview{display:inline-flex;align-items:center;justify-content:center;width:76px;height:76px;border:1px solid #dcdcde;background:#f6f7f7;color:#646970;font-size:12px;text-align:center;overflow:hidden}.milapro-media-preview img{width:100%;height:100%;object-fit:cover}.milapro-row-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:center}@media(max-width:900px){.milapro-grid,.milapro-row-grid{grid-template-columns:1fr}}';
+    return '.milapro-fields{display:grid;gap:18px}.milapro-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.milapro-field{display:grid;gap:6px;font-weight:600}.milapro-field input,.milapro-field textarea{font-weight:400}.milapro-field small{font-weight:400;color:#646970}.milapro-checkbox{display:flex;align-items:center;gap:8px}.milapro-repeat{display:grid;gap:10px;margin-bottom:10px}.milapro-row,.milapro-banner-card{padding:10px;border:1px solid #dcdcde;background:#fff}.milapro-banner-card{display:grid;gap:14px;max-width:980px;padding:18px}.milapro-banner-card h2{margin:0}.milapro-gallery-row,.milapro-media-preview-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.milapro-media-preview{display:inline-flex;align-items:center;justify-content:center;width:76px;height:76px;border:1px solid #dcdcde;background:#f6f7f7;color:#646970;font-size:12px;text-align:center;overflow:hidden}.milapro-media-preview img{width:100%;height:100%;object-fit:cover}.milapro-row-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:center}@media(max-width:900px){.milapro-grid,.milapro-row-grid{grid-template-columns:1fr}}';
 }
 
 function milapro_media_url($image): string

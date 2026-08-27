@@ -5,6 +5,7 @@ import SectionHeading from '@/components/common/SectionHeading.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { getAllBlogs } from '@/services/blogService';
 import { getAllCategories } from '@/services/categoryService';
+import { getHomeBanners } from '@/services/homeBannerService';
 import { getAllProducts } from '@/services/productService';
 import { getVisibleReels } from '@/services/reelService';
 import { customerReviews } from '@/data/siteContent';
@@ -15,6 +16,8 @@ const productCategories = await getAllCategories();
 const products = await getAllProducts();
 const blogCards = await getAllBlogs();
 const instagramReels = await getVisibleReels();
+const homeBanners = await getHomeBanners();
+const heroBanner = homeBanners.hero_banner;
 const initialProductCategory = productCategories[0]?.slug;
 const featuredReviews = customerReviews.filter((review) => review.rating === 5);
 const showroomImage = '/showroom/milapro-showroom.jpeg';
@@ -95,16 +98,16 @@ const localBusinessSchema = JSON.stringify({
 });
 ---
 
-<MainLayout title="Milapro Home | Muebles para exterior" description="Catálogo visual de muebles para exterior, ratán sintético, aluminio, plástico, sombrillas, pérgolas y plantas.">
+<MainLayout title="Milapro Home | Muebles para exterior" description="Catálogo visual de muebles para exterior, ratán sintético, aluminio, plástico, sombrillas, pérgolas y plantas." homeBanners={homeBanners}>
   <script type="application/ld+json" set:html={localBusinessSchema} />
 
   <section class="relative min-h-[600px] overflow-hidden md:min-h-[720px]">
-    <img class="absolute inset-0 h-full w-full object-cover object-center" src={bgSrc} alt="Comedor exterior frente al mar" width="1800" height="1000" />
+    <img class="absolute inset-0 h-full w-full object-cover object-center" src={heroBanner.image || bgSrc} alt="Comedor exterior frente al mar" width="1800" height="1000" />
     <div class="absolute inset-0"></div>
     <Container class="relative grid min-h-[600px] place-items-end pb-14 pt-24 text-center text-white md:min-h-[720px] md:place-items-center md:py-24">
       <div>
-        <h1 class="font-display text-6xl font-black uppercase leading-none tracking-tight sm:text-8xl lg:text-9xl">Oferta de verano</h1>
-        <p class="mt-2 text-4xl font-light uppercase sm:text-6xl">Hasta 50% de descuento</p>
+        <h1 class="font-display text-6xl font-black uppercase leading-none tracking-tight sm:text-8xl lg:text-9xl">{heroBanner.eyebrow}</h1>
+        <p class="mt-2 text-4xl font-light uppercase sm:text-6xl">{heroBanner.title}</p>
         <Button href="/products/" class="mt-6">Comprar ahora</Button>
       </div>
     </Container>

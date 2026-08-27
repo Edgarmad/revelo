@@ -3,14 +3,17 @@ import '@/styles/global.css';
 import Header from '@/components/navigation/Header.astro';
 import Footer from '@/components/navigation/Footer.astro';
 import FloatingBanner from '@/components/common/FloatingBanner.astro';
+import { getHomeBanners, type HomeBanners } from '@/services/homeBannerService';
 
 interface Props {
   title: string;
   description: string;
+  homeBanners?: HomeBanners;
 }
 
-const { title, description } = Astro.props;
+const { title, description, homeBanners: providedHomeBanners } = Astro.props;
 const showFloatingBanner = Astro.url.pathname === '/';
+const homeBanners = providedHomeBanners ?? (showFloatingBanner ? await getHomeBanners() : undefined);
 ---
 
 <!doctype html>
@@ -31,7 +34,7 @@ const showFloatingBanner = Astro.url.pathname === '/';
       <slot />
     </main>
     <Footer />
-    {showFloatingBanner && <FloatingBanner />}
+    {showFloatingBanner && <FloatingBanner banner={homeBanners?.popup_banner} />}
     <script src="/scripts/subscribe.js" defer></script>
   </body>
 </html>
