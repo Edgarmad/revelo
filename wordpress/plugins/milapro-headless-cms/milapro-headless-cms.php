@@ -70,6 +70,7 @@ add_action('admin_post_milapro_save_home_banners', 'milapro_handle_save_home_ban
 add_action('admin_notices', 'milapro_manual_deploy_notice');
 add_action('save_post_products', 'milapro_save_product_meta');
 add_action('save_post_reels', 'milapro_save_reel_meta');
+add_action('save_post_blogs', 'milapro_save_blog_meta');
 add_action('product_category_add_form_fields', 'milapro_category_add_fields');
 add_action('product_category_edit_form_fields', 'milapro_category_edit_fields');
 add_action('created_product_category', 'milapro_save_category_fields');
@@ -153,6 +154,23 @@ function milapro_register_content_models(): void
         'rest_base' => 'reels',
         'supports' => ['title', 'thumbnail', 'revisions'],
         'rewrite' => ['slug' => 'reels'],
+    ]);
+
+    register_post_type('blogs', [
+        'labels' => [
+            'name' => 'Blogs',
+            'singular_name' => 'Blog',
+            'add_new_item' => 'Add New Blog',
+            'edit_item' => 'Edit Blog',
+        ],
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_icon' => 'dashicons-welcome-write-blog',
+        'show_in_rest' => true,
+        'rest_base' => 'blogs',
+        'supports' => ['title', 'excerpt', 'thumbnail', 'revisions'],
+        'rewrite' => ['slug' => 'blogs'],
     ]);
 }
 
@@ -341,6 +359,20 @@ function milapro_register_rest_fields(): void
         },
         'schema' => ['type' => 'string'],
     ]);
+
+    register_rest_field('blogs', 'blog_details', [
+        'get_callback' => function (array $post): array {
+            return milapro_blog_details((int) $post['id']);
+        },
+        'schema' => ['type' => 'object'],
+    ]);
+
+    register_rest_field('blogs', 'blog_image_url', [
+        'get_callback' => function (array $post): string {
+            return milapro_blog_image_url((int) $post['id']);
+        },
+        'schema' => ['type' => 'string'],
+    ]);
 }
 
 function milapro_register_rest_routes(): void
@@ -390,10 +422,19 @@ function milapro_home_banner_slots(): array
     ];
 }
 
+function milapro_default_home_banner_images(): array
+{
+    return [
+        'hero_banner' => MILAPRO_HEADLESS_PLUGIN_DIR . 'assets/default-hero-bg.png',
+        'popup_banner' => MILAPRO_HEADLESS_PLUGIN_DIR . 'assets/default-popup-banner.jpeg',
+    ];
+}
+
 function milapro_home_banners(): array
 {
     $saved = get_option('milapro_home_banners', []);
     $saved = is_array($saved) ? $saved : [];
+    $saved = milapro_ensure_default_home_banner_images($saved);
     $banners = [];
 
     foreach (milapro_home_banner_slots() as $key => $defaults) {
@@ -407,6 +448,86 @@ function milapro_home_banners(): array
     }
 
     return $banners;
+}
+
+function milapro_ensure_default_home_banner_images(array $saved): array
+{
+    $imported = get_option('milapro_home_banner_defaults_imported', []);
+    $imported = is_array($imported) ? $imported : [];
+    $changed = false;
+
+    foreach (milapro_default_home_banner_images() as $key => $path) {
+        if (!empty($saved[$key]['image']) || !empty($imported[$key])) {
+            continue;
+        }
+
+        $attachment_id = milapro_import_home_banner_default_image($key, $path);
+        if (!$attachment_id) {
+            continue;
+        }
+
+        if (!isset($saved[$key]) || !is_array($saved[$key])) {
+            $saved[$key] = [];
+        }
+
+        $saved[$key]['image'] = $attachment_id;
+        $imported[$key] = true;
+        $changed = true;
+    }
+
+    if ($changed) {
+        update_option('milapro_home_banners', $saved, false);
+        update_option('milapro_home_banner_defaults_imported', $imported, false);
+    }
+
+    return $saved;
+}
+
+function milapro_import_home_banner_default_image(string $key, string $path): int
+{
+    if (!is_readable($path)) {
+        return 0;
+    }
+
+    $source = 'home-banner-default:' . $key;
+    $existing = get_posts([
+        'post_type' => 'attachment',
+        'post_status' => 'inherit',
+        'posts_per_page' => 1,
+        'fields' => 'ids',
+        'meta_key' => '_milapro_home_banner_source',
+        'meta_value' => $source,
+    ]);
+
+    if (!empty($existing[0])) {
+        return (int) $existing[0];
+    }
+
+    require_once ABSPATH . 'wp-admin/includes/file.php';
+    require_once ABSPATH . 'wp-admin/includes/media.php';
+    require_once ABSPATH . 'wp-admin/includes/image.php';
+
+    $tmp = wp_tempnam(basename($path));
+    if (!$tmp || !copy($path, $tmp)) {
+        return 0;
+    }
+
+    $file = [
+        'name' => basename($path),
+        'type' => wp_check_filetype(basename($path))['type'] ?? '',
+        'tmp_name' => $tmp,
+        'error' => 0,
+        'size' => filesize($tmp),
+    ];
+
+    $attachment_id = media_handle_sideload($file, 0, 'Milapro ' . str_replace('_', ' ', $key));
+    if (is_wp_error($attachment_id)) {
+        @unlink($tmp);
+        return 0;
+    }
+
+    update_post_meta((int) $attachment_id, '_milapro_home_banner_source', $source);
+    return (int) $attachment_id;
 }
 
 function milapro_home_banners_for_rest(): array
@@ -496,6 +617,24 @@ function milapro_product_main_image_url(int $post_id): string
     return milapro_media_url($image) ?: get_the_post_thumbnail_url($post_id, 'large') ?: '';
 }
 
+function milapro_blog_details(int $post_id): array
+{
+    return [
+        'eyebrow' => (string) (get_post_meta($post_id, '_milapro_blog_eyebrow', true) ?: 'Milapro Home'),
+        'intro_text' => (string) get_post_meta($post_id, '_milapro_blog_intro_text', true),
+        'body_text' => (string) get_post_meta($post_id, '_milapro_blog_body_text', true),
+        'image' => (int) get_post_meta($post_id, '_milapro_blog_image', true),
+        'display_order' => (int) (get_post_meta($post_id, '_milapro_blog_display_order', true) ?: 999),
+        'is_visible' => milapro_meta_bool(get_post_meta($post_id, '_milapro_blog_is_visible', true), true),
+    ];
+}
+
+function milapro_blog_image_url(int $post_id): string
+{
+    $image = (int) get_post_meta($post_id, '_milapro_blog_image', true);
+    return milapro_media_url($image) ?: get_the_post_thumbnail_url($post_id, 'large') ?: '';
+}
+
 function milapro_seed_product_for_post(int $post_id): array
 {
     $post = get_post($post_id);
@@ -552,6 +691,7 @@ function milapro_register_meta_boxes(): void
 {
     add_meta_box('milapro_product_details', 'Product Details', 'milapro_render_product_meta_box', 'products', 'normal', 'high');
     add_meta_box('milapro_reel_details', 'Reel Details', 'milapro_render_reel_meta_box', 'reels', 'normal', 'high');
+    add_meta_box('milapro_blog_details', 'Blog Details', 'milapro_render_blog_meta_box', 'blogs', 'normal', 'high');
 }
 
 function milapro_enqueue_admin_assets(string $hook): void
@@ -564,7 +704,7 @@ function milapro_enqueue_admin_assets(string $hook): void
 function milapro_render_manual_deploy_button_script(): void
 {
     $screen = get_current_screen();
-    if (!$screen || !in_array($screen->post_type, ['products', 'reels'], true) || !current_user_can('edit_posts')) {
+    if (!$screen || !in_array($screen->post_type, ['products', 'reels', 'blogs'], true) || !current_user_can('edit_posts')) {
         return;
     }
 
@@ -592,7 +732,7 @@ function milapro_render_manual_deploy_button_script(): void
 function milapro_handle_manual_deploy(): void
 {
     $post_type = sanitize_key($_GET['post_type'] ?? 'products');
-    if (!in_array($post_type, ['products', 'reels', 'home_banners'], true)) {
+    if (!in_array($post_type, ['products', 'reels', 'blogs', 'home_banners'], true)) {
         $post_type = 'products';
     }
 
@@ -767,6 +907,31 @@ function milapro_render_reel_meta_box(WP_Post $post): void
     <?php
 }
 
+function milapro_render_blog_meta_box(WP_Post $post): void
+{
+    wp_nonce_field('milapro_save_blog_meta', 'milapro_blog_nonce');
+    $details = milapro_blog_details($post->ID);
+    ?>
+    <div class="milapro-fields">
+        <div class="milapro-grid">
+            <?php milapro_input('Eyebrow / Category label', 'milapro_blog_eyebrow', $details['eyebrow']); ?>
+            <?php milapro_input('Display Order', 'milapro_blog_display_order', $details['display_order'], 'number', '1'); ?>
+            <?php milapro_checkbox('Visible', 'milapro_blog_is_visible', $details['is_visible']); ?>
+        </div>
+        <?php milapro_textarea('Intro text', 'milapro_blog_intro_text', $details['intro_text'], 'Shown on blog cards and below the H1.'); ?>
+        <?php milapro_textarea('Body text', 'milapro_blog_body_text', $details['body_text'], 'Final content paragraph in the current blog detail layout.'); ?>
+        <label class="milapro-field">Blog Image</label>
+        <div class="milapro-media-row milapro-media-preview-row">
+            <input type="hidden" name="milapro_blog_image" value="<?php echo esc_attr((string) $details['image']); ?>" data-media-input>
+            <?php echo milapro_media_preview_markup($details['image']); ?>
+            <button type="button" class="button" data-media-select>Select Image</button>
+            <button type="button" class="button" data-media-remove>Remove Image</button>
+            <span data-media-label><?php echo $details['image'] ? esc_html(basename(get_attached_file($details['image']))) : 'No image selected'; ?></span>
+        </div>
+    </div>
+    <?php
+}
+
 function milapro_input(string $label, string $name, $value, string $type = 'text', string $step = ''): void
 {
     printf('<label class="milapro-field"><span>%s</span><input type="%s" name="%s" value="%s" %s></label>', esc_html($label), esc_attr($type), esc_attr($name), esc_attr((string) $value), $step ? 'step="' . esc_attr($step) . '"' : '');
@@ -887,6 +1052,20 @@ function milapro_save_reel_meta(int $post_id): void
     update_post_meta($post_id, '_milapro_display_order', (int) ($_POST['milapro_display_order'] ?? 999));
     update_post_meta($post_id, '_milapro_is_visible', isset($_POST['milapro_is_visible']) ? '1' : '0');
     update_post_meta($post_id, '_milapro_cover_image', (int) ($_POST['milapro_cover_image'] ?? 0));
+}
+
+function milapro_save_blog_meta(int $post_id): void
+{
+    if (!isset($_POST['milapro_blog_nonce']) || !wp_verify_nonce($_POST['milapro_blog_nonce'], 'milapro_save_blog_meta') || defined('DOING_AUTOSAVE')) return;
+    update_post_meta($post_id, '_milapro_blog_eyebrow', sanitize_text_field(wp_unslash($_POST['milapro_blog_eyebrow'] ?? 'Milapro Home')));
+    update_post_meta($post_id, '_milapro_blog_intro_text', sanitize_textarea_field(wp_unslash($_POST['milapro_blog_intro_text'] ?? '')));
+    update_post_meta($post_id, '_milapro_blog_body_text', sanitize_textarea_field(wp_unslash($_POST['milapro_blog_body_text'] ?? '')));
+    update_post_meta($post_id, '_milapro_blog_display_order', (int) ($_POST['milapro_blog_display_order'] ?? 999));
+    update_post_meta($post_id, '_milapro_blog_is_visible', isset($_POST['milapro_blog_is_visible']) ? '1' : '0');
+
+    $image = (int) ($_POST['milapro_blog_image'] ?? 0);
+    update_post_meta($post_id, '_milapro_blog_image', $image);
+    if ($image) set_post_thumbnail($post_id, $image);
 }
 
 function milapro_collect_colors(): array

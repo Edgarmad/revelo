@@ -191,20 +191,24 @@ class Milapro_Seed_Importer
 
     private function blog(array $blog): void
     {
-        $post_id = $this->upsert_post('post', $blog['slug'] ?? '', [
+        $post_id = $this->upsert_post('blogs', $blog['slug'] ?? '', [
             'post_title' => sanitize_text_field($blog['title'] ?? ''),
             'post_excerpt' => wp_kses_post($blog['excerpt'] ?? ''),
-            'post_content' => wp_kses_post($blog['content'] ?? ''),
         ], 'blogs');
         if (!$post_id) return;
 
-        if (!empty($blog['category'])) {
-            $term = term_exists($blog['category'], 'category') ?: wp_insert_term(sanitize_text_field($blog['category']), 'category');
-            if (!is_wp_error($term)) wp_set_post_terms($post_id, [(int) $term['term_id']], 'category');
-        }
         $image_id = $this->media->attachment($blog['sourceImage'] ?? null, $blog['title'] ?? '');
         if ($image_id) set_post_thumbnail($post_id, $image_id);
-        update_post_meta($post_id, '_milapro_source_slug', sanitize_title($blog['slug'] ?? ''));
+        $body_text = preg_replace('/<\/p>\s*<p[^>]*>/i', "\n\n", (string) ($blog['content'] ?? ''));
+        $this->post_meta($post_id, [
+            'source_slug' => sanitize_title($blog['slug'] ?? ''),
+            'blog_eyebrow' => sanitize_text_field($blog['category'] ?? 'Milapro Home'),
+            'blog_intro_text' => sanitize_textarea_field($blog['excerpt'] ?? ''),
+            'blog_body_text' => sanitize_textarea_field(wp_strip_all_tags($body_text)),
+            'blog_image' => $image_id,
+            'blog_display_order' => (int) ($blog['displayOrder'] ?? 999),
+            'blog_is_visible' => self::bool($blog['visible'] ?? true),
+        ]);
     }
 
     private function upsert_post(string $post_type, string $slug, array $post_data, string $report_key): int
