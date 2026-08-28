@@ -14,6 +14,7 @@ interface Props {
 const { title, description, homeBanners: providedHomeBanners } = Astro.props;
 const showFloatingBanner = Astro.url.pathname === '/';
 const homeBanners = providedHomeBanners ?? (showFloatingBanner ? await getHomeBanners() : undefined);
+const homeBannersApiUrl = `${import.meta.env.WORDPRESS_API_URL?.replace(/\/wp\/v2\/?$/, '') || 'https://cms.milaprohome.com/wp-json'}/milapro/v1/home-banners`;
 ---
 
 <!doctype html>
@@ -29,12 +30,43 @@ const homeBanners = providedHomeBanners ?? (showFloatingBanner ? await getHomeBa
     <title>{title}</title>
   </head>
   <body>
-    <Header />
+    <Header banner={homeBanners?.carousel_banner} />
     <main>
       <slot />
     </main>
     <Footer />
     {showFloatingBanner && <FloatingBanner banner={homeBanners?.popup_banner} />}
+    <script is:inline define:vars={{ homeBannersApiUrl }}>
+      fetch(homeBannersApiUrl, { cache: 'no-store' })
+        .then((response) => (response.ok ? response.json() : null))
+        .then((banners) => {
+          if (!banners) return;
+
+          document.querySelectorAll('[data-home-banner-slot]').forEach((slot) => {
+            const key = slot.getAttribute('data-home-banner-slot');
+            const banner = key ? banners[key] : null;
+            if (!banner) return;
+            const findField = (selector) => slot.matches(selector) ? slot : slot.querySelector(selector);
+
+            const image = findField('[data-home-banner-image]');
+            const eyebrow = findField('[data-home-banner-eyebrow]');
+            const title = findField('[data-home-banner-title]');
+            const text = findField('[data-home-banner-text]');
+
+            if (image && banner.image_url) image.src = banner.image_url;
+            if (image && banner.title) image.alt = banner.title;
+            if (eyebrow && banner.eyebrow) eyebrow.textContent = banner.eyebrow;
+            if (title && banner.title) {
+              title.textContent = key === 'carousel_banner' && banner.eyebrow ? `${banner.eyebrow} - ${banner.title}` : banner.title;
+            }
+            if (text) {
+              text.textContent = banner.text || '';
+              text.classList.toggle('hidden', !banner.text);
+            }
+          });
+        })
+        .catch(() => {});
+    </script>
     <script src="/scripts/subscribe.js" defer></script>
   </body>
 </html>

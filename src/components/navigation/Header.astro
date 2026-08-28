@@ -5,6 +5,13 @@ import { ChevronDown, Facebook, Instagram, Menu, MessageCircle, Search, X } from
 import { getAllCategories } from '@/services/categoryService';
 import { getAllProducts, getDiscountedProducts } from '@/services/productService';
 import logoSrc from '@/styles/images/Logo Mila.svg';
+import type { HomeBanner } from '@/services/homeBannerService';
+
+interface Props {
+  banner?: HomeBanner;
+}
+
+const { banner } = Astro.props;
 
 const menuCategories = await getAllCategories();
 const furnitureCategories = menuCategories.filter((category) => ['aluminio', 'ratan', 'plastico', 'plantas'].includes(category.slug));
@@ -18,12 +25,13 @@ const menuProducts = (await getDiscountedProducts())
   .slice(0, 5);
 const searchProducts = await getAllProducts();
 const promotionsHref = '/products/?promociones=1';
+const promoText = banner ? `${banner.eyebrow} - ${banner.title}` : 'Oferta de verano - Hasta 50% de descuento';
 ---
 
 <header class="sticky top-0 z-50 bg-white shadow-sm">
   <div class="bg-ink py-2 text-white">
     <Container class="relative flex min-h-6 items-center overflow-hidden whitespace-nowrap text-xs font-bold">
-      <span class="promo-marquee">Oferta de verano - Hasta 50% de descuento</span>
+      <span class="promo-marquee" data-home-banner-slot="carousel_banner" data-home-banner-title>{promoText}</span>
       <a class="relative z-10 ml-auto shrink-0 rounded-pill bg-aqua px-4 py-1 text-ink" href={promotionsHref}>Ver ofertas</a>
     </Container>
   </div>

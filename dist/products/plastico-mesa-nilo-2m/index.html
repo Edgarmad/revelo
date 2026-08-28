@@ -15,7 +15,7 @@
   <div class="bg-ink py-2 text-white astro-MB6PVX4C">
     <div class="mx-auto w-full max-w-site px-5 sm:px-6 lg:px-8 relative flex min-h-6 items-center overflow-hidden whitespace-nowrap text-xs font-bold astro-MB6PVX4C">
   
-      <span class="promo-marquee astro-MB6PVX4C">Oferta de verano - Hasta 50% de descuento</span>
+      <span class="promo-marquee astro-MB6PVX4C" data-home-banner-slot="carousel_banner" data-home-banner-title>Oferta de verano - Hasta 50% de descuento</span>
       <a class="relative z-10 ml-auto shrink-0 rounded-pill bg-aqua px-4 py-1 text-ink astro-MB6PVX4C" href="/products/?promociones=1">Ver ofertas</a>
     
 </div>
@@ -968,6 +968,38 @@
   </div>
 </footer>
     
+    <script>(function(){const homeBannersApiUrl = "https://cms.milaprohome.com/wp-json/milapro/v1/home-banners";
+
+      fetch(homeBannersApiUrl, { cache: 'no-store' })
+        .then((response) => (response.ok ? response.json() : null))
+        .then((banners) => {
+          if (!banners) return;
+
+          document.querySelectorAll('[data-home-banner-slot]').forEach((slot) => {
+            const key = slot.getAttribute('data-home-banner-slot');
+            const banner = key ? banners[key] : null;
+            if (!banner) return;
+            const findField = (selector) => slot.matches(selector) ? slot : slot.querySelector(selector);
+
+            const image = findField('[data-home-banner-image]');
+            const eyebrow = findField('[data-home-banner-eyebrow]');
+            const title = findField('[data-home-banner-title]');
+            const text = findField('[data-home-banner-text]');
+
+            if (image && banner.image_url) image.src = banner.image_url;
+            if (image && banner.title) image.alt = banner.title;
+            if (eyebrow && banner.eyebrow) eyebrow.textContent = banner.eyebrow;
+            if (title && banner.title) {
+              title.textContent = key === 'carousel_banner' && banner.eyebrow ? `${banner.eyebrow} - ${banner.title}` : banner.title;
+            }
+            if (text) {
+              text.textContent = banner.text || '';
+              text.classList.toggle('hidden', !banner.text);
+            }
+          });
+        })
+        .catch(() => {});
+    })();</script>
     <script src="/scripts/subscribe.js" defer></script>
   </body>
 </html>

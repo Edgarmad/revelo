@@ -15,7 +15,7 @@
   <div class="bg-ink py-2 text-white astro-MB6PVX4C">
     <div class="mx-auto w-full max-w-site px-5 sm:px-6 lg:px-8 relative flex min-h-6 items-center overflow-hidden whitespace-nowrap text-xs font-bold astro-MB6PVX4C">
   
-      <span class="promo-marquee astro-MB6PVX4C">Oferta de verano - Hasta 50% de descuento</span>
+      <span class="promo-marquee astro-MB6PVX4C" data-home-banner-slot="carousel_banner" data-home-banner-title>Back to School - Hasta 60% OFF o 35% OFF más 3 o 6 MSI</span>
       <a class="relative z-10 ml-auto shrink-0 rounded-pill bg-aqua px-4 py-1 text-ink astro-MB6PVX4C" href="/products/?promociones=1">Ver ofertas</a>
     
 </div>
@@ -874,22 +874,6 @@
 
       <div class="relative left-1/2 mt-8 w-screen -translate-x-1/2 overflow-hidden">
         <div class="product-carousel flex snap-x snap-mandatory gap-8 overflow-x-auto px-5 pb-3 scroll-smooth lg:px-[max(2rem,calc((100vw-1180px)/2))]" tabindex="0" aria-label="Carrusel de productos">
-          <article class="product-carousel-card group w-[78vw] max-w-[410px] shrink-0 snap-center rounded-[1.4rem] bg-[#f1f1f1] p-3 sm:w-[360px] lg:p-4" data-carousel-banner data-home-banner-slot="carousel_banner">
-            <a class="block" href="/products/">
-              <div class="relative overflow-hidden rounded-xl bg-white">
-                <img class="aspect-[1.24/1] w-full object-cover transition duration-500 group-hover:scale-105" src="https://cms.milaprohome.com/wp-content/uploads/2026/08/default-hero-bg-1-1024x381.png" alt="Hasta 60% OFF o 35% OFF más 3 o 6 MSI" loading="lazy" width="700" height="565" data-home-banner-image>
-              </div>
-            </a>
-            <div class="mt-5">
-              <p class="text-xs font-black uppercase tracking-wide text-cocoa" data-home-banner-eyebrow>Back to School</p>
-              <h3 class="mt-2 min-h-10 text-sm font-medium leading-5 text-ink"><a class="hover:underline" href="/products/" data-home-banner-title>Hasta 60% OFF o 35% OFF más 3 o 6 MSI</a></h3>
-              <p class="mt-3 text-sm leading-6 text-muted hidden" data-home-banner-text></p>
-              <a class="mt-5 hidden min-h-11 items-center justify-between rounded-pill border border-ink/50 px-5 text-xs font-black uppercase tracking-wide transition hover:bg-ink hover:text-white lg:flex" href="/products/">
-                Ver productos
-                <span class="grid h-8 w-8 place-items-center rounded-full border border-current text-lg leading-none">↗</span>
-              </a>
-            </div>
-          </article>
           <article class="product-carousel-card group w-[78vw] max-w-[410px] shrink-0 snap-center rounded-[1.4rem] bg-[#f1f1f1] p-3 sm:w-[360px] lg:p-4 hidden" data-product-card data-product-categories="aluminio descuentos" data-product-types="">
                 <a class="block" href="/products/aluminio-bahia-esquinera/">
                   <div class="relative overflow-hidden rounded-xl bg-white">
@@ -3359,48 +3343,6 @@
     productNextButton?.addEventListener('click', () => scrollProducts(1));
   </script>
 
-  <script>(function(){const homeBannersApiUrl = "https://cms.milaprohome.com/wp-json/milapro/v1/home-banners";
-
-    fetch(homeBannersApiUrl, { cache: 'no-store' })
-      .then((response) => (response.ok ? response.json() : null))
-      .then((banners) => {
-        if (!banners) return;
-
-        document.querySelectorAll('[data-home-banner-slot]').forEach((slot) => {
-          const key = slot.getAttribute('data-home-banner-slot');
-          const banner = key ? banners[key] : null;
-          if (!banner) return;
-
-          const image = slot.querySelector('[data-home-banner-image]');
-          const eyebrow = slot.querySelector('[data-home-banner-eyebrow]');
-          const title = slot.querySelector('[data-home-banner-title]');
-          const text = slot.querySelector('[data-home-banner-text]');
-
-          if (image && banner.image_url) {
-            image.src = banner.image_url;
-          }
-
-          if (image && banner.title) {
-            image.alt = banner.title;
-          }
-
-          if (eyebrow && banner.eyebrow) {
-            eyebrow.textContent = banner.eyebrow;
-          }
-
-          if (title && banner.title) {
-            title.textContent = banner.title;
-          }
-
-          if (text) {
-            text.textContent = banner.text || '';
-            text.classList.toggle('hidden', !banner.text);
-          }
-        });
-      })
-      .catch(() => {});
-  })();</script>
-
   <section class="overflow-hidden bg-[#f1f1f1] px-5 py-16 sm:px-8 md:py-20 lg:px-12">
     <div class="mx-auto grid max-w-[1180px] gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch lg:gap-10">
       <div class="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-ink/10">
@@ -3650,6 +3592,38 @@
     </div>
   </section>
 </div>
+    <script>(function(){const homeBannersApiUrl = "https://cms.milaprohome.com/wp-json/milapro/v1/home-banners";
+
+      fetch(homeBannersApiUrl, { cache: 'no-store' })
+        .then((response) => (response.ok ? response.json() : null))
+        .then((banners) => {
+          if (!banners) return;
+
+          document.querySelectorAll('[data-home-banner-slot]').forEach((slot) => {
+            const key = slot.getAttribute('data-home-banner-slot');
+            const banner = key ? banners[key] : null;
+            if (!banner) return;
+            const findField = (selector) => slot.matches(selector) ? slot : slot.querySelector(selector);
+
+            const image = findField('[data-home-banner-image]');
+            const eyebrow = findField('[data-home-banner-eyebrow]');
+            const title = findField('[data-home-banner-title]');
+            const text = findField('[data-home-banner-text]');
+
+            if (image && banner.image_url) image.src = banner.image_url;
+            if (image && banner.title) image.alt = banner.title;
+            if (eyebrow && banner.eyebrow) eyebrow.textContent = banner.eyebrow;
+            if (title && banner.title) {
+              title.textContent = key === 'carousel_banner' && banner.eyebrow ? `${banner.eyebrow} - ${banner.title}` : banner.title;
+            }
+            if (text) {
+              text.textContent = banner.text || '';
+              text.classList.toggle('hidden', !banner.text);
+            }
+          });
+        })
+        .catch(() => {});
+    })();</script>
     <script src="/scripts/subscribe.js" defer></script>
   </body>
 </html>
