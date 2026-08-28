@@ -189,6 +189,7 @@ function milapro_register_acf_fields(): void
             ['key' => 'field_product_sku', 'label' => 'SKU', 'name' => 'sku', 'type' => 'text'],
             ['key' => 'field_product_available', 'label' => 'Available', 'name' => 'available', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
             ['key' => 'field_product_featured', 'label' => 'Featured', 'name' => 'featured', 'type' => 'true_false', 'default_value' => 0, 'ui' => 1],
+            ['key' => 'field_product_sale', 'label' => 'Sale', 'name' => 'sale', 'type' => 'true_false', 'default_value' => 0, 'ui' => 1],
             ['key' => 'field_product_display_order', 'label' => 'Display Order', 'name' => 'display_order', 'type' => 'number', 'default_value' => 999, 'min' => 0],
             ['key' => 'field_product_collection', 'label' => 'Collection', 'name' => 'collection', 'type' => 'text'],
             ['key' => 'field_product_brand', 'label' => 'Brand', 'name' => 'brand', 'type' => 'text', 'default_value' => 'Milapro Home'],
@@ -554,6 +555,7 @@ function milapro_product_details(int $post_id): array
         'sku' => (string) get_post_meta($post_id, '_milapro_sku', true),
         'available' => milapro_meta_bool(get_post_meta($post_id, '_milapro_available', true), true),
         'featured' => milapro_meta_bool(get_post_meta($post_id, '_milapro_featured', true), false),
+        'sale' => milapro_meta_bool(get_post_meta($post_id, '_milapro_sale', true), false),
         'display_order' => (int) (get_post_meta($post_id, '_milapro_display_order', true) ?: 999),
         'collection' => (string) get_post_meta($post_id, '_milapro_collection', true),
         'brand' => (string) (get_post_meta($post_id, '_milapro_brand', true) ?: 'Milapro Home'),
@@ -877,6 +879,7 @@ function milapro_render_product_meta_box(WP_Post $post): void
             <?php milapro_input('Display Order', 'milapro_display_order', $details['display_order'], 'number', '1'); ?>
             <?php milapro_checkbox('Available', 'milapro_available', $details['available']); ?>
             <?php milapro_checkbox('Featured', 'milapro_featured', $details['featured']); ?>
+            <?php milapro_checkbox('Sale', 'milapro_sale', $details['sale']); ?>
         </div>
         <?php milapro_textarea('Search Keywords', 'milapro_keywords', $details['keywords'], 'Internal search terms separated by commas or line breaks. Example: sala, sofa, couch, living room.'); ?>
         <?php milapro_main_image_field((int) $details['main_image'], (string) $details['main_image_url']); ?>
@@ -1033,6 +1036,7 @@ function milapro_save_product_meta(int $post_id): void
     update_post_meta($post_id, '_milapro_keywords', sanitize_textarea_field(wp_unslash($_POST['milapro_keywords'] ?? '')));
     update_post_meta($post_id, '_milapro_available', isset($_POST['milapro_available']) ? '1' : '0');
     update_post_meta($post_id, '_milapro_featured', isset($_POST['milapro_featured']) ? '1' : '0');
+    update_post_meta($post_id, '_milapro_sale', isset($_POST['milapro_sale']) ? '1' : '0');
     $main_image = (int) ($_POST['milapro_main_image'] ?? 0);
     update_post_meta($post_id, '_milapro_main_image', $main_image);
     if ($main_image) set_post_thumbnail($post_id, $main_image);

@@ -23,6 +23,7 @@ interface WpProductAcf {
   sku?: string;
   available?: boolean | number | string;
   featured?: boolean | number | string;
+  sale?: boolean | number | string;
   display_order?: number | string;
   collection?: string;
   brand?: string;
@@ -65,7 +66,7 @@ export async function getFeaturedProducts(limit = 4): Promise<Product[]> {
 }
 
 export async function getDiscountedProducts(): Promise<Product[]> {
-  return (await getAllProducts()).filter((product) => product.compareAtPrice || product.categories.includes('descuentos'));
+  return (await getAllProducts()).filter((product) => product.sale);
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | undefined> {
@@ -136,6 +137,7 @@ function normalizeProduct(product: WpProduct, categoryById: Map<number, { slug: 
     dimensions: decodeHtml(acf.dimensions || 'Consultar disponibilidad'),
     featured: wpBoolean(acf.featured),
     available: wpBoolean(acf.available, true),
+    sale: wpBoolean(acf.sale, false),
     displayOrder: Number(acf.display_order ?? 999),
     tags: buildProductTags({ title, collection: acf.collection || primaryCategory?.name || 'Productos', categories, keywords: acf.keywords }),
     specifications: acf.specifications?.length ? acf.specifications : [{ label: 'Categoria', value: primaryCategory?.name ?? 'Productos' }],

@@ -30,6 +30,7 @@ export interface Product {
   dimensions: string;
   featured: boolean;
   available: boolean;
+  sale: boolean;
   displayOrder: number;
   tags: string[];
   specifications: ProductSpecification[];

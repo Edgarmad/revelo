@@ -1860,6 +1860,7 @@ type SeedProduct = {
   dimensions: string;
   featured: boolean;
   available: boolean;
+  sale?: boolean;
   displayOrder: number;
   specifications: Product['specifications'];
   price: number;
@@ -1890,6 +1891,7 @@ const migratedProducts = (seed.products as SeedProduct[] | undefined)?.map((prod
     dimensions: product.dimensions,
     featured: product.featured,
     available: product.available,
+    sale: product.sale ?? false,
     displayOrder: product.displayOrder ?? index + 1,
     tags: Array.from(new Set([product.name, product.category, product.collection, ...(categoryAliases[product.category] ?? [])])),
     specifications: product.specifications,
@@ -1921,6 +1923,7 @@ const fallbackProducts: Product[] = inventory.map((product, index) => {
     dimensions: 'Consultar disponibilidad',
     featured: product.featured,
     available: product.available,
+    sale: false,
     displayOrder: index + 1,
     tags: Array.from(new Set([product.category, product.collection, ...(categoryAliases[product.category] ?? [])])),
     specifications: [{ label: 'Categoria', value: product.collection }],

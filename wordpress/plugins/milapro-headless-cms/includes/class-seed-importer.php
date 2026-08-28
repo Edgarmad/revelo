@@ -155,6 +155,7 @@ class Milapro_Seed_Importer
             'sku' => sanitize_text_field($product['sku'] ?? ''),
             'available' => self::bool($product['available'] ?? true),
             'featured' => self::bool($product['featured'] ?? false),
+            'sale' => self::bool($product['sale'] ?? false),
             'display_order' => (int) ($product['displayOrder'] ?? 999),
             'collection' => sanitize_text_field($product['collection'] ?? ''),
             'brand' => sanitize_text_field($product['brand'] ?? 'Milapro Home'),

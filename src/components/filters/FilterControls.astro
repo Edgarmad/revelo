@@ -45,7 +45,7 @@ const { categories } = Astro.props;
   const promotionField = form?.elements.namedItem('promotion') as HTMLSelectElement | null;
   const query = new URLSearchParams(window.location.search);
 
-  if (promotionField && query.get('promociones') === '1') {
+  if (promotionField && query.has('promociones')) {
     promotionField.value = 'only';
   }
 
@@ -63,7 +63,7 @@ const { categories } = Astro.props;
       const matchesSearch = !search || (card.dataset.name ?? '').includes(search);
       const categories = (card.dataset.categories ?? '').split(' ');
       const matchesCategory = category === 'all' || categories.includes(category);
-      const matchesPromotion = promotion === 'all' || categories.includes('descuentos');
+      const matchesPromotion = promotion === 'all' || card.dataset.sale === 'true';
       const matchesColor = !color || (card.dataset.colors ?? '').includes(color);
       const matchesAvailable = available === 'all' || card.dataset.available === available;
       const show = matchesSearch && matchesCategory && matchesPromotion && matchesColor && matchesAvailable;
