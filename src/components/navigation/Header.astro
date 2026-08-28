@@ -3,7 +3,7 @@ import { navItems } from '@/data/siteContent';
 import Container from '@/components/common/Container.astro';
 import { ChevronDown, Facebook, Instagram, Menu, MessageCircle, Search, X } from 'lucide-astro';
 import { getAllCategories } from '@/services/categoryService';
-import { getAllProducts, getDiscountedProducts } from '@/services/productService';
+import { getAllProducts } from '@/services/productService';
 import logoSrc from '@/styles/images/Logo Mila.svg';
 import type { HomeBanner } from '@/services/homeBannerService';
 
@@ -15,14 +15,6 @@ const { banner } = Astro.props;
 
 const menuCategories = await getAllCategories();
 const furnitureCategories = menuCategories.filter((category) => ['aluminio', 'ratan', 'plastico', 'plantas'].includes(category.slug));
-const menuProductCategories = new Set<string>();
-const menuProducts = (await getDiscountedProducts())
-  .filter((product) => {
-    if (menuProductCategories.has(product.category)) return false;
-    menuProductCategories.add(product.category);
-    return true;
-  })
-  .slice(0, 5);
 const searchProducts = await getAllProducts();
 const promotionsHref = '/products/?promociones=1';
 const promoText = banner ? `${banner.eyebrow} - ${banner.title}` : 'Oferta de verano - Hasta 50% de descuento';
@@ -69,41 +61,6 @@ const promoText = banner ? `${banner.eyebrow} - ${banner.title}` : 'Oferta de ve
                         <a class="group/card" href={`/categories/${category.slug}/`}>
                           <img class="aspect-[1.35/1] w-full rounded-xl bg-sand object-cover transition group-hover/card:scale-[1.02]" src={category.image} alt={category.name} loading="lazy" width="500" height="370" />
                           <p class="mt-2 text-center text-xs font-semibold text-muted">{category.name}</p>
-                        </a>
-                      ))}
-                    </div>
-                  </Container>
-                </div>
-              </div>
-            );
-          }
-
-          if (item.label === '🔥 Sale') {
-            return (
-              <div class="py-8" data-mega-item>
-                <a class="inline-flex items-center gap-1 transition hover:text-aqua focus-visible:text-aqua" href={promotionsHref} data-mega-trigger>
-                  {item.label}
-                  <ChevronDown class="transition" size={14} data-mega-chevron />
-                </a>
-                <div class="mega-menu-panel pointer-events-none absolute left-0 top-full w-full translate-y-2 border-t border-ink/10 bg-white opacity-0 shadow-2xl transition duration-200" data-mega-panel>
-                  <Container class="grid gap-12 py-12 lg:grid-cols-[0.95fr_1.05fr]">
-                    <div>
-                      <p class="text-sm font-black uppercase tracking-[0.18em] text-aqua">Productos</p>
-                      <h2 class="mt-4 font-display text-5xl font-light uppercase tracking-wide text-ink">Productos con descuento</h2>
-                      <div class="mt-8 grid max-w-xl gap-6">
-                        {menuProducts.map((product) => (
-                          <a class="flex items-center justify-between border-b border-ink/10 pb-5 text-3xl font-light uppercase tracking-wide text-ink transition hover:text-aqua" href={`/products/${product.slug}/`}>
-                            {product.name}
-                            <span class="grid h-9 w-9 place-items-center rounded-full border border-ink/30 text-xl leading-none">↗</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div class="grid gap-4 sm:grid-cols-2">
-                      {menuProducts.map((product) => (
-                        <a class="group/card" href={`/products/${product.slug}/`}>
-                          <img class="aspect-[1.35/1] w-full rounded-xl bg-sand object-cover transition group-hover/card:scale-[1.02]" src={product.mainImage} alt={product.name} loading="lazy" width="500" height="370" />
-                          <p class="mt-2 text-center text-xs font-semibold text-muted">{product.name}</p>
                         </a>
                       ))}
                     </div>
