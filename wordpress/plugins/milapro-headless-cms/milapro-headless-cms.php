@@ -427,6 +427,7 @@ function milapro_default_home_banner_images(): array
     return [
         'hero_banner' => MILAPRO_HEADLESS_PLUGIN_DIR . 'assets/default-hero-bg.png',
         'popup_banner' => MILAPRO_HEADLESS_PLUGIN_DIR . 'assets/default-popup-banner.jpeg',
+        'carousel_banner' => MILAPRO_HEADLESS_PLUGIN_DIR . 'assets/default-hero-bg.png',
     ];
 }
 
