@@ -10,19 +10,19 @@ interface Props {
 const { banner } = Astro.props;
 ---
 
-<div class="floating-banner" data-floating-banner role="dialog" aria-modal="true" aria-labelledby="floating-banner-title">
+<div class="floating-banner" data-floating-banner data-home-banner-slot="popup_banner" role="dialog" aria-modal="true" aria-labelledby="floating-banner-title">
   <div class="floating-banner__backdrop" data-floating-banner-close></div>
   <section class="floating-banner__card">
     <button class="floating-banner__close" type="button" data-floating-banner-close aria-label="Cerrar banner">
       <X size={22} />
     </button>
 
-    <img class="floating-banner__image" src={banner?.image || bannerImage} alt="Sala exterior con muebles Milapro Home" />
+    <img class="floating-banner__image" src={banner?.image || bannerImage} alt="Sala exterior con muebles Milapro Home" data-home-banner-image />
 
     <div class="floating-banner__content">
-      <p class="floating-banner__eyebrow">{banner?.eyebrow || 'Oferta por tiempo limitado'}</p>
-      <h2 id="floating-banner-title" class="floating-banner__title">{banner?.title || 'Obtén hasta 50% OFF'}</h2>
-      <p class="floating-banner__text">{banner?.text || 'Déjanos tu correo y recibe promociones, novedades y asesoría para renovar tus espacios exteriores.'}</p>
+      <p class="floating-banner__eyebrow" data-home-banner-eyebrow>{banner?.eyebrow || 'Oferta por tiempo limitado'}</p>
+      <h2 id="floating-banner-title" class="floating-banner__title" data-home-banner-title>{banner?.title || 'Obtén hasta 50% OFF'}</h2>
+      <p class="floating-banner__text" data-home-banner-text>{banner?.text || 'Déjanos tu correo y recibe promociones, novedades y asesoría para renovar tus espacios exteriores.'}</p>
 
       <form class="floating-banner__form" data-subscribe-form>
         <label class="sr-only" for="floating-banner-email">Correo electrónico</label>

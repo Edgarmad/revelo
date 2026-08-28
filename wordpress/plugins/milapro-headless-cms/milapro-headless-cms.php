@@ -379,8 +379,10 @@ function milapro_register_rest_routes(): void
 {
     register_rest_route('milapro/v1', '/home-banners', [
         'methods' => 'GET',
-        'callback' => function (): array {
-            return milapro_home_banners_for_rest();
+        'callback' => function (): WP_REST_Response {
+            $response = rest_ensure_response(milapro_home_banners_for_rest());
+            $response->header('Cache-Control', 'no-cache, must-revalidate, max-age=0');
+            return $response;
         },
         'permission_callback' => '__return_true',
     ]);

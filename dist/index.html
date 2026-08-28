@@ -874,16 +874,16 @@
 
       <div class="relative left-1/2 mt-8 w-screen -translate-x-1/2 overflow-hidden">
         <div class="product-carousel flex snap-x snap-mandatory gap-8 overflow-x-auto px-5 pb-3 scroll-smooth lg:px-[max(2rem,calc((100vw-1180px)/2))]" tabindex="0" aria-label="Carrusel de productos">
-          <article class="product-carousel-card group w-[78vw] max-w-[410px] shrink-0 snap-center rounded-[1.4rem] bg-[#f1f1f1] p-3 sm:w-[360px] lg:p-4" data-carousel-banner>
+          <article class="product-carousel-card group w-[78vw] max-w-[410px] shrink-0 snap-center rounded-[1.4rem] bg-[#f1f1f1] p-3 sm:w-[360px] lg:p-4" data-carousel-banner data-home-banner-slot="carousel_banner">
             <a class="block" href="/products/">
               <div class="relative overflow-hidden rounded-xl bg-white">
-                <img class="aspect-[1.24/1] w-full object-cover transition duration-500 group-hover:scale-105" src="https://cms.milaprohome.com/wp-content/uploads/2026/08/default-hero-bg-1-1024x381.png" alt="Hasta 60% OFF o 35% OFF más 3 o 6 MSI" loading="lazy" width="700" height="565">
+                <img class="aspect-[1.24/1] w-full object-cover transition duration-500 group-hover:scale-105" src="https://cms.milaprohome.com/wp-content/uploads/2026/08/default-hero-bg-1-1024x381.png" alt="Hasta 60% OFF o 35% OFF más 3 o 6 MSI" loading="lazy" width="700" height="565" data-home-banner-image>
               </div>
             </a>
             <div class="mt-5">
-              <p class="text-xs font-black uppercase tracking-wide text-cocoa">Back to School</p>
-              <h3 class="mt-2 min-h-10 text-sm font-medium leading-5 text-ink"><a class="hover:underline" href="/products/">Hasta 60% OFF o 35% OFF más 3 o 6 MSI</a></h3>
-              
+              <p class="text-xs font-black uppercase tracking-wide text-cocoa" data-home-banner-eyebrow>Back to School</p>
+              <h3 class="mt-2 min-h-10 text-sm font-medium leading-5 text-ink"><a class="hover:underline" href="/products/" data-home-banner-title>Hasta 60% OFF o 35% OFF más 3 o 6 MSI</a></h3>
+              <p class="mt-3 text-sm leading-6 text-muted hidden" data-home-banner-text></p>
               <a class="mt-5 hidden min-h-11 items-center justify-between rounded-pill border border-ink/50 px-5 text-xs font-black uppercase tracking-wide transition hover:bg-ink hover:text-white lg:flex" href="/products/">
                 Ver productos
                 <span class="grid h-8 w-8 place-items-center rounded-full border border-current text-lg leading-none">↗</span>
@@ -3359,6 +3359,48 @@
     productNextButton?.addEventListener('click', () => scrollProducts(1));
   </script>
 
+  <script>(function(){const homeBannersApiUrl = "https://cms.milaprohome.com/wp-json/milapro/v1/home-banners";
+
+    fetch(homeBannersApiUrl, { cache: 'no-store' })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((banners) => {
+        if (!banners) return;
+
+        document.querySelectorAll('[data-home-banner-slot]').forEach((slot) => {
+          const key = slot.getAttribute('data-home-banner-slot');
+          const banner = key ? banners[key] : null;
+          if (!banner) return;
+
+          const image = slot.querySelector('[data-home-banner-image]');
+          const eyebrow = slot.querySelector('[data-home-banner-eyebrow]');
+          const title = slot.querySelector('[data-home-banner-title]');
+          const text = slot.querySelector('[data-home-banner-text]');
+
+          if (image && banner.image_url) {
+            image.src = banner.image_url;
+          }
+
+          if (image && banner.title) {
+            image.alt = banner.title;
+          }
+
+          if (eyebrow && banner.eyebrow) {
+            eyebrow.textContent = banner.eyebrow;
+          }
+
+          if (title && banner.title) {
+            title.textContent = banner.title;
+          }
+
+          if (text) {
+            text.textContent = banner.text || '';
+            text.classList.toggle('hidden', !banner.text);
+          }
+        });
+      })
+      .catch(() => {});
+  })();</script>
+
   <section class="overflow-hidden bg-[#f1f1f1] px-5 py-16 sm:px-8 md:py-20 lg:px-12">
     <div class="mx-auto grid max-w-[1180px] gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch lg:gap-10">
       <div class="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-ink/10">
@@ -3569,7 +3611,7 @@
 </div>
   </div>
 </footer>
-    <div class="floating-banner astro-JW6TV6ID" data-floating-banner role="dialog" aria-modal="true" aria-labelledby="floating-banner-title">
+    <div class="floating-banner astro-JW6TV6ID" data-floating-banner data-home-banner-slot="popup_banner" role="dialog" aria-modal="true" aria-labelledby="floating-banner-title">
   <div class="floating-banner__backdrop astro-JW6TV6ID" data-floating-banner-close></div>
   <section class="floating-banner__card astro-JW6TV6ID">
     <button class="floating-banner__close astro-JW6TV6ID" type="button" data-floating-banner-close aria-label="Cerrar banner">
@@ -3581,12 +3623,12 @@
 </svg>
     </button>
 
-    <img class="floating-banner__image astro-JW6TV6ID" src="https://cms.milaprohome.com/wp-content/uploads/2026/08/default-popup-banner-1024x410.jpeg" alt="Sala exterior con muebles Milapro Home">
+    <img class="floating-banner__image astro-JW6TV6ID" src="https://cms.milaprohome.com/wp-content/uploads/2026/08/default-popup-banner-1024x410.jpeg" alt="Sala exterior con muebles Milapro Home" data-home-banner-image>
 
     <div class="floating-banner__content astro-JW6TV6ID">
-      <p class="floating-banner__eyebrow astro-JW6TV6ID">Oferta por tiempo limitado</p>
-      <h2 id="floating-banner-title" class="floating-banner__title astro-JW6TV6ID">Obtén hasta 50% OFF</h2>
-      <p class="floating-banner__text astro-JW6TV6ID">Déjanos tu correo y recibe promociones, novedades y asesoría para renovar tus espacios exteriores.</p>
+      <p class="floating-banner__eyebrow astro-JW6TV6ID" data-home-banner-eyebrow>Oferta por tiempo limitado</p>
+      <h2 id="floating-banner-title" class="floating-banner__title astro-JW6TV6ID" data-home-banner-title>Obtén hasta 50% OFF</h2>
+      <p class="floating-banner__text astro-JW6TV6ID" data-home-banner-text>Déjanos tu correo y recibe promociones, novedades y asesoría para renovar tus espacios exteriores.</p>
 
       <form class="floating-banner__form astro-JW6TV6ID" data-subscribe-form>
         <label class="sr-only astro-JW6TV6ID" for="floating-banner-email">Correo electrónico</label>

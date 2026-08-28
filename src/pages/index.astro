@@ -19,6 +19,7 @@ const instagramReels = await getVisibleReels();
 const homeBanners = await getHomeBanners();
 const heroBanner = homeBanners.hero_banner;
 const carouselBanner = homeBanners.carousel_banner;
+const homeBannersApiUrl = `${import.meta.env.WORDPRESS_API_URL?.replace(/\/wp\/v2\/?$/, '') || 'https://cms.milaprohome.com/wp-json'}/milapro/v1/home-banners`;
 const initialProductCategory = productCategories[0]?.slug;
 const featuredReviews = customerReviews.filter((review) => review.rating === 5);
 const showroomImage = '/showroom/milapro-showroom.jpeg';
@@ -165,16 +166,16 @@ const localBusinessSchema = JSON.stringify({
 
       <div class="relative left-1/2 mt-8 w-screen -translate-x-1/2 overflow-hidden">
         <div class="product-carousel flex snap-x snap-mandatory gap-8 overflow-x-auto px-5 pb-3 scroll-smooth lg:px-[max(2rem,calc((100vw-1180px)/2))]" tabindex="0" aria-label="Carrusel de productos">
-          <article class="product-carousel-card group w-[78vw] max-w-[410px] shrink-0 snap-center rounded-[1.4rem] bg-[#f1f1f1] p-3 sm:w-[360px] lg:p-4" data-carousel-banner>
+          <article class="product-carousel-card group w-[78vw] max-w-[410px] shrink-0 snap-center rounded-[1.4rem] bg-[#f1f1f1] p-3 sm:w-[360px] lg:p-4" data-carousel-banner data-home-banner-slot="carousel_banner">
             <a class="block" href="/products/">
               <div class="relative overflow-hidden rounded-xl bg-white">
-                <img class="aspect-[1.24/1] w-full object-cover transition duration-500 group-hover:scale-105" src={carouselBanner.image || bgSrc} alt={carouselBanner.title} loading="lazy" width="700" height="565" />
+                <img class="aspect-[1.24/1] w-full object-cover transition duration-500 group-hover:scale-105" src={carouselBanner.image || bgSrc} alt={carouselBanner.title} loading="lazy" width="700" height="565" data-home-banner-image />
               </div>
             </a>
             <div class="mt-5">
-              <p class="text-xs font-black uppercase tracking-wide text-cocoa">{carouselBanner.eyebrow}</p>
-              <h3 class="mt-2 min-h-10 text-sm font-medium leading-5 text-ink"><a class="hover:underline" href="/products/">{carouselBanner.title}</a></h3>
-              {carouselBanner.text && <p class="mt-3 text-sm leading-6 text-muted">{carouselBanner.text}</p>}
+              <p class="text-xs font-black uppercase tracking-wide text-cocoa" data-home-banner-eyebrow>{carouselBanner.eyebrow}</p>
+              <h3 class="mt-2 min-h-10 text-sm font-medium leading-5 text-ink"><a class="hover:underline" href="/products/" data-home-banner-title>{carouselBanner.title}</a></h3>
+              <p class={`mt-3 text-sm leading-6 text-muted ${carouselBanner.text ? '' : 'hidden'}`} data-home-banner-text>{carouselBanner.text}</p>
               <a class="mt-5 hidden min-h-11 items-center justify-between rounded-pill border border-ink/50 px-5 text-xs font-black uppercase tracking-wide transition hover:bg-ink hover:text-white lg:flex" href="/products/">
                 Ver productos
                 <span class="grid h-8 w-8 place-items-center rounded-full border border-current text-lg leading-none">↗</span>
@@ -291,6 +292,47 @@ const localBusinessSchema = JSON.stringify({
 
     productPreviousButton?.addEventListener('click', () => scrollProducts(-1));
     productNextButton?.addEventListener('click', () => scrollProducts(1));
+  </script>
+
+  <script define:vars={{ homeBannersApiUrl }}>
+    fetch(homeBannersApiUrl, { cache: 'no-store' })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((banners) => {
+        if (!banners) return;
+
+        document.querySelectorAll('[data-home-banner-slot]').forEach((slot) => {
+          const key = slot.getAttribute('data-home-banner-slot');
+          const banner = key ? banners[key] : null;
+          if (!banner) return;
+
+          const image = slot.querySelector('[data-home-banner-image]');
+          const eyebrow = slot.querySelector('[data-home-banner-eyebrow]');
+          const title = slot.querySelector('[data-home-banner-title]');
+          const text = slot.querySelector('[data-home-banner-text]');
+
+          if (image && banner.image_url) {
+            image.src = banner.image_url;
+          }
+
+          if (image && banner.title) {
+            image.alt = banner.title;
+          }
+
+          if (eyebrow && banner.eyebrow) {
+            eyebrow.textContent = banner.eyebrow;
+          }
+
+          if (title && banner.title) {
+            title.textContent = banner.title;
+          }
+
+          if (text) {
+            text.textContent = banner.text || '';
+            text.classList.toggle('hidden', !banner.text);
+          }
+        });
+      })
+      .catch(() => {});
   </script>
 
   <section class="overflow-hidden bg-[#f1f1f1] px-5 py-16 sm:px-8 md:py-20 lg:px-12">
