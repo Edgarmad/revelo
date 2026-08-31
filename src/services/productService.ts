@@ -115,7 +115,9 @@ function normalizeProduct(product: WpProduct, categoryById: Map<number, { slug: 
   const repeaterGallery = uniqueImages((acf.gallery_images ?? []).map((item) => wpImageUrl(item.image)));
   const localGallery = uniqueImages(localProduct?.gallery ?? []);
   const wpGallery = firstImageList([uniqueImages(product.gallery_urls ?? []), repeaterGallery], []);
-  const gallery = wpGallery.length ? wpGallery : firstImageList([localGallery, uniqueImages([localProduct?.mainImage]), uniqueImages([image])]);
+  const gallery = wpMainImage
+    ? uniqueImages([image, ...wpGallery])
+    : firstImageList([localGallery, uniqueImages([localProduct?.mainImage]), uniqueImages([image])]);
 
   warnIfUsingLocalProductImages(product.slug, { hasWpMainImage: Boolean(wpMainImage), hasWpGallery: wpGallery.length > 0 });
 
