@@ -49,6 +49,7 @@ $milapro_required_files = [
     MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/class-seed-media-importer.php',
     MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/class-seed-importer.php',
     MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/class-seed-import-admin.php',
+    MILAPRO_HEADLESS_PLUGIN_DIR . 'includes/class-gallery-migration-admin.php',
 ];
 
 foreach ($milapro_required_files as $milapro_required_file) {
@@ -79,6 +80,9 @@ if (class_exists('Milapro_Seed_Import_Admin')) {
     add_action('plugins_loaded', ['Milapro_Seed_Import_Admin', 'init']);
 } else {
     add_action('admin_notices', 'milapro_missing_importer_files_notice');
+}
+if (class_exists('Milapro_Gallery_Migration_Admin')) {
+    add_action('plugins_loaded', ['Milapro_Gallery_Migration_Admin', 'init']);
 }
 
 function milapro_missing_importer_files_notice(): void
