@@ -89,7 +89,7 @@ const promoText = banner ? `${banner.eyebrow} - ${banner.title}` : 'Oferta de ve
           </div>
           <div class="max-h-[420px] overflow-y-auto p-3" data-product-search-results>
             {searchProducts.map((product, index) => (
-              <a class:list={["flex items-center gap-3 rounded-xl p-2 transition hover:bg-sand", index >= 8 && "hidden"]} href={`/products/${product.slug}/`} data-product-result data-search-text={`${product.name} ${product.collection} ${product.category} ${product.tags.join(' ')}`}>
+              <a class:list={["flex items-center gap-3 rounded-xl p-2 transition hover:bg-sand", index >= 8 && "hidden"]} href={`/products/${product.slug}/`} data-product-result data-search-text={product.name}>
                 <img class="h-14 w-14 rounded-lg bg-sand object-cover" src={product.mainImage} alt="" loading="lazy" width="56" height="56" />
                 <span class="min-w-0">
                   <span class="block truncate text-sm font-black text-ink">{product.name}</span>
