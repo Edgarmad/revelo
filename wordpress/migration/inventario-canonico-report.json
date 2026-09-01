@@ -1,0 +1,385 @@
+{
+  "source": "C:\\Users\\edmad\\Downloads\\inventario.json",
+  "liveProducts": 91,
+  "inventoryProducts": 101,
+  "webProducts": 91,
+  "creates": 0,
+  "updates": 91,
+  "retire": 0,
+  "createSlugs": [],
+  "updateSlugs": [
+    {
+      "oldSlug": "plastico-banca-narciso",
+      "slug": "plastico-banca-narciso"
+    },
+    {
+      "oldSlug": "plastico-mesa-rectangular-narciso",
+      "slug": "plastico-mesa-narciso"
+    },
+    {
+      "oldSlug": "plastico-sillones-narciso",
+      "slug": "plastico-sillon-narciso"
+    },
+    {
+      "oldSlug": "plastico-narciso-con-aopyabrazos",
+      "slug": "plastico-silla-apoyabrazos"
+    },
+    {
+      "oldSlug": "plastico-silla-alta-narciso",
+      "slug": "plastico-silla-alta-narciso"
+    },
+    {
+      "oldSlug": "plastico-mesa-auxiliar-narciso",
+      "slug": "plastico-mesa-auxiliar-narciso"
+    },
+    {
+      "oldSlug": "plastico-silla-narciso",
+      "slug": "plastico-silla-narciso"
+    },
+    {
+      "oldSlug": "plastico-mesa-cala-s-central",
+      "slug": "plastico-mesa-cala-apoyo-central"
+    },
+    {
+      "oldSlug": "plastico-mesa-cala",
+      "slug": "plastico-mesa-cala"
+    },
+    {
+      "oldSlug": "plastico-mesa-comedor-cala",
+      "slug": "plastico-mesa-cala-comedor"
+    },
+    {
+      "oldSlug": "plastico-mesa-loto",
+      "slug": "plastico-mesa-loto"
+    },
+    {
+      "oldSlug": "",
+      "slug": "plastico-mesa-loto-alta"
+    },
+    {
+      "oldSlug": "plastico-silla-dalia",
+      "slug": "plastico-silla-dalia"
+    },
+    {
+      "oldSlug": "plastico-silla-zinnia",
+      "slug": "plastico-silla-zinnia"
+    },
+    {
+      "oldSlug": "plastico-silla-alta-zinnia",
+      "slug": "plastico-silla-zinnia-alta"
+    },
+    {
+      "oldSlug": "plastico-silla-calendula",
+      "slug": "plastico-silla-calendula"
+    },
+    {
+      "oldSlug": "plastico-silleta-iris",
+      "slug": "plastico-silleta-iris"
+    },
+    {
+      "oldSlug": "plastico-silla-peonia",
+      "slug": "plastico-silla-peonia"
+    },
+    {
+      "oldSlug": "plastico-silla-gerbera",
+      "slug": "plastico-silla-gerbera"
+    },
+    {
+      "oldSlug": "plastico-gerbera-con-apoyabrazos",
+      "slug": "plastico-silla-gerbera-apoya-brazos"
+    },
+    {
+      "oldSlug": "plastico-camastro-raflessia",
+      "slug": "plastico-camastro-raflessia"
+    },
+    {
+      "oldSlug": "plastico-aster-mesa-con-almacenamiento",
+      "slug": "plastico-mesa-aster"
+    },
+    {
+      "oldSlug": "plastico-mecedora-iris",
+      "slug": "plastico-mecedora-iris"
+    },
+    {
+      "oldSlug": "plastico-mesa-auxiliar-iris",
+      "slug": "plastico-mesa-auxiliar-iris"
+    },
+    {
+      "oldSlug": "",
+      "slug": "plastico-sala-iris-4"
+    },
+    {
+      "oldSlug": "plastico-set-iris",
+      "slug": "plastico-set-iris-5"
+    },
+    {
+      "oldSlug": "",
+      "slug": "plastico-set-craspedia-4"
+    },
+    {
+      "oldSlug": "plastico-set-craspedia",
+      "slug": "plastico-set-craspedia-5"
+    },
+    {
+      "oldSlug": "aluminio-onega",
+      "slug": "aluminio-sala-onega"
+    },
+    {
+      "oldSlug": "aluminio-onega-esquinero",
+      "slug": "aluminio-sala-esquinera-onega"
+    },
+    {
+      "oldSlug": "aluminio-caspio",
+      "slug": "aluminio-sala-caspio"
+    },
+    {
+      "oldSlug": "aluminio-caspio-esquinero",
+      "slug": "aluminio-sala-esquinera-caspio"
+    },
+    {
+      "oldSlug": "aluminio-silla-caspio",
+      "slug": "aluminio-silla-caspio"
+    },
+    {
+      "oldSlug": "aluminio-mesa-volga-1-6",
+      "slug": "aluminio-mesa-de-comedor-volga"
+    },
+    {
+      "oldSlug": "aluminio-camastro-sena",
+      "slug": "aluminio-camastro-sena"
+    },
+    {
+      "oldSlug": "aluminio-sillones-casio",
+      "slug": "aluminio-sillones-caspio"
+    },
+    {
+      "oldSlug": "aluminio-malaui",
+      "slug": "aluminio-sala-malaui"
+    },
+    {
+      "oldSlug": "aluminio-silla-malaui",
+      "slug": "aluminio-silla-malaui"
+    },
+    {
+      "oldSlug": "outlet-camastro-victoria",
+      "slug": "aluminio-camastros-victoria"
+    },
+    {
+      "oldSlug": "aluminio-mesa-elba",
+      "slug": "aluminio-mesa-de-comedor-elba"
+    },
+    {
+      "oldSlug": "aluminio-mesa-erie",
+      "slug": "aluminio-mesa-de-comedor-erie"
+    },
+    {
+      "oldSlug": "outlet-turkana",
+      "slug": "aluminio-sala-turkana"
+    },
+    {
+      "oldSlug": "outlet-ladoga",
+      "slug": "aluminio-sala-ladoga"
+    },
+    {
+      "oldSlug": "outlet-liena",
+      "slug": "aluminio-sala-liena"
+    },
+    {
+      "oldSlug": "aluminio-silla-erie",
+      "slug": "aluminio-silla-erie"
+    },
+    {
+      "oldSlug": "outlet-nyasa",
+      "slug": "aluminio-sala-nyasa"
+    },
+    {
+      "oldSlug": "aluminio-ontario-gris",
+      "slug": "aluminio-sala-ontario-gris"
+    },
+    {
+      "oldSlug": "aluminio-ontario-beige",
+      "slug": "aluminio-sala-ontario-beige"
+    },
+    {
+      "oldSlug": "aluminio-sillon-ind-ontario-gris",
+      "slug": "aluminio-sillon-ontario-gris"
+    },
+    {
+      "oldSlug": "aluminio-sillon-ind-onrario-beige",
+      "slug": "aluminio-sillon-ontario-beige"
+    },
+    {
+      "oldSlug": "aluminio-sillon-extra-llona",
+      "slug": "aluminio-sillon-esquinero-extra-llona"
+    },
+    {
+      "oldSlug": "",
+      "slug": "aluminio-sillon-llona"
+    },
+    {
+      "oldSlug": "aluminio-llona-4-ax",
+      "slug": "aluminio-sala-llona-4"
+    },
+    {
+      "oldSlug": "aluminio-llona-5-ax",
+      "slug": "aluminio-sala-llona-5"
+    },
+    {
+      "oldSlug": "aluminio-llona-mesa-auxiliar",
+      "slug": "aluminio-mesa-auxiliar-llona"
+    },
+    {
+      "oldSlug": "aluminio-llona-esquinero",
+      "slug": "aluminio-sala-esquinera-llona"
+    },
+    {
+      "oldSlug": "aluminio-bahia-esquinera",
+      "slug": "aluminio-sala-esquinera-bahia"
+    },
+    {
+      "oldSlug": "plastico-mesa-nilo-2m",
+      "slug": "aluminio-mesa-nilo-2-m"
+    },
+    {
+      "oldSlug": "plastico-mesa-nilo-1-6m",
+      "slug": "aluminio-mesa-nilo-1-60"
+    },
+    {
+      "oldSlug": "plastico-mesa-licerna",
+      "slug": "aluminio-mesa-lucerna"
+    },
+    {
+      "oldSlug": "plastico-mesa-leman",
+      "slug": "aluminio-mesa-leman"
+    },
+    {
+      "oldSlug": "ratan-malaga-petit",
+      "slug": "ratan-sala-malaga-petit"
+    },
+    {
+      "oldSlug": "ratan-malaga",
+      "slug": "ratan-sala-malaga"
+    },
+    {
+      "oldSlug": "ratan-marbella",
+      "slug": "ratan-sala-marbella"
+    },
+    {
+      "oldSlug": "ratan-madrid",
+      "slug": "ratan-sala-madrid"
+    },
+    {
+      "oldSlug": "",
+      "slug": "ratan-toledo"
+    },
+    {
+      "oldSlug": "ratan-ibiza",
+      "slug": "ratan-bar-ibiza"
+    },
+    {
+      "oldSlug": "ratan-granada",
+      "slug": "ratan-comedor-granada"
+    },
+    {
+      "oldSlug": "ratan-barcelona-2",
+      "slug": "ratan-comedor-barcelona-2-sillas"
+    },
+    {
+      "oldSlug": "ratan-barcelona-4",
+      "slug": "ratan-comedor-barcelona-4-sillas"
+    },
+    {
+      "oldSlug": "ratan-barcelona-6",
+      "slug": "ratan-comedor-barcelona-mesa-cuadrada-6-sillas"
+    },
+    {
+      "oldSlug": "",
+      "slug": "ratan-comedor-barcelona-mesa-redonda-6-sillas"
+    },
+    {
+      "oldSlug": "ratan-sevilla",
+      "slug": "ratan-sillones-sevilla"
+    },
+    {
+      "oldSlug": "ratan-bilbao",
+      "slug": "ratan-sala-bilbao"
+    },
+    {
+      "oldSlug": "outlet-mecedora-girona",
+      "slug": "ratan-mecedora-girona"
+    },
+    {
+      "oldSlug": "plantas-ave-paraiso",
+      "slug": "plantas-planta-ave-de-paraiso"
+    },
+    {
+      "oldSlug": "",
+      "slug": "plantas-palmera-areca-aa"
+    },
+    {
+      "oldSlug": "plantas-palma-areca-hb",
+      "slug": "plantas-palmera-areca-hb"
+    },
+    {
+      "oldSlug": "plantas-olivo-ga",
+      "slug": "plantas-arbol-de-olivo-ga"
+    },
+    {
+      "oldSlug": "plantas-olivo-fa",
+      "slug": "plantas-arbol-de-olivo-fa"
+    },
+    {
+      "oldSlug": "plantas-olivo-eb",
+      "slug": "plantas-arbol-de-olivo-eb"
+    },
+    {
+      "oldSlug": "sombrilla-circular-con-pilar-central",
+      "slug": "sombrillas-sombrilla-circular-con-pilar-central"
+    },
+    {
+      "oldSlug": "sombrilla-cuadrada-con-ondas",
+      "slug": "sombrillas-sombrilla-cuadrada-con-ondas"
+    },
+    {
+      "oldSlug": "sombrilla-roma-pettit",
+      "slug": "sombrillas-sombrilla-roma-petit"
+    },
+    {
+      "oldSlug": "sombrilla-banana",
+      "slug": "sombrillas-sombrilla-banana"
+    },
+    {
+      "oldSlug": "sombrilla-con-iluminacion-led",
+      "slug": "sombrillas-sombrilla-con-iluminacion-led-2-7m"
+    },
+    {
+      "oldSlug": "",
+      "slug": "sombrillas-sombrilla-con-iluminacion-led-3m"
+    },
+    {
+      "oldSlug": "sombrilla-roma-4-x-4",
+      "slug": "sombrillas-sombrilla-roma-4x4"
+    },
+    {
+      "oldSlug": "sombrilla-base-circular",
+      "slug": "sombrillas-base-para-sombrilla-circular"
+    },
+    {
+      "oldSlug": "sombrilla-base-rectangular",
+      "slug": "sombrillas-base-para-sombrilla-rectangular"
+    },
+    {
+      "oldSlug": "sombrilla-base-cuadrada",
+      "slug": "sombrillas-base-para-sombrilla-cuadrada"
+    }
+  ],
+  "retireSlugs": [],
+  "unmatched": [],
+  "categoryCounts": {
+    "plastico": 28,
+    "aluminio": 33,
+    "ratan": 14,
+    "plantas": 6,
+    "sombrillas": 10
+  }
+}

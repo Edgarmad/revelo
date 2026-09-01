@@ -3,6 +3,7 @@ import type { Category } from '@/types/category';
 import { decodeHtml, getPaginatedFromWordPress, stripHtml, wpBoolean, wpImageUrl } from './wordpressClient';
 
 const byOrder = (a: Category, b: Category) => a.displayOrder - b.displayOrder;
+const defaultOrder = 999;
 
 interface WpCategoryTerm {
   id: number;
@@ -51,11 +52,16 @@ function normalizeCategory(term: WpCategoryTerm): Category {
   return {
     id: `cat-${term.id}`,
     slug: term.slug,
-    name: decodeHtml(term.name),
+    name: local?.name ?? decodeHtml(term.name),
     eyebrow: details.eyebrow ? decodeHtml(details.eyebrow) : acf.eyebrow ? decodeHtml(acf.eyebrow) : local?.eyebrow ?? 'Catálogo',
     description: decodeHtml(stripHtml(term.description ?? '')) || local?.description || '',
     image: term.category_image_url || wpImageUrl(acf.category_image) || local?.image || '/client-images/decoracion/decoracion-01.jpg',
     featured: wpBoolean(details.featured ?? acf.featured, local?.featured ?? true),
-    displayOrder: Number(details.display_order ?? acf.display_order ?? local?.displayOrder ?? 999),
+    displayOrder: categoryDisplayOrder(local?.displayOrder, acf.display_order, details.display_order),
   };
+}
+
+function categoryDisplayOrder(...values: Array<number | string | undefined>): number {
+  const orders = values.map(Number).filter(Number.isFinite);
+  return orders.find((order) => order !== defaultOrder) ?? orders[0] ?? defaultOrder;
 }

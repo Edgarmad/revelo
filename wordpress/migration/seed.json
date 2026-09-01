@@ -1,11 +1,11 @@
 {
   "categories": [
     {
-      "slug": "plantas",
-      "name": "Plantas",
-      "eyebrow": "Decoración exterior",
-      "description": "Acentos verdes para completar ambientes frescos, naturales y funcionales.",
-      "sourceImage": "style:plantas.png",
+      "slug": "plastico",
+      "name": "Plástico",
+      "eyebrow": "Muebles para exterior",
+      "description": "Piezas prácticas, fáciles de limpiar y resistentes para áreas exteriores de alto uso.",
+      "sourceImage": "style:plastico.png",
       "featured": true,
       "displayOrder": 1
     },
@@ -20,7 +20,7 @@
     },
     {
       "slug": "ratan",
-      "name": "Ratán",
+      "name": "Rattan",
       "eyebrow": "Muebles para exterior",
       "description": "Salas, sillones y comedores tejidos para terrazas, jardines y áreas sociales al aire libre.",
       "sourceImage": "style:ratan.png",
@@ -28,19 +28,19 @@
       "displayOrder": 3
     },
     {
-      "slug": "plastico",
-      "name": "Plástico",
-      "eyebrow": "Muebles para exterior",
-      "description": "Piezas prácticas, fáciles de limpiar y resistentes para áreas exteriores de alto uso.",
-      "sourceImage": "style:plastico.png",
+      "slug": "plantas",
+      "name": "Plantas",
+      "eyebrow": "Decoración exterior",
+      "description": "Acentos verdes para completar ambientes frescos, naturales y funcionales.",
+      "sourceImage": "style:plantas.png",
       "featured": true,
       "displayOrder": 4
     },
     {
-      "slug": "outlet",
-      "name": "Outlet",
-      "eyebrow": "Oportunidades especiales",
-      "description": "Piezas seleccionadas con precios especiales para renovar espacios exteriores.",
+      "slug": "sombrillas",
+      "name": "Sombrilla",
+      "eyebrow": "Sombra exterior",
+      "description": "Sombrillas y bases para crear espacios exteriores mas frescos y funcionales.",
       "sourceImage": "style:outlet.png",
       "featured": true,
       "displayOrder": 5

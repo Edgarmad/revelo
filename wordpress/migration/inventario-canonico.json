@@ -1,0 +1,5858 @@
+{
+  "generatedAt": "2026-09-01T19:18:08.498Z",
+  "source": "C:\\Users\\edmad\\Downloads\\inventario.json",
+  "categories": [
+    {
+      "slug": "aluminio",
+      "name": "Aluminio",
+      "description": "Productos de Aluminio disponibles en Milapro Home.",
+      "featured": true,
+      "displayOrder": 2
+    },
+    {
+      "slug": "plastico",
+      "name": "Plástico",
+      "description": "Productos de Plastico disponibles en Milapro Home.",
+      "featured": true,
+      "displayOrder": 1
+    },
+    {
+      "slug": "ratan",
+      "name": "Rattan",
+      "description": "Productos de Ratan disponibles en Milapro Home.",
+      "featured": true,
+      "displayOrder": 3
+    },
+    {
+      "slug": "plantas",
+      "name": "Plantas",
+      "description": "Productos de Plantas disponibles en Milapro Home.",
+      "featured": true,
+      "displayOrder": 4
+    },
+    {
+      "slug": "sombrillas",
+      "name": "Sombrilla",
+      "description": "Productos de Sombrillas disponibles en Milapro Home.",
+      "featured": true,
+      "displayOrder": 5
+    }
+  ],
+  "products": [
+    {
+      "oldSlug": "plastico-banca-narciso",
+      "slug": "plastico-banca-narciso",
+      "name": "Banca Narciso",
+      "shortDescription": "Banca Narciso disponible en Plastico.",
+      "description": "Banca Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-banca-narciso-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-banca-narciso-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-banca-narciso-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-banca-narciso-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-banca-narciso-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-banca-narciso-galeria-04-variantes-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-banca-narciso-galeria-04-variantes-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-banca-narciso-galeria-04-variantes-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-BANCA-NARCISO",
+      "colors": [
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-verde-militar-04-1024x683.jpeg",
+          "available": true,
+          "quantity": 18,
+          "price": 3899,
+          "note": ""
+        },
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-gris-oscuro-03-1024x683.png",
+          "available": true,
+          "quantity": 72,
+          "price": 3899,
+          "note": ""
+        },
+        {
+          "id": "greige",
+          "name": "Greige",
+          "hex": "#b8afa2",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-greige-02-1024x683.png",
+          "available": true,
+          "quantity": 38,
+          "price": 3899,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-blanco-01-1-1024x683.jpeg",
+          "available": true,
+          "quantity": 87,
+          "price": 3899,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "VERDE MILITAR",
+          "quantity": 18,
+          "price": 3899,
+          "note": ""
+        },
+        {
+          "name": "GRIS OSCURO",
+          "quantity": 72,
+          "price": 3899,
+          "note": ""
+        },
+        {
+          "name": "GREIGE",
+          "quantity": 38,
+          "price": 3899,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 87,
+          "price": 3899,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 215,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 1,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "215"
+        }
+      ],
+      "price": 3899,
+      "formattedPrice": "$3,899.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-rectangular-narciso",
+      "slug": "plastico-mesa-narciso",
+      "name": "Mesa Narciso",
+      "shortDescription": "Mesa Narciso disponible en Plastico.",
+      "description": "Mesa Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-rectangular-narciso-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-rectangular-narciso-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-rectangular-narciso-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-rectangular-narciso-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-rectangular-narciso-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-rectangular-narciso-galeria-04-variantes-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-rectangular-narciso-galeria-04-variantes-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-rectangular-narciso-galeria-04-variantes-04.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-rectangular-narciso-galeria-04-variantes-05.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-NARCISO",
+      "colors": [
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-verde-militar-05-1024x768.jpeg",
+          "available": true,
+          "quantity": 25,
+          "price": 1999,
+          "note": ""
+        },
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-gris-oscuro-03-1-1024x683.png",
+          "available": true,
+          "quantity": 77,
+          "price": 1999,
+          "note": ""
+        },
+        {
+          "id": "greige",
+          "name": "Greige",
+          "hex": "#b8afa2",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-greige-02-2-1024x683.png",
+          "available": true,
+          "quantity": 41,
+          "price": 1999,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-blanco-01-2-1024x683.jpeg",
+          "available": true,
+          "quantity": 90,
+          "price": 1999,
+          "note": ""
+        },
+        {
+          "id": "verde-olivo",
+          "name": "Verde Olivo",
+          "hex": "#6f7350",
+          "image": "",
+          "available": true,
+          "quantity": 2,
+          "price": 1999,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "VERDE MILITAR",
+          "quantity": 25,
+          "price": 1999,
+          "note": ""
+        },
+        {
+          "name": "GRIS OSCURO",
+          "quantity": 77,
+          "price": 1999,
+          "note": ""
+        },
+        {
+          "name": "GREIGE",
+          "quantity": 41,
+          "price": 1999,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 90,
+          "price": 1999,
+          "note": ""
+        },
+        {
+          "name": "VERDE OLIVO",
+          "quantity": 2,
+          "price": 1999,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 235,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 2,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "235"
+        }
+      ],
+      "price": 1999,
+      "formattedPrice": "$1,999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-sillones-narciso",
+      "slug": "plastico-sillon-narciso",
+      "name": "Sillon Narciso",
+      "shortDescription": "Sillon Narciso disponible en Plastico.",
+      "description": "Sillon Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLON-NARCISO",
+      "colors": [
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "",
+          "available": true,
+          "quantity": 29,
+          "price": 1699,
+          "note": ""
+        },
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "",
+          "available": true,
+          "quantity": 113,
+          "price": 1699,
+          "note": ""
+        },
+        {
+          "id": "greige",
+          "name": "Greige",
+          "hex": "#b8afa2",
+          "image": "",
+          "available": true,
+          "quantity": 57,
+          "price": 1699,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 179,
+          "price": 1699,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "VERDE MILITAR",
+          "quantity": 29,
+          "price": 1699,
+          "note": ""
+        },
+        {
+          "name": "GRIS OSCURO",
+          "quantity": 113,
+          "price": 1699,
+          "note": ""
+        },
+        {
+          "name": "GREIGE",
+          "quantity": 57,
+          "price": 1699,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 179,
+          "price": 1699,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 378,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 3,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "378"
+        }
+      ],
+      "price": 1699,
+      "formattedPrice": "$1,699.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-narciso-con-aopyabrazos",
+      "slug": "plastico-silla-apoyabrazos",
+      "name": "Silla Apoyabrazos",
+      "shortDescription": "Silla Apoyabrazos disponible en Plastico.",
+      "description": "Silla Apoyabrazos forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-narciso-con-aopyabrazos-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-narciso-con-aopyabrazos-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-narciso-con-aopyabrazos-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-narciso-con-aopyabrazos-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-narciso-con-aopyabrazos-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-narciso-con-aopyabrazos-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-narciso-con-aopyabrazos-galeria-04-variantes-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-narciso-con-aopyabrazos-galeria-04-variantes-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-APOYABRAZOS",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 18,
+          "price": 1299,
+          "note": "con detalles"
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 18,
+          "price": 1299,
+          "note": "con detalles"
+        }
+      ],
+      "inventoryQuantity": 18,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 4,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "18"
+        }
+      ],
+      "price": 1299,
+      "formattedPrice": "$1,299.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-silla-alta-narciso",
+      "slug": "plastico-silla-alta-narciso",
+      "name": "Silla Alta Narciso",
+      "shortDescription": "Silla Alta Narciso disponible en Plastico.",
+      "description": "Silla Alta Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-ALTA-NARCISO",
+      "colors": [
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "",
+          "available": true,
+          "quantity": 42,
+          "price": 1499,
+          "note": ""
+        },
+        {
+          "id": "greige",
+          "name": "Greige",
+          "hex": "#b8afa2",
+          "image": "",
+          "available": true,
+          "quantity": 55,
+          "price": 1499,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 61,
+          "price": 1499,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "VERDE MILITAR",
+          "quantity": 42,
+          "price": 1499,
+          "note": ""
+        },
+        {
+          "name": "GREIGE",
+          "quantity": 55,
+          "price": 1499,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 61,
+          "price": 1499,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 158,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 5,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "158"
+        }
+      ],
+      "price": 1499,
+      "formattedPrice": "$1,499.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-auxiliar-narciso",
+      "slug": "plastico-mesa-auxiliar-narciso",
+      "name": "Mesa Auxiliar Narciso",
+      "shortDescription": "Mesa Auxiliar Narciso disponible en Plastico.",
+      "description": "Mesa Auxiliar Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-narciso-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-narciso-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-narciso-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-narciso-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-narciso-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-narciso-galeria-04-variantes-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-narciso-galeria-04-variantes-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-narciso-galeria-04-variantes-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-AUXILIAR-NARCISO",
+      "colors": [
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-verde-militar-03-1024x683.png",
+          "available": true,
+          "quantity": 52,
+          "price": 1399.01,
+          "note": ""
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "",
+          "available": true,
+          "quantity": 60,
+          "price": 1399.01,
+          "note": ""
+        },
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "",
+          "available": true,
+          "quantity": 49,
+          "price": 1399.01,
+          "note": ""
+        },
+        {
+          "id": "blanca",
+          "name": "Blanca",
+          "hex": "#f4f1ea",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-blanca-01-1-1024x683.png",
+          "available": true,
+          "quantity": 71,
+          "price": 1399.01,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "VERDE MILITAR",
+          "quantity": 52,
+          "price": 1399.01,
+          "note": ""
+        },
+        {
+          "name": "GRIS",
+          "quantity": 60,
+          "price": 1399.01,
+          "note": ""
+        },
+        {
+          "name": "BEIGE",
+          "quantity": 49,
+          "price": 1399.01,
+          "note": ""
+        },
+        {
+          "name": "BLANCA",
+          "quantity": 71,
+          "price": 1399.01,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 232,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 6,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "232"
+        }
+      ],
+      "price": 1399.01,
+      "formattedPrice": "$1,399.01",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-silla-narciso",
+      "slug": "plastico-silla-narciso",
+      "name": "Silla Narciso",
+      "shortDescription": "Silla Narciso disponible en Plastico.",
+      "description": "Silla Narciso forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-narciso-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-narciso-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-narciso-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-narciso-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-narciso-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-narciso-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-narciso-galeria-04-variantes-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-narciso-galeria-04-variantes-03.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-NARCISO",
+      "colors": [
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#7a533b",
+          "image": "",
+          "available": true,
+          "quantity": 2,
+          "price": 1199,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 2,
+          "price": 1199,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "CAFÉ",
+          "quantity": 2,
+          "price": 1199,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 2,
+          "price": 1199,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 4,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": true,
+      "available": true,
+      "displayOrder": 7,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "4"
+        }
+      ],
+      "price": 1199,
+      "formattedPrice": "$1,199.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-cala-s-central",
+      "slug": "plastico-mesa-cala-apoyo-central",
+      "name": "Mesa Cala Apoyo Central",
+      "shortDescription": "Mesa Cala Apoyo Central disponible en Plastico.",
+      "description": "Mesa Cala Apoyo Central forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-cala-s-central-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-cala-s-central-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-cala-s-central-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-cala-s-central-galeria-03-medidas.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-CALA-APOYO-CENTRAL",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 1,
+          "price": 4499,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 1,
+          "price": 4499,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 1,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 8,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "1"
+        }
+      ],
+      "price": 4499,
+      "formattedPrice": "$4,499.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-cala",
+      "slug": "plastico-mesa-cala",
+      "name": "Mesa Cala",
+      "shortDescription": "Mesa Cala disponible en Plastico.",
+      "description": "Mesa Cala forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-CALA",
+      "colors": [
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "",
+          "available": true,
+          "quantity": 28,
+          "price": 5499,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 82,
+          "price": 5499,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS OSCURO",
+          "quantity": 28,
+          "price": 5499,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 82,
+          "price": 5499,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 110,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 9,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "110"
+        }
+      ],
+      "price": 5499,
+      "formattedPrice": "$5,499.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-comedor-cala",
+      "slug": "plastico-mesa-cala-comedor",
+      "name": "Mesa Cala Comedor",
+      "shortDescription": "Mesa Cala Comedor disponible en Plastico.",
+      "description": "Mesa Cala Comedor forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-comedor-cala-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-comedor-cala-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-comedor-cala-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-comedor-cala-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-comedor-cala-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-comedor-cala-galeria-04-variantes-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-CALA-COMEDOR",
+      "colors": [
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "",
+          "available": true,
+          "quantity": 1,
+          "price": 19999,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 10,
+          "price": 19999,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS OSCURO",
+          "quantity": 1,
+          "price": 19999,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 10,
+          "price": 19999,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 11,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 10,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "11"
+        }
+      ],
+      "price": 19999,
+      "formattedPrice": "$19,999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-loto",
+      "slug": "plastico-mesa-loto",
+      "name": "Mesa Loto",
+      "shortDescription": "Mesa Loto disponible en Plastico.",
+      "description": "Mesa Loto forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-LOTO",
+      "colors": [
+        {
+          "id": "negro",
+          "name": "Negro",
+          "hex": "#222222",
+          "image": "",
+          "available": true,
+          "quantity": 1,
+          "price": 2199,
+          "note": ""
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "",
+          "available": true,
+          "quantity": 21,
+          "price": 2199,
+          "note": ""
+        },
+        {
+          "id": "verde-olivo",
+          "name": "Verde Olivo",
+          "hex": "#6f7350",
+          "image": "",
+          "available": true,
+          "quantity": 2,
+          "price": 2199,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 45,
+          "price": 2199,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "NEGRO",
+          "quantity": 1,
+          "price": 2199,
+          "note": ""
+        },
+        {
+          "name": "GRIS",
+          "quantity": 21,
+          "price": 2199,
+          "note": ""
+        },
+        {
+          "name": "VERDE OLIVO",
+          "quantity": 2,
+          "price": 2199,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 45,
+          "price": 2199,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 69,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 11,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "69"
+        }
+      ],
+      "price": 2199,
+      "formattedPrice": "$2,199.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "",
+      "slug": "plastico-mesa-loto-alta",
+      "name": "Mesa Loto Alta",
+      "shortDescription": "Mesa Loto Alta disponible en Plastico.",
+      "description": "Mesa Loto Alta forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-LOTO-ALTA",
+      "colors": [
+        {
+          "id": "negro",
+          "name": "Negro",
+          "hex": "#222222",
+          "image": "",
+          "available": true,
+          "quantity": 2,
+          "price": 4399,
+          "note": "con detalles"
+        }
+      ],
+      "variants": [
+        {
+          "name": "NEGRO",
+          "quantity": 2,
+          "price": 4399,
+          "note": "con detalles"
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 12,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 4399,
+      "formattedPrice": "$4,399.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-silla-dalia",
+      "slug": "plastico-silla-dalia",
+      "name": "Silla Dalia",
+      "shortDescription": "Silla Dalia disponible en Plastico.",
+      "description": "Silla Dalia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-dalia-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-dalia-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-dalia-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-dalia-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-dalia-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-dalia-galeria-04-variantes-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-DALIA",
+      "colors": [
+        {
+          "id": "ginger",
+          "name": "Ginger",
+          "hex": "#b56f3a",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-ginger-02-1024x747.png",
+          "available": true,
+          "quantity": 99,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-blanco-01-7-1024x747.png",
+          "available": true,
+          "quantity": 93,
+          "price": 1799,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GINGER",
+          "quantity": 99,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 93,
+          "price": 1799,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 192,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 13,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "192"
+        }
+      ],
+      "price": 1799,
+      "formattedPrice": "$1,799.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-silla-zinnia",
+      "slug": "plastico-silla-zinnia",
+      "name": "Silla Zinnia",
+      "shortDescription": "Silla Zinnia disponible en Plastico.",
+      "description": "Silla Zinnia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-zinnia-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-zinnia-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-zinnia-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-zinnia-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-zinnia-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-zinnia-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-zinnia-galeria-04-variantes-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-zinnia-galeria-04-variantes-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-zinnia-galeria-04-variantes-04.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-ZINNIA",
+      "colors": [
+        {
+          "id": "mostaza",
+          "name": "Mostaza",
+          "hex": "#c59a2f",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-mostaza-02-1-1024x747.png",
+          "available": true,
+          "quantity": 28,
+          "price": 1199,
+          "note": ""
+        },
+        {
+          "id": "azul",
+          "name": "Azul",
+          "hex": "#315f7d",
+          "image": "",
+          "available": true,
+          "quantity": 42,
+          "price": 1199,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "MOSTAZA",
+          "quantity": 28,
+          "price": 1199,
+          "note": ""
+        },
+        {
+          "name": "AZUL",
+          "quantity": 42,
+          "price": 1199,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 70,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 14,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "70"
+        }
+      ],
+      "price": 1199,
+      "formattedPrice": "$1,199.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-silla-alta-zinnia",
+      "slug": "plastico-silla-zinnia-alta",
+      "name": "Silla Zinnia Alta",
+      "shortDescription": "Silla Zinnia Alta disponible en Plastico.",
+      "description": "Silla Zinnia Alta forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-alta-zinnia-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-alta-zinnia-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-alta-zinnia-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-alta-zinnia-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-alta-zinnia-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-alta-zinnia-galeria-04-variantes-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-ZINNIA-ALTA",
+      "colors": [
+        {
+          "id": "amarillo",
+          "name": "Amarillo",
+          "hex": "#d6a722",
+          "image": "",
+          "available": true,
+          "quantity": 54,
+          "price": 1699,
+          "note": ""
+        },
+        {
+          "id": "azul",
+          "name": "Azul",
+          "hex": "#315f7d",
+          "image": "",
+          "available": true,
+          "quantity": 84,
+          "price": 1699,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "AMARILLO",
+          "quantity": 54,
+          "price": 1699,
+          "note": ""
+        },
+        {
+          "name": "AZUL",
+          "quantity": 84,
+          "price": 1699,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 138,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 15,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "138"
+        }
+      ],
+      "price": 1699,
+      "formattedPrice": "$1,699.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-silla-calendula",
+      "slug": "plastico-silla-calendula",
+      "name": "Silla Calendula",
+      "shortDescription": "Silla Calendula disponible en Plastico.",
+      "description": "Silla Calendula forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-calendula-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-calendula-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-calendula-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-calendula-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-calendula-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-calendula-galeria-04-variantes-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-CALENDULA",
+      "colors": [
+        {
+          "id": "rojo",
+          "name": "Rojo",
+          "hex": "#8d1f2d",
+          "image": "",
+          "available": true,
+          "quantity": 3,
+          "price": 1899,
+          "note": ""
+        },
+        {
+          "id": "amarillo",
+          "name": "Amarillo",
+          "hex": "#d6a722",
+          "image": "",
+          "available": true,
+          "quantity": 13,
+          "price": 1899,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "ROJO",
+          "quantity": 3,
+          "price": 1899,
+          "note": ""
+        },
+        {
+          "name": "AMARILLO",
+          "quantity": 13,
+          "price": 1899,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 16,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 16,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "16"
+        }
+      ],
+      "price": 1899,
+      "formattedPrice": "$1,899.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-silleta-iris",
+      "slug": "plastico-silleta-iris",
+      "name": "Silleta Iris",
+      "shortDescription": "Silleta Iris disponible en Plastico.",
+      "description": "Silleta Iris forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLETA-IRIS",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 4,
+          "price": 2899,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 4,
+          "price": 2899,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 4,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 17,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "4"
+        }
+      ],
+      "price": 2899,
+      "formattedPrice": "$2,899.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-silla-peonia",
+      "slug": "plastico-silla-peonia",
+      "name": "Silla Peonia",
+      "shortDescription": "Silla Peonia disponible en Plastico.",
+      "description": "Silla Peonia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-peonia-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-peonia-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-peonia-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-peonia-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-peonia-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-peonia-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-peonia-galeria-04-variantes-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-PEONIA",
+      "colors": [
+        {
+          "id": "chocolate",
+          "name": "Chocolate",
+          "hex": "#5b372c",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-chocolate-01-766x1024.png",
+          "available": true,
+          "quantity": 66,
+          "price": 1699.01,
+          "note": ""
+        },
+        {
+          "id": "khaki",
+          "name": "Khaki",
+          "hex": "#b8aa86",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-khaki-02-1024x747.png",
+          "available": true,
+          "quantity": 68,
+          "price": 1699.01,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "CHOCOLATE",
+          "quantity": 66,
+          "price": 1699.01,
+          "note": ""
+        },
+        {
+          "name": "KHAKI",
+          "quantity": 68,
+          "price": 1699.01,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 134,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 18,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "134"
+        }
+      ],
+      "price": 1699.01,
+      "formattedPrice": "$1,699.01",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-silla-gerbera",
+      "slug": "plastico-silla-gerbera",
+      "name": "Silla Gerbera",
+      "shortDescription": "Silla Gerbera disponible en Plastico.",
+      "description": "Silla Gerbera forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-gerbera-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-gerbera-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-gerbera-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-gerbera-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-gerbera-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-silla-gerbera-galeria-04-variantes.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-GERBERA",
+      "colors": [
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#7a533b",
+          "image": "",
+          "available": true,
+          "quantity": 111,
+          "price": 1699.01,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "CAFE",
+          "quantity": 111,
+          "price": 1699.01,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 111,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 19,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "111"
+        }
+      ],
+      "price": 1699.01,
+      "formattedPrice": "$1,699.01",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-gerbera-con-apoyabrazos",
+      "slug": "plastico-silla-gerbera-apoya-brazos",
+      "name": "Silla Gerbera Apoya Brazos",
+      "shortDescription": "Silla Gerbera Apoya Brazos disponible en Plastico.",
+      "description": "Silla Gerbera Apoya Brazos forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-gerbera-con-apoyabrazos-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-gerbera-con-apoyabrazos-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-gerbera-con-apoyabrazos-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-gerbera-con-apoyabrazos-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-gerbera-con-apoyabrazos-galeria-03-medidas.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SILLA-GERBERA-APOYA-BRAZOS",
+      "colors": [
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#7a533b",
+          "image": "",
+          "available": true,
+          "quantity": 33,
+          "price": 1799,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "CAFE",
+          "quantity": 33,
+          "price": 1799,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 33,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 20,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "33"
+        }
+      ],
+      "price": 1799,
+      "formattedPrice": "$1,799.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-camastro-raflessia",
+      "slug": "plastico-camastro-raflessia",
+      "name": "Camastro Raflessia",
+      "shortDescription": "Camastro Raflessia disponible en Plastico.",
+      "description": "Camastro Raflessia forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-camastro-raflessia-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-camastro-raflessia-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-camastro-raflessia-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-camastro-raflessia-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-camastro-raflessia-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-camastro-raflessia-galeria-04-variantes-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-CAMASTRO-RAFLESSIA",
+      "colors": [
+        {
+          "id": "gris-con-blanco",
+          "name": "Gris Con Blanco",
+          "hex": "#8b8b84",
+          "image": "",
+          "available": true,
+          "quantity": 7,
+          "price": 5999,
+          "note": ""
+        },
+        {
+          "id": "gris-oscuro",
+          "name": "Gris Oscuro",
+          "hex": "#4f5454",
+          "image": "",
+          "available": true,
+          "quantity": 67,
+          "price": 5999,
+          "note": ""
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-gris-02-1-1024x768.png",
+          "available": true,
+          "quantity": 3,
+          "price": 5999,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS CON BLANCO",
+          "quantity": 7,
+          "price": 5999,
+          "note": ""
+        },
+        {
+          "name": "GRIS OSCURO",
+          "quantity": 67,
+          "price": 5999,
+          "note": ""
+        },
+        {
+          "name": "GRIS",
+          "quantity": 3,
+          "price": 5999,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 77,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 21,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "77"
+        }
+      ],
+      "price": 5999,
+      "formattedPrice": "$5,999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-aster-mesa-con-almacenamiento",
+      "slug": "plastico-mesa-aster",
+      "name": "Mesa Aster",
+      "shortDescription": "Mesa Aster disponible en Plastico.",
+      "description": "Mesa Aster forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-galeria-04-variantes-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-galeria-04-variantes-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-galeria-04-variantes-04.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-galeria-04-variantes-05.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-aster-mesa-con-almacenamiento-galeria-04-variantes-06.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-ASTER",
+      "colors": [
+        {
+          "id": "mostaza",
+          "name": "Mostaza",
+          "hex": "#c59a2f",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-mostaza-04-1-1024x683.jpeg",
+          "available": true,
+          "quantity": 41,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "id": "azul-oceano",
+          "name": "Azul Oceano",
+          "hex": "#315f7d",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-azul-oceano-01-1024x683.jpeg",
+          "available": true,
+          "quantity": 35,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "id": "verde-militar",
+          "name": "Verde Militar",
+          "hex": "#5d6744",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-verde-militar-06-1024x683.jpeg",
+          "available": true,
+          "quantity": 38,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#7a533b",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-cafe-03-1024x683.jpeg",
+          "available": true,
+          "quantity": 42,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-blanco-02-1024x683.jpeg",
+          "available": true,
+          "quantity": 46,
+          "price": 1799,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "MOSTAZA",
+          "quantity": 41,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "name": "AZUL OCEANO",
+          "quantity": 35,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "name": "VERDE MILITAR",
+          "quantity": 38,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "name": "CAFE",
+          "quantity": 42,
+          "price": 1799,
+          "note": ""
+        },
+        {
+          "name": "BLANCO",
+          "quantity": 46,
+          "price": 1799,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 202,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 22,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "202"
+        }
+      ],
+      "price": 1799,
+      "formattedPrice": "$1,799.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mecedora-iris",
+      "slug": "plastico-mecedora-iris",
+      "name": "Mecedora Iris",
+      "shortDescription": "Mecedora Iris disponible en Plastico.",
+      "description": "Mecedora Iris forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mecedora-iris-fondo-real-1.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mecedora-iris-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mecedora-iris-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mecedora-iris-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mecedora-iris-galeria-04-variantes.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MECEDORA-IRIS",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 8,
+          "price": 3399,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 8,
+          "price": 3399,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 8,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 23,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "8"
+        }
+      ],
+      "price": 3399,
+      "formattedPrice": "$3,399.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-auxiliar-iris",
+      "slug": "plastico-mesa-auxiliar-iris",
+      "name": "Mesa Auxiliar Iris",
+      "shortDescription": "Mesa Auxiliar Iris disponible en Plastico.",
+      "description": "Mesa Auxiliar Iris forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-iris-fondo-real.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-iris-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-auxiliar-iris-galeria-02-fondo-blanco-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-MESA-AUXILIAR-IRIS",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-blanco-01-4-1024x718.png",
+          "available": true,
+          "quantity": 5,
+          "price": 1399,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 5,
+          "price": 1399,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 5,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 24,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "5"
+        }
+      ],
+      "price": 1399,
+      "formattedPrice": "$1,399.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "",
+      "slug": "plastico-sala-iris-4",
+      "name": "Sala Iris 4",
+      "shortDescription": "Sala Iris 4 disponible en Plastico.",
+      "description": "Sala Iris 4 forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SALA-IRIS-4",
+      "colors": [
+        {
+          "id": "naranja",
+          "name": "Naranja",
+          "hex": "#c76f35",
+          "image": "",
+          "available": true,
+          "quantity": 1,
+          "price": 15480,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "NARANJA",
+          "quantity": 1,
+          "price": 15480,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 1,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 25,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "1"
+        }
+      ],
+      "price": 15480,
+      "formattedPrice": "$15,480.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-set-iris",
+      "slug": "plastico-set-iris-5",
+      "name": "Set Iris 5",
+      "shortDescription": "Set Iris 5 disponible en Plastico.",
+      "description": "Set Iris 5 forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-set-iris-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-set-iris-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-set-iris-galeria-02-fondo-blanco-02.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SET-IRIS-5",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-blanco-01-6-1024x683.png",
+          "available": true,
+          "quantity": 1,
+          "price": 17989,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 1,
+          "price": 17989,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 1,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 26,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "1"
+        }
+      ],
+      "price": 17989,
+      "formattedPrice": "$17,989.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "",
+      "slug": "plastico-set-craspedia-4",
+      "name": "Set Craspedia 4",
+      "shortDescription": "Set Craspedia 4 disponible en Plastico.",
+      "description": "Set Craspedia 4 forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SET-CRASPEDIA-4",
+      "colors": [
+        {
+          "id": "amarillo",
+          "name": "Amarillo",
+          "hex": "#d6a722",
+          "image": "",
+          "available": true,
+          "quantity": 2,
+          "price": 15480,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "AMARILLO",
+          "quantity": 2,
+          "price": 15480,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 27,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 15480,
+      "formattedPrice": "$15,480.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-set-craspedia",
+      "slug": "plastico-set-craspedia-5",
+      "name": "Set Craspedia 5",
+      "shortDescription": "Set Craspedia 5 disponible en Plastico.",
+      "description": "Set Craspedia 5 forma parte del inventario actual de plastico para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-set-craspedia-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-set-craspedia-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-set-craspedia-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-set-craspedia-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-set-craspedia-galeria-04-variantes-1.png"
+      ],
+      "category": "plastico",
+      "categories": [
+        "plastico"
+      ],
+      "collection": "Plastico",
+      "brand": "Milapro Home",
+      "sku": "PLASTICO-SET-CRASPEDIA-5",
+      "colors": [
+        {
+          "id": "amarillo",
+          "name": "Amarillo",
+          "hex": "#d6a722",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-amarillo-01-1024x682.png",
+          "available": true,
+          "quantity": 1,
+          "price": 17989,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "AMARILLO",
+          "quantity": 1,
+          "price": 17989,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 1,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 28,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plastico"
+        },
+        {
+          "label": "Inventario total",
+          "value": "1"
+        }
+      ],
+      "price": 17989,
+      "formattedPrice": "$17,989.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-onega",
+      "slug": "aluminio-sala-onega",
+      "name": "Sala Onega",
+      "shortDescription": "Sala Onega disponible en Aluminio.",
+      "description": "Sala Onega forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-ONEGA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 11,
+          "price": 79200,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 11,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": true,
+      "available": true,
+      "displayOrder": 29,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "11"
+        }
+      ],
+      "price": 79200,
+      "formattedPrice": "$79,200.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-onega-esquinero",
+      "slug": "aluminio-sala-esquinera-onega",
+      "name": "Sala Esquinera Onega",
+      "shortDescription": "Sala Esquinera Onega disponible en Aluminio.",
+      "description": "Sala Esquinera Onega forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-02-fondo-blanco-04.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-02-fondo-blanco-05.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-02-fondo-blanco-06.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-02-fondo-blanco-07.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-02-fondo-blanco-08.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-onega-esquinero-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-ESQUINERA-ONEGA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 12,
+          "price": 92289.99,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 12,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 30,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "12"
+        }
+      ],
+      "price": 92289.99,
+      "formattedPrice": "$92,289.99",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-caspio",
+      "slug": "aluminio-sala-caspio",
+      "name": "Sala Caspio",
+      "shortDescription": "Sala Caspio disponible en Aluminio.",
+      "description": "Sala Caspio forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-CASPIO",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 8,
+          "price": 48700,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 8,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 31,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "8"
+        }
+      ],
+      "price": 48700,
+      "formattedPrice": "$48,700.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-caspio-esquinero",
+      "slug": "aluminio-sala-esquinera-caspio",
+      "name": "Sala Esquinera Caspio",
+      "shortDescription": "Sala Esquinera Caspio disponible en Aluminio.",
+      "description": "Sala Esquinera Caspio forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-galeria-02-fondo-blanco-04.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-galeria-02-fondo-blanco-05.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-galeria-02-fondo-blanco-06.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-galeria-02-fondo-blanco-07.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-caspio-esquinero-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-ESQUINERA-CASPIO",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 2,
+          "price": 71670,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 32,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 71670,
+      "formattedPrice": "$71,670.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-silla-caspio",
+      "slug": "aluminio-silla-caspio",
+      "name": "Silla Caspio",
+      "shortDescription": "Silla Caspio disponible en Aluminio.",
+      "description": "Silla Caspio forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-caspio-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-caspio-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-caspio-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-caspio-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-caspio-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-caspio-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLA-CASPIO",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 188,
+          "price": 6400,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 188,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 33,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "188"
+        }
+      ],
+      "price": 6400,
+      "formattedPrice": "$6,400.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-mesa-volga-1-6",
+      "slug": "aluminio-mesa-de-comedor-volga",
+      "name": "Mesa De Comedor Volga",
+      "shortDescription": "Mesa De Comedor Volga disponible en Aluminio.",
+      "description": "Mesa De Comedor Volga forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-volga-1-6-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-volga-1-6-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-volga-1-6-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-volga-1-6-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-volga-1-6-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-DE-COMEDOR-VOLGA",
+      "colors": [
+        {
+          "id": "1-60m",
+          "name": "1 60m",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 7,
+          "price": 25740,
+          "note": ""
+        },
+        {
+          "id": "2-30m",
+          "name": "2 30m",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 17,
+          "price": 29570,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "1.60M",
+          "quantity": 7,
+          "price": 25740,
+          "note": ""
+        },
+        {
+          "name": "2.30M",
+          "quantity": 17,
+          "price": 29570,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 24,
+      "notes": "El precio varía según el tamaño de la variante",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 34,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "24"
+        }
+      ],
+      "price": 25740,
+      "formattedPrice": "$25,740.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-camastro-sena",
+      "slug": "aluminio-camastro-sena",
+      "name": "Camastro Sena",
+      "shortDescription": "Camastro Sena disponible en Aluminio.",
+      "description": "Camastro Sena forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-camastro-sena-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-camastro-sena-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-camastro-sena-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-camastro-sena-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-camastro-sena-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-CAMASTRO-SENA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 1,
+          "price": 21980,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 1,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 35,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "1"
+        }
+      ],
+      "price": 21980,
+      "formattedPrice": "$21,980.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-sillones-casio",
+      "slug": "aluminio-sillones-caspio",
+      "name": "Sillones Caspio",
+      "shortDescription": "Sillones Caspio disponible en Aluminio.",
+      "description": "Sillones Caspio forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLONES-CASPIO",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 4,
+          "price": 25000,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 4,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 36,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "4"
+        }
+      ],
+      "price": 25000,
+      "formattedPrice": "$25,000.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-malaui",
+      "slug": "aluminio-sala-malaui",
+      "name": "Sala Malaui",
+      "shortDescription": "Sala Malaui disponible en Aluminio.",
+      "description": "Sala Malaui forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-malaui-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-malaui-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-malaui-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-malaui-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-malaui-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-MALAUI",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 6,
+          "price": 58810,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 6,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 37,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "6"
+        }
+      ],
+      "price": 58810,
+      "formattedPrice": "$58,810.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-silla-malaui",
+      "slug": "aluminio-silla-malaui",
+      "name": "Silla Malaui",
+      "shortDescription": "Silla Malaui disponible en Aluminio.",
+      "description": "Silla Malaui forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-malaui-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-malaui-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-malaui-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-malaui-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-malaui-galeria-04-variantes-02.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLA-MALAUI",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 62,
+          "price": 7260,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 62,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 38,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "62"
+        }
+      ],
+      "price": 7260,
+      "formattedPrice": "$7,260.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "outlet-camastro-victoria",
+      "slug": "aluminio-camastros-victoria",
+      "name": "Camastros Victoria",
+      "shortDescription": "Camastros Victoria disponible en Aluminio.",
+      "description": "Camastros Victoria forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-camastro-victoria-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-camastro-victoria-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-camastro-victoria-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-camastro-victoria-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-CAMASTROS-VICTORIA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 31,
+          "price": 7999,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 31,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 39,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "31"
+        }
+      ],
+      "price": 7999,
+      "formattedPrice": "$7,999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-mesa-elba",
+      "slug": "aluminio-mesa-de-comedor-elba",
+      "name": "Mesa De Comedor Elba",
+      "shortDescription": "Mesa De Comedor Elba disponible en Aluminio.",
+      "description": "Mesa De Comedor Elba forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-elba-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-elba-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-elba-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-elba-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-elba-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-DE-COMEDOR-ELBA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 2,
+          "price": 29570,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 40,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 29570,
+      "formattedPrice": "$29,570.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-mesa-erie",
+      "slug": "aluminio-mesa-de-comedor-erie",
+      "name": "Mesa De Comedor Erie",
+      "shortDescription": "Mesa De Comedor Erie disponible en Aluminio.",
+      "description": "Mesa De Comedor Erie forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-erie-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-erie-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-erie-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-erie-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-mesa-erie-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-DE-COMEDOR-ERIE",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 2,
+          "price": 20460,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 41,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 20460,
+      "formattedPrice": "$20,460.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "outlet-turkana",
+      "slug": "aluminio-sala-turkana",
+      "name": "Sala Turkana",
+      "shortDescription": "Sala Turkana disponible en Aluminio.",
+      "description": "Sala Turkana forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-TURKANA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 60,
+          "price": 42999,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 60,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 42,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "60"
+        }
+      ],
+      "price": 42999,
+      "formattedPrice": "$42,999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "outlet-ladoga",
+      "slug": "aluminio-sala-ladoga",
+      "name": "Sala Ladoga",
+      "shortDescription": "Sala Ladoga disponible en Aluminio.",
+      "description": "Sala Ladoga forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-ladoga-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-ladoga-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-ladoga-galeria-02-fondo-blanco-02.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-LADOGA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 6,
+          "price": 42999,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 6,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 43,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "6"
+        }
+      ],
+      "price": 42999,
+      "formattedPrice": "$42,999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "outlet-liena",
+      "slug": "aluminio-sala-liena",
+      "name": "Sala Liena",
+      "shortDescription": "Sala Liena disponible en Aluminio.",
+      "description": "Sala Liena forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-liena-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-liena-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-liena-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-liena-galeria-02-fondo-blanco-03.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-LIENA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 9,
+          "price": 42999,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 9,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 44,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "9"
+        }
+      ],
+      "price": 42999,
+      "formattedPrice": "$42,999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-silla-erie",
+      "slug": "aluminio-silla-erie",
+      "name": "Silla Erie",
+      "shortDescription": "Silla Erie disponible en Aluminio.",
+      "description": "Silla Erie forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-erie-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-erie-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-erie-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-erie-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-silla-erie-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLA-ERIE",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 1,
+          "price": null,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 1,
+      "notes": "Precio no especificado en el documento original",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 45,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "1"
+        }
+      ],
+      "price": null,
+      "formattedPrice": "",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "outlet-nyasa",
+      "slug": "aluminio-sala-nyasa",
+      "name": "Sala Nyasa",
+      "shortDescription": "Sala Nyasa disponible en Aluminio.",
+      "description": "Sala Nyasa forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-nyasa-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-nyasa-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-nyasa-galeria-02-fondo-blanco-02.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-NYASA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 16,
+          "price": 29200,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 16,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 46,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "16"
+        }
+      ],
+      "price": 29200,
+      "formattedPrice": "$29,200.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-ontario-gris",
+      "slug": "aluminio-sala-ontario-gris",
+      "name": "Sala Ontario Gris",
+      "shortDescription": "Sala Ontario Gris disponible en Aluminio.",
+      "description": "Sala Ontario Gris forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-gris-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-gris-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-gris-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-gris-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-gris-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-ONTARIO-GRIS",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 6,
+          "price": 81150,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 6,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 47,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "6"
+        }
+      ],
+      "price": 81150,
+      "formattedPrice": "$81,150.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-ontario-beige",
+      "slug": "aluminio-sala-ontario-beige",
+      "name": "Sala Ontario Beige",
+      "shortDescription": "Sala Ontario Beige disponible en Aluminio.",
+      "description": "Sala Ontario Beige forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-beige-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-beige-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-beige-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-beige-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-ontario-beige-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-ONTARIO-BEIGE",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 2,
+          "price": 81150,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 48,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 81150,
+      "formattedPrice": "$81,150.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-sillon-ind-ontario-gris",
+      "slug": "aluminio-sillon-ontario-gris",
+      "name": "Sillon Ontario Gris",
+      "shortDescription": "Sillon Ontario Gris disponible en Aluminio.",
+      "description": "Sillon Ontario Gris forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-ind-ontario-gris-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-ind-ontario-gris-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-ind-ontario-gris-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-ind-ontario-gris-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-ind-ontario-gris-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLON-ONTARIO-GRIS",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 4,
+          "price": 19980,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 4,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 49,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "4"
+        }
+      ],
+      "price": 19980,
+      "formattedPrice": "$19,980.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-sillon-ind-onrario-beige",
+      "slug": "aluminio-sillon-ontario-beige",
+      "name": "Sillon Ontario Beige",
+      "shortDescription": "Sillon Ontario Beige disponible en Aluminio.",
+      "description": "Sillon Ontario Beige forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-ind-onrario-beige-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-ind-onrario-beige-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-ind-onrario-beige-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-ind-onrario-beige-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLON-ONTARIO-BEIGE",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 1,
+          "price": 19980,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 1,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 50,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "1"
+        }
+      ],
+      "price": 19980,
+      "formattedPrice": "$19,980.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-sillon-extra-llona",
+      "slug": "aluminio-sillon-esquinero-extra-llona",
+      "name": "Sillon Esquinero Extra Llona",
+      "shortDescription": "Sillon Esquinero Extra Llona disponible en Aluminio.",
+      "description": "Sillon Esquinero Extra Llona forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-extra-llona-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-extra-llona-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-extra-llona-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-sillon-extra-llona-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLON-ESQUINERO-EXTRA-LLONA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 3,
+          "price": 12160,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 3,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 51,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "3"
+        }
+      ],
+      "price": 12160,
+      "formattedPrice": "$12,160.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "",
+      "slug": "aluminio-sillon-llona",
+      "name": "Sillon Llona",
+      "shortDescription": "Sillon Llona disponible en Aluminio.",
+      "description": "Sillon Llona forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SILLON-LLONA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 0,
+          "price": 15800,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 0,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": false,
+      "displayOrder": 52,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "0"
+        }
+      ],
+      "price": 15800,
+      "formattedPrice": "$15,800.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-llona-4-ax",
+      "slug": "aluminio-sala-llona-4",
+      "name": "Sala Llona 4",
+      "shortDescription": "Sala Llona 4 disponible en Aluminio.",
+      "description": "Sala Llona 4 forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-4-ax-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-4-ax-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-4-ax-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-4-ax-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-4-ax-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-LLONA-4",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 9,
+          "price": 63200,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 9,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 53,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "9"
+        }
+      ],
+      "price": 63200,
+      "formattedPrice": "$63,200.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-llona-5-ax",
+      "slug": "aluminio-sala-llona-5",
+      "name": "Sala Llona 5",
+      "shortDescription": "Sala Llona 5 disponible en Aluminio.",
+      "description": "Sala Llona 5 forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-5-ax-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-5-ax-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-5-ax-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-5-ax-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-5-ax-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-LLONA-5",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 27,
+          "price": 75800,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 27,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 54,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "27"
+        }
+      ],
+      "price": 75800,
+      "formattedPrice": "$75,800.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-llona-mesa-auxiliar",
+      "slug": "aluminio-mesa-auxiliar-llona",
+      "name": "Mesa Auxiliar Llona",
+      "shortDescription": "Mesa Auxiliar Llona disponible en Aluminio.",
+      "description": "Mesa Auxiliar Llona forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-mesa-auxiliar-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-mesa-auxiliar-galeria-02-fondo-blanco-2.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-mesa-auxiliar-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-mesa-auxiliar-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-mesa-auxiliar-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-AUXILIAR-LLONA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 6,
+          "price": 4560,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 6,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 55,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "6"
+        }
+      ],
+      "price": 4560,
+      "formattedPrice": "$4,560.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-llona-esquinero",
+      "slug": "aluminio-sala-esquinera-llona",
+      "name": "Sala Esquinera Llona",
+      "shortDescription": "Sala Esquinera Llona disponible en Aluminio.",
+      "description": "Sala Esquinera Llona forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-esquinero-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-esquinero-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-esquinero-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-esquinero-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-llona-esquinero-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-ESQUINERA-LLONA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 14,
+          "price": 59400,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 14,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 56,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "14"
+        }
+      ],
+      "price": 59400,
+      "formattedPrice": "$59,400.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "aluminio-bahia-esquinera",
+      "slug": "aluminio-sala-esquinera-bahia",
+      "name": "Sala Esquinera Bahia",
+      "shortDescription": "Sala Esquinera Bahia disponible en Aluminio.",
+      "description": "Sala Esquinera Bahia forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-bahia-esquinera-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-bahia-esquinera-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-bahia-esquinera-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/aluminio-bahia-esquinera-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-SALA-ESQUINERA-BAHIA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 16,
+          "price": 61800,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 16,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 57,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "16"
+        }
+      ],
+      "price": 61800,
+      "formattedPrice": "$61,800.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-nilo-2m",
+      "slug": "aluminio-mesa-nilo-2-m",
+      "name": "Mesa Nilo 2 M",
+      "shortDescription": "Mesa Nilo 2 M disponible en Aluminio.",
+      "description": "Mesa Nilo 2 M forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-2m-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-2m-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-2m-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-2m-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-2m-galeria-02-fondo-blanco-04.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-2m-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-2m-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-2m-galeria-04-variantes-02.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-NILO-2-M",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-blanco-02-1-1024x683.png",
+          "available": true,
+          "quantity": 17,
+          "price": 19850,
+          "note": ""
+        },
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-beige-01-4-1024x683.png",
+          "available": true,
+          "quantity": 18,
+          "price": 19850,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 17,
+          "price": 19850,
+          "note": ""
+        },
+        {
+          "name": "BEIGE",
+          "quantity": 18,
+          "price": 19850,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 35,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 58,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "35"
+        }
+      ],
+      "price": 19850,
+      "formattedPrice": "$19,850.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-nilo-1-6m",
+      "slug": "aluminio-mesa-nilo-1-60",
+      "name": "Mesa Nilo 1 60",
+      "shortDescription": "Mesa Nilo 1 60 disponible en Aluminio.",
+      "description": "Mesa Nilo 1 60 forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-1-6m-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-1-6m-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-1-6m-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-1-6m-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-1-6m-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-nilo-1-6m-galeria-04-variantes-02.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-NILO-1-60",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-blanco-02-1024x683.png",
+          "available": true,
+          "quantity": 9,
+          "price": 15850,
+          "note": ""
+        },
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-beige-01-3-1024x683.png",
+          "available": true,
+          "quantity": 17,
+          "price": 15850,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 9,
+          "price": 15850,
+          "note": ""
+        },
+        {
+          "name": "BEIGE",
+          "quantity": 17,
+          "price": 15850,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 26,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 59,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "26"
+        }
+      ],
+      "price": 15850,
+      "formattedPrice": "$15,850.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-licerna",
+      "slug": "aluminio-mesa-lucerna",
+      "name": "Mesa Lucerna",
+      "shortDescription": "Mesa Lucerna disponible en Aluminio.",
+      "description": "Mesa Lucerna forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-licerna-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-licerna-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-licerna-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-licerna-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-licerna-galeria-04-variantes.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-LUCERNA",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 5,
+          "price": 11650,
+          "note": ""
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "",
+          "available": true,
+          "quantity": null,
+          "price": 11650,
+          "note": "cantidad no legible/no especificada en el documento original"
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 5,
+          "price": 11650,
+          "note": ""
+        },
+        {
+          "name": "GRIS",
+          "quantity": null,
+          "price": 11650,
+          "note": "cantidad no legible/no especificada en el documento original"
+        }
+      ],
+      "inventoryQuantity": 5,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 60,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "5"
+        }
+      ],
+      "price": 11650,
+      "formattedPrice": "$11,650.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plastico-mesa-leman",
+      "slug": "aluminio-mesa-leman",
+      "name": "Mesa Leman",
+      "shortDescription": "Mesa Leman disponible en Aluminio.",
+      "description": "Mesa Leman forma parte del inventario actual de aluminio para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-leman-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-leman-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-leman-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-leman-galeria-02-fondo-blanco-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-leman-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-leman-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plastico-mesa-leman-galeria-04-variantes-02.png"
+      ],
+      "category": "aluminio",
+      "categories": [
+        "aluminio"
+      ],
+      "collection": "Aluminio",
+      "brand": "Milapro Home",
+      "sku": "ALUMINIO-MESA-LEMAN",
+      "colors": [
+        {
+          "id": "blanco",
+          "name": "Blanco",
+          "hex": "#f4f1ea",
+          "image": "",
+          "available": true,
+          "quantity": 3,
+          "price": 18650,
+          "note": ""
+        },
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "",
+          "available": true,
+          "quantity": 2,
+          "price": 18650,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "BLANCO",
+          "quantity": 3,
+          "price": 18650,
+          "note": ""
+        },
+        {
+          "name": "GRIS",
+          "quantity": 2,
+          "price": 18650,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 5,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 61,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Inventario total",
+          "value": "5"
+        }
+      ],
+      "price": 18650,
+      "formattedPrice": "$18,650.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-malaga-petit",
+      "slug": "ratan-sala-malaga-petit",
+      "name": "Sala Malaga Petit",
+      "shortDescription": "Sala Malaga Petit disponible en Ratan.",
+      "description": "Sala Malaga Petit forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-malaga-petit-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-malaga-petit-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-malaga-petit-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-malaga-petit-galeria-03-medidas.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-SALA-MALAGA-PETIT",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 2,
+          "price": 49500,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 62,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 49500,
+      "formattedPrice": "$49,500.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-malaga",
+      "slug": "ratan-sala-malaga",
+      "name": "Sala Malaga",
+      "shortDescription": "Sala Malaga disponible en Ratan.",
+      "description": "Sala Malaga forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-malaga-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-malaga-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-malaga-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-malaga-galeria-03-medidas.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-SALA-MALAGA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 2,
+          "price": 58000,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 63,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 58000,
+      "formattedPrice": "$58,000.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-marbella",
+      "slug": "ratan-sala-marbella",
+      "name": "Sala Marbella",
+      "shortDescription": "Sala Marbella disponible en Ratan.",
+      "description": "Sala Marbella forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-marbella-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-marbella-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-marbella-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-marbella-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-marbella-galeria-03-medidas-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-marbella-galeria-03-medidas-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-marbella-galeria-04-variantes.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-SALA-MARBELLA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "",
+          "available": true,
+          "quantity": 3,
+          "price": 46500,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS",
+          "quantity": 3,
+          "price": 46500,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 3,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 64,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "3"
+        }
+      ],
+      "price": 46500,
+      "formattedPrice": "$46,500.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-madrid",
+      "slug": "ratan-sala-madrid",
+      "name": "Sala Madrid",
+      "shortDescription": "Sala Madrid disponible en Ratan.",
+      "description": "Sala Madrid forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-madrid-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-madrid-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-madrid-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-madrid-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-madrid-galeria-03-medidas-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-madrid-galeria-03-medidas-03.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-madrid-galeria-03-medidas-04.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-madrid-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-madrid-galeria-04-variantes-02.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-SALA-MADRID",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-gris-02-6-1024x683.png",
+          "available": true,
+          "quantity": 2,
+          "price": 51500,
+          "note": ""
+        },
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-beige-01-6-1024x683.png",
+          "available": false,
+          "quantity": 0,
+          "price": 51500,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS",
+          "quantity": 2,
+          "price": 51500,
+          "note": ""
+        },
+        {
+          "name": "BEIGE",
+          "quantity": 0,
+          "price": 51500,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": true,
+      "available": true,
+      "displayOrder": 65,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 51500,
+      "formattedPrice": "$51,500.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "",
+      "slug": "ratan-toledo",
+      "name": "Toledo",
+      "shortDescription": "Toledo disponible en Ratan.",
+      "description": "Toledo forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-TOLEDO",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 0,
+          "price": 17500,
+          "note": "SOLD OUT"
+        }
+      ],
+      "inventoryQuantity": 0,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": false,
+      "displayOrder": 66,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "0"
+        }
+      ],
+      "price": 17500,
+      "formattedPrice": "$17,500.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-ibiza",
+      "slug": "ratan-bar-ibiza",
+      "name": "Bar Ibiza",
+      "shortDescription": "Bar Ibiza disponible en Ratan.",
+      "description": "Bar Ibiza forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-ibiza-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-ibiza-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-ibiza-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-ibiza-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-ibiza-galeria-04-variantes.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-BAR-IBIZA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 2,
+          "price": 72500,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 67,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 72500,
+      "formattedPrice": "$72,500.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-granada",
+      "slug": "ratan-comedor-granada",
+      "name": "Comedor Granada",
+      "shortDescription": "Comedor Granada disponible en Ratan.",
+      "description": "Comedor Granada forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-granada-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-granada-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-granada-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-granada-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-granada-galeria-04-variantes.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-COMEDOR-GRANADA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "https://cms.milaprohome.com/wp-content/uploads/2026/08/variant-gris-01-17-1024x724.png",
+          "available": true,
+          "quantity": 2,
+          "price": 23999,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS",
+          "quantity": 2,
+          "price": 23999,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 68,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 23999,
+      "formattedPrice": "$23,999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-barcelona-2",
+      "slug": "ratan-comedor-barcelona-2-sillas",
+      "name": "Comedor Barcelona 2 Sillas",
+      "shortDescription": "Comedor Barcelona 2 Sillas disponible en Ratan.",
+      "description": "Comedor Barcelona 2 Sillas forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-2-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-2-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-2-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-2-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-2-galeria-04-variantes.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-COMEDOR-BARCELONA-2-SILLAS",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 7,
+          "price": 22500,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 7,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 69,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "7"
+        }
+      ],
+      "price": 22500,
+      "formattedPrice": "$22,500.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-barcelona-4",
+      "slug": "ratan-comedor-barcelona-4-sillas",
+      "name": "Comedor Barcelona 4 Sillas",
+      "shortDescription": "Comedor Barcelona 4 Sillas disponible en Ratan.",
+      "description": "Comedor Barcelona 4 Sillas forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-4-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-4-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-4-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-4-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-4-galeria-04-variantes.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-COMEDOR-BARCELONA-4-SILLAS",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 4,
+          "price": 45000,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 4,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 70,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "4"
+        }
+      ],
+      "price": 45000,
+      "formattedPrice": "$45,000.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-barcelona-6",
+      "slug": "ratan-comedor-barcelona-mesa-cuadrada-6-sillas",
+      "name": "Comedor Barcelona Mesa Cuadrada 6 Sillas",
+      "shortDescription": "Comedor Barcelona Mesa Cuadrada 6 Sillas disponible en Ratan.",
+      "description": "Comedor Barcelona Mesa Cuadrada 6 Sillas forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-6-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-6-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-6-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-barcelona-6-galeria-03-medidas.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-COMEDOR-BARCELONA-MESA-CUADRADA-6-SILLAS",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 5,
+          "price": 65000,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 5,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 71,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "5"
+        }
+      ],
+      "price": 65000,
+      "formattedPrice": "$65,000.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "",
+      "slug": "ratan-comedor-barcelona-mesa-redonda-6-sillas",
+      "name": "Comedor Barcelona Mesa Redonda 6 Sillas",
+      "shortDescription": "Comedor Barcelona Mesa Redonda 6 Sillas disponible en Ratan.",
+      "description": "Comedor Barcelona Mesa Redonda 6 Sillas forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-COMEDOR-BARCELONA-MESA-REDONDA-6-SILLAS",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 1,
+          "price": 65000,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 1,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 72,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "1"
+        }
+      ],
+      "price": 65000,
+      "formattedPrice": "$65,000.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-sevilla",
+      "slug": "ratan-sillones-sevilla",
+      "name": "Sillones Sevilla",
+      "shortDescription": "Sillones Sevilla disponible en Ratan.",
+      "description": "Sillones Sevilla forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-sevilla-fondo-real.jpeg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-sevilla-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-sevilla-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-sevilla-galeria-03-medidas.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-SILLONES-SEVILLA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 9,
+          "price": 33500,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 9,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 73,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "9"
+        }
+      ],
+      "price": 33500,
+      "formattedPrice": "$33,500.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "ratan-bilbao",
+      "slug": "ratan-sala-bilbao",
+      "name": "Sala Bilbao",
+      "shortDescription": "Sala Bilbao disponible en Ratan.",
+      "description": "Sala Bilbao forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-bilbao-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-bilbao-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-bilbao-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-bilbao-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/ratan-bilbao-galeria-03-medidas-02.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-SALA-BILBAO",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 2,
+          "price": 39500,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 2,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 74,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "2"
+        }
+      ],
+      "price": 39500,
+      "formattedPrice": "$39,500.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "outlet-mecedora-girona",
+      "slug": "ratan-mecedora-girona",
+      "name": "Mecedora Girona",
+      "shortDescription": "Mecedora Girona disponible en Ratan.",
+      "description": "Mecedora Girona forma parte del inventario actual de ratan para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-mecedora-girona-fondo-real.png",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-mecedora-girona-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-mecedora-girona-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-mecedora-girona-galeria-04-variantes.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/outlet-mecedora-girona-galeria-04-variantes-02.png"
+      ],
+      "category": "ratan",
+      "categories": [
+        "ratan"
+      ],
+      "collection": "Ratan",
+      "brand": "Milapro Home",
+      "sku": "RATAN-MECEDORA-GIRONA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "",
+          "available": true,
+          "quantity": 123,
+          "price": 7999,
+          "note": ""
+        },
+        {
+          "id": "beige",
+          "name": "Beige",
+          "hex": "#d8c7ad",
+          "image": "",
+          "available": true,
+          "quantity": 38,
+          "price": 7999,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS",
+          "quantity": 123,
+          "price": 7999,
+          "note": ""
+        },
+        {
+          "name": "BEIGE",
+          "quantity": 38,
+          "price": 7999,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 161,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 75,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Ratan"
+        },
+        {
+          "label": "Inventario total",
+          "value": "161"
+        }
+      ],
+      "price": 7999,
+      "formattedPrice": "$7,999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plantas-ave-paraiso",
+      "slug": "plantas-planta-ave-de-paraiso",
+      "name": "Planta Ave De Paraiso",
+      "shortDescription": "Planta Ave De Paraiso disponible en Plantas.",
+      "description": "Planta Ave De Paraiso forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-ave-paraiso-fondo-real.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-ave-paraiso-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-ave-paraiso-galeria-02-fondo-blanco-02.png"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-PLANTA-AVE-DE-PARAISO",
+      "colors": [
+        {
+          "id": "180cm",
+          "name": "180cm",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 8,
+          "price": 999,
+          "note": ""
+        },
+        {
+          "id": "160cm",
+          "name": "160cm",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 27,
+          "price": 1599,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "180cm",
+          "quantity": 8,
+          "price": 999,
+          "note": ""
+        },
+        {
+          "name": "160cm",
+          "quantity": 27,
+          "price": 1599,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 35,
+      "notes": "El precio varía según el tamaño de la variante",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": true,
+      "available": true,
+      "displayOrder": 76,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "35"
+        }
+      ],
+      "price": 999,
+      "formattedPrice": "$999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "",
+      "slug": "plantas-palmera-areca-aa",
+      "name": "Palmera Areca Aa",
+      "shortDescription": "Palmera Areca Aa disponible en Plantas.",
+      "description": "Palmera Areca Aa forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "plantas",
+      "categories": [
+        "plantas"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-PALMERA-ARECA-AA",
+      "colors": [
+        {
+          "id": "1-40m",
+          "name": "1 40m",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 74,
+          "price": 999,
+          "note": ""
+        },
+        {
+          "id": "1-80m",
+          "name": "1 80m",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 82,
+          "price": 1459,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "1.40M",
+          "quantity": 74,
+          "price": 999,
+          "note": ""
+        },
+        {
+          "name": "1.80M",
+          "quantity": 82,
+          "price": 1459,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 156,
+      "notes": "El precio varía según el tamaño de la variante",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 77,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "156"
+        }
+      ],
+      "price": 999,
+      "formattedPrice": "$999.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plantas-palma-areca-hb",
+      "slug": "plantas-palmera-areca-hb",
+      "name": "Palmera Areca Hb",
+      "shortDescription": "Palmera Areca Hb disponible en Plantas.",
+      "description": "Palmera Areca Hb forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-palma-areca-hb-fondo-real.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-palma-areca-hb-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-palma-areca-hb-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-palma-areca-hb-galeria-03-medidas-02.png"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-PALMERA-ARECA-HB",
+      "colors": [
+        {
+          "id": "1-40m",
+          "name": "1 40m",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 24,
+          "price": 1698,
+          "note": ""
+        },
+        {
+          "id": "1-80m",
+          "name": "1 80m",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 20,
+          "price": 1998,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "1.40M",
+          "quantity": 24,
+          "price": 1698,
+          "note": ""
+        },
+        {
+          "name": "1.80M",
+          "quantity": 20,
+          "price": 1998,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 44,
+      "notes": "El precio varía según el tamaño de la variante",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 78,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "44"
+        }
+      ],
+      "price": 1698,
+      "formattedPrice": "$1,698.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plantas-olivo-ga",
+      "slug": "plantas-arbol-de-olivo-ga",
+      "name": "Arbol De Olivo Ga",
+      "shortDescription": "Arbol De Olivo Ga disponible en Plantas.",
+      "description": "Arbol De Olivo Ga forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-ga-fondo-real.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-ga-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-ga-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-ga-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-ga-galeria-03-medidas-02.png"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-ARBOL-DE-OLIVO-GA",
+      "colors": [
+        {
+          "id": "155cm",
+          "name": "155cm",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 79,
+          "price": 1459,
+          "note": ""
+        },
+        {
+          "id": "183cm",
+          "name": "183cm",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 68,
+          "price": 1998.99,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "155cm",
+          "quantity": 79,
+          "price": 1459,
+          "note": ""
+        },
+        {
+          "name": "183cm",
+          "quantity": 68,
+          "price": 1998.99,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 147,
+      "notes": "El precio varía según el tamaño de la variante",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 79,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "147"
+        }
+      ],
+      "price": 1459,
+      "formattedPrice": "$1,459.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plantas-olivo-fa",
+      "slug": "plantas-arbol-de-olivo-fa",
+      "name": "Arbol De Olivo Fa",
+      "shortDescription": "Arbol De Olivo Fa disponible en Plantas.",
+      "description": "Arbol De Olivo Fa forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-fa-fondo-real.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-fa-galeria-02-fondo-blanco.png"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-ARBOL-DE-OLIVO-FA",
+      "colors": [
+        {
+          "id": "150cm",
+          "name": "150cm",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 35,
+          "price": 1479,
+          "note": ""
+        },
+        {
+          "id": "180cm",
+          "name": "180cm",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 16,
+          "price": 1789,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "150cm",
+          "quantity": 35,
+          "price": 1479,
+          "note": ""
+        },
+        {
+          "name": "180cm",
+          "quantity": 16,
+          "price": 1789,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 51,
+      "notes": "El precio varía según el tamaño de la variante",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 80,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "51"
+        }
+      ],
+      "price": 1479,
+      "formattedPrice": "$1,479.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "plantas-olivo-eb",
+      "slug": "plantas-arbol-de-olivo-eb",
+      "name": "Arbol De Olivo Eb",
+      "shortDescription": "Arbol De Olivo Eb disponible en Plantas.",
+      "description": "Arbol De Olivo Eb forma parte del inventario actual de plantas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-eb-fondo-real.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-eb-galeria-02-fondo-blanco.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-eb-galeria-02-fondo-blanco-02.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-eb-galeria-03-medidas.png",
+        "https://cms.milaprohome.com/wp-content/uploads/2026/08/plantas-olivo-eb-galeria-03-medidas-02.png"
+      ],
+      "category": "plantas",
+      "categories": [
+        "plantas"
+      ],
+      "collection": "Plantas",
+      "brand": "Milapro Home",
+      "sku": "PLANTAS-ARBOL-DE-OLIVO-EB",
+      "colors": [
+        {
+          "id": "150cm",
+          "name": "150cm",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 35,
+          "price": 1669,
+          "note": ""
+        },
+        {
+          "id": "180cm",
+          "name": "180cm",
+          "hex": "#cccccc",
+          "image": "",
+          "available": true,
+          "quantity": 21,
+          "price": 2478.99,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "150cm",
+          "quantity": 35,
+          "price": 1669,
+          "note": ""
+        },
+        {
+          "name": "180cm",
+          "quantity": 21,
+          "price": 2478.99,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 56,
+      "notes": "El precio varía según el tamaño de la variante",
+      "materials": [],
+      "dimensions": "Ver imagen de medidas en galeria",
+      "featured": false,
+      "available": true,
+      "displayOrder": 81,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Plantas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "56"
+        }
+      ],
+      "price": 1669,
+      "formattedPrice": "$1,669.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "sombrilla-circular-con-pilar-central",
+      "slug": "sombrillas-sombrilla-circular-con-pilar-central",
+      "name": "Sombrilla Circular Con Pilar Central",
+      "shortDescription": "Sombrilla Circular Con Pilar Central disponible en Sombrillas.",
+      "description": "Sombrilla Circular Con Pilar Central forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/09/78c7f87b-3f09-4080-9834-3e52e94e25e7.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/09/0b8e78d2-350d-47c6-8f8a-12234026343e.jpg"
+      ],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-SOMBRILLA-CIRCULAR-CON-PILAR-CENTRAL",
+      "colors": [
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#610013",
+          "image": "",
+          "available": true,
+          "quantity": 6,
+          "price": 2350,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "CAFE",
+          "quantity": 6,
+          "price": 2350,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 6,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 82,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "6"
+        }
+      ],
+      "price": 2350,
+      "formattedPrice": "$2,350.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "sombrilla-cuadrada-con-ondas",
+      "slug": "sombrillas-sombrilla-cuadrada-con-ondas",
+      "name": "Sombrilla Cuadrada Con Ondas",
+      "shortDescription": "Sombrilla Cuadrada Con Ondas disponible en Sombrillas.",
+      "description": "Sombrilla Cuadrada Con Ondas forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-cuadrada-con-ondas-principal.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-cuadrada-con-ondas-galeria-01.jpg"
+      ],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-SOMBRILLA-CUADRADA-CON-ONDAS",
+      "colors": [
+        {
+          "id": "khaki",
+          "name": "Khaki",
+          "hex": "#c3b091",
+          "image": "",
+          "available": true,
+          "quantity": 3,
+          "price": 3580,
+          "note": ""
+        },
+        {
+          "id": "rojo",
+          "name": "Rojo",
+          "hex": "#b91c1c",
+          "image": "",
+          "available": true,
+          "quantity": 5,
+          "price": 3580,
+          "note": ""
+        },
+        {
+          "id": "verde",
+          "name": "Verde",
+          "hex": "#2f6b3f",
+          "image": "",
+          "available": true,
+          "quantity": 5,
+          "price": 3580,
+          "note": ""
+        },
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#6f4e37",
+          "image": "",
+          "available": true,
+          "quantity": 5,
+          "price": 3580,
+          "note": ""
+        },
+        {
+          "id": "azul",
+          "name": "Azul",
+          "hex": "#1d4ed8",
+          "image": "",
+          "available": true,
+          "quantity": 4,
+          "price": 3580,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "KHAKI",
+          "quantity": 3,
+          "price": 3580,
+          "note": ""
+        },
+        {
+          "name": "ROJO",
+          "quantity": 5,
+          "price": 3580,
+          "note": ""
+        },
+        {
+          "name": "VERDE",
+          "quantity": 5,
+          "price": 3580,
+          "note": ""
+        },
+        {
+          "name": "CAFÉ",
+          "quantity": 5,
+          "price": 3580,
+          "note": ""
+        },
+        {
+          "name": "AZUL",
+          "quantity": 4,
+          "price": 3580,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 22,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 83,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "22"
+        }
+      ],
+      "price": 3580,
+      "formattedPrice": "$3,580.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "sombrilla-roma-pettit",
+      "slug": "sombrillas-sombrilla-roma-petit",
+      "name": "Sombrilla Roma Petit",
+      "shortDescription": "Sombrilla Roma Petit disponible en Sombrillas.",
+      "description": "Sombrilla Roma Petit forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/09/899415b0-63ab-4df4-8bdc-306728c0285a.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/09/45bec3be-9cf8-44e8-a265-29e167bd1608.jpg"
+      ],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-SOMBRILLA-ROMA-PETIT",
+      "colors": [
+        {
+          "id": "khaki-rojo",
+          "name": "Khaki Rojo",
+          "hex": "#b8aa86",
+          "image": "",
+          "available": true,
+          "quantity": 1,
+          "price": 4480,
+          "note": ""
+        },
+        {
+          "id": "cafe",
+          "name": "Cafe",
+          "hex": "#7a533b",
+          "image": "",
+          "available": true,
+          "quantity": 4,
+          "price": 4480,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "KHAKI/ROJO",
+          "quantity": 1,
+          "price": 4480,
+          "note": ""
+        },
+        {
+          "name": "CAFÉ",
+          "quantity": 4,
+          "price": 4480,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 5,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 84,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "5"
+        }
+      ],
+      "price": 4480,
+      "formattedPrice": "$4,480.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "sombrilla-banana",
+      "slug": "sombrillas-sombrilla-banana",
+      "name": "Sombrilla Banana",
+      "shortDescription": "Sombrilla Banana disponible en Sombrillas.",
+      "description": "Sombrilla Banana forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-banana-principal.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-banana-galeria-01.jpg"
+      ],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-SOMBRILLA-BANANA",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#808080",
+          "image": "",
+          "available": true,
+          "quantity": 4,
+          "price": 3360,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS",
+          "quantity": 4,
+          "price": 3360,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 4,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 85,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "4"
+        }
+      ],
+      "price": 3360,
+      "formattedPrice": "$3,360.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "sombrilla-con-iluminacion-led",
+      "slug": "sombrillas-sombrilla-con-iluminacion-led-2-7m",
+      "name": "Sombrilla Con Iluminacion Led 2 7m",
+      "shortDescription": "Sombrilla Con Iluminacion Led 2 7m disponible en Sombrillas.",
+      "description": "Sombrilla Con Iluminacion Led 2 7m forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-con-iluminacion-led-principal.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-con-iluminacion-led-galeria-01.jpg"
+      ],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-SOMBRILLA-CON-ILUMINACION-LED-2-7M",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#808080",
+          "image": "",
+          "available": true,
+          "quantity": 13,
+          "price": 5480,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS",
+          "quantity": 13,
+          "price": 5480,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 13,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 86,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "13"
+        }
+      ],
+      "price": 5480,
+      "formattedPrice": "$5,480.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "",
+      "slug": "sombrillas-sombrilla-con-iluminacion-led-3m",
+      "name": "Sombrilla Con Iluminacion Led 3m",
+      "shortDescription": "Sombrilla Con Iluminacion Led 3m disponible en Sombrillas.",
+      "description": "Sombrilla Con Iluminacion Led 3m forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "",
+      "gallery": [],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-SOMBRILLA-CON-ILUMINACION-LED-3M",
+      "colors": [
+        {
+          "id": "gris",
+          "name": "Gris",
+          "hex": "#8b8b84",
+          "image": "",
+          "available": true,
+          "quantity": 11,
+          "price": 5980,
+          "note": ""
+        }
+      ],
+      "variants": [
+        {
+          "name": "GRIS",
+          "quantity": 11,
+          "price": 5980,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 11,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 87,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "11"
+        }
+      ],
+      "price": 5980,
+      "formattedPrice": "$5,980.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "sombrilla-roma-4-x-4",
+      "slug": "sombrillas-sombrilla-roma-4x4",
+      "name": "Sombrilla Roma 4x4",
+      "shortDescription": "Sombrilla Roma 4x4 disponible en Sombrillas.",
+      "description": "Sombrilla Roma 4x4 forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-roma-4-x-4-principal.jpg",
+      "gallery": [
+        "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-roma-4-x-4-galeria-01.jpg"
+      ],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-SOMBRILLA-ROMA-4X4",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 4,
+          "price": 22600,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 4,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 88,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "4"
+        }
+      ],
+      "price": 22600,
+      "formattedPrice": "$22,600.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "sombrilla-base-circular",
+      "slug": "sombrillas-base-para-sombrilla-circular",
+      "name": "Base Para Sombrilla Circular",
+      "shortDescription": "Base Para Sombrilla Circular disponible en Sombrillas.",
+      "description": "Base Para Sombrilla Circular forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-base-circular-principal.jpeg",
+      "gallery": [],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-BASE-PARA-SOMBRILLA-CIRCULAR",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 21,
+          "price": 800,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 21,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 89,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "21"
+        }
+      ],
+      "price": 800,
+      "formattedPrice": "$800.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "sombrilla-base-rectangular",
+      "slug": "sombrillas-base-para-sombrilla-rectangular",
+      "name": "Base Para Sombrilla Rectangular",
+      "shortDescription": "Base Para Sombrilla Rectangular disponible en Sombrillas.",
+      "description": "Base Para Sombrilla Rectangular forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-base-rectangular-principal.jpeg",
+      "gallery": [],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-BASE-PARA-SOMBRILLA-RECTANGULAR",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 27,
+          "price": 1600,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 27,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 90,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "27"
+        }
+      ],
+      "price": 1600,
+      "formattedPrice": "$1,600.00",
+      "compareAtPrice": ""
+    },
+    {
+      "oldSlug": "sombrilla-base-cuadrada",
+      "slug": "sombrillas-base-para-sombrilla-cuadrada",
+      "name": "Base Para Sombrilla Cuadrada",
+      "shortDescription": "Base Para Sombrilla Cuadrada disponible en Sombrillas.",
+      "description": "Base Para Sombrilla Cuadrada forma parte del inventario actual de sombrillas para espacios exteriores.",
+      "sourceImage": "https://cms.milaprohome.com/wp-content/uploads/2026/09/sombrilla-base-cuadrada-principal.jpeg",
+      "gallery": [],
+      "category": "sombrillas",
+      "categories": [
+        "sombrillas"
+      ],
+      "collection": "Sombrillas",
+      "brand": "Milapro Home",
+      "sku": "SOMBRILLAS-BASE-PARA-SOMBRILLA-CUADRADA",
+      "colors": [],
+      "variants": [
+        {
+          "name": null,
+          "quantity": 8,
+          "price": 4000,
+          "note": ""
+        }
+      ],
+      "inventoryQuantity": 8,
+      "notes": "",
+      "materials": [],
+      "dimensions": "Consultar disponibilidad",
+      "featured": false,
+      "available": true,
+      "displayOrder": 91,
+      "specifications": [
+        {
+          "label": "Categoria",
+          "value": "Sombrillas"
+        },
+        {
+          "label": "Inventario total",
+          "value": "8"
+        }
+      ],
+      "price": 4000,
+      "formattedPrice": "$4,000.00",
+      "compareAtPrice": ""
+    }
+  ],
+  "retireSlugs": []
+}
