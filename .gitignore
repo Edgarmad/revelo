@@ -5,3 +5,5 @@ PRODUCTOS MILA WEB
 dist/*.zip
 public/api/subscribe.config.php
 dist/api/subscribe.config.php
+public/api/wa-webhook.config.php
+dist/api/wa-webhook.config.php
