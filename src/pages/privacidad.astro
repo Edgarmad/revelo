@@ -1,0 +1,140 @@
+---
+import Container from '@/components/common/Container.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+import logoSrc from '@/styles/images/Logo Mila.svg';
+
+const contacto = 'ventas@milaprohome.com';
+const actualizacion = '24 de septiembre de 2026';
+---
+
+<MainLayout title="Aviso de Privacidad | Milapro Home" description="Aviso de privacidad de Milapro Home conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.">
+  <Container class="py-14 lg:py-20">
+    <article class="mx-auto max-w-5xl rounded-[2rem] bg-white px-6 py-8 shadow-xl ring-1 ring-ink/10 sm:px-10 lg:px-16 lg:py-14">
+      <header class="grid gap-8 sm:grid-cols-[1fr_auto] sm:items-start">
+        <div>
+          <p class="text-sm font-black uppercase tracking-[0.18em] text-aqua">Milapro Home</p>
+          <h1 class="mt-4 font-display text-4xl font-black tracking-tight text-ink sm:text-5xl lg:text-6xl">Aviso de Privacidad</h1>
+          <p class="mt-3 text-sm text-muted">Última actualización: {actualizacion}</p>
+        </div>
+        <img class="w-36 sm:w-44" src={logoSrc} alt="Milapro Home" width="188" height="25" />
+      </header>
+
+      <div class="mt-9 space-y-9 text-lg leading-relaxed text-ink">
+        <p><strong>MILAPRO SPACE, S.A. de C.V.</strong> (en adelante <strong>Milapro Home</strong>), con Registro Federal de Contribuyentes <strong>MSP240422488</strong> y domicilio en Calle 6, Tablaje Catastral 57140, Bodega 10, Chichí Suárez, C.P. 97306, Mérida, Yucatán, México, es responsable del tratamiento de sus datos personales.</p>
+
+        <p>Este aviso se emite conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, su Reglamento y los Lineamientos del Aviso de Privacidad.</p>
+
+        <section>
+          <h2 class="text-2xl font-black">1. Datos personales que recabamos</h2>
+          <p class="mt-2">Recabamos los siguientes datos, según la forma en que usted interactúe con nosotros:</p>
+          <p class="mt-3"><strong>Cuando nos contacta por WhatsApp, teléfono o el formulario del sitio:</strong></p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li>Nombre o nombre de perfil.</li>
+            <li>Número de teléfono y correo electrónico.</li>
+            <li>Contenido de los mensajes que nos envía, incluidas imágenes y archivos adjuntos.</li>
+          </ul>
+          <p class="mt-3"><strong>Cuando realiza una compra:</strong></p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li>Nombre completo y domicilio de entrega.</li>
+            <li>Comprobantes de pago que usted nos comparta.</li>
+          </ul>
+          <p class="mt-3"><strong>Cuando solicita factura:</strong></p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li>Registro Federal de Contribuyentes y Constancia de Situación Fiscal.</li>
+            <li>Régimen fiscal, uso de CFDI y correo electrónico.</li>
+          </ul>
+          <p class="mt-3"><strong>Cuando navega en nuestro sitio web:</strong></p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li>Dirección IP, tipo de navegador y dispositivo.</li>
+            <li>Páginas visitadas y tiempo de permanencia.</li>
+          </ul>
+          <p class="mt-3"><strong>No recabamos datos personales sensibles</strong> ni números de tarjeta bancaria. Los pagos con tarjeta se procesan directamente en la terminal bancaria o plataforma correspondiente, sin que Milapro Home almacene esa información.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">2. Para qué usamos sus datos</h2>
+          <p class="mt-2"><strong>Finalidades necesarias.</strong> Sin ellas no podríamos atenderle:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li>Responder consultas sobre productos, precios, disponibilidad y promociones.</li>
+            <li>Procesar, confirmar y dar seguimiento a sus pedidos.</li>
+            <li>Coordinar la entrega o la recolección en almacén.</li>
+            <li>Emitir comprobantes fiscales.</li>
+            <li>Atender garantías, cambios, devoluciones y reclamaciones.</li>
+            <li>Cumplir con obligaciones legales y fiscales.</li>
+          </ul>
+          <p class="mt-3"><strong>Finalidades adicionales.</strong> No son necesarias para el servicio, pero nos ayudan a mejorarlo:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li>Enviarle información sobre promociones, novedades y catálogos.</li>
+            <li>Realizar encuestas de satisfacción.</li>
+            <li>Elaborar estadísticas internas para mejorar nuestros productos y atención.</li>
+          </ul>
+          <p class="mt-3">Si no desea que sus datos se usen para estas finalidades adicionales, escríbanos a <a class="font-black text-aqua underline" href={`mailto:${contacto}`}>{contacto}</a>. Su negativa no será motivo para negarle los servicios que solicite.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">3. Atención automatizada por WhatsApp</h2>
+          <p class="mt-2">Milapro Home utiliza un <strong>asistente virtual automatizado</strong> para atender consultas iniciales por WhatsApp. Al escribirnos, el contenido de sus mensajes es procesado por sistemas automatizados, incluidos servicios de inteligencia artificial de terceros, con la única finalidad de entender su consulta y generar una respuesta.</p>
+          <p class="mt-2">En cualquier momento puede solicitar hablar con una persona escribiendo <strong>«quiero hablar con una persona»</strong>, y su conversación será atendida por personal de Milapro Home.</p>
+          <p class="mt-2">El asistente no toma decisiones que produzcan efectos jurídicos sobre usted ni confirma pagos de manera automática: <strong>toda operación de compra es validada por una persona</strong>.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">4. Con quién compartimos sus datos</h2>
+          <p class="mt-2">Sus datos pueden ser compartidos únicamente para cumplir las finalidades descritas, con:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li><strong>Empresas de mensajería y paquetería</strong>, para realizar la entrega de su pedido.</li>
+            <li><strong>Proveedores de servicios tecnológicos</strong> que operan nuestras plataformas de mensajería, automatización e inteligencia artificial, quienes tratan los datos por cuenta de Milapro Home.</li>
+            <li><strong>Proveedores de análisis y publicidad digital</strong> (Google LLC y Meta Platforms, Inc.), conforme a la sección 6 de este aviso.</li>
+            <li><strong>Autoridades fiscales y administrativas</strong>, cuando exista obligación legal.</li>
+          </ul>
+          <p class="mt-3"><strong>No vendemos ni comercializamos sus datos personales.</strong> Algunos de estos proveedores se encuentran fuera de México, por lo que el tratamiento puede implicar una transferencia internacional de datos.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">5. Sus derechos ARCO</h2>
+          <p class="mt-2">Usted tiene derecho a <strong>Acceder</strong> a sus datos, <strong>Rectificarlos</strong> cuando sean inexactos, <strong>Cancelarlos</strong> cuando considere que no se requieren, y <strong>Oponerse</strong> a su tratamiento para fines específicos. También puede revocar su consentimiento en cualquier momento.</p>
+          <p class="mt-2">Para ejercerlos, envíe su solicitud a <a class="font-black text-aqua underline" href={`mailto:${contacto}`}>{contacto}</a> incluyendo:</p>
+          <ol class="mt-2 list-decimal space-y-1 pl-7">
+            <li>Su nombre completo y un medio para comunicarle la respuesta.</li>
+            <li>Copia de una identificación oficial.</li>
+            <li>Descripción clara de los datos sobre los que desea ejercer su derecho.</li>
+            <li>Cualquier documento que facilite la localización de sus datos.</li>
+          </ol>
+          <p class="mt-3">Responderemos en un plazo máximo de <strong>20 días hábiles</strong> y, de resultar procedente, se hará efectivo dentro de los <strong>15 días hábiles</strong> siguientes.</p>
+          <p class="mt-2">Si considera que su derecho a la protección de datos ha sido vulnerado, puede acudir al <strong>INAI</strong> en <a class="font-black text-aqua underline" href="https://www.inai.org.mx" target="_blank" rel="noreferrer">www.inai.org.mx</a>.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">6. Cookies y tecnologías de rastreo</h2>
+          <p class="mt-2">Nuestro sitio utiliza cookies y tecnologías similares que recopilan información de navegación de forma automática:</p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li><strong>Google Analytics</strong>, de Google LLC, para conocer cuántas personas visitan el sitio, qué páginas consultan y cuánto tiempo permanecen. Puede impedir esta recopilación con el complemento disponible en <a class="font-black text-aqua underline" href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noreferrer">tools.google.com/dlpage/gaoptout</a>.</li>
+            <li><strong>Píxel de Meta</strong>, de Meta Platforms, Inc., para medir la efectividad de nuestra publicidad en Facebook e Instagram. Puede configurar sus preferencias en <a class="font-black text-aqua underline" href="https://www.facebook.com/adpreferences/ad_settings" target="_blank" rel="noreferrer">facebook.com/adpreferences</a>.</li>
+          </ul>
+          <p class="mt-3">Ambos proveedores están ubicados fuera de México, por lo que su uso implica una <strong>transferencia internacional de datos</strong> a Estados Unidos de América. Puede deshabilitar las cookies desde la configuración de su navegador; hacerlo podría afectar algunas funciones del sitio, pero no le impedirá consultar nuestros productos ni contactarnos.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">7. Conservación y seguridad</h2>
+          <p class="mt-2">Conservamos sus datos durante el tiempo necesario para cumplir las finalidades descritas y los plazos que la legislación fiscal y mercantil exige, tras lo cual serán suprimidos o disociados de forma segura.</p>
+          <p class="mt-2">Hemos implementado medidas de seguridad administrativas, técnicas y físicas razonables para proteger sus datos contra daño, pérdida, alteración, acceso o uso no autorizado.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">8. Cambios a este aviso</h2>
+          <p class="mt-2">Este aviso puede modificarse para atender cambios legales, de nuestras prácticas o del modelo de negocio. Cualquier modificación será publicada en esta misma página, por lo que le recomendamos revisarla periódicamente.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-black">9. Contacto</h2>
+          <p class="mt-2"><strong>MILAPRO SPACE, S.A. de C.V.</strong></p>
+          <ul class="mt-2 list-disc space-y-1 pl-7">
+            <li>Correo: <a class="font-black text-aqua underline" href={`mailto:${contacto}`}>{contacto}</a></li>
+            <li>WhatsApp: <strong>(999) 455 3932</strong></li>
+            <li>Showroom: Plaza Vía Cinco, Local 1, Temozón Norte, C.P. 97302, Mérida, Yucatán.</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+  </Container>
+</MainLayout>
