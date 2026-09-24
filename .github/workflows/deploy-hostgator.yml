@@ -62,6 +62,31 @@ jobs:
 
           du -sh dist
 
+      - name: Generar configuracion del webhook de WhatsApp
+        env:
+          WA_MAKE_WEBHOOK_URL: ${{ secrets.WA_MAKE_WEBHOOK_URL }}
+          WA_VERIFY_TOKEN: ${{ secrets.WA_VERIFY_TOKEN }}
+          WA_APP_SECRET: ${{ secrets.WA_APP_SECRET }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${WA_MAKE_WEBHOOK_URL}" ] || [ -z "${WA_VERIFY_TOKEN}" ] || [ -z "${WA_APP_SECRET}" ]; then
+            echo "Faltan los secrets WA_*; el puente de WhatsApp quedara sin configurar."
+            exit 0
+          fi
+
+          mkdir -p dist/api
+          {
+            printf '<?php\n\n'
+            printf 'return [\n'
+            printf "    'make_webhook_url' => '%s',\n" "${WA_MAKE_WEBHOOK_URL}"
+            printf "    'verify_token' => '%s',\n" "${WA_VERIFY_TOKEN}"
+            printf "    'app_secret' => '%s',\n" "${WA_APP_SECRET}"
+            printf '];\n'
+          } > dist/api/wa-webhook.config.php
+
+          echo "Configuracion del webhook generada."
+
       - name: Deploy static build to HostGator
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
