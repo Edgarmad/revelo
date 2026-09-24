@@ -1,0 +1,12 @@
+# Los archivos de configuracion guardan credenciales y nunca deben servirse
+# como texto, ni siquiera si PHP dejara de ejecutarse en el servidor.
+<FilesMatch "\.config\.php$">
+    Require all denied
+</FilesMatch>
+
+<IfModule !mod_authz_core.c>
+    <FilesMatch "\.config\.php$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
